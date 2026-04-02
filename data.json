@@ -1,1 +1,154 @@
-
+[
+  {
+    "id": 1,
+    "cat": "Neuroscience",
+    "title": "Sinkronisasi Memori ke Cloud v5",
+    "body": "Uji coba sukses pertama pengunggahan memori jangka pendek ke server lokal menggunakan Neural Interface v5. Teknologi ini memungkinkan manusia menyimpan ingatan dalam bentuk data digital terenkripsi yang aman dari penyakit degeneratif otak seperti Alzheimer."
+  },
+  {
+    "id": 2,
+    "cat": "Quantum",
+    "title": "Energi Titik Nol Bandung",
+    "body": "Laboratorium Quantum di Bandung berhasil mengekstraksi energi dari fluktuasi vakum menggunakan kristal waktu. Penemuan ini menjadi cikal bakal energi tak terbatas tanpa emisi karbon sama sekali."
+  },
+  {
+    "id": 3,
+    "cat": "Astro-Tech",
+    "title": "Koloni Mars Tahap 1: Oksigen Abadi",
+    "body": "Modul MOXIE-2 di Mars melaporkan keberhasilan produksi oksigen konstan untuk kebutuhan 50 personel. Ini memastikan rencana koloni manusia permanen di Mars pada 2030 berjalan sesuai jadwal."
+  },
+  {
+    "id": 4,
+    "cat": "Artificial Intelligence",
+    "title": "AI Generative Menembus IQ 160",
+    "body": "Model bahasa terbaru 'Omega-Alpha' menunjukkan kemampuan pemecahan masalah matematika tingkat tinggi yang melampaui kecerdasan manusia rata-rata. AI kini mulai digunakan untuk merancang obat kanker secara mandiri."
+  },
+  {
+    "id": 5,
+    "cat": "Bio-Tech",
+    "title": "Organ 3D Printing Siap Transplantasi",
+    "body": "Rumah sakit di Jakarta mulai menggunakan printer 3D biologis untuk mencetak jaringan ginjal dari sel punca pasien sendiri. Risiko penolakan organ oleh tubuh kini mencapai 0%."
+  },
+  {
+    "id": 6,
+    "cat": "Robotics",
+    "title": "Robot Humanoid Pengganti Buruh Kasar",
+    "body": "Tesla meluncurkan Optimus Gen-4 yang memiliki fleksibilitas sendi setara atlet. Robot ini mulai dipekerjakan di gudang-gudang logistik global untuk bekerja 24 jam tanpa henti."
+  },
+  {
+    "id": 7,
+    "cat": "Future Transport",
+    "title": "Hyperloop Jakarta-Surabaya 45 Menit",
+    "body": "Uji coba kapsul Hyperloop tahap akhir menunjukkan kecepatan stabil 1.100 km/jam. Rute komersial pertama di Asia Tenggara ini akan dibuka pada akhir tahun 2026."
+  },
+  {
+    "id": 8,
+    "cat": "Computing",
+    "title": "Laptop Kuantum Pertama Dirilis",
+    "body": "IBM merilis prototipe laptop kuantum portabel. Meskipun masih membutuhkan pendingin khusus, kecepatan prosesnya 1 juta kali lebih cepat dibanding MacBook terbaru."
+  },
+  {
+    "id": 9,
+    "cat": "Climate-Tech",
+    "title": "Penyedot Karbon Raksasa di Iceland",
+    "body": "Fasilitas 'Mammoth' berhasil menarik 30.000 ton CO2 dari atmosfer per tahun dan mengubahnya menjadi batu di bawah tanah. Teknologi ini menjadi harapan utama menghentikan pemanasan global."
+  },
+  {
+    "id": 10,
+    "cat": "Cybersecurity",
+    "title": "Enkripsi Pasca-Kuantum Nasional",
+    "body": "Pemerintah mulai menerapkan standar enkripsi baru yang tidak bisa ditembus oleh komputer kuantum tercepat sekalipun untuk melindungi data perbankan nasional."
+  },
+  {
+    "id": 11,
+    "cat": "Astro-Physics",
+    "title": "Teleskop Webb Temukan Oksigen di Proxima B",
+    "body": "Data terbaru menunjukkan adanya atmosfer yang mengandung oksigen dan uap air di planet terdekat dari bumi, Proxima Centauri b. Misi robotik antar bintang mulai direncanakan."
+  },
+  {
+    "id": 12,
+    "cat": "Materials",
+    "title": "Graphene Murah untuk Baterai HP",
+    "body": "Peneliti menemukan cara memproduksi Graphene dari limbah plastik. Baterai HP masa depan kini bisa diisi penuh dalam 30 detik dan bertahan selama satu minggu."
+  },
+  {
+    "id": 13,
+    "cat": "Agro-Tech",
+    "title": "Daging Lab Halal Pertama di Dunia",
+    "body": "Singapura dan Indonesia menyetujui distribusi daging sapi hasil kultur sel (tanpa pemotongan hewan) yang telah mendapatkan sertifikasi halal dan nutrisi tinggi."
+  },
+  {
+    "id": 14,
+    "cat": "Medicine",
+    "title": "Vaksin Universal untuk Semua Jenis Flu",
+    "body": "Ilmuwan berhasil menciptakan satu suntikan vaksin mRNA yang memberikan perlindungan permanen terhadap semua mutasi virus influenza dan virus pernapasan lainnya."
+  },
+  {
+    "id": 15,
+    "cat": "Optics",
+    "title": "Lensa Kontak Night Vision",
+    "body": "Lensa kontak pintar dengan lapisan termal memungkinkan manusia melihat dalam gelap total. Teknologi ini awalnya untuk militer namun kini mulai tersedia untuk umum."
+  },
+  {
+    "id": 16,
+    "cat": "Energy",
+    "title": "Panel Surya Transparan untuk Jendela",
+    "body": "Gedung-gedung pencakar langit kini bisa menghasilkan listrik sendiri menggunakan kaca jendela yang berfungsi sebagai panel surya bening tanpa menghalangi pandangan."
+  },
+  {
+    "id": 17,
+    "cat": "AI",
+    "title": "Hukum AI: Hak Cipta Kode Program",
+    "body": "PBB menetapkan aturan baru bahwa kode yang ditulis 100% oleh AI adalah milik publik, mendorong kolaborasi perangkat lunak terbuka secara masif di seluruh dunia."
+  },
+  {
+    "id": 18,
+    "cat": "Bio-Tech",
+    "title": "CRISPR Sembuhkan Buta Warna",
+    "body": "Terapi gen satu kali suntik ke retina berhasil mengaktifkan kembali sel kerucut pada mata, memungkinkan penderita buta warna melihat spektrum warna penuh."
+  },
+  {
+    "id": 19,
+    "cat": "Space",
+    "title": "Turisme Bulan Pertama Dibuka",
+    "body": "Blue Origin mulai menjual tiket untuk perjalanan mengorbit bulan selama 3 hari. Harga tiket setara dengan rumah mewah, namun daftar tunggu sudah penuh hingga 2028."
+  },
+  {
+    "id": 20,
+    "cat": "Communication",
+    "title": "Internet 6G Mulai Diuji di Seoul",
+    "body": "Kecepatan 6G mencapai 1 Terabit per detik. Men-download 100 film kualitas 4K kini hanya membutuhkan waktu kurang dari satu detik saja."
+  }
+]
+[
+  { "id": 21, "cat": "Cyber Security", "title": "AI-Driven Malware Terdeteksi", "body": "Sistem keamanan siber global mendeteksi virus yang bisa berubah kode secara mandiri setiap 5 detik. Para ahli menyarankan penggunaan enkripsi berbasis biometrik wajah." },
+  { "id": 22, "cat": "Green Tech", "title": "Pesawat Listrik Pertama Jakarta-Bali", "body": "Maskapai nasional sukses melakukan penerbangan komersial pertama menggunakan pesawat tenaga baterai solid-state dengan emisi nol." },
+  { "id": 23, "cat": "Meta-Tech", "title": "Kacamata AR Pengganti Smartphone", "body": "Raksasa teknologi merilis kacamata ringan yang memproyeksikan layar holografik langsung di depan mata pengguna, membuat HP fisik mulai ditinggalkan." },
+  { "id": 24, "cat": "Bio-Hacking", "title": "Chip Monitor Nutrisi Darah", "body": "Implan kecil seukuran beras kini bisa mengirimkan data vitamin dan mineral tubuh langsung ke smartwatch Anda secara real-time." },
+  { "id": 25, "cat": "Robotics", "title": "Robot Pemadam Kebakaran AI", "body": "Unit robotik tahan panas mulai dikerahkan di hutan Kalimantan untuk mendeteksi dan memadamkan titik api sebelum menyebar luas." },
+  { "id": 26, "cat": "Quantum", "title": "Teleportasi Data Antar Benua", "body": "Laboratorium di Tokyo berhasil melakukan kuantum entaglement data dari Jepang ke Jerman secara instan tanpa melalui kabel bawah laut." },
+  { "id": 27, "cat": "Space", "title": "Pertambangan Asteroid Pertama", "body": "Pesawat kargo robotik kembali ke bumi membawa 10 ton Platinum dari asteroid Psyche, menurunkan harga logam mulia secara global." },
+  { "id": 28, "cat": "Medicine", "title": "Nanobot Pembersih Arteri", "body": "Robot berukuran mikroskopis kini bisa disuntikkan ke darah untuk menghancurkan plak penyebab serangan jantung tanpa operasi." },
+  { "id": 29, "cat": "Energy", "title": "Fusi Nuklir Skala Rumah Tangga", "body": "Startup di California memperkenalkan reaktor fusi mini yang bisa menghidupi satu blok perumahan selama 50 tahun hanya dengan satu galon air laut." },
+  { "id": 30, "cat": "AI", "title": "Film Pertama yang Disutradarai AI", "body": "Film berdurasi 2 jam yang seluruh naskah, visual, dan suaranya dibuat oleh AI memenangkan penghargaan di festival film internasional." },
+  { "id": 31, "cat": "Urban Tech", "title": "Aspal Pintar Pengisi Daya Mobil", "body": "Jalan tol di IKN kini dilengkapi lapisan induksi yang bisa mengisi daya mobil listrik saat sedang berjalan." },
+  { "id": 32, "cat": "Physics", "title": "Kecepatan Cahaya Terlampaui?", "body": "Eksperimen di laboratorium partikel Swiss menunjukkan sinyal yang bergerak 0.001% lebih cepat dari cahaya, menantang teori Einstein." },
+  { "id": 33, "cat": "Cyber Security", "title": "Dompet Crypto Berbasis Pikiran", "body": "Teknologi 'Mind-Key' memungkinkan user mengakses dompet digital hanya dengan pola gelombang otak yang unik, mustahil dibajak." },
+  { "id": 34, "cat": "Future Work", "title": "Kerja 3 Hari Seminggu Jadi Standar", "body": "Berkat otomasi robotik, banyak negara maju mulai menerapkan 3 hari kerja tanpa mengurangi gaji karyawan." },
+  { "id": 35, "cat": "Agro-Tech", "title": "Padi yang Tumbuh di Air Asin", "body": "Rekayasa genetika terbaru memungkinkan petani menanam padi langsung di pinggir pantai menggunakan air laut." },
+  { "id": 36, "cat": "Gadget", "title": "Layar HP yang Bisa Melipat Sendiri", "body": "Material 'Shape-Memory Polymer' memungkinkan layar gadget melipat dan menggulung secara otomatis sesuai perintah suara." },
+  { "id": 37, "cat": "Bio-Tech", "title": "Gigi yang Bisa Tumbuh Kembali", "body": "Obat penumbuh gigi permanen hasil riset Jepang resmi memasuki tahap pasar massal, menggantikan fungsi implan gigi." },
+  { "id": 38, "cat": "Space", "title": "Hotel Luar Angkasa 'Voyager' Dibuka", "body": "Stasiun luar angkasa komersial pertama mulai menerima tamu menginap dengan pemandangan matahari terbit setiap 90 menit." },
+  { "id": 39, "cat": "AI", "title": "Penerjemah Bahasa Hewan", "body": "Algoritma AI terbaru mampu menerjemahkan frekuensi suara lumba-lumba dan simpanse ke dalam bahasa manusia dengan akurasi 70%." },
+  { "id": 40, "cat": "Eco-Tech", "title": "Sepatu yang Bisa Terurai dalam Tanah", "body": "Brand olahraga besar merilis sepatu dari jamur yang akan hancur menjadi pupuk organik jika dikubur selama 30 hari." },
+  { "id": 41, "cat": "Neuroscience", "title": "Belajar Bahasa Asing Lewat Tidur", "body": "Perangkat 'Neuro-Sleep' menstimulasi otak saat tidur untuk mempercepat pemahaman kosa kata bahasa baru secara bawah sadar." },
+  { "id": 42, "cat": "Computing", "title": "Hardisk Berbasis DNA", "body": "Satu gram DNA sintetis kini bisa menyimpan seluruh data internet dunia selamanya tanpa membutuhkan listrik." },
+  { "id": 43, "cat": "Architecture", "title": "Gedung Pencakar Langit dari Kayu", "body": "Teknologi kayu silang (CLT) memungkinkan pembangunan gedung 100 lantai yang lebih kuat dari baja dan menyerap karbon." },
+  { "id": 44, "cat": "Weather", "title": "Sistem Pengatur Hujan Presisi", "body": "Satelit laser terbaru bisa memicu hujan tepat di atas waduk yang kekeringan dengan akurasi radius 1 kilometer." },
+  { "id": 45, "cat": "Fashion", "title": "Baju yang Berubah Warna via Aplikasi", "body": "Kain dengan serat elektronik memungkinkan pengguna mengganti motif dan warna baju mereka langsung dari smartphone." },
+  { "id": 46, "cat": "Psychology", "title": "Terapi VR untuk Trauma Masa Lalu", "body": "Simulasi VR yang sangat realistis membantu veteran perang menyembuhkan PTSD dengan tingkat keberhasilan 85%." },
+  { "id": 47, "cat": "Archaeology", "title": "Scan Radar Temukan Kota Bawah Tanah", "body": "Teknologi LiDAR terbaru menemukan kompleks kota kuno raksasa di bawah hutan Amazon yang sebelumnya tak terdeteksi." },
+  { "id": 48, "cat": "Education", "title": "Guru Hologram di Sekolah Pelosok", "body": "Siswa di desa terpencil kini belajar langsung dari guru terbaik dunia melalui proyeksi hologram 3D interaktif." },
+  { "id": 49, "cat": "Automotive", "title": "Mobil Terbang Komersial di Dubai", "body": "Layanan taksi terbang tanpa pengemudi resmi beroperasi secara reguler, mengurangi kemacetan darat hingga 40%." },
+  { "id": 50, "cat": "Humanity", "title": "Populasi Manusia Tembus 8.5 Miliar", "body": "Data PBB menunjukkan distribusi penduduk mulai bergeser ke kota-kota terapung baru akibat kenaikan air laut." }
+]

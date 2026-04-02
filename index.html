@@ -1,63 +1,232 @@
-const express = require('express');
-const Replicate = require('replicate');
-const cors = require('cors');
-require('dotenv').config(); // Opsional: Untuk menyimpan API Key di file .env
-
-const app = express();
-const port = 3000;
-
-// --- KONFIGURASI PENTING ---
-// Mengizinkan website frontend Anda mengakses server ini
-app.use(cors()); 
-app.use(express.json());
-
-// Masukkan API Token Replicate Anda di sini
-const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN,
-});
-
-// Endpoint untuk Generate Video
-app.post('/generate-video', async (req, res) => {
-  const { prompt } = req.body;
-
-  if (!prompt) {
-    return res.status(400).json({ error: "Prompt tidak boleh kosong." });
-  }
-
-  console.log(`[SYSTEM]: Menerima perintah visual: "${prompt}"`);
-
-  try {
-    // Memulai proses AI (Menggunakan model Luma Ray V2 sebagai contoh)
-    const output = await replicate.run(
-      "luma/ray-v2", 
-      { 
-        input: { 
-          prompt: prompt,
-          aspect_ratio: "16:9" 
-        } 
-      }
-    );
-
-    console.log("[SYSTEM]: Neural render berhasil. URL:", output);
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08080a">
+    <link rel="manifest" href="manifest.json">
     
-    // Mengirim URL video balik ke Frontend
-    res.json({ video_url: output });
+    <title>NEURAL LOGIC | Portal IPTEK 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent: #00ff88;
+            --bg-dark: #08080a;
+            --card-bg: #121217;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
 
-  } catch (error) {
-    console.error("[ERROR]: Gagal memproses Neural Sequence:", error.message);
-    res.status(500).json({ 
-        error: "Gagal terhubung ke Neural Core.",
-        details: error.message 
-    });
-  }
-});
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg-dark); font-family: 'Inter', sans-serif; color: var(--text-main); overflow-x: hidden; }
 
-app.listen(port, () => {
-  console.log(`
-  -----------------------------------------
-   AKASHIRO NEURAL SERVER : ONLINE
-   LISTENING ON PORT      : ${port}
-   STATUS                 : SECURE_CONNECTION
-  -----------------------------------------
-  `);
-});
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 5%; background: rgba(8, 8, 10, 0.95); backdrop-filter: blur(12px);
+            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #1f2937;
+        }
+        .brand { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
+
+        /* --- PROGRESS BAR --- */
+        .progress-container { position: fixed; top: 60px; left: 0; width: 100%; height: 3px; z-index: 1001; }
+        .progress-bar { height: 100%; background: var(--accent); width: 0%; box-shadow: 0 0 15px var(--accent); transition: 0.2s; }
+
+        /* --- LAYOUT --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 5%; display: grid; grid-template-columns: 1fr; gap: 30px; }
+        @media (min-width: 900px) { .container { grid-template-columns: 2.5fr 1fr; } }
+
+        /* --- CARDS --- */
+        .post-card {
+            background: var(--card-bg); border-radius: 16px; border: 1px solid #1f2937;
+            margin-bottom: 20px; overflow: hidden; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;
+        }
+        .post-card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1); }
+        .post-content { padding: 25px; }
+        .post-title { font-size: 1.3rem; margin: 10px 0; color: #fff; line-height: 1.4; }
+        .post-tag { color: var(--accent); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+
+        /* --- BUTTONS --- */
+        .btn-save { background: var(--accent); color: #000; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.75rem; transition: 0.3s; }
+        .btn-save:hover { opacity: 0.8; transform: scale(1.05); }
+
+        /* --- SIDEBAR WIDGETS --- */
+        .widget { background: var(--card-bg); padding: 20px; border-radius: 16px; border: 1px solid #1f2937; margin-bottom: 20px; }
+        .widget h3 { font-size: 0.8rem; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .saved-item { font-size: 0.85rem; padding: 10px 0; border-bottom: 1px solid #1f2937; display: flex; justify-content: space-between; align-items: center; }
+
+        /* --- TOAST NOTIFICATIONS --- */
+        .toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
+        .toast { background: #1a1a20; color: white; padding: 15px 20px; border-radius: 12px; border-left: 4px solid var(--accent); box-shadow: 0 10px 40px rgba(0,0,0,0.6); animation: slideIn 0.4s ease-out forwards; font-size: 0.85rem; }
+        @keyframes slideIn { from { transform: translateX(110%); } to { transform: translateX(0); } }
+        .toast.fade-out { animation: fadeOut 0.5s forwards; }
+        @keyframes fadeOut { to { opacity: 0; transform: translateY(20px); } }
+
+        /* --- MODAL --- */
+        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; z-index: 2000; overflow-y: auto; padding: 20px; backdrop-filter: blur(10px); }
+        .modal-content { background: #121217; max-width: 800px; margin: 40px auto; padding: 40px; border-radius: 24px; border: 1px solid var(--accent); position: relative; }
+        .close { position: absolute; top: 25px; right: 25px; color: #fff; font-size: 2rem; cursor: pointer; }
+        .comment-box { margin-top: 30px; border-top: 1px solid #1f2937; padding-top: 20px; }
+        .comment-input { width: 100%; background: #08080a; border: 1px solid #334155; border-radius: 12px; color: white; padding: 12px; margin-bottom: 12px; outline: none; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="brand">NEURAL LOGIC</div>
+        <div id="offline-tag" style="display:none; font-size: 0.6rem; background: #ff4444; color: white; padding: 2px 8px; border-radius: 10px;">OFFLINE</div>
+    </nav>
+
+    <div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+    <div class="container">
+        <main id="article-feed">
+            </main>
+
+        <aside>
+            <div class="widget">
+                <h3>Bookmark</h3>
+                <div id="saved-list" style="color: var(--text-muted); font-size: 0.8rem;">Kosong.</div>
+            </div>
+            <div class="widget">
+                <h3>Terminal Status</h3>
+                <div style="font-size: 0.8rem; font-family: monospace; color: #00ff00;">
+                    > System: Online<br>
+                    > Node: Active<br>
+                    > Version: 4.5.0-PLATINUM
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="modal" id="articleModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <span id="mTag" class="post-tag"></span>
+            <h1 id="mTitle" style="color:var(--accent); margin: 15px 0; font-family: 'Space Grotesk';"></h1>
+            <div id="mBody" style="line-height: 1.8; color: #cbd5e1; font-size: 1.1rem;"></div>
+            
+            <div class="comment-box">
+                <h4 style="margin-bottom:15px;">Diskusi Publik</h4>
+                <div id="comments-display" style="margin-bottom: 20px;"></div>
+                <input type="text" id="commentInput" class="comment-input" placeholder="Tulis pendapat Anda...">
+                <button class="btn-save" onclick="addComment()">Kirim Komentar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script>
+        const articles = [
+            { id: 1, cat: 'Neuroscience', title: 'Sinkronisasi Memori ke Cloud v5', body: 'Uji coba sukses pertama pengunggahan memori jangka pendek ke server lokal menggunakan Neural Interface v5. Teknologi ini memungkinkan manusia menyimpan ingatan dalam bentuk data digital terenkripsi.' },
+            { id: 2, cat: 'Quantum', title: 'Energi Tak Terbatas dari Vakum', body: 'Ilmuwan di Bandung berhasil mengekstraksi energi dari fluktuasi vakum menggunakan kristal waktu. Ini adalah langkah pertama menuju sumber daya abadi tanpa emisi.' },
+            { id: 3, cat: 'Astro-Tech', title: 'Pembangunan Base Camp Mars', body: 'Modul robotik Arjuna-1 mulai membangun struktur hunian berbasis 3D printing di kawah Jezero, Mars. Oksigen mulai diproduksi dari atmosfer karbon dioksida.' }
+        ];
+
+        // --- RENDER FEED ---
+        const feed = document.getElementById('article-feed');
+        articles.forEach(art => {
+            feed.innerHTML += `
+                <article class="post-card">
+                    <div class="post-content" onclick="openModal(${art.id})">
+                        <span class="post-tag">${art.cat}</span>
+                        <h2 class="post-title">${art.title}</h2>
+                        <button class="btn-save" onclick="event.stopPropagation(); saveArticle(${art.id})">Simpan</button>
+                    </div>
+                </article>
+            `;
+        });
+
+        // --- TOAST NOTIF ---
+        function showToast(msg) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `🔔 &nbsp; ${msg}`;
+            container.appendChild(toast);
+            setTimeout(() => { toast.classList.add('fade-out'); setTimeout(() => toast.remove(), 500); }, 4000);
+        }
+
+        // --- BOOKMARK SYSTEM ---
+        function saveArticle(id) {
+            let saved = JSON.parse(localStorage.getItem('saved_nl')) || [];
+            if(!saved.includes(id)) {
+                saved.push(id);
+                localStorage.setItem('saved_nl', JSON.stringify(saved));
+                renderSaved();
+                showToast("Artikel berhasil disimpan!");
+            } else {
+                showToast("Artikel sudah ada di bookmark.");
+            }
+        }
+
+        function renderSaved() {
+            const list = document.getElementById('saved-list');
+            let savedIds = JSON.parse(localStorage.getItem('saved_nl')) || [];
+            if(savedIds.length === 0) { list.innerHTML = "Kosong."; return; }
+            list.innerHTML = savedIds.map(id => {
+                let art = articles.find(a => a.id === id);
+                return `<div class="saved-item"><span>${art.title}</span> <span style="color:#ff4444; cursor:pointer;" onclick="removeSaved(${id})">✕</span></div>`;
+            }).join("");
+        }
+
+        function removeSaved(id) {
+            let saved = JSON.parse(localStorage.getItem('saved_nl')) || [];
+            localStorage.setItem('saved_nl', JSON.stringify(saved.filter(i => i !== id)));
+            renderSaved();
+            showToast("Dihapus dari bookmark.");
+        }
+
+        // --- MODAL & COMMENTS ---
+        let activeId = null;
+        function openModal(id) {
+            activeId = id;
+            const art = articles.find(a => a.id === id);
+            document.getElementById('mTag').innerText = art.cat;
+            document.getElementById('mTitle').innerText = art.title;
+            document.getElementById('mBody').innerText = art.body;
+            document.getElementById('articleModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            loadComments();
+        }
+
+        function closeModal() { 
+            document.getElementById('articleModal').style.display = 'none'; 
+            document.body.style.overflow = 'auto';
+        }
+
+        function addComment() {
+            const val = document.getElementById('commentInput').value;
+            if(!val) return;
+            let cms = JSON.parse(localStorage.getItem('cms_'+activeId)) || [];
+            cms.push(val);
+            localStorage.setItem('cms_'+activeId, JSON.stringify(cms));
+            document.getElementById('commentInput').value = "";
+            loadComments();
+            showToast("Komentar terkirim!");
+        }
+
+        function loadComments() {
+            const box = document.getElementById('comments-display');
+            let cms = JSON.parse(localStorage.getItem('cms_'+activeId)) || [];
+            box.innerHTML = cms.map(c => `<div style="background:#08080a; padding:12px; border-radius:10px; margin-bottom:10px; border-left:3px solid var(--accent); font-size:0.9rem;">${c}</div>`).join("");
+        }
+
+        // --- UTILS ---
+        window.onscroll = () => {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById("progressBar").style.width = (winScroll / height) * 100 + "%";
+        };
+
+        window.addEventListener('offline', () => { document.getElementById('offline-tag').style.display = 'inline'; showToast("Koneksi terputus. Mode Offline aktif."); });
+        window.addEventListener('online', () => { document.getElementById('offline-tag').style.display = 'none'; showToast("Anda kembali online!"); });
+
+        // Welcome
+        setTimeout(() => showToast("Sistem Berhasil Dimuat. Selamat Datang."), 1000);
+        renderSaved();
+    </script>
+</body>
+</html>

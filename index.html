@@ -3,91 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | 2026 Tech Sentinel</title>
+    <title>NEURAL LOGIC | Portal IPTEK 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --accent: #00ff88; --bg: #050507; --card: #111116; --text: #e2e8f0; --muted: #8892b0; }
+        :root { --accent: #00ff88; --bg: #050508; --card: #0d0d12; --text: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
         /* --- LOGO VEKTOR MODERN --- */
         nav {
-            padding: 15px 5%; background: rgba(5, 5, 7, 0.85); backdrop-filter: blur(15px);
+            padding: 15px 6%; background: rgba(5, 5, 8, 0.9); backdrop-filter: blur(15px);
             position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
         }
-        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
         .logo-glyph {
-            width: 40px; height: 40px; background: #000; border: 2px solid var(--accent);
-            border-radius: 10px; display: grid; place-items: center;
-            font-family: 'Space Grotesk'; font-weight: 700; color: var(--accent); font-size: 1.5rem;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            width: 42px; height: 42px; background: #000; border: 2px solid var(--accent);
+            border-radius: 12px; display: grid; place-items: center;
+            font-family: 'Space Grotesk'; font-weight: 700; color: var(--accent); font-size: 1.6rem;
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
         }
-        .logo-txt { font-family: 'Space Grotesk'; font-size: 1.4rem; color: #fff; letter-spacing: 1px; }
+        .logo-text { font-family: 'Space Grotesk'; font-size: 1.5rem; color: #fff; letter-spacing: 0.5px; }
 
-        /* --- GRID UI --- */
-        .container { max-width: 1250px; margin: 30px auto; padding: 0 5%; }
-        #article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+        /* --- GRID & CARDS --- */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 6%; }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 35px; }
 
-        .post {
-            background: var(--card); border-radius: 20px; overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.03); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .card {
+            background: var(--card); border-radius: 24px; overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.04); transition: 0.4s;
             cursor: pointer; position: relative;
         }
-        .post:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
-        .post-img { width: 100%; height: 180px; object-fit: cover; filter: grayscale(30%); transition: 0.4s; }
-        .post:hover .post-img { filter: grayscale(0%); transform: scale(1.05); }
-
-        .post-info { padding: 25px; }
-        .post-tag { font-size: 0.65rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
-        .post-title { font-family: 'Space Grotesk'; font-size: 1.25rem; color: #fff; margin: 12px 0; line-height: 1.2; }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card-tag { font-size: 0.7rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .card-title { font-family: 'Space Grotesk'; font-size: 1.3rem; color: #fff; margin: 12px 0; line-height: 1.3; }
 
         /* --- MODAL & AUDIO READER --- */
-        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.96); display: none; z-index: 2000; padding: 20px; }
-        .m-content { 
-            background: var(--card); max-width: 800px; margin: auto; border-radius: 25px; 
-            padding: 40px; border: 1px solid rgba(0, 255, 136, 0.2); position: relative;
-            max-height: 90vh; overflow-y: auto; box-shadow: 0 0 50px rgba(0,0,0,1);
-        }
-        .audio-bar {
-            display: flex; gap: 10px; margin-bottom: 25px; background: rgba(0, 255, 136, 0.05);
-            padding: 15px; border-radius: 12px; border: 1px dashed var(--accent);
-        }
-        .btn-audio { 
-            background: var(--accent); color: #000; border: none; padding: 10px 20px; 
-            border-radius: 10px; font-weight: 700; cursor: pointer; transition: 0.2s;
-        }
-        .btn-audio:active { transform: scale(0.95); }
-        .close-m { position: absolute; top: 20px; right: 25px; font-size: 2rem; color: #fff; cursor: pointer; }
+        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); display: none; z-index: 2000; align-items: center; justify-content: center; padding: 20px; }
+        .m-box { background: var(--card); max-width: 850px; width: 100%; border-radius: 30px; padding: 40px; position: relative; max-height: 90vh; overflow-y: auto; border: 1px solid rgba(0, 255, 136, 0.3); }
+        .audio-controls { display: flex; gap: 12px; margin-bottom: 30px; background: rgba(0,255,136,0.08); padding: 15px; border-radius: 15px; }
+        .btn-play { background: var(--accent); color: #000; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+        .btn-stop { background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: 12px 24px; border-radius: 12px; cursor: pointer; }
+        .close-btn { position: absolute; top: 25px; right: 30px; font-size: 2rem; color: #fff; cursor: pointer; }
 
-        /* Mobile Adjust */
-        @media (max-width: 600px) { .m-content { padding: 20px; } .logo-txt { display: none; } }
+        @media (max-width: 768px) { .logo-text { display: none; } .m-box { padding: 20px; } }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo-wrap">
+        <a href="#" class="logo">
             <div class="logo-glyph">N</div>
-            <div class="logo-txt">NEURAL LOGIC</div>
+            <div class="logo-text">NEURAL LOGIC</div>
         </a>
-        <div style="font-size: 0.7rem; color: var(--accent); font-family: monospace;">SYSTEM: v10.0-LIVE</div>
+        <div style="font-size: 0.75rem; color: var(--accent); font-family: monospace;">STATUS: v11.0 ONLINE</div>
     </nav>
 
     <div class="container">
-        <div id="article-grid"></div>
+        <div id="feed"></div>
     </div>
 
     <div id="modal" class="modal" onclick="closeModal()">
-        <div class="m-content" onclick="event.stopPropagation()">
-            <span class="close-m" onclick="closeModal()">&times;</span>
-            <div class="audio-bar">
-                <button class="btn-audio" onclick="playAudio()">🔊 Putar Suara</button>
-                <button class="btn-audio" style="background: transparent; border: 1px solid var(--accent); color: var(--accent);" onclick="stopAudio()">⏹ Berhenti</button>
+        <div class="m-box" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="audio-controls">
+                <button class="btn-play" onclick="playAudio()">🔊 Baca Berita</button>
+                <button class="btn-stop" onclick="stopAudio()">⏹ Berhenti</button>
             </div>
-            <img id="m-img" style="width:100%; border-radius:15px; margin-bottom:25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-            <h1 id="m-title" style="font-family: 'Space Grotesk'; color: #fff; font-size: 2rem; margin-bottom: 20px;"></h1>
-            <p id="m-body" style="font-size: 1.15rem; color: var(--muted); line-height: 1.8;"></p>
+            <img id="m-img" style="width: 100%; border-radius: 20px; margin-bottom: 25px;">
+            <h1 id="m-title" style="font-family: 'Space Grotesk'; color: #fff; font-size: 2.2rem; margin-bottom: 20px;"></h1>
+            <p id="m-body" style="font-size: 1.2rem; color: #cbd5e1; line-height: 1.8;"></p>
         </div>
     </div>
 
@@ -95,27 +82,27 @@
         let synth = window.speechSynthesis;
         let utter = null;
 
-        async function init() {
+        async function loadArticles() {
             const res = await fetch('data.json');
             const data = await res.json();
-            // Urutkan dari ID terbesar (terbaru)
+            // Tampilkan yang terbaru (ID tertinggi) dulu
             data.sort((a, b) => b.id - a.id);
             
-            document.getElementById('article-grid').innerHTML = data.map(a => `
-                <div class="post" onclick='showModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
-                    <img src="${a.img}" class="post-img" loading="lazy">
-                    <div class="post-info">
-                        <span class="post-tag">${a.cat}</span>
-                        <h2 class="post-title">${a.title}</h2>
+            document.getElementById('feed').innerHTML = data.map(art => `
+                <div class="card" onclick='openModal(${JSON.stringify(art).replace(/'/g, "&apos;")})'>
+                    <img src="${art.img}" class="card-img" loading="lazy">
+                    <div class="card-content">
+                        <span class="card-tag">${art.cat}</span>
+                        <h2 class="card-title">${art.title}</h2>
                     </div>
                 </div>
             `).join('');
         }
 
-        function showModal(a) {
-            document.getElementById('m-img').src = a.img;
-            document.getElementById('m-title').innerText = a.title;
-            document.getElementById('m-body').innerText = a.body;
+        function openModal(art) {
+            document.getElementById('m-img').src = art.img;
+            document.getElementById('m-title').innerText = art.title;
+            document.getElementById('m-body').innerText = art.body;
             document.getElementById('modal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
@@ -131,7 +118,7 @@
             const text = document.getElementById('m-title').innerText + ". " + document.getElementById('m-body').innerText;
             utter = new SpeechSynthesisUtterance(text);
             utter.lang = 'id-ID';
-            utter.rate = 1.1; // Sedikit lebih cepat agar profesional
+            utter.rate = 1.0;
             synth.speak(utter);
         }
 
@@ -139,7 +126,7 @@
             synth.cancel();
         }
 
-        init();
+        loadArticles();
     </script>
 </body>
 </html>

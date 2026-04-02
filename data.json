@@ -1,122 +1,52 @@
 [
-  {
-    "id": 1,
-    "cat": "Neuroscience",
-    "title": "Sinkronisasi Memori ke Cloud v5",
-    "body": "Uji coba sukses pertama pengunggahan memori jangka pendek ke server lokal menggunakan Neural Interface v5. Teknologi ini memungkinkan manusia menyimpan ingatan dalam bentuk data digital terenkripsi yang aman dari penyakit degeneratif otak seperti Alzheimer."
-  },
-  {
-    "id": 2,
-    "cat": "Quantum",
-    "title": "Energi Titik Nol Bandung",
-    "body": "Laboratorium Quantum di Bandung berhasil mengekstraksi energi dari fluktuasi vakum menggunakan kristal waktu. Penemuan ini menjadi cikal bakal energi tak terbatas tanpa emisi karbon sama sekali."
-  },
-  {
-    "id": 3,
-    "cat": "Astro-Tech",
-    "title": "Koloni Mars Tahap 1: Oksigen Abadi",
-    "body": "Modul MOXIE-2 di Mars melaporkan keberhasilan produksi oksigen konstan untuk kebutuhan 50 personel. Ini memastikan rencana koloni manusia permanen di Mars pada 2030 berjalan sesuai jadwal."
-  },
-  {
-    "id": 4,
-    "cat": "Artificial Intelligence",
-    "title": "AI Generative Menembus IQ 160",
-    "body": "Model bahasa terbaru 'Omega-Alpha' menunjukkan kemampuan pemecahan masalah matematika tingkat tinggi yang melampaui kecerdasan manusia rata-rata. AI kini mulai digunakan untuk merancang obat kanker secara mandiri."
-  },
-  {
-    "id": 5,
-    "cat": "Bio-Tech",
-    "title": "Organ 3D Printing Siap Transplantasi",
-    "body": "Rumah sakit di Jakarta mulai menggunakan printer 3D biologis untuk mencetak jaringan ginjal dari sel punca pasien sendiri. Risiko penolakan organ oleh tubuh kini mencapai 0%."
-  },
-  {
-    "id": 6,
-    "cat": "Robotics",
-    "title": "Robot Humanoid Pengganti Buruh Kasar",
-    "body": "Tesla meluncurkan Optimus Gen-4 yang memiliki fleksibilitas sendi setara atlet. Robot ini mulai dipekerjakan di gudang-gudang logistik global untuk bekerja 24 jam tanpa henti."
-  },
-  {
-    "id": 7,
-    "cat": "Future Transport",
-    "title": "Hyperloop Jakarta-Surabaya 45 Menit",
-    "body": "Uji coba kapsul Hyperloop tahap akhir menunjukkan kecepatan stabil 1.100 km/jam. Rute komersial pertama di Asia Tenggara ini akan dibuka pada akhir tahun 2026."
-  },
-  {
-    "id": 8,
-    "cat": "Computing",
-    "title": "Laptop Kuantum Pertama Dirilis",
-    "body": "IBM merilis prototipe laptop kuantum portabel. Meskipun masih membutuhkan pendingin khusus, kecepatan prosesnya 1 juta kali lebih cepat dibanding MacBook terbaru."
-  },
-  {
-    "id": 9,
-    "cat": "Climate-Tech",
-    "title": "Penyedot Karbon Raksasa di Iceland",
-    "body": "Fasilitas 'Mammoth' berhasil menarik 30.000 ton CO2 dari atmosfer per tahun dan mengubahnya menjadi batu di bawah tanah. Teknologi ini menjadi harapan utama menghentikan pemanasan global."
-  },
-  {
-    "id": 10,
-    "cat": "Cybersecurity",
-    "title": "Enkripsi Pasca-Kuantum Nasional",
-    "body": "Pemerintah mulai menerapkan standar enkripsi baru yang tidak bisa ditembus oleh komputer kuantum tercepat sekalipun untuk melindungi data perbankan nasional."
-  },
-  {
-    "id": 11,
-    "cat": "Astro-Physics",
-    "title": "Teleskop Webb Temukan Oksigen di Proxima B",
-    "body": "Data terbaru menunjukkan adanya atmosfer yang mengandung oksigen dan uap air di planet terdekat dari bumi, Proxima Centauri b. Misi robotik antar bintang mulai direncanakan."
-  },
-  {
-    "id": 12,
-    "cat": "Materials",
-    "title": "Graphene Murah untuk Baterai HP",
-    "body": "Peneliti menemukan cara memproduksi Graphene dari limbah plastik. Baterai HP masa depan kini bisa diisi penuh dalam 30 detik dan bertahan selama satu minggu."
-  },
-  {
-    "id": 13,
-    "cat": "Agro-Tech",
-    "title": "Daging Lab Halal Pertama di Dunia",
-    "body": "Singapura dan Indonesia menyetujui distribusi daging sapi hasil kultur sel (tanpa pemotongan hewan) yang telah mendapatkan sertifikasi halal dan nutrisi tinggi."
-  },
-  {
-    "id": 14,
-    "cat": "Medicine",
-    "title": "Vaksin Universal untuk Semua Jenis Flu",
-    "body": "Ilmuwan berhasil menciptakan satu suntikan vaksin mRNA yang memberikan perlindungan permanen terhadap semua mutasi virus influenza dan virus pernapasan lainnya."
-  },
-  {
-    "id": 15,
-    "cat": "Optics",
-    "title": "Lensa Kontak Night Vision",
-    "body": "Lensa kontak pintar dengan lapisan termal memungkinkan manusia melihat dalam gelap total. Teknologi ini awalnya untuk militer namun kini mulai tersedia untuk umum."
-  },
-  {
-    "id": 16,
-    "cat": "Energy",
-    "title": "Panel Surya Transparan untuk Jendela",
-    "body": "Gedung-gedung pencakar langit kini bisa menghasilkan listrik sendiri menggunakan kaca jendela yang berfungsi sebagai panel surya bening tanpa menghalangi pandangan."
-  },
-  {
-    "id": 17,
-    "cat": "AI",
-    "title": "Hukum AI: Hak Cipta Kode Program",
-    "body": "PBB menetapkan aturan baru bahwa kode yang ditulis 100% oleh AI adalah milik publik, mendorong kolaborasi perangkat lunak terbuka secara masif di seluruh dunia."
-  },
-  {
-    "id": 18,
-    "cat": "Bio-Tech",
-    "title": "CRISPR Sembuhkan Buta Warna",
-    "body": "Terapi gen satu kali suntik ke retina berhasil mengaktifkan kembali sel kerucut pada mata, memungkinkan penderita buta warna melihat spektrum warna penuh."
-  },
-  {
-    "id": 19,
-    "cat": "Space",
-    "title": "Turisme Bulan Pertama Dibuka",
-    "body": "Blue Origin mulai menjual tiket untuk perjalanan mengorbit bulan selama 3 hari. Harga tiket setara dengan rumah mewah, namun daftar tunggu sudah penuh hingga 2028."
-  },
-  {
-    "id": 20,
-    "cat": "Communication",
-    "title": "Internet 6G Mulai Diuji di Seoul",
-    "body": "Kecepatan 6G mencapai 1 Terabit per detik. Men-download 100 film kualitas 4K kini hanya membutuhkan waktu kurang dari satu detik saja."
-  }
+  { "id": 1, "cat": "Neuroscience", "title": "Sinkronisasi Memori v5", "body": "Uji coba sukses pengunggahan memori...", "img": "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?q=80&w=400" },
+  { "id": 2, "cat": "Quantum", "title": "Energi Titik Nol Bandung", "body": "Ekstraksi energi dari vakum...", "img": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=400" },
+  { "id": 3, "cat": "Astro-Tech", "title": "Koloni Mars: Oksigen Abadi", "body": "Produksi oksigen konstan di Mars...", "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=400" },
+  { "id": 4, "cat": "AI", "title": "AI Menembus IQ 160", "body": "Model Omega-Alpha melampaui...", "img": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=400" },
+  { "id": 5, "cat": "Bio-Tech", "title": "Organ 3D Printing Sukses", "body": "Cetak jaringan ginjal dari sel punca...", "img": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=400" },
+  { "id": 6, "cat": "Robotics", "title": "Humanoid Optimus Gen-4", "body": "Fleksibilitas setara atlet...", "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=400" },
+  { "id": 7, "cat": "Transport", "title": "Hyperloop Jkt-Sby 45 Menit", "body": "Uji coba kecepatan 1.100 km/jam...", "img": "https://images.unsplash.com/photo-1519704259837-1237a3473188?q=80&w=400" },
+  { "id": 8, "cat": "Computing", "title": "Laptop Kuantum Pertama", "body": "IBM merilis prototipe portabel...", "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400" },
+  { "id": 9, "cat": "Climate", "title": "Penyedot Karbon Raksasa", "body": "Fasilitas Mammoth mengubah CO2...", "img": "https://images.unsplash.com/photo-1534294668821-28a3054f4256?q=80&w=400" },
+  { "id": 10, "cat": "Cyber Security", "title": "Enkripsi Pasca-Kuantum", "body": "Standar baru perlindungan data...", "img": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=400" },
+  { "id": 11, "cat": "Space", "title": "Oksigen di Proxima B", "body": "Teleskop Webb temukan atmosfer...", "img": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=400" },
+  { "id": 12, "cat": "Materials", "title": "Graphene Murah untuk Baterai", "body": "Isi penuh HP dalam 30 detik...", "img": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=400" },
+  { "id": 13, "cat": "Agro-Tech", "title": "Daging Lab Halal Pertama", "body": "Distribusi daging kultur sel...", "img": "https://images.unsplash.com/photo-1532187863486-abf51ad9f69f?q=80&w=400" },
+  { "id": 14, "cat": "Medicine", "title": "Vaksin Universal Flu", "body": "Perlindungan permanen dari mutasi...", "img": "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=400" },
+  { "id": 15, "cat": "Optics", "title": "Lensa Kontak Night Vision", "body": "Melihat dalam gelap total...", "img": "https://images.unsplash.com/photo-1617791160536-598cf32026fb?q=80&w=400" },
+  { "id": 16, "cat": "Energy", "title": "Surya Transparan untuk Gedung", "body": "Jendela hasilkan listrik...", "img": "https://images.unsplash.com/photo-1548613053-22002f5a60b9?q=80&w=400" },
+  { "id": 17, "cat": "AI", "title": "Hukum Hak Cipta Kode AI", "body": "PBB tetapkan aturan baru...", "img": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=400" },
+  { "id": 18, "cat": "Bio-Tech", "title": "CRISPR Sembuhkan Buta Warna", "body": "Aktivasi sel kerucut retina...", "img": "https://images.unsplash.com/photo-1579165466521-45013143e540?q=80&w=400" },
+  { "id": 19, "cat": "Space", "title": "Turisme Bulan Pertama", "body": "Blue Origin jual tiket mengorbit...", "img": "https://images.unsplash.com/photo-1614314169000-4cf229a15333?q=80&w=400" },
+  { "id": 20, "cat": "6G", "title": "Uji Coba 6G di Seoul", "body": "Kecepatan 1 Terabit per detik...", "img": "https://images.unsplash.com/photo-1520004434532-668416d137f9?q=80&w=400" },
+  { "id": 21, "cat": "Cyber Security", "title": "AI-Driven Malware Terdeteksi", "body": "Virus berubah kode setiap 5 detik...", "img": "https://images.unsplash.com/photo-1562813733-b31f71025d54?q=80&w=400" },
+  { "id": 22, "cat": "Green Tech", "title": "Pesawat Listrik Jkt-Bali", "body": "Penerbangan komersial emisi nol...", "img": "https://images.unsplash.com/photo-1559131397-f94da358f7ca?q=80&w=400" },
+  { "id": 23, "cat": "Meta-Tech", "title": "Kacamata AR Pengganti HP", "body": "Proyeksi layar holografik...", "img": "https://images.unsplash.com/photo-1478432713021-34d31d71b8d6?q=80&w=400" },
+  { "id": 24, "cat": "Bio-Hacking", "title": "Chip Monitor Nutrisi Darah", "body": "Implan kirim data real-time...", "img": "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=400" },
+  { "id": 25, "cat": "Robotics", "title": "Robot Pemadam Kebakaran AI", "body": "Deteksi titik api Kalimantan...", "img": "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?q=80&w=400" },
+  { "id": 26, "cat": "Quantum", "title": "Teleportasi Data Antar Benua", "body": "Kuantum entanglement instan...", "img": "https://images.unsplash.com/photo-1509023467864-159343b51488?q=80&w=400" },
+  { "id": 27, "cat": "Space", "title": "Pertambangan Asteroid Psyche", "body": "Kembali membawa 10 ton Platinum...", "img": "https://images.unsplash.com/photo-1614313913007-6fefc970327f?q=80&w=400" },
+  { "id": 28, "cat": "Medicine", "title": "Nanobot Pembersih Arteri", "body": "Hancurkan plak jantung tanpa operasi...", "img": "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=400" },
+  { "id": 29, "cat": "Energy", "title": "Fusi Nuklir Skala Rumah", "body": "Reaktor mini hidupi perumahan...", "img": "https://images.unsplash.com/photo-1517420790103-3b10b0648450?q=80&w=400" },
+  { "id": 30, "cat": "AI", "title": "Film Sutradara AI Pertama", "body": "Seluruh naskah & visual buatan AI...", "img": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=400" },
+  { "id": 31, "cat": "Urban Tech", "title": "Aspal Pintar Pengisi Daya", "body": "Jalan tol IKN isi daya mobil...", "img": "https://images.unsplash.com/photo-1591123720164-de1348028a82?q=80&w=400" },
+  { "id": 32, "cat": "Physics", "title": "Cahaya Terlampaui di Swiss?", "body": "Sinyal bergerak lebih cepat...", "img": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?q=80&w=400" },
+  { "id": 33, "cat": "Cyber Security", "title": "Crypto Berbasis Pikiran", "body": "Akses dompet digital lewat gelombang otak...", "img": "https://images.unsplash.com/photo-1620325867502-221cfb5fc5f6?q=80&w=400" },
+  { "id": 34, "cat": "Future Work", "title": "Kerja 3 Hari Jadi Standar", "body": "Berkat otomasi robotik global...", "img": "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=400" },
+  { "id": 35, "cat": "Agro-Tech", "title": "Padi Air Asin Pertama", "body": "Tumbuh subur di pinggir pantai...", "img": "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=400" },
+  { "id": 36, "cat": "Gadget", "title": "HP Melipat Sendiri via Suara", "body": "Material Shape-Memory Polymer...", "img": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=400" },
+  { "id": 37, "cat": "Bio-Tech", "title": "Gigi Tumbuh Kembali Permanen", "body": "Obat penumbuh gigi massal...", "img": "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?q=80&w=400" },
+  { "id": 38, "cat": "Space", "title": "Hotel Voyager Dibuka", "body": "Stasiun luar angkasa komersial...", "img": "https://images.unsplash.com/photo-1544071378-558c499c8558?q=80&w=400" },
+  { "id": 39, "cat": "AI", "title": "Penerjemah Bahasa Hewan", "body": "Akurasi 70% suara lumba-lumba...", "img": "https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=400" },
+  { "id": 40, "cat": "Eco-Tech", "title": "Sepatu Jamur Terurai", "body": "Hancur jadi pupuk organik...", "img": "https://images.unsplash.com/photo-1518002171953-a080ee81be44?q=80&w=400" },
+  { "id": 41, "cat": "Neuro", "title": "Belajar Lewat Tidur v2", "body": "Stimulasi otak Neuro-Sleep...", "img": "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=400" },
+  { "id": 42, "cat": "Computing", "title": "Hardisk Berbasis DNA Sintetis", "body": "Satu gram DNA simpan data internet...", "img": "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=400" },
+  { "id": 43, "cat": "Architecture", "title": "Pencakar Langit Kayu CLT", "body": "Gedung 100 lantai lebih kuat...", "img": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=400" },
+  { "id": 44, "cat": "Weather", "title": "Pengatur Hujan Laser", "body": "Akurasi pemicu hujan 1 km...", "img": "https://images.unsplash.com/photo-1492011221367-f47e3ccd77a0?q=80&w=400" },
+  { "id": 45, "cat": "Fashion", "title": "Baju Berubah Warna via HP", "body": "Kain serat elektronik...", "img": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=400" },
+  { "id": 46, "cat": "Psychology", "title": "Terapi VR Trauma Perang", "body": "Simulasi VR sangat realistis...", "img": "https://images.unsplash.com/photo-1592478411313-1151fba478f0?q=80&w=400" },
+  { "id": 47, "cat": "Archaeology", "title": "Scan Kota Bawah Amazon", "body": "Complex kuno LiDAR raksasa...", "img": "https://images.unsplash.com/photo-1501436513145-30f24e19fbc8?q=80&w=400" },
+  { "id": 48, "cat": "Education", "title": "Guru Hologram 3D Interaktif", "body": "Belajar langsung dari pakar dunia...", "img": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=400" },
+  { "id": 49, "cat": "Automotive", "title": "Taksi Terbang Dubai Sukses", "body": "Layanan tanpa pengemudi reguler...", "img": "https://images.unsplash.com/photo-1601053163351-b0e6988812c3?q=80&w=400" },
+  { "id": 50, "cat": "Humanity", "title": "Populasi 8.5 Miliar di Kota Terapung", "body": "Pergeseran penduduk akibat kenaikan laut...", "img": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=400" }
 ]

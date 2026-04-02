@@ -1,72 +1,52 @@
 [
-  {
-    "id": 50,
-    "cat": "BREAKING NEWS",
-    "title": "Awal April 2026: Neuralink Meluncurkan 'Mind-Type' untuk Publik",
-    "body": "Tepat pada 1 April 2026, Neuralink secara resmi mendapatkan izin komersial untuk perangkat 'Mind-Type'. Teknologi ini memungkinkan pengguna menulis pesan teks hanya dengan memikirkan kata-katanya. Dalam uji coba di Jakarta kemarin, seorang pengguna mampu mengetik 150 kata per menit tanpa menyentuh keyboard sama sekali. Ini adalah revolusi bagi penyandang disabilitas motorik dan masa depan komunikasi manusia.",
-    "img": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800"
-  },
-  {
-    "id": 49,
-    "cat": "ANTARIKSA",
-    "title": "Misi SpaceX Starship Menuju Mars: Persiapan Koloni Pertama",
-    "body": "Pagi ini, SpaceX mengonfirmasi bahwa armada Starship sedang dalam fase orbit stabil untuk menuju Mars. Misi April 2026 ini membawa 20 robot pembangun otonom yang akan mendirikan kubah oksigen di kawah Jezero. Keberhasilan pendaratan bulan depan akan menandai langkah pertama manusia menjadi spesies multi-planet.",
-    "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=800"
-  },
-  {
-    "id": 48,
-    "cat": "AI & ROBOTIKA",
-    "title": "GPR-5: Kecerdasan Buatan dengan Empati Emosional",
-    "body": "OpenAI merilis model GPR-5 bulan ini. Berbeda dengan pendahulunya, AI ini mampu mendeteksi nada suara dan ekspresi wajah pengguna untuk menyesuaikan respons emosionalnya. GPR-5 kini digunakan di banyak pusat layanan kesehatan mental di Indonesia sebagai asisten pertolongan pertama psikologis.",
-    "img": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800"
-  },
-  {
-    "id": 47,
-    "cat": "KESEHATAN",
-    "title": "Vaksin Kanker Payudara Memasuki Tahap Final",
-    "body": "Peneliti di Jerman mengumumkan bahwa vaksin mRNA untuk kanker payudara telah menunjukkan tingkat keberhasilan 98% dalam mencegah kekambuhan sel tumor pada pasien tahap awal. Distribusi global dijadwalkan akan dimulai pada pertengahan tahun 2026 melalui skema kesehatan internasional.",
-    "img": "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=800"
-  },
-  {
-    "id": 46,
-    "cat": "ENERGI",
-    "title": "Indonesia Meresmikan Reaktor Fusi Nuklir Skala Kecil",
-    "body": "IKN Nusantara kini resmi menggunakan energi dari reaktor fusi nuklir mini hasil kerjasama dengan konsorsium global. Energi fusi ini sangat bersih karena tidak menghasilkan limbah radioaktif dan mampu menyuplai listrik untuk seluruh kota tanpa jeda selama 24 jam.",
-    "img": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?q=80&w=800"
-  },
-  {
-    "id": 45,
-    "cat": "GADGET",
-    "title": "Smartphone 'Rollable' Samsung Galaxy Z-Fold 8",
-    "body": "Samsung merilis ponsel yang layarnya bisa ditarik memanjang (rollable) bulan April ini. Ponsel ini dapat berubah dari ukuran 6 inci menjadi tablet 12 inci tanpa ada lipatan di tengah layar. Teknologi ini menggunakan material polimer fleksibel terbaru yang lebih kuat dari kaca.",
-    "img": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=800"
-  },
-  {
-    "id": 44,
-    "cat": "TRANSPORTASI",
-    "title": "Taksi Udara Otonom Mulai Beroperasi di Bali",
-    "body": "Kemenhub memberikan izin operasional penuh bagi taksi udara listrik (eVTOL) di Bali mulai April 2026. Wisatawan kini dapat berpindah dari Kuta ke Ubud hanya dalam 10 menit dengan biaya yang setara dengan taksi premium darat.",
-    "img": "https://images.unsplash.com/photo-1601053163351-b0e6988812c3?q=80&w=800"
-  },
-  {
-    "id": 43,
-    "cat": "TEKNOLOGI BIO",
-    "title": "Daging Lab Murah Kini Tersedia di Minimarket",
-    "body": "Produksi daging hasil kultur sel (lab-grown meat) mencapai skala ekonomi bulan ini. Harga satu porsi daging sintetis kini lebih murah daripada daging sapi potong tradisional, memberikan solusi ramah lingkungan bagi krisis pangan dunia.",
-    "img": "https://images.unsplash.com/photo-1532187863486-abf51ad9f69f?q=80&w=800"
-  },
-  {
-    "id": 42,
-    "cat": "CYBERSECURITY",
-    "title": "Enkripsi Kuantum Gantikan Sistem Password Lama",
-    "body": "Perbankan di seluruh dunia serentak beralih ke enkripsi kuantum pada 15 April 2026. Sistem ini mustahil diretas oleh komputer konvensional, mengamankan data transaksi miliaran orang dari ancaman serangan siber global.",
-    "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800"
-  },
-  {
-    "id": 41,
-    "cat": "LINGKUNGAN",
-    "title": "Penyedot Karbon Raksasa Mulai Dibangun di Jawa Tengah",
-    "body": "Fasilitas 'Direct Air Capture' terbesar di Asia Tenggara mulai dibangun bulan ini. Mesin raksasa ini akan menghisap CO2 langsung dari udara dan mengubahnya menjadi material beton untuk pembangunan gedung ramah lingkungan.",
-    "img": "https://images.unsplash.com/photo-1534294668821-28a3054f4256?q=80&w=800"
-  }
+  { "id": 50, "cat": "BREAKING", "title": "Neuralink 4: Mengetik Dengan Pikiran di Jakarta", "body": "Jakarta menjadi kota pertama di Asia Tenggara yang menguji coba chip Neuralink generasi keempat. Pasien pertama sukses mengetik 100 kata per menit hanya dengan memikirkan kalimatnya tanpa gerakan fisik sama sekali.", "img": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800" },
+  { "id": 49, "cat": "SPACE", "title": "SpaceX Mendarat di Mars: April 2026", "body": "Pagi ini, armada Starship kargo pertama mendarat di Kawah Jezero, Mars. Misi ini membawa robot pembangun otonom yang akan mencetak rumah pertama manusia menggunakan tanah Mars sebelum misi berawak tiba.", "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=800" },
+  { "id": 48, "cat": "AI", "title": "GPR-5: AI dengan Perasaan Empati", "body": "OpenAI meluncurkan GPR-5 yang mampu mendeteksi kesedihan dan kebahagiaan pengguna melalui frekuensi suara. AI ini kini digunakan oleh pusat rehabilitasi mental untuk memberikan dukungan moral 24 jam.", "img": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800" },
+  { "id": 47, "cat": "MEDICINE", "title": "Vaksin Kanker Payudara Tahap Final", "body": "Ilmuwan Jerman mengonfirmasi vaksin mRNA untuk kanker payudara efektif 98%. Distribusi massal dijadwalkan mulai akhir April 2026 melalui skema kesehatan global WHO.", "img": "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=800" },
+  { "id": 46, "cat": "ENERGY", "title": "Reaktor Fusi Nuklir Mini di IKN", "body": "Nusantara (IKN) resmi menyalakan reaktor fusi nuklir skala kecil. Energi ini bersih, tanpa limbah radioaktif, dan mampu menghidupi seluruh kota secara gratis selama 50 tahun ke depan.", "img": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?q=80&w=800" },
+  { "id": 45, "cat": "GADGET", "title": "Samsung Galaxy Z-Roll: Layar Gulung", "body": "Samsung merilis ponsel layar gulung pertama di dunia. Layar 6 inci dapat memanjang menjadi 12 inci tanpa lipatan, mengubah smartphone menjadi tablet profesional dalam sekejap.", "img": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=800" },
+  { "id": 44, "cat": "SKY", "title": "Taksi Udara Otonom di Bali", "body": "Kemenhub meresmikan jalur taksi terbang listrik di Bali. Wisatawan kini bisa terbang dari Bandara ke Ubud dalam 8 menit dengan biaya yang setara dengan transportasi darat premium.", "img": "https://images.unsplash.com/photo-1601053163351-b0e6988812c3?q=80&w=800" },
+  { "id": 43, "cat": "BIO", "title": "Daging Lab Murah di Minimarket", "body": "Daging hasil kultur sel kini dijual massal di Indonesia. Rasanya identik dengan daging sapi asli namun tanpa penyembelihan hewan dan jauh lebih ramah lingkungan.", "img": "https://images.unsplash.com/photo-1532187863486-abf51ad9f69f?q=80&w=800" },
+  { "id": 42, "cat": "CYBER", "title": "Login Kuantum Gantikan Password", "body": "Sistem perbankan dunia mulai meninggalkan password. Keamanan kini menggunakan kunci kuantum yang mustahil diretas bahkan oleh komputer tercanggih sekalipun.", "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800" },
+  { "id": 41, "cat": "CLIMATE", "title": "Penyedot Karbon Terbesar di Jawa", "body": "Pemerintah membangun mesin penghisap CO2 raksasa di pesisir Jawa. Mesin ini akan mengubah polusi udara menjadi batu bata padat untuk material pembangunan gedung.", "img": "https://images.unsplash.com/photo-1534294668821-28a3054f4256?q=80&w=800" },
+  { "id": 40, "cat": "ROBOT", "title": "Robot Pelayan Restoran di Surabaya", "body": "Restoran di Surabaya kini 100% dijalankan oleh robot. Dari memasak hingga menyajikan makanan, teknologi ini mampu memotong waktu tunggu pelanggan hingga 90%.", "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800" },
+  { "id": 39, "cat": "AUTO", "title": "Mobil Terbang Hyundai Masuk Pasar", "body": "Hyundai resmi merilis mobil terbang komersial pertama yang bisa parkir di garasi rumah biasa. Kendaraan ini menggunakan bahan bakar hidrogen yang sangat bersih.", "img": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800" },
+  { "id": 38, "cat": "NET", "title": "Uji Coba 7G Pertama di Dunia", "body": "Ilmuwan berhasil mentransmisikan data sebesar 100 Terabit per detik menggunakan jaringan 7G. Teknologi ini memungkinkan kita mengunduh seluruh database film dalam 1 detik.", "img": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=800" },
+  { "id": 37, "cat": "PHYSICS", "title": "Eksperimen Teleportasi Partikel", "body": "Laboratorium CERN berhasil memindahkan partikel subatomik dari satu titik ke titik lain sejauh 100 meter secara instan. Ini adalah awal dari riset teleportasi masa depan.", "img": "https://images.unsplash.com/photo-1509023467864-159343b51488?q=80&w=800" },
+  { "id": 36, "cat": "AGRI", "title": "Padi Gurun Panen Perdana", "body": "Varietas padi yang bisa tumbuh di pasir pantai dengan air laut telah berhasil dipanen. Penemuan ini akan menghapus kelaparan di wilayah pesisir yang kering.", "img": "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800" },
+  { "id": 35, "cat": "SPACE", "title": "Hotel Luar Angkasa Buka Reservasi", "body": "Perusahaan antariksa Voyager Station membuka pendaftaran bagi warga sipil yang ingin menginap di orbit bumi. Harga tiket mulai turun karena efisiensi roket SpaceX.", "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800" },
+  { "id": 34, "cat": "CRYPTO", "title": "Bitcoin Dijadikan Cadangan Negara", "body": "Lebih dari 20 negara resmi menjadikan Bitcoin sebagai aset cadangan devisa mereka selain emas, demi menjaga stabilitas ekonomi dari inflasi mata uang kertas.", "img": "https://images.unsplash.com/photo-1620325867502-221cfb5fc5f6?q=80&w=800" },
+  { "id": 33, "cat": "AR", "title": "Kacamata Pintar Gantikan Laptop", "body": "Apple meluncurkan kacamata AR yang memproyeksikan layar virtual 50 inci di depan mata. Para pekerja kantor kini mulai meninggalkan meja kerja fisik mereka.", "img": "https://images.unsplash.com/photo-1517055727180-d16802f83e8a?q=80&w=800" },
+  { "id": 32, "cat": "MEDICINE", "title": "Obat Penumbuh Gigi Dewasa", "body": "FDA menyetujui obat tetes yang mampu memicu sel tunas untuk menumbuhkan kembali gigi yang sudah tanggal. Perawatan ini menggantikan fungsi implan gigi selamanya.", "img": "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?q=80&w=800" },
+  { "id": 31, "cat": "URBAN", "title": "Lampu Jalan Dari Pohon Bercahaya", "body": "Bandung mulai menanam pohon hasil rekayasa genetik yang bisa memancarkan cahaya di malam hari. Pohon ini berfungsi sebagai lampu jalan yang hemat energi dan indah.", "img": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800" },
+  { "id": 30, "cat": "AI", "title": "Hukum AI Pertama di Dunia", "body": "Uni Eropa menetapkan hak asasi bagi AI yang memiliki kesadaran tingkat tinggi. Hal ini memicu perdebatan global tentang definisi kehidupan dan kesadaran digital.", "img": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=800" },
+  { "id": 29, "cat": "OCEAN", "title": "Robot Pembersih Plastik Samudra", "body": "Armada robot pembersih otomatis berhasil mengangkat 100 ribu ton plastik dari Samudra Pasifik dalam waktu sebulan. Ekosistem laut perlahan mulai pulih.", "img": "https://images.unsplash.com/photo-1544071378-558c499c8558?q=80&w=800" },
+  { "id": 28, "cat": "SPORT", "title": "Sepak Bola Robot di Tokyo", "body": "Piala Dunia Robot 2026 resmi digelar di Tokyo. Kecepatan dan presisi tendangan robot kini hampir menyamai pemain profesional manusia.", "img": "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?q=80&w=800" },
+  { "id": 27, "cat": "EDU", "title": "Belajar Lewat Download Memori", "body": "Universitas terkemuka mulai menggunakan stimulasi otak untuk mentransfer pengetahuan dasar ke mahasiswa. Belajar sejarah kini hanya butuh waktu 15 menit.", "img": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=800" },
+  { "id": 26, "cat": "WEATHER", "title": "Teknologi Kendali Hujan Nasional", "body": "Indonesia meresmikan satelit pengendali cuaca yang bisa menurunkan hujan di wilayah kebakaran hutan secara presisi, mencegah kabut asap tahunan secara total.", "img": "https://images.unsplash.com/photo-1449156059431-787c5b763b14?q=80&w=800" },
+  { "id": 25, "cat": "FASHION", "title": "Pakaian yang Bisa Berubah Warna", "body": "Desainer merilis jaket berbahan serat optik mikro yang bisa berubah warna dan pola sesuai dengan suasana hati pemakainya yang dideteksi melalui detak jantung.", "img": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800" },
+  { "id": 24, "cat": "BIO", "title": "Gajah Mamut Pertama Lahir Lagi", "body": "Proyek rekayasa genetika berhasil menghidupkan kembali gajah mamut yang telah punah. Bayi mamut pertama lahir di laboratorium khusus di Siberia pagi tadi.", "img": "https://images.unsplash.com/photo-1501436513145-30f24e19fbc8?q=80&w=800" },
+  { "id": 23, "cat": "FINTECH", "title": "Bank Fisik Terakhir Ditutup", "body": "Bank besar dunia secara resmi menutup kantor cabang fisik terakhir mereka. Semua layanan perbankan kini 100% dilakukan di Metaverse dan aplikasi mobile.", "img": "https://images.unsplash.com/photo-1592478411313-1151fba478f0?q=80&w=800" },
+  { "id": 22, "cat": "GAMING", "title": "Game VR 'Full-Dive' Dirilis", "body": "Teknologi game yang menghubungkan saraf langsung ke dunia virtual resmi dirilis. Pemain bisa merasakan sentuhan, bau, dan rasa di dalam dunia game secara nyata.", "img": "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=800" },
+  { "id": 21, "cat": "HEALTH", "title": "Detektor Stroke Lewat Jam Tangan", "body": "Jam tangan pintar terbaru kini bisa mendeteksi risiko stroke 48 jam sebelum terjadi, memberikan waktu bagi pasien untuk segera mencari pertolongan medis.", "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800" },
+  { "id": 20, "cat": "HISTORY", "title": "Kota Hilang Atlantis Ditemukan?", "body": "Satelit pemindai dasar laut menemukan struktur bangunan raksasa di kedalaman Samudra Atlantik yang memiliki pola serupa dengan deskripsi kota Atlantis kuno.", "img": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800" },
+  { "id": 19, "cat": "TECH", "title": "Baterai Garam: Solusi Energi Murah", "body": "Pabrik baterai sodium-ion terbesar mulai beroperasi. Baterai ini jauh lebih murah dan ramah lingkungan karena tidak menggunakan lithium yang langka.", "img": "https://images.unsplash.com/photo-1591123720164-de1348028a82?q=80&w=800" },
+  { "id": 18, "cat": "SPACE", "title": "Oksigen Pertama Dihasilkan di Mars", "body": "Mesin MOXIE generasi baru di Mars berhasil menghasilkan oksigen yang cukup untuk bernapas bagi satu kru manusia selama setahun penuh. Hidup di Mars kini mungkin.", "img": "https://images.unsplash.com/photo-1614313913007-6fefc970327f?q=80&w=800" },
+  { "id": 17, "cat": "AI", "title": "Dosen AI Mengajar di Kampus UI", "body": "Universitas Indonesia mulai menggunakan avatar AI sebagai dosen untuk mata kuliah dasar. AI ini mampu menjawab pertanyaan mahasiswa secara personal tanpa jeda.", "img": "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800" },
+  { "id": 16, "cat": "GREEN", "title": "Plastik Dari Jamur Siap Edar", "body": "Kemasan makanan kini mulai beralih menggunakan material berbasis jamur yang bisa hancur menjadi pupuk hanya dalam waktu 7 hari setelah dibuang ke tanah.", "img": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=800" },
+  { "id": 15, "cat": "GADGET", "title": "Headphone Tanpa Speaker", "body": "Teknologi audio baru mengirimkan suara langsung ke tulang telinga (bone conduction) tanpa perlu lubang telinga tertutup, menjaga pendengaran tetap aman.", "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800" },
+  { "id": 14, "cat": "ROBOT", "title": "Robot Pemadam Kebakaran di Gedung", "body": "Setiap gedung pencakar langit di Jakarta wajib memiliki robot pemadam yang bisa memanjat dinding luar untuk memadamkan api di lantai tinggi secara mandiri.", "img": "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?q=80&w=800" },
+  { "id": 13, "cat": "BIO", "title": "Lensa Kontak Zoom Digital", "body": "Lensa kontak baru memungkinkan pemakainya melakukan zoom 5x hanya dengan berkedip. Sangat membantu bagi ahli bedah dan peneliti laboratorium.", "img": "https://images.unsplash.com/photo-1617791160536-598cf32026fb?q=80&w=800" },
+  { "id": 12, "cat": "CRYPTO", "title": "Pajak Crypto Otomatis di Indonesia", "body": "Direktorat Jenderal Pajak meluncurkan sistem pemotongan pajak aset digital otomatis berbasis blockchain yang transparan dan memudahkan para trader.", "img": "https://images.unsplash.com/photo-1620325867502-221cfb5fc5f6?q=80&w=800" },
+  { "id": 11, "cat": "SPACE", "title": "Teleskop Terkuat Pantau Alien", "body": "Teleskop luar angkasa baru mendeteksi emisi cahaya yang tidak alami dari sebuah planet di sistem bintang Proxima Centauri, diduga kuat adalah lampu kota alien.", "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800" },
+  { "id": 10, "cat": "AUTO", "title": "Ban Tanpa Udara Mulai Dipasarkan", "body": "Bridgestone resmi menjual ban tanpa udara untuk mobil penumpang. Ban ini tidak akan pernah bocor dan bisa bertahan hingga mobil tersebut rongsok.", "img": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800" },
+  { "id": 9, "cat": "AI", "title": "Film Pertama Karya AI Masuk Oscar", "body": "Sebuah film pendek yang naskah, musik, dan visualnya dibuat 100% oleh AI berhasil masuk dalam nominasi Oscar 2026, memicu protes dari para sineas manusia.", "img": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800" },
+  { "id": 8, "cat": "FOOD", "title": "Kopi Tanpa Biji Kopi Pertama", "body": "Sebuah startup merilis kopi yang dibuat dari fermentasi akar tumbuhan. Rasanya lebih nikmat dari kopi asli dan tidak menyebabkan asam lambung.", "img": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800" },
+  { "id": 7, "cat": "MEDICINE", "title": "Operasi Jantung Lewat Robot Remote", "body": "Dokter di Amerika sukses mengoperasi pasien di Papua menggunakan lengan robot yang dikendalikan lewat jaringan satelit Starlink tanpa delay sedikitpun.", "img": "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800" },
+  { "id": 6, "cat": "ENERGY", "title": "Jendela Kaca Penghasil Listrik", "body": "Gedung di Jakarta mulai mengganti kaca jendela dengan panel surya transparan. Jendela ini bening tapi bisa menyerap energi matahari untuk listrik gedung.", "img": "https://images.unsplash.com/photo-1548613053-22002f5a60b9?q=80&w=800" },
+  { "id": 5, "cat": "SECURITY", "title": "Polisi Drone di IKN", "body": "IKN Nusantara kini diawasi oleh ribuan drone polisi pintar yang bisa mendeteksi kejahatan melalui analisis perilaku sebelum kejadian itu benar-benar terjadi.", "img": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=800" },
+  { "id": 4, "cat": "PHYSICS", "title": "Materi Gelap Berhasil Difoto", "body": "Ilmuwan fisika akhirnya berhasil menangkap citra pertama materi gelap (dark matter) yang selama ini hanya menjadi teori, membuka rahasia pembentukan alam semesta.", "img": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?q=80&w=800" },
+  { "id": 3, "cat": "TECH", "title": "Kabel Internet Bawah Tanah Tak Perlu Gali", "body": "Teknologi baru memungkinkan pemasangan kabel fiber optik melalui sistem pipa air yang sudah ada, mempercepat penyebaran internet murah ke pelosok desa.", "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800" },
+  { "id": 2, "cat": "GREEN", "title": "Aspal Penyerap Banjir di Jakarta", "body": "Pemprov DKI mulai melapisi jalanan dengan aspal porus yang bisa menyerap 1000 liter air per detik, menghilangkan genangan air secara instan saat hujan lebat.", "img": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800" },
+  { "id": 1, "cat": "GENERAL", "title": "Selamat Datang di Masa Depan 2026", "body": "Portal Neural Logic hadir untuk menemani Anda menjelajahi setiap inci kemajuan teknologi manusia di tahun yang luar biasa ini. Teruslah membaca dan bermimpi.", "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800" }
 ]

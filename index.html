@@ -7,10 +7,8 @@
     <link rel="manifest" href="manifest.json">
     
     <title>NEURAL LOGIC | Portal IPTEK 2026</title>
-    <meta name="description" content="NEURAL LOGIC: Portal berita IPTEK terdepan tahun 2026. Eksplorasi Neuroscience, Quantum Computing, dan Teknologi Luar Angkasa.">
-    <meta name="keywords" content="IPTEK, Teknologi 2026, Neuroscience, Quantum, Berita Sains, Neural Logic">
+    <meta name="description" content="NEURAL LOGIC: Portal berita IPTEK terdepan tahun 2026.">
     <meta property="og:title" content="NEURAL LOGIC | Masa Depan Teknologi">
-    <meta property="og:description" content="Baca 50+ artikel eksklusif mengenai perkembangan teknologi terbaru dunia.">
     <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/2103/2103633.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -37,23 +35,28 @@
 
         /* Progress Bar */
         .progress-container { position: fixed; top: 60px; left: 0; width: 100%; height: 3px; z-index: 1001; }
-        .progress-bar { height: 100%; background: var(--accent); width: 0%; box-shadow: 0 0 15px var(--accent); transition: 0.2s; }
+        .progress-bar { height: 100%; background: var(--accent); width: 0%; box-shadow: 0 0 15px var(--accent); }
 
-        /* Layout */
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px 5%; display: grid; grid-template-columns: 1fr; gap: 30px; }
-        @media (min-width: 900px) { .container { grid-template-columns: 2.5fr 1fr; } }
+        /* Layout Grid */
+        .container { 
+            max-width: 1200px; margin: 0 auto; padding: 20px 5%; 
+            display: grid; grid-template-columns: 1fr; gap: 30px; 
+        }
+        @media (min-width: 900px) { 
+            .container { grid-template-columns: 2.5fr 1fr; } 
+            aside { position: sticky; top: 80px; height: fit-content; } /* Sidebar tidak ikut tergulung */
+        }
 
         /* Article Cards */
         .post-card {
             background: var(--card-bg); border-radius: 16px; border: 1px solid #1f2937;
-            margin-bottom: 20px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;
+            margin-bottom: 20px; transition: 0.3s; cursor: pointer;
         }
-        .post-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .post-card:hover { border-color: var(--accent); transform: translateY(-3px); }
         .post-content { padding: 25px; }
-        .post-title { font-size: 1.3rem; margin: 10px 0; color: #fff; line-height: 1.4; }
+        .post-title { font-size: 1.3rem; margin: 10px 0; color: #fff; }
         .post-tag { color: var(--accent); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
 
-        /* Buttons */
         .btn-save { background: var(--accent); color: #000; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.75rem; }
 
         /* Sidebar Widgets */
@@ -65,14 +68,11 @@
         .toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
         .toast { background: #1a1a20; color: white; padding: 15px 20px; border-radius: 12px; border-left: 4px solid var(--accent); box-shadow: 0 10px 40px rgba(0,0,0,0.6); animation: slideIn 0.4s ease-out forwards; }
         @keyframes slideIn { from { transform: translateX(110%); } to { transform: translateX(0); } }
-        .fade-out { animation: fadeOut 0.5s forwards; }
-        @keyframes fadeOut { to { opacity: 0; transform: translateY(20px); } }
 
-        /* Modal Content */
+        /* Modal */
         .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; z-index: 2000; padding: 20px; backdrop-filter: blur(10px); }
         .modal-content { background: #121217; max-width: 800px; margin: 40px auto; padding: 40px; border-radius: 24px; border: 1px solid var(--accent); position: relative; max-height: 85vh; overflow-y: auto; }
         .close { position: absolute; top: 25px; right: 25px; color: #fff; font-size: 2rem; cursor: pointer; }
-        .comment-input { width: 100%; background: #08080a; border: 1px solid #334155; border-radius: 12px; color: white; padding: 12px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -86,20 +86,20 @@
 
     <div class="container">
         <main id="article-feed">
-            <p style="text-align: center; color: var(--accent);">Memuat data sinkronisasi...</p>
+            <p style="text-align: center; color: var(--accent);">Sinkronisasi Data...</p>
         </main>
 
         <aside>
             <div class="widget">
                 <h3>Bookmark</h3>
-                <div id="saved-list" style="color: var(--text-muted); font-size: 0.8rem;">Belum ada artikel.</div>
+                <div id="saved-list" style="color: var(--text-muted); font-size: 0.8rem;">Kosong.</div>
             </div>
             <div class="widget">
-                <h3>System Health</h3>
+                <h3>System Status</h3>
                 <div style="font-size: 0.8rem; font-family: monospace; color: #00ff00;">
-                    > Node Status: Active<br>
-                    > Database: 50 Records<br>
-                    > Version: 4.6.0-SEO
+                    > Database: 50 Articles<br>
+                    > Sticky Mode: Active<br>
+                    > Version: 4.7.0-OPT
                 </div>
             </div>
         </aside>
@@ -110,28 +110,24 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <span id="mTag" class="post-tag"></span>
             <h1 id="mTitle" style="color:var(--accent); margin: 15px 0; font-family: 'Space Grotesk';"></h1>
-            <div id="mBody" style="line-height: 1.8; color: #cbd5e1;"></div>
-            
-            <div style="margin-top: 30px; border-top: 1px solid #1f2937; padding-top: 20px;">
-                <h4 style="margin-bottom:15px;">Diskusi Lokal</h4>
-                <div id="comments-display"></div>
-                <input type="text" id="commentInput" class="comment-input" placeholder="Tambahkan pemikiran Anda...">
-                <button class="btn-save" style="margin-top: 10px;" onclick="addComment()">Kirim</button>
-            </div>
+            <div id="mBody" style="line-height: 1.8; color: #cbd5e1; font-size: 1.1rem;"></div>
         </div>
     </div>
 
     <div id="toast-container" class="toast-container"></div>
 
     <script>
-        // CMS System: Load from data.json
+        // Load Articles from data.json
         async function fetchArticles() {
             try {
                 const response = await fetch('data.json');
                 const articles = await response.json();
-                renderFeed(articles);
+                
+                // Urutkan: ID Terbesar (Terbaru) muncul paling atas
+                const sorted = [...articles].sort((a, b) => b.id - a.id);
+                renderFeed(sorted);
             } catch (err) {
-                document.getElementById('article-feed').innerHTML = "Gagal memuat data. Pastikan data.json tersedia.";
+                document.getElementById('article-feed').innerHTML = "Gagal memuat database IPTEK.";
             }
         }
 
@@ -153,26 +149,23 @@
             });
         }
 
-        // Notification System
+        // Notification & Bookmark Logic
         function showToast(msg) {
             const container = document.getElementById('toast-container');
             const toast = document.createElement('div');
             toast.className = 'toast';
             toast.innerHTML = `🔔 &nbsp; ${msg}`;
             container.appendChild(toast);
-            setTimeout(() => { toast.classList.add('fade-out'); setTimeout(() => toast.remove(), 500); }, 4000);
+            setTimeout(() => { toast.remove(); }, 4000);
         }
 
-        // Bookmark System
         function saveArticle(id, title) {
             let saved = JSON.parse(localStorage.getItem('saved_nl')) || [];
             if(!saved.find(x => x.id === id)) {
                 saved.push({id, title});
                 localStorage.setItem('saved_nl', JSON.stringify(saved));
                 renderSaved();
-                showToast("Berhasil disimpan!");
-            } else {
-                showToast("Sudah ada di daftar.");
+                showToast("Artikel tersimpan.");
             }
         }
 
@@ -182,7 +175,7 @@
             if(saved.length === 0) return;
             list.innerHTML = saved.map(item => `
                 <div class="saved-item">
-                    <span>${item.title.substring(0, 20)}...</span>
+                    <span>${item.title.substring(0, 15)}...</span>
                     <span style="color:#ff4444; cursor:pointer;" onclick="removeSaved('${item.id}')">✕</span>
                 </div>
             `).join("");
@@ -192,19 +185,16 @@
             let saved = JSON.parse(localStorage.getItem('saved_nl')) || [];
             localStorage.setItem('saved_nl', JSON.stringify(saved.filter(i => i.id !== id)));
             renderSaved();
-            showToast("Bookmark dihapus.");
+            showToast("Dihapus.");
         }
 
         // Modal Logic
-        let currentId = null;
         function openModal(art) {
-            currentId = art.id;
             document.getElementById('mTag').innerText = art.cat;
             document.getElementById('mTitle').innerText = art.title;
             document.getElementById('mBody').innerText = art.body;
             document.getElementById('articleModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
-            loadComments();
         }
 
         function closeModal() {
@@ -212,25 +202,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Comment System
-        function addComment() {
-            const input = document.getElementById('commentInput');
-            if(!input.value) return;
-            let cms = JSON.parse(localStorage.getItem('cms_' + currentId)) || [];
-            cms.push(input.value);
-            localStorage.setItem('cms_' + currentId, JSON.stringify(cms));
-            input.value = "";
-            loadComments();
-            showToast("Komentar ditambahkan.");
-        }
-
-        function loadComments() {
-            const box = document.getElementById('comments-display');
-            let cms = JSON.parse(localStorage.getItem('cms_' + currentId)) || [];
-            box.innerHTML = cms.map(c => `<div style="background:#08080a; padding:12px; border-radius:10px; margin-bottom:10px; border-left:3px solid var(--accent); font-size:0.85rem;">${c}</div>`).join("");
-        }
-
-        // Global Listeners
+        // Scrolling & Connectivity
         window.onscroll = () => {
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -240,10 +212,9 @@
         window.addEventListener('offline', () => document.getElementById('offline-tag').style.display = 'inline');
         window.addEventListener('online', () => document.getElementById('offline-tag').style.display = 'none');
 
-        // Init
+        // Start
         fetchArticles();
         renderSaved();
-        setTimeout(() => showToast("Sistem Terenkripsi. Selamat Datang."), 1000);
     </script>
 </body>
 </html>

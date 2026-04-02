@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Hyper-Portal v12.0</title>
+    <title>NEURAL LOGIC | Hyper-Portal v14.0</title>
     
     <meta name="theme-color" content="#00ff88">
     <link rel="manifest" href="manifest.json">
-    
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -20,7 +19,6 @@
             --border: rgba(255, 255, 255, 0.05);
         }
 
-        /* Light Mode Variables */
         .light-mode {
             --bg: #f8fafc;
             --card: #ffffff;
@@ -30,15 +28,13 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding-bottom: 40px; }
 
-        /* --- PROGRESS BAR --- */
         #read-progress {
             position: fixed; top: 0; left: 0; height: 4px; background: var(--accent);
             width: 0%; z-index: 2001; box-shadow: 0 0 10px var(--accent);
         }
 
-        /* --- NAV & LOGO --- */
         nav {
             padding: 15px 6%; background: var(--card); backdrop-filter: blur(15px);
             position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;
@@ -49,42 +45,48 @@
             width: 38px; height: 38px; background: #000; border: 2px solid var(--accent);
             border-radius: 10px; display: grid; place-items: center;
             font-family: 'Space Grotesk'; font-weight: 700; color: var(--accent);
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
         }
         .logo-text { font-family: 'Space Grotesk'; font-size: 1.3rem; color: var(--text); }
 
         .nav-tools { display: flex; gap: 15px; align-items: center; }
         .tool-btn { background: none; border: 1px solid var(--border); color: var(--text); padding: 8px; border-radius: 8px; cursor: pointer; font-size: 1.2rem; }
 
-        /* --- GRID & CARDS --- */
         .container { max-width: 1200px; margin: 30px auto; padding: 0 6%; }
         #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
 
-        .card {
-            background: var(--card); border-radius: 20px; overflow: hidden;
-            border: 1px solid var(--border); position: relative;
-        }
+        .card { background: var(--card); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); cursor: pointer; }
         .card:hover { border-color: var(--accent); transform: translateY(-5px); }
         .card-img { width: 100%; height: 180px; object-fit: cover; }
         .card-body { padding: 20px; }
-        .card-meta { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--accent); font-weight: 700; text-transform: uppercase; }
+        .card-meta { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--accent); font-weight: 700; }
         .card-title { font-family: 'Space Grotesk'; font-size: 1.1rem; margin: 10px 0; color: var(--text); }
+
+        /* --- NEWS TICKER --- */
+        #ticker-wrap {
+            position: fixed; bottom: 0; width: 100%; background: var(--accent);
+            color: #000; overflow: hidden; white-space: nowrap; padding: 8px 0;
+            font-size: 0.85rem; font-weight: 800; z-index: 1000; border-top: 2px solid #000;
+        }
+        .ticker-content { display: inline-block; animation: scroll-ticker 40s linear infinite; }
+        @keyframes scroll-ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
         /* --- MODAL --- */
         .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; z-index: 2000; padding: 20px; overflow-y: auto; }
         .m-content { background: var(--card); max-width: 800px; margin: 20px auto; border-radius: 25px; padding: 30px; position: relative; border: 1px solid var(--border); }
         .m-img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
         
-        .action-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .action-bar { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
         .btn { padding: 10px 18px; border-radius: 10px; border: none; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 8px; }
         .btn-p { background: var(--accent); color: #000; }
-        .btn-s { background: #1da1f2; color: #fff; } /* Twitter Color */
-        .btn-wa { background: #25d366; color: #fff; } /* WA Color */
+        .btn-wa { background: #25d366; color: #fff; }
         .btn-save { background: #f59e0b; color: #fff; }
 
-        .close { position: absolute; top: 20px; right: 25px; font-size: 2rem; color: var(--text); cursor: pointer; }
+        .ai-summary {
+            background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--accent);
+            padding: 15px; border-radius: 0 10px 10px 0; margin-bottom: 20px; font-style: italic;
+        }
 
-        @media (max-width: 600px) { .logo-text { display: none; } }
+        .close { position: absolute; top: 20px; right: 25px; font-size: 2rem; color: var(--text); cursor: pointer; }
     </style>
 </head>
 <body>
@@ -97,14 +99,18 @@
             <div class="logo-text">NEURAL LOGIC</div>
         </a>
         <div class="nav-tools">
-            <button class="tool-btn" onclick="toggleTheme()" title="Ganti Tema">🌓</button>
-            <button class="tool-btn" onclick="showSaved()" title="Artikel Tersimpan">🔖</button>
+            <button class="tool-btn" onclick="toggleTheme()">🌓</button>
+            <button class="tool-btn" onclick="showSaved()">🔖</button>
         </div>
     </nav>
 
     <div class="container">
-        <h2 id="view-title" style="margin-bottom: 20px; font-family: 'Space Grotesk';">Berita Terbaru</h2>
+        <h2 id="view-title" style="margin-bottom: 20px; font-family: 'Space Grotesk';">April 2026: Berita Terkini</h2>
         <div id="feed"></div>
+    </div>
+
+    <div id="ticker-wrap">
+        <div class="ticker-content" id="ticker">Memuat berita terbaru...</div>
     </div>
 
     <div id="modal" class="modal" onclick="closeModal()">
@@ -115,11 +121,15 @@
             <div class="action-bar">
                 <button class="btn btn-p" onclick="speak()">🔊 Baca</button>
                 <button class="btn btn-save" onclick="saveArticle()">🔖 Simpan</button>
-                <button class="btn btn-wa" onclick="shareWA()">WA</button>
-                <button class="btn btn-s" onclick="shareTwitter()">X</button>
+                <button class="btn btn-wa" onclick="shareWA()">Share WA</button>
             </div>
 
-            <div id="m-readtime" style="font-size: 0.8rem; color: var(--muted); margin-bottom: 10px;"></div>
+            <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--muted);">
+                <span>Kecepatan Suara:</span>
+                <input type="range" min="0.5" max="2" step="0.2" value="1" id="voiceRate" onchange="speechRate = this.value">
+            </div>
+
+            <div id="m-ai" class="ai-summary"></div>
             <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 20px;"></h1>
             <div id="m-body" style="line-height: 1.8; font-size: 1.1rem; color: var(--text);"></div>
         </div>
@@ -129,53 +139,51 @@
         let allArticles = [];
         let savedArticles = JSON.parse(localStorage.getItem('nn_saved')) || [];
         let currentArt = null;
+        let speechRate = 1.0;
 
-        // --- 1. DARK/LIGHT MODE ---
-        function toggleTheme() {
-            document.body.classList.toggle('light-mode');
-            const isLight = document.body.classList.contains('light-mode');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        }
-        if(localStorage.getItem('theme') === 'light') document.body.classList.add('light-mode');
-
-        // --- 2. LOAD DATA ---
         async function init() {
             const res = await fetch('data.json');
             allArticles = await res.json();
-            renderFeed(allArticles.sort((a,b) => b.id - a.id));
+            const sorted = allArticles.sort((a,b) => b.id - a.id);
+            renderFeed(sorted);
+            initTicker(sorted);
         }
 
         function renderFeed(data) {
             const feed = document.getElementById('feed');
-            feed.innerHTML = data.map(a => {
-                const readTime = Math.ceil(a.body.split(' ').length / 200); // Estimasi 200 kata per menit
-                return `
+            feed.innerHTML = data.map(a => `
                 <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
                     <img src="${a.img}" class="card-img">
                     <div class="card-body">
-                        <div class="card-meta">
-                            <span>${a.cat}</span>
-                            <span>⏱ ${readTime} Menit</span>
-                        </div>
+                        <div class="card-meta"><span>${a.cat}</span><span>⏱ ${Math.ceil(a.body.split(' ').length/200)} Menit</span></div>
                         <h2 class="card-title">${a.title}</h2>
                     </div>
                 </div>
-            `}).join('');
+            `).join('');
         }
 
-        // --- 3. MODAL & READING PROGRESS ---
+        function initTicker(data) {
+            document.getElementById('ticker').innerHTML = data.map(a => ` • ${a.title} `).join(' — ');
+        }
+
         function openModal(a) {
             currentArt = a;
             document.getElementById('m-img').src = a.img;
             document.getElementById('m-title').innerText = a.title;
             document.getElementById('m-body').innerText = a.body;
             
-            const readTime = Math.ceil(a.body.split(' ').length / 200);
-            document.getElementById('m-readtime').innerText = `Estimasi waktu baca: ${readTime} menit`;
+            // AI Summary: Mengambil 2 kalimat pertama secara otomatis
+            const summary = a.body.split('. ').slice(0, 2).join('. ') + "...";
+            document.getElementById('m-ai').innerHTML = `<strong>✨ Ringkasan AI:</strong> ${summary}`;
 
             document.getElementById('modal').style.display = 'block';
             document.body.style.overflow = 'hidden';
-            window.addEventListener('scroll', updateProgress);
+            
+            const mContent = document.querySelector('.m-content');
+            document.getElementById('modal').onscroll = () => {
+                const scrolled = (document.getElementById('modal').scrollTop / (mContent.scrollHeight - window.innerHeight)) * 100;
+                document.getElementById('read-progress').style.width = scrolled + "%";
+            };
         }
 
         function closeModal() {
@@ -185,54 +193,43 @@
             document.getElementById('read-progress').style.width = '0%';
         }
 
-        function updateProgress() {
-            const winScroll = document.querySelector('.m-content').scrollTop || document.documentElement.scrollTop;
-            const height = document.querySelector('.m-content').scrollHeight - document.querySelector('.m-content').clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('read-progress').style.width = scrolled + "%";
-        }
-
-        // --- 4. AUDIO READER ---
         function speak() {
             window.speechSynthesis.cancel();
             const utter = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
             utter.lang = 'id-ID';
+            utter.rate = speechRate;
             window.speechSynthesis.speak(utter);
         }
 
-        // --- 5. BOOKMARKS ---
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        }
+
         function saveArticle() {
             if(!savedArticles.some(a => a.id === currentArt.id)) {
                 savedArticles.push(currentArt);
                 localStorage.setItem('nn_saved', JSON.stringify(savedArticles));
-                alert("Artikel disimpan ke Bookmark!");
-            } else {
-                alert("Artikel sudah ada di Bookmark.");
+                alert("Berhasil disimpan!");
             }
         }
 
         function showSaved() {
             const title = document.getElementById('view-title');
-            if(title.innerText === "Berita Terbaru") {
+            if(title.innerText.includes("April")) {
                 renderFeed(savedArticles);
                 title.innerText = "Bookmark Saya";
             } else {
                 renderFeed(allArticles);
-                title.innerText = "Berita Terbaru";
+                title.innerText = "April 2026: Berita Terkini";
             }
         }
 
-        // --- 6. SOCIAL SHARE ---
         function shareWA() {
-            const url = window.location.href;
-            window.open(`https://api.whatsapp.com/send?text=${currentArt.title} - Baca selengkapnya: ${url}`);
+            window.open(`https://api.whatsapp.com/send?text=${currentArt.title} - Baca di: ${window.location.href}`);
         }
 
-        function shareTwitter() {
-            const url = window.location.href;
-            window.open(`https://twitter.com/intent/tweet?text=${currentArt.title}&url=${url}`);
-        }
-
+        if(localStorage.getItem('theme') === 'light') document.body.classList.add('light-mode');
         init();
     </script>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Hyper-Portal v14.0</title>
+    <title>NEURAL LOGIC | Hyper-Portal v15.0</title>
     
     <meta name="theme-color" content="#00ff88">
     <link rel="manifest" href="manifest.json">
@@ -28,7 +28,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding-bottom: 40px; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding-bottom: 50px; }
 
         #read-progress {
             position: fixed; top: 0; left: 0; height: 4px; background: var(--accent);
@@ -75,11 +75,16 @@
         .m-content { background: var(--card); max-width: 800px; margin: 20px auto; border-radius: 25px; padding: 30px; position: relative; border: 1px solid var(--border); }
         .m-img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
         
-        .action-bar { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
-        .btn { padding: 10px 18px; border-radius: 10px; border: none; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+        .action-bar { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+        .btn { padding: 10px 15px; border-radius: 10px; border: none; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 6px; font-size: 0.85rem; }
         .btn-p { background: var(--accent); color: #000; }
-        .btn-wa { background: #25d366; color: #fff; }
         .btn-save { background: #f59e0b; color: #fff; }
+        
+        /* Share Colors */
+        .btn-wa { background: #25d366; color: #fff; }
+        .btn-fb { background: #1877f2; color: #fff; }
+        .btn-x { background: #000; color: #fff; border: 1px solid #333; }
+        .btn-tg { background: #0088cc; color: #fff; }
 
         .ai-summary {
             background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--accent);
@@ -121,7 +126,10 @@
             <div class="action-bar">
                 <button class="btn btn-p" onclick="speak()">🔊 Baca</button>
                 <button class="btn btn-save" onclick="saveArticle()">🔖 Simpan</button>
-                <button class="btn btn-wa" onclick="shareWA()">Share WA</button>
+                <button class="btn btn-wa" onclick="share('wa')">WhatsApp</button>
+                <button class="btn btn-fb" onclick="share('fb')">FB</button>
+                <button class="btn btn-x" onclick="share('x')">X</button>
+                <button class="btn btn-tg" onclick="share('tg')">Telegram</button>
             </div>
 
             <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--muted);">
@@ -172,7 +180,6 @@
             document.getElementById('m-title').innerText = a.title;
             document.getElementById('m-body').innerText = a.body;
             
-            // AI Summary: Mengambil 2 kalimat pertama secara otomatis
             const summary = a.body.split('. ').slice(0, 2).join('. ') + "...";
             document.getElementById('m-ai').innerHTML = `<strong>✨ Ringkasan AI:</strong> ${summary}`;
 
@@ -201,6 +208,20 @@
             window.speechSynthesis.speak(utter);
         }
 
+        function share(platform) {
+            const url = window.location.href;
+            const text = encodeURIComponent(`${currentArt.title} - Baca selengkapnya di Neural Logic: `);
+            
+            const links = {
+                wa: `https://api.whatsapp.com/send?text=${text}${url}`,
+                fb: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+                x: `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
+                tg: `https://t.me/share/url?url=${url}&text=${text}`
+            };
+            
+            window.open(links[platform], '_blank');
+        }
+
         function toggleTheme() {
             document.body.classList.toggle('light-mode');
             localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
@@ -223,10 +244,6 @@
                 renderFeed(allArticles);
                 title.innerText = "April 2026: Berita Terkini";
             }
-        }
-
-        function shareWA() {
-            window.open(`https://api.whatsapp.com/send?text=${currentArt.title} - Baca di: ${window.location.href}`);
         }
 
         if(localStorage.getItem('theme') === 'light') document.body.classList.add('light-mode');

@@ -1,52 +1,79 @@
 [
-  { "id": 50, "cat": "Neuroscience", "title": "Neuralink 3: Transmisi Pikiran Jarak Jauh", "body": "Uji coba sukses menunjukkan manusia dapat bertukar pesan teks hanya melalui gelombang otak sejauh 50km.", "img": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=600" },
-  { "id": 49, "cat": "Quantum", "title": "Komputer Kuantum Saku Pertama Dirilis", "body": "IBM memperkenalkan prototipe kuantum portabel yang mampu memecahkan enkripsi standar dalam 2 detik.", "img": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600" },
-  { "id": 48, "cat": "Astro-Tech", "title": "Oksigen Abadi di Mars Berhasil Diciptakan", "body": "Modul MOXIE-2 berhasil memproduksi oksigen konstan dari atmosfer Mars untuk kebutuhan 100 koloni.", "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=600" },
-  { "id": 47, "cat": "AI", "title": "AI 'Omega' Lulus Ujian Turing Sempurna", "body": "Sistem AI terbaru mampu meniru emosi dan empati manusia hingga tidak bisa dibedakan oleh psikolog.", "img": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600" },
-  { "id": 46, "cat": "Bio-Tech", "title": "Cetak Jantung 3D dari Sel Punca", "body": "Rumah sakit di Zurich berhasil melakukan transplantasi jantung hasil cetak 3D pertama di dunia.", "img": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=600" },
-  { "id": 45, "cat": "Cyber", "title": "Kiamat Password: Biometrik Otak Menjadi Standar", "body": "Apple dan Google sepakat menghapus password dan menggantinya dengan pemindaian pola pikir unik.", "img": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=600" },
-  { "id": 44, "cat": "Robotics", "title": "Robot Humanoid Mulai Masuk ke Rumah Tangga", "body": "Tesla Bot Gen-3 resmi dijual masal untuk membantu pekerjaan dapur dan pembersihan rumah.", "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=600" },
-  { "id": 43, "cat": "Energy", "title": "Baterai Garam Laut Tahan 50 Tahun", "body": "Penemuan baterai berbasis sodium-ion terbaru diklaim tidak akan aus meskipun diisi ulang setiap hari.", "img": "https://images.unsplash.com/photo-1548613053-22002f5a60b9?q=80&w=600" },
-  { "id": 42, "cat": "Space", "title": "Hotel Luar Angkasa 'Voyager' Dibuka", "body": "Turis pertama resmi menginap di orbit rendah bumi dengan fasilitas gravitasi buatan.", "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=600" },
-  { "id": 41, "cat": "Green-Tech", "title": "Hutan Vertikal Otomatis di Jakarta", "body": "Gedung-gedung di Jakarta Pusat mulai menerapkan teknologi penyerap polusi berbasis lumut AI.", "img": "https://images.unsplash.com/photo-1449156059431-787c5b763b14?q=80&w=600" },
-  { "id": 40, "cat": "6G", "title": "Uji Coba 6G: Download 1TB dalam 1 Detik", "body": "Korea Selatan sukses menguji jaringan 6G yang 100x lebih cepat daripada teknologi 5G saat ini.", "img": "https://images.unsplash.com/photo-1520004434532-668416d137f9?q=80&w=600" },
-  { "id": 39, "cat": "Computing", "title": "RAM Berbasis DNA Sintetis", "body": "Penyimpanan data kini bisa bertahan hingga 10.000 tahun menggunakan molekul DNA buatan.", "img": "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=600" },
-  { "id": 38, "cat": "Transport", "title": "Taksi Terbang Elektrik di Bali", "body": "Pemerintah meresmikan rute komersial taksi terbang pertama untuk menghubungkan bandara ke hotel.", "img": "https://images.unsplash.com/photo-1601053163351-b0e6988812c3?q=80&w=600" },
-  { "id": 37, "cat": "Medicine", "title": "Nanobot Pembersih Kanker darah", "body": "Robot seukuran atom kini bisa menyuntikkan obat langsung ke sel kanker tanpa merusak sel sehat.", "img": "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=600" },
-  { "id": 36, "cat": "AI", "title": "Film Pertama yang Disutradarai Sepenuhnya oleh AI", "body": "Visual, naskah, dan akting semua dihasilkan oleh algoritma generatif tanpa campur tangan manusia.", "img": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=600" },
-  { "id": 35, "cat": "Physics", "title": "Partikel Baru 'God Particle 2' Ditemukan", "body": "CERN mendeteksi adanya partikel yang bisa menjelaskan materi gelap (dark matter) di alam semesta.", "img": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?q=80&w=600" },
-  { "id": 34, "cat": "Cyber", "title": "Peretasan Kuantum Pertama Terdeteksi", "body": "Sistem perbankan di Swiss melaporkan serangan siber berbasis daya komputasi kuantum.", "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600" },
-  { "id": 33, "cat": "Agro-Tech", "title": "Padi Tanpa Air di Gurun Sahara", "body": "Rekayasa genetika memungkinkan tanaman padi tumbuh subur hanya dengan kelembapan udara.", "img": "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=600" },
-  { "id": 32, "cat": "Neuroscience", "title": "Kacamata Pintar untuk Tunanetra", "body": "Sensor mengirimkan getaran langsung ke saraf optik, memungkinkan mata 'melihat' siluet benda.", "img": "https://images.unsplash.com/photo-1517055727180-d16802f83e8a?q=80&w=600" },
-  { "id": 31, "cat": "Climate", "title": "Penyedot Karbon Raksasa di Islandia", "body": "Fasilitas baru mampu menghisap 1 juta ton CO2 per tahun langsung dari atmosfer bumi.", "img": "https://images.unsplash.com/photo-1534294668821-28a3054f4256?q=80&w=600" },
-  { "id": 30, "cat": "Gadget", "title": "HP Transparan dengan Layar Hologram", "body": "Samsung memamerkan ponsel yang benar-benar bening dengan proyeksi layar 3D di atasnya.", "img": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=600" },
-  { "id": 29, "cat": "Bio-Tech", "title": "Daging Lab Halal Pertama Diproduksi Massal", "body": "Alternatif daging sapi tanpa penyembelihan mulai tersedia di supermarket besar di Indonesia.", "img": "https://images.unsplash.com/photo-1532187863486-abf51ad9f69f?q=80&w=600" },
-  { "id": 28, "cat": "Space", "title": "Asteroid Psyche: Penambangan Emas Dimulai", "body": "NASA dan SpaceX mengirim robot penambang untuk mengambil sampel logam mulia senilai triliunan dolar.", "img": "https://images.unsplash.com/photo-1614313913007-6fefc970327f?q=80&w=600" },
-  { "id": 27, "cat": "Robotics", "title": "Robot Pemadam Kebakaran AI di Kalimantan", "body": "Unit robotik otonom mampu memadamkan titik api di hutan tanpa membahayakan nyawa manusia.", "img": "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?q=80&w=600" },
-  { "id": 26, "cat": "Quantum", "title": "Teleportasi Data Instan Antar Benua", "body": "Informasi berhasil dikirim melalui kuantum entanglement tanpa ada jeda waktu (lag).", "img": "https://images.unsplash.com/photo-1509023467864-159343b51488?q=80&w=600" },
-  { "id": 25, "cat": "Energy", "title": "Reaktor Fusi Nuklir Rumahan Pertama", "body": "Sumber energi bersih yang meniru matahari kini bisa menghidupi satu komplek perumahan.", "img": "https://images.unsplash.com/photo-1517420790103-3b10b0648450?q=80&w=600" },
-  { "id": 24, "cat": "Urban", "title": "Aspal Pintar Pengisi Daya Mobil Listrik", "body": "Mobil cukup berjalan di atas jalan tol untuk mengisi daya baterai secara nirkabel.", "img": "https://images.unsplash.com/photo-1591123720164-de1348028a82?q=80&w=600" },
-  { "id": 23, "cat": "Neuro", "title": "Belajar Bahasa Baru Saat Tidur", "body": "Stimulasi saraf saat fase tidur REM terbukti meningkatkan kemampuan kosa kata hingga 40%.", "img": "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=600" },
-  { "id": 22, "cat": "Architecture", "title": "Gedung Pencakar Langit dari Kayu CLT", "body": "Teknologi kayu lapis terbaru memungkinkan gedung 50 lantai dibangun lebih ramah lingkungan.", "img": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=600" },
-  { "id": 21, "cat": "Cyber", "title": "Cryptocurrency Berbasis Gelombang Otak", "body": "Penambangan koin digital kini dilakukan dengan aktivitas fokus mental pengguna.", "img": "https://images.unsplash.com/photo-1620325867502-221cfb5fc5f6?q=80&w=600" },
-  { "id": 20, "cat": "AI", "title": "Penerjemah Bahasa Hewan AI", "body": "Algoritma sukses menerjemahkan pola suara lumba-lumba ke dalam bahasa Inggris sederhana.", "img": "https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=600" },
-  { "id": 19, "cat": "Medicine", "title": "Gigi Tumbuh Kembali Permanen", "body": "Uji klinis obat penumbuh tunas gigi baru memberikan harapan bagi pengguna gigi palsu.", "img": "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?q=80&w=600" },
-  { "id": 18, "cat": "Green-Tech", "title": "Sepatu Jamur yang Bisa Terurai", "body": "Brand fashion besar mulai menggunakan material miselium yang hancur menjadi pupuk saat dibuang.", "img": "https://images.unsplash.com/photo-1518002171953-a080ee81be44?q=80&w=600" },
-  { "id": 17, "cat": "Space", "title": "Air Ditemukan di Bulan dalam Jumlah Masal", "body": "Penelitian terbaru di kutub selatan bulan menunjukkan cadangan air es yang melimpah.", "img": "https://images.unsplash.com/photo-1614314169000-4cf229a15333?q=80&w=600" },
-  { "id": 16, "cat": "Weather", "title": "Sistem Pengendali Hujan Laser", "body": "Akurasi pemicu hujan kini bisa ditentukan hingga radius 1km menggunakan tembakan laser.", "img": "https://images.unsplash.com/photo-1492011221367-f47e3ccd77a0?q=80&w=600" },
-  { "id": 15, "cat": "Computing", "title": "Hardisk Kristal Berkapasitas 500TB", "body": "Penyimpanan berbasis struktur optik kristal diluncurkan untuk pusat data raksasa.", "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600" },
-  { "id": 14, "cat": "Bio-Tech", "title": "Lensa Kontak Night Vision", "body": "Lensa tipis yang memungkinkan manusia melihat di kegelapan total tanpa alat berat.", "img": "https://images.unsplash.com/photo-1617791160536-598cf32026fb?q=80&w=600" },
-  { "id": 13, "cat": "AI", "title": "Hak Cipta Karya AI Resmi Disahkan", "body": "Pemerintah menetapkan aturan pembagian royalti antara pencipta algoritma dan pengguna AI.", "img": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=600" },
-  { "id": 12, "cat": "Fashion", "title": "Baju Pintar Berubah Warna Sesuai Mood", "body": "Serat kain elektronik menyesuaikan suhu tubuh dan emosi pemakainya secara otomatis.", "img": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=600" },
-  { "id": 11, "cat": "Energy", "title": "Panel Surya Transparan untuk Jendela", "body": "Setiap kaca di gedung pencakar langit kini bisa menjadi sumber energi listrik mandiri.", "img": "https://images.unsplash.com/photo-1519704259837-1237a3473188?q=80&w=600" },
-  { "id": 10, "cat": "Robotics", "title": "Drone Pengantar Darah di Pelosok Papua", "body": "Sistem logistik otonom mempercepat penanganan medis di daerah yang sulit dijangkau.", "img": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=600" },
-  { "id": 9, "cat": "Archaeology", "title": "Scan LiDAR Temukan Kota Kuno Bawah Amazon", "body": "Teknologi laser mendeteksi ribuan struktur bangunan yang tertutup hutan selama ribuan tahun.", "img": "https://images.unsplash.com/photo-1501436513145-30f24e19fbc8?q=80&w=600" },
-  { "id": 8, "cat": "Astro-Tech", "title": "Teleskop Webb Temukan Atmosfer di Proxima B", "body": "Analisis kimiawi menunjukkan adanya tanda-tanda oksigen di planet luar tata surya kita.", "img": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=600" },
-  { "id": 7, "cat": "Materials", "title": "Graphene Murah Mulai Diproduksi Massal", "body": "Material terkuat di bumi ini kini bisa digunakan untuk memperkuat beton dan aspal jalan.", "img": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600" },
-  { "id": 6, "cat": "Psychology", "title": "Terapi VR Trauma Perang yang Sangat Efektif", "body": "Simulasi lingkungan aman berbasis VR membantu veteran mengatasi PTSD dengan lebih cepat.", "img": "https://images.unsplash.com/photo-1592478411313-1151fba478f0?q=80&w=600" },
-  { "id": 5, "cat": "Automotive", "title": "Ban Mobil Tanpa Udara dari Michelin", "body": "Struktur resin unik membuat ban tidak pernah bocor dan tahan digunakan selamanya.", "img": "https://images.unsplash.com/photo-1591123720164-de1348028a82?q=80&w=600" },
-  { "id": 4, "cat": "Education", "title": "Guru Hologram 3D Interaktif di Sekolah", "body": "Belajar sejarah kini didampingi langsung oleh proyeksi visual tokoh-tokoh masa lalu.", "img": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=600" },
-  { "id": 3, "cat": "Bio-Hacking", "title": "Chip Monitor Nutrisi Darah Implan", "body": "Sensor di bawah kulit memberi notifikasi ke HP jika tubuh kekurangan vitamin atau mineral.", "img": "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600" },
-  { "id": 2, "cat": "Urban", "title": "Lampu Jalan Bertenaga Bakteri Bioluminesensi", "body": "Teknologi pencahayaan kota tanpa listrik menggunakan mikroba yang bersinar alami.", "img": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600" },
-  { "id": 1, "cat": "Medicine", "title": "Vaksin Kanker Universal Fase 3 Berhasil", "body": "Harapan baru bagi penderita tumor padat untuk mendapatkan kesembuhan total.", "img": "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600" }
+  {
+    "id": 50,
+    "cat": "Neuroscience",
+    "title": "Neuralink Gen-3: Era Komunikasi Tanpa Suara",
+    "body": "Elon Musk mengumumkan keberhasilan uji coba Neuralink generasi ketiga yang memungkinkan manusia mengirim pesan teks ke perangkat digital hanya melalui fokus pikiran. Teknologi ini menggunakan benang elektroda super tipis yang ditanamkan oleh robot bedah presisi tinggi. Selain untuk komunikasi, chip ini diklaim mampu memulihkan fungsi motorik pada pasien kelumpuhan total dengan akurasi gerakan hingga 95%.",
+    "img": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=600"
+  },
+  {
+    "id": 49,
+    "cat": "Quantum Computing",
+    "title": "Komputer Kuantum Saku Pertama Dirilis",
+    "body": "IBM secara mengejutkan merilis 'Q-Pocket', prototipe komputer kuantum portabel pertama di dunia. Meskipun ukurannya sebesar tablet, perangkat ini memiliki daya komputasi yang mampu memecahkan enkripsi RSA tradisional dalam hitungan detik. Ilmuwan memprediksi bahwa dalam 5 tahun ke depan, teknologi ini akan menggantikan chip silikon standar di semua perangkat mobile untuk keamanan data tingkat tinggi.",
+    "img": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600"
+  },
+  {
+    "id": 48,
+    "cat": "Astro-Tech",
+    "title": "Produksi Oksigen di Mars Capai Rekor Baru",
+    "body": "Eksperimen MOXIE milik NASA yang berada di rover Perseverance berhasil memproduksi oksigen konstan dari atmosfer Mars yang kaya karbon dioksida. Hasil terbaru menunjukkan produksi sebesar 12 gram oksigen per jam, setara dengan kebutuhan pernapasan satu pohon kecil. Ini adalah langkah krusial sebelum misi berawak pertama mendarat di Planet Merah pada akhir dekade ini.",
+    "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=600"
+  },
+  {
+    "id": 47,
+    "cat": "Artificial Intelligence",
+    "title": "AI Omega-5 Lulus Ujian Psikologi Manusia",
+    "body": "Model bahasa besar terbaru, Omega-5, telah lulus uji Turing yang dimodifikasi oleh para psikolog top dunia. Berbeda dengan AI sebelumnya, Omega-5 menunjukkan pemahaman nuansa emosional dan intuisi yang setara dengan manusia usia 25 tahun. Hal ini memicu perdebatan global mengenai etika penggunaan AI sebagai pendamping kesehatan mental dan konselor pribadi.",
+    "img": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600"
+  },
+  {
+    "id": 46,
+    "cat": "Bio-Technology",
+    "title": "Transplantasi Jantung Cetak 3D Sukses",
+    "body": "Seorang pasien di Singapura menjadi orang pertama yang menerima jantung sintetis yang dicetak 3D sepenuhnya dari sel punca miliknya sendiri. Keuntungan utama dari metode ini adalah hilangnya risiko penolakan organ oleh sistem imun tubuh. Teknologi bio-printing ini diperkirakan akan menghapus daftar tunggu donor organ dunia dalam waktu kurang dari sepuluh tahun.",
+    "img": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=600"
+  },
+  {
+    "id": 45,
+    "cat": "Cyber Security",
+    "title": "Login Biometrik Otak Gantikan Sidik Jari",
+    "body": "Konsorsium teknologi global secara resmi memperkenalkan standar keamanan 'Mind-Key'. Pengguna tidak lagi memerlukan password atau sidik jari; cukup dengan mengenakan sensor ringan di telinga, sistem akan mengenali pola gelombang otak unik pengguna saat memikirkan objek tertentu. Pola ini hampir mustahil dipalsukan bahkan oleh AI tercanggih sekalipun.",
+    "img": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=600"
+  },
+  {
+    "id": 44,
+    "cat": "Robotics",
+    "title": "Tesla Bot Gen-3 Mulai Bekerja di Pabrik",
+    "body": "Robot humanoid Optimus terbaru dari Tesla telah resmi diintegrasikan ke dalam lini produksi mobil. Dengan kemampuan keseimbangan dinamis dan visi komputer yang presisi, robot ini mampu melakukan tugas perakitan rumit yang sebelumnya hanya bisa dilakukan tangan manusia. Tesla berencana menjual unit ini ke publik untuk tugas domestik mulai tahun depan.",
+    "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=600"
+  },
+  {
+    "id": 43,
+    "cat": "Energy",
+    "title": "Baterai Garam Laut Tahan 50 Tahun",
+    "body": "Ilmuwan di Australia berhasil mengembangkan baterai sodium-ion berbasis air laut yang memiliki masa pakai luar biasa. Berbeda dengan lithium-ion yang menurun kapasitasnya setelah 3 tahun, baterai ini tetap stabil hingga 50 tahun penggunaan. Teknologi ini diprediksi akan menurunkan harga mobil listrik hingga 40% karena materialnya yang melimpah dan murah.",
+    "img": "https://images.unsplash.com/photo-1548613053-22002f5a60b9?q=80&w=600"
+  },
+  {
+    "id": 42,
+    "cat": "Space Exploration",
+    "title": "Stasiun Ruang Angkasa Komersial Pertama",
+    "body": "Axiom Space telah menyelesaikan modul hunian pertama untuk stasiun luar angkasa swasta. Hotel orbit ini menawarkan pengalaman gravitasi nol bagi warga sipil dengan biaya 10 juta dolar per malam. Fasilitas ini mencakup observatorium kristal untuk melihat bumi dan laboratorium penelitian bagi perusahaan farmasi yang ingin bereksperimen di lingkungan mikro-gravitasi.",
+    "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=600"
+  },
+  {
+    "id": 41,
+    "cat": "Green Tech",
+    "title": "Penyerap Polusi Cair untuk Kota Padat",
+    "body": "Jakarta mulai memasang panel fotobioreaktor berbasis mikroalga di sepanjang jalan protokol. Satu panel ini mampu menyerap karbon dioksida setara dengan 20 pohon dewasa. Selain membersihkan udara, alga yang dipanen dari panel ini dapat diolah menjadi bio-fuel berkualitas tinggi, menciptakan siklus energi yang bersih dan berkelanjutan di lingkungan perkotaan.",
+    "img": "https://images.unsplash.com/photo-1449156059431-787c5b763b14?q=80&w=600"
+  },
+  {
+    "id": 40,
+    "cat": "Telecommunication",
+    "title": "Korea Selatan Luncurkan Jaringan 6G",
+    "body": "Uji coba komersial 6G di Seoul mencatatkan kecepatan puncak 1 Terabit per detik. Jaringan ini menggunakan frekuensi terahertz yang memungkinkan komunikasi holografik real-time tanpa jeda sedikitpun. Dengan 6G, operasi pembedahan jarak jauh menggunakan robot kini menjadi sangat aman dan dapat dilakukan lintas benua.",
+    "img": "https://images.unsplash.com/photo-1520004434532-668416d137f9?q=80&w=600"
+  }
 ]

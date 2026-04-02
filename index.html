@@ -3,81 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Premium Tech Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <title>NEURAL LOGIC | 2026 Tech Sentinel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --accent: #00ff88;
-            --bg: #0b0b0f;
-            --card: #16161d;
-            --text-p: #94a3b8;
-            --text-h: #ffffff;
-        }
+        :root { --accent: #00ff88; --bg: #050507; --card: #111116; --text: #e2e8f0; --muted: #8892b0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { background: var(--bg); color: var(--text-p); font-family: 'Inter', sans-serif; line-height: 1.6; }
-
-        /* Navigation */
+        /* --- LOGO VEKTOR MODERN --- */
         nav {
-            padding: 18px 6%; background: rgba(11, 11, 15, 0.85); backdrop-filter: blur(12px);
-            position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between;
-            align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 15px 5%; background: rgba(5, 5, 7, 0.85); backdrop-filter: blur(15px);
+            position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        .logo { font-family: 'Space Grotesk'; font-size: 1.6rem; font-weight: 700; color: var(--accent); letter-spacing: -1px; }
-
-        /* Container & Grid */
-        .container { max-width: 1300px; margin: 40px auto; padding: 0 6%; }
-        #article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 35px;
+        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-glyph {
+            width: 40px; height: 40px; background: #000; border: 2px solid var(--accent);
+            border-radius: 10px; display: grid; place-items: center;
+            font-family: 'Space Grotesk'; font-weight: 700; color: var(--accent); font-size: 1.5rem;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
         }
+        .logo-txt { font-family: 'Space Grotesk'; font-size: 1.4rem; color: #fff; letter-spacing: 1px; }
 
-        /* Card Design */
-        .card {
+        /* --- GRID UI --- */
+        .container { max-width: 1250px; margin: 30px auto; padding: 0 5%; }
+        #article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+
+        .post {
             background: var(--card); border-radius: 20px; overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.03); transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255,255,255,0.03); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer; position: relative;
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0, 255, 136, 0.1); }
-        
-        .card-img-wrapper { width: 100%; height: 210px; overflow: hidden; position: relative; }
-        .card-img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
-        .card:hover .card-img { transform: scale(1.1); filter: brightness(1.1); }
+        .post:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
+        .post-img { width: 100%; height: 180px; object-fit: cover; filter: grayscale(30%); transition: 0.4s; }
+        .post:hover .post-img { filter: grayscale(0%); transform: scale(1.05); }
 
-        .card-body { padding: 25px; }
-        .card-tag { font-size: 0.7rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; display: block; }
-        .card-title { font-family: 'Space Grotesk'; font-size: 1.3rem; color: var(--text-h); line-height: 1.3; margin-bottom: 12px; }
-        .card-excerpt { font-size: 0.9rem; color: var(--text-p); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .post-info { padding: 25px; }
+        .post-tag { font-size: 0.65rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .post-title { font-family: 'Space Grotesk'; font-size: 1.25rem; color: #fff; margin: 12px 0; line-height: 1.2; }
 
-        /* Modal Overlay */
-        .modal { 
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-            background: rgba(0,0,0,0.95); display: none; z-index: 2000; align-items: center; justify-content: center; padding: 20px;
+        /* --- MODAL & AUDIO READER --- */
+        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.96); display: none; z-index: 2000; padding: 20px; }
+        .m-content { 
+            background: var(--card); max-width: 800px; margin: auto; border-radius: 25px; 
+            padding: 40px; border: 1px solid rgba(0, 255, 136, 0.2); position: relative;
+            max-height: 90vh; overflow-y: auto; box-shadow: 0 0 50px rgba(0,0,0,1);
         }
-        .modal-content { 
-            background: var(--card); max-width: 850px; width: 100%;
-            border-radius: 24px; padding: 0; border: 1px solid rgba(0, 255, 136, 0.2);
-            max-height: 90vh; overflow-y: auto; position: relative; animation: modalIn 0.4s ease;
+        .audio-bar {
+            display: flex; gap: 10px; margin-bottom: 25px; background: rgba(0, 255, 136, 0.05);
+            padding: 15px; border-radius: 12px; border: 1px dashed var(--accent);
         }
-        @keyframes modalIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-        
-        .modal-header-img { width: 100%; height: 350px; object-fit: cover; }
-        .modal-body { padding: 40px; }
-        .close-btn { position: absolute; top: 20px; right: 25px; background: rgba(0,0,0,0.5); color: white; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; font-size: 1.5rem; z-index: 10; }
+        .btn-audio { 
+            background: var(--accent); color: #000; border: none; padding: 10px 20px; 
+            border-radius: 10px; font-weight: 700; cursor: pointer; transition: 0.2s;
+        }
+        .btn-audio:active { transform: scale(0.95); }
+        .close-m { position: absolute; top: 20px; right: 25px; font-size: 2rem; color: #fff; cursor: pointer; }
 
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg); }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+        /* Mobile Adjust */
+        @media (max-width: 600px) { .m-content { padding: 20px; } .logo-txt { display: none; } }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">NEURAL LOGIC</div>
+        <a href="#" class="logo-wrap">
+            <div class="logo-glyph">N</div>
+            <div class="logo-txt">NEURAL LOGIC</div>
+        </a>
+        <div style="font-size: 0.7rem; color: var(--accent); font-family: monospace;">SYSTEM: v10.0-LIVE</div>
     </nav>
 
     <div class="container">
@@ -85,46 +79,43 @@
     </div>
 
     <div id="modal" class="modal" onclick="closeModal()">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="close-btn" onclick="closeModal()">&times;</div>
-            <img id="m-img" class="modal-header-img">
-            <div class="modal-body">
-                <span id="m-tag" class="card-tag"></span>
-                <h1 id="m-title" style="margin: 15px 0; color: white; font-family: 'Space Grotesk'; font-size: 2.2rem;"></h1>
-                <p id="m-body" style="font-size: 1.1rem; color: #cbd5e1;"></p>
+        <div class="m-content" onclick="event.stopPropagation()">
+            <span class="close-m" onclick="closeModal()">&times;</span>
+            <div class="audio-bar">
+                <button class="btn-audio" onclick="playAudio()">🔊 Putar Suara</button>
+                <button class="btn-audio" style="background: transparent; border: 1px solid var(--accent); color: var(--accent);" onclick="stopAudio()">⏹ Berhenti</button>
             </div>
+            <img id="m-img" style="width:100%; border-radius:15px; margin-bottom:25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <h1 id="m-title" style="font-family: 'Space Grotesk'; color: #fff; font-size: 2rem; margin-bottom: 20px;"></h1>
+            <p id="m-body" style="font-size: 1.15rem; color: var(--muted); line-height: 1.8;"></p>
         </div>
     </div>
 
     <script>
+        let synth = window.speechSynthesis;
+        let utter = null;
+
         async function init() {
-            try {
-                const res = await fetch('data.json');
-                const data = await res.json();
-                const grid = document.getElementById('article-grid');
-                
-                grid.innerHTML = data.map(item => `
-                    <div class="card" onclick='openModal(${JSON.stringify(item).replace(/'/g, "&apos;")})'>
-                        <div class="card-img-wrapper">
-                            <img src="${item.img}" class="card-img" alt="Visual" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-tag">${item.cat}</span>
-                            <h2 class="card-title">${item.title}</h2>
-                            <p class="card-excerpt">${item.body}</p>
-                        </div>
+            const res = await fetch('data.json');
+            const data = await res.json();
+            // Urutkan dari ID terbesar (terbaru)
+            data.sort((a, b) => b.id - a.id);
+            
+            document.getElementById('article-grid').innerHTML = data.map(a => `
+                <div class="post" onclick='showModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
+                    <img src="${a.img}" class="post-img" loading="lazy">
+                    <div class="post-info">
+                        <span class="post-tag">${a.cat}</span>
+                        <h2 class="post-title">${a.title}</h2>
                     </div>
-                `).join('');
-            } catch (err) {
-                console.error("Gagal memuat database IPTEK");
-            }
+                </div>
+            `).join('');
         }
 
-        function openModal(item) {
-            document.getElementById('m-img').src = item.img;
-            document.getElementById('m-tag').innerText = item.cat;
-            document.getElementById('m-title').innerText = item.title;
-            document.getElementById('m-body').innerText = item.body;
+        function showModal(a) {
+            document.getElementById('m-img').src = a.img;
+            document.getElementById('m-title').innerText = a.title;
+            document.getElementById('m-body').innerText = a.body;
             document.getElementById('modal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
@@ -132,6 +123,20 @@
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
             document.body.style.overflow = 'auto';
+            stopAudio();
+        }
+
+        function playAudio() {
+            stopAudio();
+            const text = document.getElementById('m-title').innerText + ". " + document.getElementById('m-body').innerText;
+            utter = new SpeechSynthesisUtterance(text);
+            utter.lang = 'id-ID';
+            utter.rate = 1.1; // Sedikit lebih cepat agar profesional
+            synth.speak(utter);
+        }
+
+        function stopAudio() {
+            synth.cancel();
         }
 
         init();

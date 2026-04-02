@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://github.com/AkaShiro22/akashiro-neural-studio/sitemap.xml

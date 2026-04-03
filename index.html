@@ -226,5 +226,80 @@
 
         init();
     </script>
+<style>
+  .social-share-container {
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    background: #f9f9f9;
+    text-align: center;
+    border: 1px solid #eee;
+    font-family: sans-serif;
+  }
+  .share-txt {
+    font-size: 15px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 15px;
+  }
+  .share-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .btn-s {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+  .btn-s:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  .btn-s:active { transform: scale(0.95); }
+  
+  /* Warna Medsos */
+  .c-wa { background-color: #25D366; }
+  .c-x { background-color: #000000; }
+  .c-tele { background-color: #0088cc; }
+  .c-fb { background-color: #1877F2; }
+</style>
+
+<div class="social-share-container">
+  <div class="share-txt">📢 Bagikan Berita Neural Logic:</div>
+  <div class="share-grid">
+    <button onclick="shareWA()" class="btn-s c-wa">WhatsApp</button>
+    <button onclick="shareX()" class="btn-s c-x">Twitter / X</button>
+    <button onclick="shareTele()" class="btn-s c-tele">Telegram</button>
+    <button onclick="shareFB()" class="btn-s c-fb">Facebook</button>
+  </div>
+</div>
+
+<script>
+  // Fungsi Logika Share Tanpa Mengganggu Script Lain
+  function shareWA() {
+    const link = encodeURIComponent(window.location.href);
+    const msg = encodeURIComponent("Berita Teknologi April 2026: ");
+    window.open(`https://api.whatsapp.com/send?text=${msg}${link}`, '_blank');
+  }
+  function shareX() {
+    const link = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?url=${link}`, '_blank');
+  }
+  function shareTele() {
+    const link = encodeURIComponent(window.location.href);
+    window.open(`https://t.me/share/url?url=${link}`, '_blank');
+  }
+  function shareFB() {
+    const link = encodeURIComponent(window.location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${link}`, '_blank');
+  }
+</script>
 </body>
 </html>

@@ -1,5 +1,12 @@
 [
 {
+    "id": 129,
+    "title": "NeuralLens: Lensa Kontak AR dengan Proyeksi Retina Langsung",
+    "cat": "GADGET",
+    "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800",
+    "body": "Pada pertengahan April 2026, prototipe publik pertama dari NeuralLens resmi diperkenalkan. Lensa kontak pintar ini perlahan mulai menggantikan fungsi layar smartphone dengan memproyeksikan antarmuka Augmented Reality (AR) langsung ke retina mata pengguna. Ditenagai secara biomimetik oleh panas tubuh dan gesekan kedipan mata sebagai sumber energi mikro, NeuralLens memungkinkan penggunanya untuk melakukan navigasi pemetaan, terjemahan bahasa real-time, hingga membaca notifikasi tanpa perlu memegang perangkat fisik apa pun."
+  },
+{
   "id": 128,
   "title": "Layar Fotovoltaik: Masa Depan Gadget Tanpa Kabel Charger",
   "cat": "TEKNOLOGI",

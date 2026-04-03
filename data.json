@@ -1,5 +1,180 @@
 [
   {
+    "id": 100,
+    "cat": "ANTARIKSA",
+    "title": "Koloni Mars Pertama Berhasil Panen Kentang",
+    "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=500",
+    "body": "Astronot di kawah Jezero Mars melaporkan keberhasilan panen kentang hidroponik pertama dengan nutrisi tanah Mars yang telah difilter. Ini langkah besar bagi kemandirian pangan di luar bumi."
+  },
+  {
+    "id": 99,
+    "cat": "AI",
+    "title": "GPT-6 Resmi Diluncurkan: Bisa Merasakan Emosi",
+    "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=500",
+    "body": "OpenAI merilis GPT-6 yang memiliki modul empati. AI ini tidak hanya menjawab teks, tapi bisa mendeteksi kesedihan pengguna melalui nada suara dan memberikan dukungan psikologis."
+  },
+  {
+    "id": 98,
+    "cat": "GADGET",
+    "title": "Smartphone Transparan Samsung Mulai Dijual",
+    "img": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?q=80&w=500",
+    "body": "Samsung Galaxy Glass resmi hadir dengan layar OLED transparan 90%. Semua komponen mesin disembunyikan di bagian bawah bezel yang sangat tipis."
+  },
+  {
+    "id": 97,
+    "cat": "ROBOTIK",
+    "title": "Robot Pelayan Rumah Tangga Kini Seharga Motor",
+    "img": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=500",
+    "body": "Harga robot humanoid untuk mencuci piring dan menyetrika pakaian turun drastis di April 2026. Kini keluarga menengah bisa memiliki asisten robotik seharga 30 juta rupiah."
+  },
+  {
+    "id": 96,
+    "cat": "OTOMOTIF",
+    "title": "Mobil Terbang Pertama Beroperasi di Jakarta",
+    "img": "https://images.unsplash.com/photo-1506610654-064fbba47ad0?q=80&w=500",
+    "body": "Dinas Perhubungan DKI Jakarta meresmikan jalur udara untuk taksi terbang elektrik (eVTOL). Rute pertama melayani rute Bandara Soekarno-Hatta ke Sudirman dalam 8 menit."
+  },
+  {
+    "id": 95,
+    "cat": "KESEHATAN",
+    "title": "Chip Neuralink Sembuhkan Kelumpuhan Total",
+    "img": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=500",
+    "body": "Seorang pasien lumpuh berhasil berjalan kembali setelah dipasang chip Neuralink generasi ke-4 yang menghubungkan otak langsung ke saraf tulang belakang melalui sinyal bluetooth."
+  },
+  {
+    "id": 94,
+    "cat": "GAME",
+    "title": "PlayStation 6 Bocor ke Publik: Gunakan Chip Quantum",
+    "img": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=500",
+    "body": "Sony dilaporkan sedang menguji PS6 dengan teknologi ray-tracing real-time yang tidak terbatas, memberikan grafis yang mustahil dibedakan dengan dunia nyata."
+  },
+  {
+    "id": 93,
+    "cat": "INTERNET",
+    "title": "Starlink 2.0: Internet 10Gbps Merata di Seluruh Desa",
+    "img": "https://images.unsplash.com/photo-1527333656061-ca7adf608ae1?q=80&w=500",
+    "body": "Elon Musk mengumumkan upgrade satelit Starlink yang mampu memberikan kecepatan 10Gbps ke pelosok hutan Kalimantan dan Papua tanpa lag."
+  },
+  {
+    "id": 92,
+    "cat": "ENERGI",
+    "title": "Matahari Buatan China Cetak Rekor Suhu Baru",
+    "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500",
+    "body": "Reaktor fusi nuklir EAST di China berhasil menyala stabil selama 20 menit pada suhu 150 juta derajat Celcius, mendekati sumber energi bersih tanpa batas."
+  },
+  {
+    "id": 91,
+    "cat": "TEKNOLOGI",
+    "title": "Baterai HP Kini Tahan 1 Bulan Sekali Cas",
+    "img": "https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=500",
+    "body": "Penemuan baterai berbasis graphene padat memungkinkan smartphone bertahan 30 hari dalam sekali pengisian daya tanpa menambah ketebalan ponsel."
+  },
+  {
+    "id": 90,
+    "cat": "AI",
+    "title": "AI Sekarang Bisa Menulis Lagu Hits dalam 5 Detik",
+    "img": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=500",
+    "body": "Platform musik baru meluncurkan fitur di mana pengguna cukup memberikan perintah suara untuk membuat lagu lengkap dengan lirik dan vokal berkualitas studio."
+  },
+  {
+    "id": 89,
+    "cat": "ANTARIKSA",
+    "title": "Hotel Luar Angkasa Pertama Mulai Terima Reservasi",
+    "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=500",
+    "body": "Stasiun luar angkasa komersial Voyager Class siap menampung turis mulai akhir tahun ini. Harga per malam dibanderol 500 ribu dolar AS."
+  },
+  {
+    "id": 88,
+    "cat": "LINGKUNGAN",
+    "title": "Mesin Penyedot Karbon Raksasa Mulai Beroperasi",
+    "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=500",
+    "body": "Islandia mengaktifkan pabrik penyedot polusi udara terbesar yang mengubah karbon dioksida menjadi batu mineral dalam waktu kurang dari dua tahun."
+  },
+  {
+    "id": 87,
+    "cat": "GADGET",
+    "title": "Lensa Kontak AR: Layar Monitor Ada di Mata Anda",
+    "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=500",
+    "body": "Teknologi lensa kontak pintar memungkinkan pengguna melihat navigasi GPS dan notifikasi pesan langsung di depan mata tanpa kacamata tambahan."
+  },
+  {
+    "id": 86,
+    "cat": "PENDIDIKAN",
+    "title": "Guru AI Mulai Mengajar di Sekolah Dasar Jakarta",
+    "img": "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=500",
+    "body": "Pilot project sekolah masa depan menggunakan hologram guru AI yang bisa menjawab pertanyaan siswa secara personal sesuai kecepatan belajar masing-masing anak."
+  },
+  {
+    "id": 85,
+    "cat": "BIOTEK",
+    "title": "Daging Lab Murah Kini Tersedia di Supermarket",
+    "img": "https://images.unsplash.com/photo-1514460399165-2110e4738aa4?q=80&w=500",
+    "body": "Daging sapi hasil budidaya sel tanpa menyembelih hewan kini harganya lebih murah dari daging konvensional, menjadi solusi pangan ramah lingkungan."
+  },
+  {
+    "id": 84,
+    "cat": "KRIPTO",
+    "title": "Bitcoin Menjadi Mata Uang Resmi Global",
+    "img": "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=500",
+    "body": "Lebih dari 50 negara sepakat menggunakan aset digital sebagai cadangan devisa utama menggantikan sistem mata uang lama yang inflasi."
+  },
+  {
+    "id": 83,
+    "cat": "SECURITY",
+    "title": "Password Resmi Dihapus: Otentikasi Pikirian Hadir",
+    "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500",
+    "body": "Sistem keamanan terbaru menggunakan gelombang otak unik pengguna untuk membuka perangkat. Tidak bisa dihack meski pengguna sedang tidur."
+  },
+  {
+    "id": 82,
+    "cat": "GADGET",
+    "title": "Laptop Lipat Tiga Kali Layar 30 Inci Meluncur",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=500",
+    "body": "Laptop masa depan ini bisa dilipat sekecil tablet namun saat dibuka penuh menjadi layar workstation sebesar 30 inci tanpa sambungan."
+  },
+  {
+    "id": 81,
+    "cat": "TRANSPORTASI",
+    "title": "Kereta Hyperloop Jakarta-Surabaya 45 Menit",
+    "img": "https://images.unsplash.com/photo-1515162305114-8d3da120aa43?q=80&w=500",
+    "body": "Proyek transportasi tercepat di Indonesia resmi memulai uji coba. Penumpang dari Jakarta ke Surabaya kini bisa tiba dalam waktu kurang dari satu jam."
+  },
+  {
+    "id": 80,
+    "cat": "SAINS",
+    "title": "Ilmuwan Temukan Oksigen di Bulan",
+    "img": "https://images.unsplash.com/photo-1532634896-26909d0d4b89?q=80&w=500",
+    "body": "Ekstraksi batuan regolith bulan terbukti bisa menghasilkan oksigen dalam jumlah besar, mempermudah pembangunan pangkalan permanen manusia di bulan."
+  },
+  {
+    "id": 79,
+    "cat": "AI",
+    "title": "Film AI Pertama Menangkan Piala Oscar",
+    "img": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500",
+    "body": "Sebuah film yang seluruh naskah, visual, dan aktingnya dihasilkan oleh AI memenangkan penghargaan film terbaik, memicu debat besar di Hollywood."
+  },
+  {
+    "id": 78,
+    "cat": "KESEHATAN",
+    "title": "Vaksin Kanker Universal Mulai Disebar",
+    "img": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=500",
+    "body": "WHO menyetujui distribusi vaksin mRNA yang mampu mengenali 50 jenis sel kanker berbeda sebelum berkembang menjadi tumor berbahaya."
+  },
+  {
+    "id": 77,
+    "cat": "TEKNOLOGI",
+    "title": "Internet 6G Mulai Uji Coba: Unduh 1TB per Detik",
+    "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500",
+    "body": "Jaringan 6G menjanjikan latensi nol. Kini mengunduh seluruh koleksi film di Netflix hanya membutuhkan waktu kurang dari 2 detik saja."
+  },
+  {
+    "id": 76,
+    "cat": "BERITA UTAMA",
+    "title": "Portal Neural Logic v21.0 Resmi Dirilis",
+    "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=500",
+    "body": "Update besar-besaran website Neural Logic menghadirkan fitur Auto-Sort, Audio Reading, dan AI Summary untuk memudahkan pembaca mendapatkan info IPTEK tercepat."
+  },
+  {
     "id": 75,
     "cat": "AI & ROBOTIK",
     "title": "AI 'Socrates' Mulai Digunakan Sebagai Hakim Mediasi di Indonesia",

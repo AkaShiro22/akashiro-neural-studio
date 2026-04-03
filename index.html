@@ -3,403 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Aesthetic v25.0</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+    <title>Neural Logic | Portal IPTEK 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --accent: #00ff88;
-            --bg: #050509; /* Lebih gelap untuk kontras neon */
-            --card: rgba(17, 17, 24, 0.6); /* Transparan untuk Glassmorphism */
-            --text: #f8fafc;
-            --muted: #8892b0;
-            --glass-blur: blur(20px);
-            --gradient: linear-gradient(135deg, #00ff88 0%, #0072ff 100%);
-            --border-glass: 1px solid rgba(255, 255, 255, 0.04);
+            --primary: #00f2ff;
+            --bg: #0a0b10;
+            --card-bg: #161821;
+            --text: #e0e0e0;
         }
 
-        .light-mode {
-            --bg: #f8fafc;
-            --card: rgba(255, 255, 255, 0.7);
-            --text: #0f172a;
-            --muted: #64748b;
-            --glass-blur: blur(15px);
-            --border-glass: 1px solid rgba(0, 0, 0, 0.05);
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s, transform 0.2s cubic-bezier(0.2, 0, 0.2, 1); }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; cursor: none; /* Sembunyikan kursor asli */ }
-
-        /* --- 1. CURSOR TRACKER GLOW --- */
-        #cursor-tracker {
-            position: fixed; width: 40px; height: 40px; background: rgba(0, 255, 136, 0.1);
-            border-radius: 50%; pointer-events: none; z-index: 10000;
-            transform: translate(-50%, -50%); border: 1px solid var(--accent);
-            box-shadow: 0 0 15px var(--accent);
-            display: none; /* Munculkan lewat JS */
+        header {
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, #161821 0%, transparent 100%);
         }
 
-        /* Sembunyikan Header Google Translate yang mengganggu */
-        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
-        body { top: 0px !important; }
-        .goog-te-gadget-simple { 
-            background: var(--card) !important; 
-            backdrop-filter: var(--glass-blur) !important;
-            border: var(--border-glass) !important; 
-            padding: 6px 12px !important; 
-            border-radius: 12px !important;
-            font-family: inherit !important;
-            cursor: pointer !important;
-        }
-        .goog-te-gadget-simple:hover { border-color: var(--accent) !important; }
-        .goog-te-menu-value span { color: var(--text) !important; font-size: 13px !important; font-weight: 600 !important; }
-
-        /* --- NAVIGATION (Pro Glass) --- */
-        nav {
-            position: sticky; top: 0; z-index: 2000; padding: 15px 6%;
-            background: var(--card); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-            border-bottom: var(--border-glass);
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); font-size: 1.3rem; }
-        .logo-box { padding: 5px 12px; background: var(--gradient); color: #000; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,136,0.3); }
-
-        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 2100; width: 0%; }
-
-        /* --- HERO & SEARCH (Centered Aesthetic) --- */
-        .hero { padding: 60px 6% 30px; text-align: center; }
-        .hero h1 { font-family: 'Space Grotesk'; font-size: 3rem; margin-bottom: 15px; letter-spacing: -1.5px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .badge { display: inline-block; padding: 6px 16px; border-radius: 50px; background: rgba(0, 255, 136, 0.05); color: var(--accent); font-size: 0.75rem; font-weight: 700; margin-bottom: 15px; border: 1px solid rgba(0,255,136,0.15); }
-        
-        .search-bar { max-width: 550px; margin: 30px auto; position: relative; }
-        .search-bar input {
-            width: 100%; padding: 18px 28px; border-radius: 20px; border: var(--border-glass);
-            background: var(--card); color: var(--text); font-family: inherit; font-size: 1.05rem;
-            backdrop-filter: var(--glass-blur);
-        }
-        .search-bar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 25px rgba(0,255,136,0.15); }
-
-        .filter-container { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; padding: 0 6%; }
-        .filter-btn { padding: 10px 22px; border-radius: 15px; border: var(--border-glass); background: var(--card); color: var(--muted); cursor: pointer; font-weight: 600; font-size: 0.9rem; backdrop-filter: var(--glass-blur); }
-        .filter-btn:hover { border-color: var(--accent); color: var(--text); }
-        .filter-btn.active { background: var(--gradient); color: #000; border-color: transparent; box-shadow: 0 5px 15px rgba(0,255,136,0.2); }
-
-        /* --- FEED (Card Aesthetic) --- */
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px 6%; }
-        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
-
-        /* --- 2. HOVER RIPPLE & GLOW EFFECT --- */
-        .card { 
-            background: var(--card); border-radius: 28px; overflow: hidden; 
-            border: var(--border-glass); cursor: pointer; position: relative; 
-            backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-            animation: slideUp 0.7s ease-out; z-index: 1;
-        }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        
-        .card::before {
-            content: ""; position: absolute; inset: 0; background: var(--gradient);
-            filter: blur(20px); opacity: 0; z-index: -1; transition: opacity 0.6s;
-        }
-        .card:hover::before { opacity: 0.15; }
-        .card:hover { transform: translateY(-10px) scale(1.02); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-        
-        .card-img-container { width: 100%; height: 220px; overflow: hidden; position: relative; }
-        .card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1); }
-        .card:hover .card-img { transform: scale(1.1); }
-        
-        /* Efek Overlay Gradasi pada Gambar */
-        .card-img-container::after {
-            content: ""; position: absolute; inset: 0;
-            background: linear-gradient(to bottom, transparent 50%, rgba(5,5,9,0.8));
+        h1 {
+            color: var(--primary);
+            letter-spacing: 2px;
+            margin: 0;
         }
 
-        .card-content { padding: 25px; position: relative; z-index: 2; }
-        .card-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; font-size: 0.8rem; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.03); padding-top: 15px; }
-
-        /* --- 3. SKELETON SHIMMER LOADING --- */
-        .skeleton { background: rgba(255,255,255,0.03); position: relative; overflow: hidden; border-radius: 15px; }
-        .skeleton::after {
-            content: ""; position: absolute; inset: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
-            animation: shimmer 1.5s infinite;
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 1rem;
+            flex-wrap: wrap;
         }
-        @keyframes shimmer { 100% { transform: translateX(100%); } }
 
-        /* --- MODAL (Premium Glass) --- */
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; z-index: 4000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); animation: fadeIn 0.5s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        
-        .m-content { 
-            background: var(--card); max-width: 850px; margin: 30px auto; 
-            border-radius: 35px; padding: 45px; position: relative; 
-            border: var(--border-glass); backdrop-filter: var(--glass-blur);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-            transform: scale(0.9); transition: transform 0.3s;
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        .modal.open .m-content { transform: scale(1); }
 
-        .ai-glow { padding: 22px; border-radius: 20px; background: rgba(0,255,136,0.02); border: 1px solid rgba(0,255,136,0.1); margin-bottom: 30px; position: relative; }
-        .ai-glow::before { content: ""; position: absolute; inset: -1px; background: var(--gradient); filter: blur(10px); opacity: 0.1; z-index: -1; border-radius: 20px; }
-        
-        .close { position: absolute; top: 25px; right: 30px; font-size: 2.5rem; color: var(--muted); cursor: pointer; transition: color 0.3s; }
-        .close:hover { color: var(--accent); transform: rotate(90deg); }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: var(--bg);
+        }
 
-        .btn-action { padding: 14px 28px; border-radius: 15px; border: none; cursor: pointer; font-weight: 700; display: flex; align-items: center; gap: 10px; font-size: 1rem; transition: transform 0.2s, box-shadow 0.3s; }
-        .btn-action:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
-        .btn-action:active { transform: translateY(0); }
+        #news-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-        .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 3000; }
-        .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.3rem; backdrop-filter: var(--glass-blur); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-        .fab:hover { background: var(--accent); color: #000; box-shadow: 0 0 20px var(--accent); }
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid #252836;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content { padding: 15px; }
+
+        .category {
+            font-size: 0.7rem;
+            color: var(--primary);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .audio-btn {
+            background: #252836;
+            border: none;
+            color: white;
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            float: right;
+        }
+
+        /* Skeleton Loading */
+        .skeleton {
+            background: #252836;
+            height: 200px;
+            width: 100%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Toast Notification */
+        #notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--bg);
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: none;
+            z-index: 1000;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,242,255,0.3);
+        }
     </style>
 </head>
-<body class="dark-mode">
+<body>
 
-<div id="cursor-tracker"></div>
+<header>
+    <h1>NEURAL LOGIC</h1>
+    <p>Intelligence Beyond Human Perception</p>
+</header>
 
-<div id="scroll-progress"></div>
-
-<nav>
-    <a href="javascript:location.reload()" class="logo">
-        <span class="logo-box">NL</span>
-        <span class="notranslate">NEURAL LOGIC</span>
-    </a>
-    
-    <div id="google_translate_element"></div>
-    
-    <button class="fab" style="width:38px; height:38px; border:none; border-radius: 12px;" onclick="toggleTheme()" title="Theme">🌓</button>
-</nav>
-
-<div class="hero">
-    <div class="badge">Aesthetic Update v25.0</div>
-    <h1 id="hero-title" class="notranslate">Neural Logic</h1>
-    <p style="color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Navigasi masa depan IPTEK dengan estetika tinggi.</p>
-    
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Cari teknologi atau inovasi..." onkeyup="handleSearch()">
-    </div>
-
-    <div class="filter-container">
-        <button class="filter-btn active" onclick="filterData('SEMUA', this)">Semua</button>
-        <button class="filter-btn" onclick="filterData('AI', this)">AI</button>
-        <button class="filter-btn" onclick="filterData('ANTARIKSA', this)">Space</button>
-        <button class="filter-btn" onclick="filterData('GADGET', this)">Gadgets</button>
-        <button class="filter-btn" onclick="filterData('SAINS', this)">Sains</button>
-    </div>
+<div class="filter-container" id="filter-container">
+    <button class="filter-btn active" onclick="filterData('ALL')">ALL</button>
+    <button class="filter-btn" onclick="filterData('AUTOMOTIVE')">AUTOMOTIVE</button>
+    <button class="filter-btn" onclick="filterData('AI')">AI</button>
+    <button class="filter-btn" onclick="filterData('MILITER')">MILITER</button>
 </div>
 
-<div class="container">
-    <div id="feed">
-        <div class="card skeleton" style="height: 350px;"></div>
-        <div class="card skeleton" style="height: 350px;"></div>
-        <div class="card skeleton" style="height: 350px;"></div>
-    </div>
+<div id="news-container">
+    <div class="card"><div class="skeleton"></div></div>
+    <div class="card"><div class="skeleton"></div></div>
+    <div class="card"><div class="skeleton"></div></div>
 </div>
 
-<div class="fab-container">
-    <button class="fab" onclick="showSaved()" title="Bookmark">🔖</button>
-    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Top">▲</button>
-</div>
-
-<div id="modal" class="modal" onclick="closeModal()">
-    <div class="m-content" onclick="event.stopPropagation()">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img id="m-img" style="width:100%; border-radius: 25px; margin-bottom: 30px; max-height: 400px; object-fit: cover; border: var(--border-glass);">
-        
-        <div class="ai-glow">
-            <h4 style="color: var(--accent); margin-bottom: 8px; font-size: 0.95rem; font-family: 'Space Grotesk';">✨ Intelijen Neural:</h4>
-            <p id="m-ai" style="font-size: 0.95rem; line-height: 1.7; color: var(--text); font-style: italic;"></p>
-        </div>
-
-        <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 20px; font-size: 2.2rem; line-height: 1.2; letter-spacing: -1px;"></h1>
-        <div id="m-body" style="line-height: 1.9; color: var(--muted); font-size: 1.1rem; margin-bottom: 35px;"></div>
-        
-        <div style="display: flex; gap: 15px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.03); padding-top: 25px;">
-            <button onclick="speak()" class="btn-action" style="background: var(--accent); color: #000;"><span style="font-size:1.2rem;">🔊</span> Dengar Audio</button>
-            <button onclick="shareWA()" class="btn-action" style="background: #25d366; color:white;"><span style="font-size:1.2rem;">💬</span> WhatsApp</button>
-            <button onclick="saveCurrent()" class="btn-action" style="background: rgba(255,255,255,0.05); color:white; border: var(--border-glass);">🔖 Simpan</button>
-        </div>
-    </div>
-</div>
+<div id="notification">🚀 Update Artikel Terbaru Tersedia!</div>
 
 <script>
-    let allData = [];
-    let currentArt = null;
-    const cursor = document.getElementById('cursor-tracker');
+    let allArticles = [];
 
-    // --- A. JAVASCRIPT UNTUK ESTETIKA (V25.0) ---
-
-    // 1. Kursor Kustom (Hanya muncul di Desktop/Pointer device)
-    if (window.matchMedia("(pointer: fine)").matches) {
-        cursor.style.display = 'block';
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        // Efek kursor membesar saat hover link/tombol
-        document.querySelectorAll('a, button, .card').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.style.transform = 'translate(-50%, -50%) scale(1.5)');
-            el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%, -50%) scale(1)');
-        });
-    }
-
-    // 2. Inisialisasi Google Translate
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'id',
-            includedLanguages: 'en,id,ja,ko,ar,zh-CN,fr,de',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-
-    // --- B. LOGIKA INTI WEBSITE (Sama seperti v23, update v25 di template) ---
-
-    async function init() {
-        // Shimmer Loading muncul default
+    async function loadNews() {
         try {
-            const res = await fetch('data.json?v=' + Date.now());
-            allData = await res.json();
-            // Beri delay sedikit agar efek Skeleton terlihat (Estetika)
-            setTimeout(() => {
-                display(allData.sort((a,b) => b.id - a.id));
-            }, 800);
+            // Menambahkan timestamp agar browser tidak mengambil cache lama
+            const response = await fetch('data.json?t=' + new Date().getTime());
+            const data = await response.json();
+            allArticles = data;
+            
+            checkNewUpdate(data);
+            displayNews(data);
         } catch (error) {
-            console.error("Data.json bermasalah:", error);
-            document.getElementById('feed').innerHTML = "<p style='text-align:center; padding:50px;'>Gagal memuat portal. Cek data.json kamu.</p>";
+            console.error("Gagal memuat data:", error);
+            document.getElementById('news-container').innerHTML = "<p>Gagal memuat berita. Periksa file data.json Anda.</p>";
         }
     }
 
-    function display(data) {
-        const feed = document.getElementById('feed');
-        if(data.length === 0) {
-            feed.innerHTML = "<p style='text-align:center; grid-column: 1/-1; padding: 60px; color:var(--muted);'>Tidak ada inovasi ditemukan.</p>";
-            return;
-        }
-        feed.innerHTML = data.map(a => {
-            const words = a.body.split(' ').length;
-            const time = Math.ceil(words / 200); // 200 kata/menit
-            return `
-                <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
-                    <div class="card-img-container">
-                        <img src="${a.img}" class="card-img" alt="${a.title}" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <span class="badge" style="font-size: 0.65rem; padding: 4px 12px; margin-bottom:12px;">${a.cat}</span>
-                        <h2 style="font-family: 'Space Grotesk'; font-size: 1.2rem; line-height: 1.3;">${a.title}</h2>
-                        <div class="card-meta">
-                            <span>#${a.id}</span>
-                            <span>⏱️ ${time} min read</span>
-                        </div>
-                    </div>
+    function displayNews(articles) {
+        const container = document.getElementById('news-container');
+        container.innerHTML = "";
+
+        articles.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${item.img}" alt="${item.title}" loading="lazy">
+                <div class="card-content">
+                    <button class="audio-btn" onclick="speak('${item.body.replace(/'/g, "\\'")}')">🔊</button>
+                    <span class="category">${item.cat}</span>
+                    <h3>${item.title}</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">${item.body}</p>
                 </div>
             `;
-        }).join('');
+            container.appendChild(card);
+        });
     }
 
-    function handleSearch() {
-        const q = document.getElementById('searchInput').value.toLowerCase();
-        const filtered = allData.filter(a => a.title.toLowerCase().includes(q) || a.cat.toLowerCase().includes(q));
-        display(filtered);
-    }
+    function filterData(category) {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if(btn.innerText === category) btn.classList.add('active');
+        });
 
-    function filterData(cat, btn) {
-        // Update Tombol Aktif (Aesthetic)
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        if(cat === 'SEMUA') {
-            display(allData);
-            document.getElementById('hero-title').innerText = "Neural Logic";
+        if (category === 'ALL') {
+            displayNews(allArticles);
         } else {
-            const filtered = allData.filter(a => a.cat.toUpperCase() === cat);
-            display(filtered);
-            document.getElementById('hero-title').innerText = cat;
+            const filtered = allArticles.filter(a => a.cat === category);
+            displayNews(filtered);
         }
     }
 
-    function openModal(a) {
-        currentArt = a;
-        document.getElementById('m-img').src = a.img;
-        document.getElementById('m-title').innerText = a.title;
-        document.getElementById('m-body').innerText = a.body;
-        
-        // Buat Ringkasan Otomatis (Aesthetic)
-        const summary = a.body.split('. ').slice(0, 2).join('. ') + "... [Neural Summary]";
-        document.getElementById('m-ai').innerText = summary;
-
-        const modal = document.getElementById('modal');
-        modal.style.display = 'block';
-        setTimeout(() => modal.classList.add('open'), 10); // Animasi scale-in
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        const modal = document.getElementById('modal');
-        modal.classList.remove('open');
-        setTimeout(() => modal.style.display = 'none', 300); // Tunggu animasi selesai
-        document.body.style.overflow = 'auto';
+    function speak(text) {
+        // Fitur Audio Reading
         window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'id-ID';
+        window.speechSynthesis.speak(utterance);
     }
 
-    function toggleTheme() {
-        document.body.classList.toggle('light-mode');
-        localStorage.setItem('nl_theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-    }
+    function checkNewUpdate(data) {
+        const lastId = localStorage.getItem('lastId');
+        const currentId = data[0].id;
 
-    function speak() {
-        window.speechSynthesis.cancel();
-        // Deteksi bahasa Google Translate (v24 feature)
-        const currentLangSpan = document.querySelector('.goog-te-menu-value span');
-        const currentLang = currentLangSpan ? currentLangSpan.innerText : 'Indonesian';
-        
-        const msg = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
-        
-        // Atur suara berdasarkan bahasa yang dipilih
-        if (currentLang.includes('English')) msg.lang = 'en-US';
-        else if (currentLang.includes('Jepang') || currentLang.includes('Japanese')) msg.lang = 'ja-JP';
-        else msg.lang = 'id-ID';
-        
-        window.speechSynthesis.speak(msg);
-    }
-
-    function shareWA() {
-        const text = encodeURIComponent(`*${currentArt.title}*\n\nEksplorasi di Neural Logic: ${window.location.href}`);
-        window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
-    }
-
-    function saveCurrent() {
-        let saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(!saved.some(x => x.id === currentArt.id)) {
-            saved.push(currentArt);
-            localStorage.setItem('nl_saved', JSON.stringify(saved));
-            alert("Berhasil disimpan di Bookmark! 🔖");
+        if (lastId && currentId > lastId) {
+            const toast = document.getElementById('notification');
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 5000);
         }
+        localStorage.setItem('lastId', currentId);
     }
 
-    function showSaved() {
-        const saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(saved.length === 0) alert("Belum ada simpanan.");
-        else {
-            display(saved);
-            document.getElementById('hero-title').innerText = "Bookmark Saya";
-        }
-    }
-
-    // Progress Bar
-    window.onscroll = () => {
-        let winScroll = document.documentElement.scrollTop;
-        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        document.getElementById("scroll-progress").style.width = (winScroll / height) * 100 + "%";
-    };
-
-    // Load Theme & Start
-    if(localStorage.getItem('nl_theme') === 'light') document.body.classList.add('light-mode');
-    init();
+    // Jalankan saat halaman dibuka
+    loadNews();
 </script>
+
 </body>
 </html>

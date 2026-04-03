@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Next-Gen Tech Portal v22.0</title>
+    <title>NEURAL LOGIC | Omni-Portal v23.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -40,41 +40,44 @@
 
         #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 2100; width: 0%; }
 
-        /* --- CONTENT & ANIMATION --- */
-        .hero { padding: 60px 6% 20px; text-align: center; }
-        .hero h1 { font-family: 'Space Grotesk'; font-size: 3rem; margin-bottom: 10px; }
-        .badge { display: inline-block; padding: 4px 12px; border-radius: 50px; background: rgba(0, 255, 136, 0.1); color: var(--accent); font-size: 0.75rem; font-weight: 700; margin-bottom: 15px; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 6%; }
-        #feed { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-            gap: 30px; 
-            animation: fadeIn 0.8s ease-out;
+        /* --- HERO & SEARCH --- */
+        .hero { padding: 50px 6% 20px; text-align: center; }
+        .hero h1 { font-family: 'Space Grotesk'; font-size: 2.8rem; margin-bottom: 10px; letter-spacing: -1px; }
+        .badge { display: inline-block; padding: 6px 16px; border-radius: 50px; background: rgba(0, 255, 136, 0.1); color: var(--accent); font-size: 0.75rem; font-weight: 700; margin-bottom: 15px; border: 1px solid rgba(0,255,136,0.2); }
+        
+        .search-bar {
+            max-width: 500px; margin: 25px auto; position: relative;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .search-bar input {
+            width: 100%; padding: 16px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);
+            background: var(--card); color: var(--text); font-family: inherit; font-size: 1rem;
         }
+        .search-bar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 20px rgba(0,255,136,0.1); }
 
-        .card { background: var(--card); border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.03); cursor: pointer; position: relative; }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-        .card-img { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 25px; }
+        .filter-container { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; padding: 0 6%; }
+        .filter-btn { padding: 8px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); background: var(--card); color: var(--muted); cursor: pointer; font-weight: 600; font-size: 0.85rem; }
+        .filter-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
 
-        /* --- FLOATING ACTIONS --- */
-        .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 3000; }
-        .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-        .fab:hover { background: var(--accent); color: #000; }
+        /* --- FEED --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 6%; }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+
+        .card { background: var(--card); border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.03); cursor: pointer; position: relative; animation: slideUp 0.6s ease-out; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .card:hover { transform: translateY(-8px); border-color: var(--accent); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .card-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; font-size: 0.75rem; color: var(--muted); }
 
         /* --- MODAL --- */
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: none; z-index: 4000; padding: 20px; overflow-y: auto; }
-        .m-content { background: var(--card); max-width: 850px; margin: 40px auto; border-radius: 32px; padding: 40px; position: relative; border: 1px solid rgba(255,255,255,0.05); }
-        .ai-glow { padding: 20px; border-radius: 20px; background: rgba(0,255,136,0.05); border: 1px solid rgba(0,255,136,0.2); margin-bottom: 30px; }
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; z-index: 4000; padding: 20px; overflow-y: auto; backdrop-filter: blur(10px); }
+        .m-content { background: var(--card); max-width: 800px; margin: 20px auto; border-radius: 30px; padding: 35px; position: relative; border: 1px solid rgba(255,255,255,0.05); }
+        .ai-glow { padding: 18px; border-radius: 18px; background: rgba(0,255,136,0.03); border: 1px solid rgba(0,255,136,0.15); margin-bottom: 25px; }
         .close { position: absolute; top: 20px; right: 25px; font-size: 2rem; color: var(--text); cursor: pointer; }
 
-        .btn-action { padding: 12px 24px; border-radius: 12px; border: none; cursor: pointer; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .fab-container { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 3000; }
+        .fab { width: 50px; height: 50px; border-radius: 15px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
     </style>
 </head>
 <body class="dark-mode">
@@ -82,14 +85,26 @@
 <div id="scroll-progress"></div>
 
 <nav>
-    <a href="#" class="logo"><span class="logo-box">NL</span> NEURAL LOGIC</a>
-    <button class="fab" style="width:40px; height:40px;" onclick="toggleTheme()">🌓</button>
+    <a href="javascript:location.reload()" class="logo"><span class="logo-box">NL</span> NEURAL LOGIC</a>
+    <button class="fab" style="width:35px; height:35px;" onclick="toggleTheme()">🌓</button>
 </nav>
 
 <div class="hero">
-    <div class="badge">Sistem Auto-Sort Aktif</div>
-    <h1>Masa Depan IPTEK</h1>
-    <p>Berita terbaru selalu muncul di baris pertama.</p>
+    <div class="badge">Omni-Edition v23.0</div>
+    <h1 id="hero-title">Neural Logic</h1>
+    <p style="color: var(--muted);">Navigasi masa depan dalam satu genggaman.</p>
+    
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Cari topik atau artikel..." onkeyup="handleSearch()">
+    </div>
+
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterData('SEMUA', this)">Semua</button>
+        <button class="filter-btn" onclick="filterData('AI', this)">Kecerdasan Buatan</button>
+        <button class="filter-btn" onclick="filterData('ANTARIKSA', this)">Antariksa</button>
+        <button class="filter-btn" onclick="filterData('GADGET', this)">Gadget</button>
+        <button class="filter-btn" onclick="filterData('SAINS', this)">Sains</button>
+    </div>
 </div>
 
 <div class="container">
@@ -97,77 +112,90 @@
 </div>
 
 <div class="fab-container">
-    <button class="fab" onclick="showSaved()" title="Bookmark">🔖</button>
+    <button class="fab" onclick="showSaved()" title="Simpanan">🔖</button>
     <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
 </div>
 
 <div id="modal" class="modal" onclick="closeModal()">
     <div class="m-content" onclick="event.stopPropagation()">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img id="m-img" style="width:100%; border-radius: 20px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
-        
+        <img id="m-img" style="width:100%; border-radius: 20px; margin-bottom: 25px; max-height: 350px; object-fit: cover;">
         <div class="ai-glow">
-            <h4 style="color: var(--accent); margin-bottom: 8px;">✨ Intelijen Neural (Ringkasan):</h4>
-            <p id="m-ai" style="font-size: 0.95rem; line-height: 1.6; color: var(--text);"></p>
+            <h4 style="color: var(--accent); margin-bottom: 5px; font-size: 0.9rem;">✨ Neural Summary:</h4>
+            <p id="m-ai" style="font-size: 0.9rem; line-height: 1.6; color: var(--text);"></p>
         </div>
-
-        <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 20px; line-height: 1.2;"></h1>
-        <div id="m-body" style="line-height: 1.9; color: var(--muted); font-size: 1.1rem; margin-bottom: 30px;"></div>
-        
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <button onclick="speak()" class="btn-action" style="background: var(--accent); color: #000;">🔊 Dengar Audio</button>
-            <button onclick="shareWA()" class="btn-action" style="background: #25d366; color: white;">WhatsApp</button>
-            <button onclick="saveCurrent()" class="btn-action" style="background: #333; color: white;">🔖 Simpan</button>
+        <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 15px; font-size: 1.8rem;"></h1>
+        <div id="m-body" style="line-height: 1.8; color: var(--muted); font-size: 1.05rem; margin-bottom: 25px;"></div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button onclick="speak()" style="padding: 12px 20px; border-radius: 12px; background: var(--accent); border:none; font-weight:700; cursor:pointer;">🔊 Dengar</button>
+            <button onclick="shareWA()" style="padding: 12px 20px; border-radius: 12px; background: #25d366; color:white; border:none; cursor:pointer;">WhatsApp</button>
+            <button onclick="saveCurrent()" style="padding: 12px 20px; border-radius: 12px; background: #333; color:white; border:none; cursor:pointer;">🔖 Simpan</button>
         </div>
     </div>
 </div>
 
 <script>
-    let allArticles = [];
+    let allData = [];
     let currentArt = null;
 
-    // 1. Inisialisasi & Ambil Data
     async function init() {
-        try {
-            // Anti-Cache: Memaksa browser ambil data terbaru dari data.json
-            const res = await fetch('data.json?v=' + Date.now());
-            allArticles = await res.json();
-            
-            // LOGIKA SORTING OTOMATIS: ID terbesar (terbaru) berada di paling atas
-            const sortedData = allArticles.sort((a, b) => parseInt(b.id) - parseInt(a.id));
+        const res = await fetch('data.json?v=' + Date.now());
+        allData = await res.json();
+        // Urutkan ID terbesar ke terkecil secara default
+        display(allData.sort((a,b) => b.id - a.id));
+    }
 
-            render(sortedData);
-        } catch (error) {
-            console.error("Gagal memuat data:", error);
-            document.getElementById('feed').innerHTML = "<p>Gagal memuat berita. Pastikan data.json sudah benar.</p>";
+    function display(data) {
+        const feed = document.getElementById('feed');
+        if(data.length === 0) {
+            feed.innerHTML = "<p style='text-align:center; grid-column: 1/-1; padding: 40px;'>Tidak ada artikel ditemukan.</p>";
+            return;
+        }
+        feed.innerHTML = data.map(a => {
+            const time = Math.ceil(a.body.split(' ').length / 200); // Hitung waktu baca
+            return `
+                <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
+                    <img src="${a.img}" class="card-img" loading="lazy">
+                    <div class="card-content">
+                        <span class="badge" style="font-size: 0.6rem; padding: 3px 10px;">${a.cat}</span>
+                        <h2 style="font-family: 'Space Grotesk'; font-size: 1.1rem; margin-top: 10px;">${a.title}</h2>
+                        <div class="card-meta">
+                            <span>ID: #${a.id}</span>
+                            <span>⏱️ ${time} min read</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function handleSearch() {
+        const q = document.getElementById('searchInput').value.toLowerCase();
+        const filtered = allData.filter(a => a.title.toLowerCase().includes(q) || a.cat.toLowerCase().includes(q));
+        display(filtered);
+    }
+
+    function filterData(cat, btn) {
+        // Update UI Tombol Aktif
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if(cat === 'SEMUA') {
+            display(allData);
+            document.getElementById('hero-title').innerText = "Neural Logic";
+        } else {
+            const filtered = allData.filter(a => a.cat.toUpperCase() === cat);
+            display(filtered);
+            document.getElementById('hero-title').innerText = cat;
         }
     }
 
-    // 2. Render Kartu Artikel
-    function render(data) {
-        const feed = document.getElementById('feed');
-        feed.innerHTML = data.map(a => `
-            <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
-                <img src="${a.img}" class="card-img" alt="${a.title}" loading="lazy">
-                <div class="card-content">
-                    <span class="badge" style="font-size: 0.65rem;">${a.cat}</span>
-                    <h2 style="font-family: 'Space Grotesk'; margin-bottom: 12px; font-size: 1.15rem; line-height: 1.3;">${a.title}</h2>
-                    <p style="color: var(--muted); font-size: 0.85rem; font-weight: 500;">Baca Selengkapnya →</p>
-                </div>
-            </div>
-        `).join('');
-    }
-
-    // 3. Kontrol Modal
     function openModal(a) {
         currentArt = a;
         document.getElementById('m-img').src = a.img;
         document.getElementById('m-title').innerText = a.title;
         document.getElementById('m-body').innerText = a.body;
-        
-        // Buat Ringkasan Otomatis dari 150 karakter pertama
-        document.getElementById('m-ai').innerText = a.body.substring(0, 150) + "... [Analisa selesai]";
-        
+        document.getElementById('m-ai').innerText = a.body.substring(0, 140) + "... [Analisa Neural Selesai]";
         document.getElementById('modal').style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
@@ -178,7 +206,6 @@
         window.speechSynthesis.cancel();
     }
 
-    // 4. Fitur Pendukung (Theme, Audio, Share)
     function toggleTheme() {
         document.body.classList.toggle('light-mode');
         localStorage.setItem('nl_theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
@@ -192,7 +219,7 @@
     }
 
     function shareWA() {
-        const text = encodeURIComponent(`*${currentArt.title}*\n\nBaca info lengkapnya di Neural Logic: ${window.location.href}`);
+        const text = encodeURIComponent(`*${currentArt.title}*\n\nBaca selengkapnya di Neural Logic: ${window.location.href}`);
         window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
     }
 
@@ -201,32 +228,26 @@
         if(!saved.some(x => x.id === currentArt.id)) {
             saved.push(currentArt);
             localStorage.setItem('nl_saved', JSON.stringify(saved));
-            alert("Artikel berhasil disimpan di Bookmark! 🔖");
+            alert("Tersimpan di Bookmark! 🔖");
         }
     }
 
     function showSaved() {
         const saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(saved.length === 0) {
-            alert("Belum ada artikel yang disimpan.");
-        } else {
-            render(saved.sort((a,b) => b.id - a.id));
-            document.querySelector('.hero h1').innerText = "Bookmark Saya";
+        if(saved.length === 0) alert("Belum ada simpanan.");
+        else {
+            display(saved);
+            document.getElementById('hero-title').innerText = "Bookmark Saya";
         }
     }
 
-    // 5. Progress Bar Scroll
     window.onscroll = () => {
         let winScroll = document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
-        document.getElementById("scroll-progress").style.width = scrolled + "%";
+        document.getElementById("scroll-progress").style.width = (winScroll / height) * 100 + "%";
     };
 
-    // Load Theme Preference
     if(localStorage.getItem('nl_theme') === 'light') document.body.classList.add('light-mode');
-
-    // Start App
     init();
 </script>
 </body>

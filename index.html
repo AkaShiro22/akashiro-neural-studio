@@ -3,303 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Portal IPTEK & Monetize v16.0</title>
-    
-    <meta name="description" content="Portal berita IPTEK terupdate April 2026. Info AI, Gadget, dan Antariksa.">
-    <meta name="keywords" content="Berita Teknologi, AI 2026, Gadget Terbaru, Neural Logic">
-    
-    <meta name="theme-color" content="#00ff88">
-    <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
+    <title>Neural Logic - Berita Teknologi 2026</title>
     <style>
+        /* --- CSS DASAR & GLASSMORPHISM --- */
         :root {
-            --accent: #00ff88;
-            --bg: #050508;
-            --card: #0d0d12;
-            --text: #e2e8f0;
-            --muted: #8892b0;
-            --border: rgba(255, 255, 255, 0.05);
+            --bg: #ffffff;
+            --text: #333333;
+            --card-bg: #f9f9f9;
+            --accent: #0072ff;
         }
-
-        .light-mode {
-            --bg: #f8fafc;
-            --card: #ffffff;
-            --text: #1e293b;
-            --muted: #64748b;
-            --border: rgba(0, 0, 0, 0.1);
+        body.dark-mode {
+            --bg: #121212;
+            --text: #e0e0e0;
+            --card-bg: #1e1e1e;
+            --accent: #00c6ff;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding-bottom: 60px; }
-
-        /* --- AD SPACE STYLE --- */
-        .ad-space {
-            background: rgba(255,255,255,0.03);
-            border: 1px dashed var(--muted);
-            color: var(--muted);
-            text-align: center;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            transition: 0.3s;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 114, 255, 0.8);
+            color: white;
             padding: 15px;
-            margin: 20px 0;
-            font-size: 0.7rem;
-            border-radius: 12px;
-            text-transform: uppercase;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--accent);
+            z-index: 1100;
         }
 
-        nav {
-            padding: 15px 6%; background: var(--card); backdrop-filter: blur(15px);
-            position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 1px solid var(--border);
+        /* --- CONTAINER ARTIKEL --- */
+        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+        .article-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
-        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-glyph {
-            width: 38px; height: 38px; background: #000; border: 2px solid var(--accent);
-            border-radius: 10px; display: grid; place-items: center;
-            font-family: 'Space Grotesk'; font-weight: 700; color: var(--accent);
-        }
-        .logo-text { font-family: 'Space Grotesk'; font-size: 1.3rem; color: var(--text); }
-
-        .nav-tools { display: flex; gap: 15px; align-items: center; }
-        .tool-btn { background: none; border: 1px solid var(--border); color: var(--text); padding: 8px; border-radius: 8px; cursor: pointer; }
-
-        .container { max-width: 1200px; margin: 20px auto; padding: 0 6%; }
-        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
-
-        .card { background: var(--card); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); cursor: pointer; }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .card-img { width: 100%; height: 180px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-title { font-family: 'Space Grotesk'; font-size: 1.1rem; margin: 10px 0; color: var(--text); }
-
-        /* --- TICKER --- */
-        #ticker-wrap {
-            position: fixed; bottom: 0; width: 100%; background: var(--accent);
-            color: #000; overflow: hidden; white-space: nowrap; padding: 8px 0;
-            font-size: 0.85rem; font-weight: 800; z-index: 1000;
-        }
-        .ticker-content { display: inline-block; animation: scroll-ticker 40s linear infinite; }
-        @keyframes scroll-ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-
-        /* --- MODAL --- */
-        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; z-index: 2000; padding: 20px; overflow-y: auto; }
-        .m-content { background: var(--card); max-width: 800px; margin: 20px auto; border-radius: 25px; padding: 30px; position: relative; border: 1px solid var(--border); }
+        .article-card:hover { transform: translateY(-5px); }
+        .cat-tag { color: var(--accent); font-weight: bold; font-size: 12px; text-transform: uppercase; }
+        img { width: 100%; border-radius: 10px; margin: 15px 0; aspect-ratio: 16/9; object-fit: cover; }
         
-        .action-bar { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
-        .btn { padding: 10px 15px; border-radius: 10px; border: none; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 6px; font-size: 0.8rem; }
-        .btn-p { background: var(--accent); color: #000; }
-        .btn-buy { background: #ff4757; color: #fff; width: 100%; justify-content: center; margin-top: 20px; font-size: 1rem; }
-        
-        .btn-wa { background: #25d366; color: #fff; }
-        .btn-x { background: #000; color: #fff; border: 1px solid #333; }
-
-        .ai-summary {
-            background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--accent);
-            padding: 15px; border-radius: 0 10px 10px 0; margin-bottom: 20px; font-style: italic;
+        /* --- TOMBOL AKSI --- */
+        .btn-group { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+        button {
+            border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;
+            font-weight: 600; transition: 0.2s;
         }
-
-        .close { position: absolute; top: 20px; right: 25px; font-size: 2rem; color: var(--text); cursor: pointer; }
+        .btn-audio { background: #ff9800; color: white; }
+        .btn-wa { background: #25D366; color: white; }
+        .btn-x { background: #000; color: white; }
+        
+        /* --- FLOATING BUTTONS --- */
+        .fab-container { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; }
+        .fab {
+            width: 50px; height: 50px; border-radius: 50%; background: var(--accent);
+            color: white; border: none; cursor: pointer; font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo">
-            <div class="logo-glyph">N</div>
-            <div class="logo-text">NEURAL LOGIC</div>
-        </a>
-        <div class="nav-tools">
-            <button class="tool-btn" onclick="toggleTheme()">🌓</button>
-            <button class="tool-btn" onclick="showSaved()">🔖</button>
-        </div>
-    </nav>
+<div id="scroll-progress"></div>
 
-    <div class="container">
-        <div class="ad-space">Iklan Anda di Sini (728x90) - Hubungi Admin</div>
-        
-        <h2 id="view-title" style="margin-bottom: 20px; font-family: 'Space Grotesk';">April 2026: Berita Terkini</h2>
-        <div id="feed"></div>
-    </div>
+<header>
+    <h1>Neural Logic 2026</h1>
+    <p>Masa Depan dalam Genggaman</p>
+</header>
 
-    <div id="ticker-wrap">
-        <div class="ticker-content" id="ticker">Memuat berita terbaru...</div>
-    </div>
+<div class="container" id="news-container">
+    <p style="text-align: center;">Memuat berita terbaru...</p>
+</div>
 
-    <div id="modal" class="modal" onclick="closeModal()">
-        <div class="m-content" onclick="event.stopPropagation()">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="m-img" style="width: 100%; border-radius: 15px; margin-bottom: 20px;">
-            
-            <div class="action-bar">
-                <button class="btn btn-p" onclick="speak()">🔊 Baca Berita</button>
-                <button class="btn btn-wa" onclick="share('wa')">WA</button>
-                <button class="btn btn-x" onclick="share('x')">X</button>
-                <button class="btn btn-tool" onclick="saveArticle()">🔖 Simpan</button>
-            </div>
-
-            <div id="m-ai" class="ai-summary"></div>
-            
-            <div class="ad-space" style="background: rgba(0,255,136,0.05)">Sponsor: Gadget Masa Depan Diskon 50%!</div>
-
-            <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 20px;"></h1>
-            <div id="m-body" style="line-height: 1.8; font-size: 1.1rem;"></div>
-
-            <button class="btn btn-buy" onclick="window.open('https://shopee.co.id', '_blank')">🛒 Cek Harga Produk Terkait</button>
-        </div>
-    </div>
-
-    <script>
-        let allArticles = [];
-        let savedArticles = JSON.parse(localStorage.getItem('nn_saved')) || [];
-        let currentArt = null;
-
-        async function init() {
-            const res = await fetch('data.json');
-            allArticles = await res.json();
-            renderFeed(allArticles.sort((a,b) => b.id - a.id));
-            document.getElementById('ticker').innerHTML = allArticles.map(a => ` • ${a.title} `).join(' — ');
-        }
-
-        function renderFeed(data) {
-            document.getElementById('feed').innerHTML = data.map(a => `
-                <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
-                    <img src="${a.img}" class="card-img">
-                    <div class="card-body">
-                        <h2 class="card-title">${a.title}</h2>
-                        <div style="font-size: 0.7rem; color: var(--accent);">${a.cat}</div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function openModal(a) {
-            currentArt = a;
-            document.getElementById('m-img').src = a.img;
-            document.getElementById('m-title').innerText = a.title;
-            document.getElementById('m-body').innerText = a.body;
-            document.getElementById('m-ai').innerHTML = `<strong>✨ Ringkasan AI:</strong> ${a.body.split('. ').slice(0,2).join('. ')}...`;
-            document.getElementById('modal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-            window.speechSynthesis.cancel();
-        }
-
-        function speak() {
-            window.speechSynthesis.cancel();
-            const utter = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
-            utter.lang = 'id-ID';
-            window.speechSynthesis.speak(utter);
-        }
-
-        function share(p) {
-            const u = window.location.href;
-            const t = encodeURIComponent(currentArt.title);
-            if(p === 'wa') window.open(`https://api.whatsapp.com/send?text=${t} ${u}`);
-            if(p === 'x') window.open(`https://twitter.com/intent/tweet?text=${t}&url=${u}`);
-        }
-
-        function toggleTheme() {
-            document.body.classList.toggle('light-mode');
-        }
-
-        function saveArticle() {
-            if(!savedArticles.some(x => x.id === currentArt.id)) {
-                savedArticles.push(currentArt);
-                localStorage.setItem('nn_saved', JSON.stringify(savedArticles));
-                alert("Tersimpan!");
-            }
-        }
-
-        function showSaved() {
-            const t = document.getElementById('view-title');
-            if(t.innerText === "Bookmark Saya") {
-                renderFeed(allArticles);
-                t.innerText = "April 2026: Berita Terkini";
-            } else {
-                renderFeed(savedArticles);
-                t.innerText = "Bookmark Saya";
-            }
-        }
-
-        init();
-    </script>
-<style>
-  .social-share-container {
-    margin: 40px auto;
-    padding: 25px;
-    border-radius: 15px;
-    background: #f9f9f9;
-    text-align: center;
-    border: 1px solid #eee;
-    font-family: sans-serif;
-  }
-  .share-txt {
-    font-size: 15px;
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 15px;
-  }
-  .share-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  .btn-s {
-    border: none;
-    padding: 12px 20px;
-    border-radius: 50px;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-  }
-  .btn-s:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-  .btn-s:active { transform: scale(0.95); }
-  
-  /* Warna Medsos */
-  .c-wa { background-color: #25D366; }
-  .c-x { background-color: #000000; }
-  .c-tele { background-color: #0088cc; }
-  .c-fb { background-color: #1877F2; }
-</style>
-
-<div class="social-share-container">
-  <div class="share-txt">📢 Bagikan Berita Neural Logic:</div>
-  <div class="share-grid">
-    <button onclick="shareWA()" class="btn-s c-wa">WhatsApp</button>
-    <button onclick="shareX()" class="btn-s c-x">Twitter / X</button>
-    <button onclick="shareTele()" class="btn-s c-tele">Telegram</button>
-    <button onclick="shareFB()" class="btn-s c-fb">Facebook</button>
-  </div>
+<div class="fab-container">
+    <button class="fab" onclick="toggleDarkMode()">🌓</button>
+    <button class="fab" onclick="showBookmarks()">🔖</button>
 </div>
 
 <script>
-  // Fungsi Logika Share Tanpa Mengganggu Script Lain
-  function shareWA() {
-    const link = encodeURIComponent(window.location.href);
-    const msg = encodeURIComponent("Berita Teknologi April 2026: ");
-    window.open(`https://api.whatsapp.com/send?text=${msg}${link}`, '_blank');
-  }
-  function shareX() {
-    const link = encodeURIComponent(window.location.href);
-    window.open(`https://twitter.com/intent/tweet?url=${link}`, '_blank');
-  }
-  function shareTele() {
-    const link = encodeURIComponent(window.location.href);
-    window.open(`https://t.me/share/url?url=${link}`, '_blank');
-  }
-  function shareFB() {
-    const link = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${link}`, '_blank');
-  }
+    // 1. AMBIL DATA & URUTKAN (ID TERBESAR DI ATAS)
+    async function loadNews() {
+        try {
+            const res = await fetch('data.json');
+            const data = await res.json();
+            
+            // Logika Auto-Sort: ID 50 > ID 49
+            const sorted = data.sort((a, b) => b.id - a.id);
+            
+            const container = document.getElementById('news-container');
+            container.innerHTML = '';
+
+            sorted.forEach(item => {
+                const words = item.body.split(' ').length;
+                const readTime = Math.ceil(words / 200);
+
+                const card = `
+                    <div class="article-card">
+                        <span class="cat-tag">${item.cat}</span>
+                        <h2>${item.title}</h2>
+                        <img src="${item.img}" alt="thumbnail">
+                        <p>${item.body}</p>
+                        <div style="font-size: 12px; color: #888; margin-bottom: 10px;">
+                            ⏱️ ${readTime} min read | <span style="cursor:pointer; color:var(--accent)" onclick="saveBookmark('${item.title}')">📌 Simpan</span>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn-audio" onclick="speak('${item.body.replace(/'/g, "\\'")}')">🔊 Baca Berita</button>
+                            <button class="btn-wa" onclick="shareWA('${item.title}')">WhatsApp</button>
+                            <button class="btn-x" onclick="shareX('${item.title}')">X / Twitter</button>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        } catch (err) {
+            document.getElementById('news-container').innerHTML = "Gagal memuat data.json";
+        }
+    }
+
+    // 2. FITUR AUDIO (SUARA INDONESIA)
+    function speak(text) {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(text);
+        msg.lang = 'id-ID';
+        window.speechSynthesis.speak(msg);
+    }
+
+    // 3. FITUR SHARE
+    function shareWA(title) {
+        window.open(`https://api.whatsapp.com/send?text=Berita Baru 2026: ${title} - ${window.location.href}`, '_blank');
+    }
+    function shareX(title) {
+        window.open(`https://twitter.com/intent/tweet?text=${title}&url=${window.location.href}`, '_blank');
+    }
+
+    // 4. DARK MODE & PROGRESS BAR
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+
+    window.onscroll = () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("scroll-progress").style.width = scrolled + "%";
+    };
+
+    // 5. BOOKMARK SYSTEM
+    function saveBookmark(title) {
+        let list = JSON.parse(localStorage.getItem('bookmarks')) || [];
+        if(!list.includes(title)) {
+            list.push(title);
+            localStorage.setItem('bookmarks', JSON.stringify(list));
+            alert('Berita disimpan! 🔖');
+        } else {
+            alert('Sudah ada di daftar bacaan.');
+        }
+    }
+
+    function showBookmarks() {
+        let list = JSON.parse(localStorage.getItem('bookmarks')) || [];
+        if(list.length === 0) alert('Daftar bacaan masih kosong.');
+        else alert('Daftar Bacaan Anda:\n\n- ' + list.join('\n- '));
+    }
+
+    // INISIALISASI
+    if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+    loadNews();
 </script>
+
 </body>
 </html>

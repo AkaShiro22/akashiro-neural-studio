@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Omni-Portal v23.0</title>
+    <title>NEURAL LOGIC | International v24.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <style>
         :root {
             --accent: #00ff88;
@@ -26,7 +28,19 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; }
+
+        /* Sembunyikan Header Google Translate yang mengganggu */
+        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
+        body { top: 0px !important; }
+        .goog-te-gadget-simple { 
+            background: var(--card) !important; 
+            border: 1px solid var(--accent) !important; 
+            padding: 5px 10px !important; 
+            border-radius: 10px !important;
+            font-family: inherit !important;
+        }
+        .goog-te-menu-value span { color: var(--text) !important; font-size: 12px !important; }
 
         /* --- NAVIGATION --- */
         nav {
@@ -35,7 +49,7 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
             display: flex; justify-content: space-between; align-items: center;
         }
-        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); font-size: 1.4rem; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); font-size: 1.2rem; }
         .logo-box { padding: 5px 10px; background: var(--gradient); color: #000; border-radius: 8px; }
 
         #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 2100; width: 0%; }
@@ -45,17 +59,14 @@
         .hero h1 { font-family: 'Space Grotesk'; font-size: 2.8rem; margin-bottom: 10px; letter-spacing: -1px; }
         .badge { display: inline-block; padding: 6px 16px; border-radius: 50px; background: rgba(0, 255, 136, 0.1); color: var(--accent); font-size: 0.75rem; font-weight: 700; margin-bottom: 15px; border: 1px solid rgba(0,255,136,0.2); }
         
-        .search-bar {
-            max-width: 500px; margin: 25px auto; position: relative;
-        }
+        .search-bar { max-width: 500px; margin: 25px auto; position: relative; }
         .search-bar input {
             width: 100%; padding: 16px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);
             background: var(--card); color: var(--text); font-family: inherit; font-size: 1rem;
         }
-        .search-bar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 20px rgba(0,255,136,0.1); }
 
-        .filter-container { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; padding: 0 6%; }
-        .filter-btn { padding: 8px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); background: var(--card); color: var(--muted); cursor: pointer; font-weight: 600; font-size: 0.85rem; }
+        .filter-container { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+        .filter-btn { padding: 8px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); background: var(--card); color: var(--muted); cursor: pointer; font-weight: 600; }
         .filter-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
 
         /* --- FEED --- */
@@ -64,7 +75,6 @@
 
         .card { background: var(--card); border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.03); cursor: pointer; position: relative; animation: slideUp 0.6s ease-out; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        
         .card:hover { transform: translateY(-8px); border-color: var(--accent); }
         .card-img { width: 100%; height: 200px; object-fit: cover; }
         .card-content { padding: 20px; }
@@ -77,7 +87,7 @@
         .close { position: absolute; top: 20px; right: 25px; font-size: 2rem; color: var(--text); cursor: pointer; }
 
         .fab-container { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 3000; }
-        .fab { width: 50px; height: 50px; border-radius: 15px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        .fab { width: 50px; height: 50px; border-radius: 15px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.1rem; }
     </style>
 </head>
 <body class="dark-mode">
@@ -86,24 +96,26 @@
 
 <nav>
     <a href="javascript:location.reload()" class="logo"><span class="logo-box">NL</span> NEURAL LOGIC</a>
-    <button class="fab" style="width:35px; height:35px;" onclick="toggleTheme()">🌓</button>
+    
+    <div id="google_translate_element"></div>
+    
+    <button class="fab" style="width:35px; height:35px; border:none;" onclick="toggleTheme()">🌓</button>
 </nav>
 
 <div class="hero">
-    <div class="badge">Omni-Edition v23.0</div>
-    <h1 id="hero-title">Neural Logic</h1>
-    <p style="color: var(--muted);">Navigasi masa depan dalam satu genggaman.</p>
+    <div class="badge">International v24.0</div>
+    <h1 id="hero-title" class="notranslate">Neural Logic</h1>
+    <p style="color: var(--muted);">Explore the future in any language.</p>
     
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Cari topik atau artikel..." onkeyup="handleSearch()">
+        <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="handleSearch()">
     </div>
 
     <div class="filter-container">
-        <button class="filter-btn active" onclick="filterData('SEMUA', this)">Semua</button>
-        <button class="filter-btn" onclick="filterData('AI', this)">Kecerdasan Buatan</button>
-        <button class="filter-btn" onclick="filterData('ANTARIKSA', this)">Antariksa</button>
-        <button class="filter-btn" onclick="filterData('GADGET', this)">Gadget</button>
-        <button class="filter-btn" onclick="filterData('SAINS', this)">Sains</button>
+        <button class="filter-btn active" onclick="filterData('SEMUA', this)">All</button>
+        <button class="filter-btn" onclick="filterData('AI', this)">AI</button>
+        <button class="filter-btn" onclick="filterData('ANTARIKSA', this)">Space</button>
+        <button class="filter-btn" onclick="filterData('GADGET', this)">Gadgets</button>
     </div>
 </div>
 
@@ -112,7 +124,7 @@
 </div>
 
 <div class="fab-container">
-    <button class="fab" onclick="showSaved()" title="Simpanan">🔖</button>
+    <button class="fab" onclick="showSaved()" title="Bookmark">🔖</button>
     <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
 </div>
 
@@ -127,9 +139,8 @@
         <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 15px; font-size: 1.8rem;"></h1>
         <div id="m-body" style="line-height: 1.8; color: var(--muted); font-size: 1.05rem; margin-bottom: 25px;"></div>
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <button onclick="speak()" style="padding: 12px 20px; border-radius: 12px; background: var(--accent); border:none; font-weight:700; cursor:pointer;">🔊 Dengar</button>
+            <button onclick="speak()" style="padding: 12px 20px; border-radius: 12px; background: var(--accent); border:none; font-weight:700; cursor:pointer;">🔊 Audio</button>
             <button onclick="shareWA()" style="padding: 12px 20px; border-radius: 12px; background: #25d366; color:white; border:none; cursor:pointer;">WhatsApp</button>
-            <button onclick="saveCurrent()" style="padding: 12px 20px; border-radius: 12px; background: #333; color:white; border:none; cursor:pointer;">🔖 Simpan</button>
         </div>
     </div>
 </div>
@@ -138,29 +149,33 @@
     let allData = [];
     let currentArt = null;
 
+    // Inisialisasi Google Translate
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'id',
+            includedLanguages: 'en,id,ja,ko,ar,zh-CN,fr,de',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
     async function init() {
         const res = await fetch('data.json?v=' + Date.now());
         allData = await res.json();
-        // Urutkan ID terbesar ke terkecil secara default
         display(allData.sort((a,b) => b.id - a.id));
     }
 
     function display(data) {
         const feed = document.getElementById('feed');
-        if(data.length === 0) {
-            feed.innerHTML = "<p style='text-align:center; grid-column: 1/-1; padding: 40px;'>Tidak ada artikel ditemukan.</p>";
-            return;
-        }
         feed.innerHTML = data.map(a => {
-            const time = Math.ceil(a.body.split(' ').length / 200); // Hitung waktu baca
+            const time = Math.ceil(a.body.split(' ').length / 200);
             return `
                 <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
                     <img src="${a.img}" class="card-img" loading="lazy">
                     <div class="card-content">
-                        <span class="badge" style="font-size: 0.6rem; padding: 3px 10px;">${a.cat}</span>
+                        <span class="badge" style="font-size: 0.6rem;">${a.cat}</span>
                         <h2 style="font-family: 'Space Grotesk'; font-size: 1.1rem; margin-top: 10px;">${a.title}</h2>
                         <div class="card-meta">
-                            <span>ID: #${a.id}</span>
                             <span>⏱️ ${time} min read</span>
                         </div>
                     </div>
@@ -171,23 +186,15 @@
 
     function handleSearch() {
         const q = document.getElementById('searchInput').value.toLowerCase();
-        const filtered = allData.filter(a => a.title.toLowerCase().includes(q) || a.cat.toLowerCase().includes(q));
+        const filtered = allData.filter(a => a.title.toLowerCase().includes(q));
         display(filtered);
     }
 
     function filterData(cat, btn) {
-        // Update UI Tombol Aktif
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
-        if(cat === 'SEMUA') {
-            display(allData);
-            document.getElementById('hero-title').innerText = "Neural Logic";
-        } else {
-            const filtered = allData.filter(a => a.cat.toUpperCase() === cat);
-            display(filtered);
-            document.getElementById('hero-title').innerText = cat;
-        }
+        const filtered = cat === 'SEMUA' ? allData : allData.filter(a => a.cat.toUpperCase() === cat);
+        display(filtered);
     }
 
     function openModal(a) {
@@ -195,7 +202,7 @@
         document.getElementById('m-img').src = a.img;
         document.getElementById('m-title').innerText = a.title;
         document.getElementById('m-body').innerText = a.body;
-        document.getElementById('m-ai').innerText = a.body.substring(0, 140) + "... [Analisa Neural Selesai]";
+        document.getElementById('m-ai').innerText = a.body.substring(0, 140) + "... [Analyzing]";
         document.getElementById('modal').style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
@@ -213,32 +220,22 @@
 
     function speak() {
         window.speechSynthesis.cancel();
+        // Deteksi bahasa saat ini untuk audio
+        const currentLang = document.querySelector('.goog-te-menu-value span')?.innerText || 'id';
         const msg = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
-        msg.lang = 'id-ID';
+        msg.lang = currentLang.includes('English') ? 'en-US' : 'id-ID';
         window.speechSynthesis.speak(msg);
     }
 
     function shareWA() {
-        const text = encodeURIComponent(`*${currentArt.title}*\n\nBaca selengkapnya di Neural Logic: ${window.location.href}`);
+        const text = encodeURIComponent(`*${currentArt.title}*\nRead more: ${window.location.href}`);
         window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
-    }
-
-    function saveCurrent() {
-        let saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(!saved.some(x => x.id === currentArt.id)) {
-            saved.push(currentArt);
-            localStorage.setItem('nl_saved', JSON.stringify(saved));
-            alert("Tersimpan di Bookmark! 🔖");
-        }
     }
 
     function showSaved() {
         const saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(saved.length === 0) alert("Belum ada simpanan.");
-        else {
-            display(saved);
-            document.getElementById('hero-title').innerText = "Bookmark Saya";
-        }
+        if(saved.length === 0) alert("No bookmarks.");
+        else display(saved);
     }
 
     window.onscroll = () => {

@@ -13,9 +13,7 @@ app.use(express.json());
 
 // Masukkan API Token Replicate Anda di sini
 const replicate = new Replicate({
-  const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN,
-});
 });
 
 // Endpoint untuk Generate Video

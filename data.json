@@ -1,5 +1,180 @@
 [
   {
+    "id": 125,
+    "title": "Vario 160 ABS: Rahasia Cat Tetap Glossy di Iklim Tropis",
+    "cat": "AUTOMOTIVE",
+    "img": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=800",
+    "body": "Pemeliharaan cat pada Honda Vario 160 ABS memerlukan perhatian khusus. Sinar UV berlebih di bulan April dapat memudarkan pigmen warna. Gunakan cairan pelindung berbasis silikon dan hindari mencuci dengan sabun cuci piring karena sifat asamnya dapat mengikis lapisan clear coat. Pastikan menggunakan microfiber berkualitas saat mengelap untuk menghindari goresan halus."
+  },
+  {
+    "id": 124,
+    "title": "Teknik Pencahayaan Golden Hour untuk Fotografi Motor",
+    "cat": "CREATIVE",
+    "img": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=800",
+    "body": "Untuk mendapatkan foto motor yang terlihat 'handal', manfaatkan cahaya matahari pukul 5 sore. Cahaya rendah memberikan kontur tajam pada bodi motor Vario 160. Gunakan teknik low-angle untuk memberikan kesan gagah dan pastikan fokus terkunci pada bagian lampu depan untuk estetika maksimal."
+  },
+  {
+    "id": 123,
+    "title": "Neural Engine 5: Revolusi AI Mobile Tahun 2026",
+    "cat": "AI",
+    "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800",
+    "body": "Prosesor Neural terbaru kini mampu menjalankan model bahasa besar secara offline di smartphone. Ini memungkinkan privasi data pengguna tetap terjaga sambil memberikan respons asisten pintar yang instan tanpa delay internet."
+  },
+  {
+    "id": 122,
+    "title": "Misi Artemis IV: Manusia Kembali Menjelajah Bulan",
+    "cat": "ANTARIKSA",
+    "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800",
+    "body": "NASA mengonfirmasi peluncuran Artemis IV pada akhir April 2026. Fokus misi kali ini adalah membangun stasiun luar angkasa pertama di orbit Bulan yang akan menjadi pintu gerbang menuju Planet Mars di masa depan."
+  },
+  {
+    "id": 121,
+    "title": "Kecerdasan Buatan dalam Diagnosa Medis Mandiri",
+    "cat": "AI",
+    "img": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800",
+    "body": "Aplikasi kesehatan berbasis AI kini dapat mendeteksi gejala awal penyakit jantung hanya melalui pemindaian pola denyut nadi dari kamera smartphone. Akurasinya mencapai sembilan puluh delapan persen di tahun 2026."
+  },
+  {
+    "id": 120,
+    "title": "Tren Warna Matte vs Metallic di Industri Otomotif 2026",
+    "cat": "AUTOMOTIVE",
+    "img": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800",
+    "body": "Warna matte masih mendominasi pasar motor matic besar. Namun, pemeliharaannya lebih sulit karena tidak bisa dipoles. Pengguna disarankan menggunakan matte-protection khusus untuk menjaga tekstur bodi tetap halus dan tidak bercak."
+  },
+  {
+    "id": 119,
+    "title": "Edit Foto Estetik dengan AI In-Painting",
+    "cat": "CREATIVE",
+    "img": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800",
+    "body": "Teknologi Generative AI kini menyatu di aplikasi edit foto. Kamu bisa menghilangkan objek yang mengganggu hanya dengan satu sentuhan, sementara AI akan mengisi kekosongan latar belakang agar terlihat sangat nyata dan profesional."
+  },
+  {
+    "id": 118,
+    "title": "Revolusi Baterai Padat: Jarak Tempuh Motor Listrik Meningkat",
+    "cat": "SAINS",
+    "img": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800",
+    "body": "Ilmuwan berhasil menciptakan baterai solid-state yang lebih ringan dan aman. Teknologi ini diprediksi akan diadopsi secara massal pada akhir tahun 2026, membuat motor listrik mampu menempuh jarak hingga lima ratus kilometer sekali isi."
+  },
+  {
+    "id": 117,
+    "title": "Menangkap Keindahan Galaksi Andromeda dari Kamera HP",
+    "cat": "ANTARIKSA",
+    "img": "https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=800",
+    "body": "Dengan mode astrofotografi terbaru di smartphone 2026, memotret bintang kini tidak butuh kamera mahal. Cukup gunakan tripod dan long-exposure sepuluh detik untuk menangkap detail kabut galaksi di langit malam yang cerah."
+  },
+  {
+    "id": 116,
+    "title": "Keamanan Siber: Melindungi Identitas di Era Deepfake",
+    "cat": "AI",
+    "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
+    "body": "Seiring maraknya video palsu berbasis AI, teknologi blockchain mulai digunakan untuk memverifikasi keaslian video. Pengguna dihimbau lebih waspada terhadap panggilan video dari nomor tak dikenal yang meminta data pribadi."
+  },
+  {
+    "id": 115,
+    "title": "Perawatan Ban Motor ABS di Musim Hujan",
+    "cat": "AUTOMOTIVE",
+    "img": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800",
+    "body": "Sistem ABS pada Vario 160 sangat bergantung pada traksi ban. Pastikan alur ban tidak gundul untuk menghindari slip saat pengereman mendadak di jalanan licin bulan April ini. Tekanan angin harus selalu ideal sesuai standar pabrikan."
+  },
+  {
+    "id": 114,
+    "title": "Psikologi Warna dalam Fotografi Potret Anak",
+    "cat": "CREATIVE",
+    "img": "https://images.unsplash.com/photo-1481841395932-a1c30149520e?q=80&w=800",
+    "body": "Mengambil foto anak-anak dengan pakaian bertema putri kerajaan memerlukan latar belakang warna pastel. Warna ini memberikan kesan lembut dan ceria, membuat subjek foto terlihat menonjol namun tetap estetik dan artistik."
+  },
+  {
+    "id": 113,
+    "title": "Kecerdasan Buatan dalam Mengelola Lalu Lintas Kota",
+    "cat": "AI",
+    "img": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800",
+    "body": "Sistem lampu lalu lintas pintar kini menggunakan sensor AI untuk mendeteksi kepadatan kendaraan secara real-time. Ini mengurangi kemacetan kota hingga tiga puluh persen dan menurunkan tingkat stres pengendara di jam sibuk."
+  },
+  {
+    "id": 112,
+    "title": "Teleskop James Webb Temukan Tanda Air di Planet Ekstra-Surya",
+    "cat": "ANTARIKSA",
+    "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=800",
+    "body": "Penemuan uap air di atmosfer planet K2-18b memberikan harapan baru dalam pencarian kehidupan di luar bumi. Planet ini terletak di zona layak huni bintangnya, memicu penelitian lebih dalam oleh para ilmuwan dunia."
+  },
+  {
+    "id": 111,
+    "title": "Efek Coating Keramik pada Bodi Plastik Motor",
+    "cat": "AUTOMOTIVE",
+    "img": "https://images.unsplash.com/photo-1599256621730-535171e28e50?q=80&w=800",
+    "body": "Coating keramik tidak hanya untuk mobil mewah. Pada bodi motor plastik, coating ini memberikan lapisan permanen yang menolak debu dan air, sehingga motor Vario 160 kamu tetap terlihat seperti baru meski terkena hujan."
+  },
+  {
+    "id": 110,
+    "title": "Masa Depan AI: Robot Pendamping untuk Lansia",
+    "cat": "AI",
+    "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800",
+    "body": "Robot humanoid dengan kecerdasan emosional kini mulai digunakan di panti jompo. Mereka mampu mengenali ekspresi kesedihan dan memberikan dukungan percakapan yang menenangkan bagi para lansia yang merasa kesepian."
+  },
+  {
+    "id": 109,
+    "title": "Teknik Komposisi Simetri dalam Arsitektur Modern",
+    "cat": "CREATIVE",
+    "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
+    "body": "Simetri menciptakan keseimbangan visual yang memuaskan. Dalam fotografi arsitektur, mengambil gambar tepat dari tengah bangunan akan memberikan kesan megah dan rapi, sangat cocok untuk diunggah di galeri media sosial yang estetik."
+  },
+  {
+    "id": 108,
+    "title": "Pemanfaatan Energi Matahari Terpusat di Gurun Sahara",
+    "cat": "SAINS",
+    "img": "https://images.unsplash.com/photo-1509391366360-fe5bb629550b?q=80&w=800",
+    "body": "Proyek energi surya raksasa di Sahara mulai memasok listrik ke benua Eropa. Teknologi ini menggunakan ribuan cermin untuk memusatkan cahaya matahari ke satu titik guna menghasilkan uap penggerak turbin listrik."
+  },
+  {
+    "id": 107,
+    "title": "SpaceX Starship: Uji Coba Penerbangan Kargo ke Mars",
+    "cat": "ANTARIKSA",
+    "img": "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=800",
+    "body": "Elon Musk mengumumkan bahwa Starship akan melakukan simulasi pendaratan kargo di Mars tahun ini. Misi tanpa awak ini krusial untuk memastikan keselamatan astronot yang akan dikirim dalam dekade berikutnya."
+  },
+  {
+    "id": 106,
+    "title": "Smart Helmet dengan Head-Up Display (HUD)",
+    "cat": "AUTOMOTIVE",
+    "img": "https://images.unsplash.com/photo-1591704901662-dc6092040a15?q=80&w=800",
+    "body": "Helm masa depan kini dilengkapi layar transparan yang menampilkan kecepatan, navigasi GPS, dan notifikasi smartphone tepat di depan mata pengendara tanpa mengalihkan pandangan dari jalan raya."
+  },
+  {
+    "id": 105,
+    "title": "Generasi Baru Chip Biometrik untuk Pembayaran Tanpa Kontak",
+    "cat": "SAINS",
+    "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
+    "body": "Sistem pembayaran kini beralih ke verifikasi pola pembuluh darah di telapak tangan. Teknologi ini dianggap jauh lebih aman daripada sidik jari konvensional karena hampir tidak mungkin untuk diduplikasi."
+  },
+  {
+    "id": 104,
+    "title": "Fotografi Makro: Menjelajahi Dunia Mikro di Taman Rumah",
+    "cat": "CREATIVE",
+    "img": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800",
+    "body": "Lensa makro memungkinkan kita melihat detail serangga dan bunga yang tak terlihat mata telanjang. Kuncinya adalah kesabaran dan penggunaan tripod untuk menghindari blur akibat guncangan tangan yang sangat kecil."
+  },
+  {
+    "id": 103,
+    "title": "AI dalam Produksi Musik Sinematik",
+    "cat": "AI",
+    "img": "https://images.unsplash.com/photo-1514525253361-bee8718a74a2?q=80&w=800",
+    "body": "Komposer film kini menggunakan bantuan AI untuk membuat aransemen orkestra dasar. Ini mempercepat proses produksi musik tanpa menghilangkan sentuhan emosional yang tetap harus dilakukan oleh manusia."
+  },
+  {
+    "id": 102,
+    "title": "Menemukan Lubang Hitam Terdekat dari Bumi",
+    "cat": "ANTARIKSA",
+    "img": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800",
+    "body": "Astronom mendeteksi adanya lubang hitam yang hanya berjarak seribu tahun cahaya dari Bumi. Lubang hitam ini tidak aktif, sehingga tidak memancarkan radiasi berbahaya, namun keberadaannya mengubah teori distribusi massa galaksi."
+  },
+  {
+    "id": 101,
+    "title": "Pentingnya Mengganti Oli Motor Sesuai Kilometer",
+    "cat": "AUTOMOTIVE",
+    "img": "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=800",
+    "body": "Untuk menjaga performa mesin Vario 160 tetap halus, penggantian oli setiap dua ribu kilometer sangat dianjurkan. Oli yang bersih memastikan gesekan mesin tetap rendah dan suhu mesin tetap terjaga stabil di cuaca panas April."
+  },
+  {
     "id": 100,
     "cat": "ANTARIKSA",
     "title": "Koloni Mars Pertama Berhasil Panen Kentang",

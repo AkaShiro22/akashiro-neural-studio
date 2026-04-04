@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | System Status & Social</title>
+    <title>NEURAL LOGIC | Ultra Fix Edition</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
@@ -11,32 +11,31 @@
         :root {
             --accent: #00ff88;
             --bg: #050509; 
-            --card: rgba(17, 17, 24, 0.6); 
+            --card: rgba(17, 17, 24, 0.7); 
             --text: #f8fafc;
             --muted: #8892b0;
-            --glass-blur: blur(20px);
+            --glass-blur: blur(25px);
             --gradient: linear-gradient(135deg, #00ff88 0%, #0072ff 100%);
-            --border-glass: 1px solid rgba(255, 255, 255, 0.04);
+            --border-glass: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; transition: 0.3s; }
         body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; }
 
-        /* --- FLOATING SHARE BAR (FIX KLIK TEMBUS) --- */
+        /* --- FIX: SHARE SIDEBAR TIDAK MENGHALANGI KLIK --- */
         .share-sidebar {
             position: fixed; left: 15px; top: 50%; transform: translateY(-50%);
-            display: flex; flex-direction: column; gap: 12px; z-index: 5000;
-            pointer-events: none; /* Area kosong tidak menghalangi klik ke artikel */
+            display: flex; flex-direction: column; gap: 12px; 
+            z-index: 9999; /* Sangat tinggi tapi tembus pandang */
+            pointer-events: none; 
         }
         .share-item {
             width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
             text-decoration: none; color: white; font-size: 0.8rem; font-weight: 800;
             backdrop-filter: var(--glass-blur); border: 1px solid rgba(255,255,255,0.1); 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            pointer-events: auto; /* Hanya tombol yang bisa diklik */
+            pointer-events: auto; /* Tombol ini baru bisa diklik */
         }
-        .share-item:hover { transform: scale(1.2) translateX(10px); border-color: var(--accent); box-shadow: 0 0 15px var(--accent); }
-        
+        .share-item:hover { transform: scale(1.1) translateX(8px); border-color: var(--accent); }
         .sh-fb { background: #1877f2; }
         .sh-x { background: #000; }
         .sh-wa { background: #25d366; }
@@ -47,48 +46,48 @@
             .share-sidebar { 
                 left: 0; top: auto; bottom: 0; width: 100%; 
                 flex-direction: row; justify-content: space-around; 
-                background: var(--card); padding: 10px; transform: none;
-                border-top: var(--border-glass); backdrop-filter: var(--glass-blur);
-                pointer-events: auto;
+                background: var(--card); padding: 12px; transform: none;
+                border-top: var(--border-glass); pointer-events: auto;
             }
-            .share-item:hover { transform: translateY(-5px); }
         }
 
-        /* --- NAVIGATION --- */
+        /* --- UI NAVIGATION --- */
         nav {
-            position: sticky; top: 0; z-index: 2000; padding: 15px 6%;
+            position: sticky; top: 0; z-index: 1000; padding: 15px 6%;
             background: var(--card); backdrop-filter: var(--glass-blur);
             border-bottom: var(--border-glass); display: flex; justify-content: space-between; align-items: center;
         }
         .logo-box { padding: 5px 12px; background: var(--gradient); color: #000; border-radius: 10px; font-weight: bold; }
 
-        /* --- STATUS BAR --- */
         .status-bar {
             background: rgba(0, 255, 136, 0.05); border-bottom: var(--border-glass);
             padding: 10px 6%; display: flex; gap: 20px; font-size: 0.7rem; font-family: 'Space Grotesk';
-            color: var(--muted); text-transform: uppercase;
+            color: var(--muted); position: relative; z-index: 10;
         }
         .dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; animation: blink 1s infinite; }
         @keyframes blink { 50% { opacity: 0.2; } }
 
-        /* --- CONTENT --- */
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 6% 120px; }
-        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+        /* --- FIX: AREA ARTIKEL PRIORITAS TINGGI --- */
+        .container { 
+            max-width: 1200px; margin: 0 auto; padding: 30px 6% 120px; 
+            position: relative; z-index: 100; /* Di atas segalanya */
+        }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
         .card { 
             background: var(--card); border-radius: 28px; overflow: hidden; border: var(--border-glass); 
             cursor: pointer; backdrop-filter: var(--glass-blur); position: relative;
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); z-index: 10; }
-        .card-img { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 25px; }
+        .card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,255,136,0.1); }
+        .card-img { width: 100%; height: 210px; object-fit: cover; pointer-events: none; }
+        .card-content { padding: 22px; pointer-events: none; }
 
         /* --- MODAL --- */
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: none; z-index: 6000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
-        .m-content { background: var(--card); max-width: 800px; margin: 30px auto; border-radius: 35px; padding: 40px; border: var(--border-glass); position: relative; }
-        .close { position: absolute; top: 20px; right: 25px; font-size: 2.5rem; cursor: pointer; color: var(--muted); }
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); display: none; z-index: 10000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
+        .m-content { background: var(--card); max-width: 800px; margin: 20px auto; border-radius: 35px; padding: 35px; border: var(--border-glass); position: relative; }
+        .close { position: absolute; top: 15px; right: 25px; font-size: 2.5rem; cursor: pointer; color: var(--muted); }
 
         /* --- FAB --- */
-        .fab-container { position: fixed; bottom: 85px; right: 25px; display: flex; flex-direction: column; gap: 15px; z-index: 4000; }
+        .fab-container { position: fixed; bottom: 85px; right: 25px; display: flex; flex-direction: column; gap: 15px; z-index: 5000; }
         .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
     </style>
 </head>
@@ -111,9 +110,7 @@
 </nav>
 
 <div class="status-bar">
-    <div style="display:flex; align-items:center; gap:8px;">
-        <div class="dot"></div> System: <span style="color:var(--accent)">Online</span>
-    </div>
+    <div style="display:flex; align-items:center; gap:8px;"><div class="dot"></div> System: <span style="color:var(--accent)">Online</span></div>
     <div>Uptime: <span id="timer">00:00:00</span></div>
     <div>Ping: <span id="ping">24</span>ms</div>
 </div>
@@ -123,19 +120,19 @@
 </div>
 
 <div class="fab-container">
-    <button class="fab" onclick="window.open('https://saweria.co/akashiro', '_blank')">☕</button>
+    <button class="fab" onclick="window.open('https://trakteer.id/AkaShiro22','_blank')">☕</button>
     <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
 </div>
 
 <div id="modal" class="modal" onclick="closeModal()">
     <div class="m-content" onclick="event.stopPropagation()">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img id="m-img" style="width:100%; border-radius: 25px; margin-bottom: 25px;">
+        <img id="m-img" style="width:100%; border-radius: 25px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
         <h2 id="m-title" style="margin-bottom: 15px; font-family:'Space Grotesk'"></h2>
-        <div id="m-body" style="color:var(--muted); line-height:1.8; margin-bottom: 30px;"></div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <button onclick="speak()" style="background:var(--accent); padding:12px 25px; border:none; border-radius:15px; font-weight:bold; cursor:pointer;">🔊 Audio</button>
-            <button onclick="copyLink()" style="background:white; padding:12px 25px; border:none; border-radius:15px; font-weight:bold; cursor:pointer;">🔗 Salin Link</button>
+        <div id="m-body" style="color:var(--muted); line-height:1.8; margin-bottom: 30px; font-size: 1.1rem;"></div>
+        <div style="display:flex; gap:12px;">
+            <button onclick="speak()" style="background:var(--accent); padding:14px 28px; border:none; border-radius:15px; font-weight:bold; cursor:pointer; color:#000;">🔊 Audio</button>
+            <button onclick="copyLink()" style="background:rgba(255,255,255,0.1); color:white; padding:14px 28px; border:1px solid rgba(255,255,255,0.2); border-radius:15px; font-weight:bold; cursor:pointer;">🔗 Salin Link</button>
         </div>
     </div>
 </div>
@@ -149,20 +146,21 @@
             const res = await fetch('data.json?v=' + Date.now());
             allData = await res.json();
             display(allData.sort((a,b) => b.id - a.id));
+            
             setInterval(() => {
                 const d = new Date(Date.now() - start);
                 document.getElementById('timer').innerText = d.toISOString().substr(11, 8);
-                document.getElementById('ping').innerText = Math.floor(Math.random() * 10 + 20);
+                document.getElementById('ping').innerText = Math.floor(Math.random() * 12 + 18);
             }, 1000);
-        } catch (e) { console.error("Gagal muat data."); }
+        } catch (e) { console.error("Data error"); }
     }
 
     function display(data) {
         document.getElementById('feed').innerHTML = data.map(a => `
             <div class="card" onclick='openModal(${JSON.stringify(a)})'>
-                <img src="${a.img}" class="card-img" loading="lazy">
+                <img src="${a.img}" class="card-img">
                 <div class="card-content">
-                    <small style="color:var(--accent)">${a.cat}</small>
+                    <small style="color:var(--accent); font-weight:bold">${a.cat}</small>
                     <h3 style="margin-top:8px">${a.title}</h3>
                 </div>
             </div>

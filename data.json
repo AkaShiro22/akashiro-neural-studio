@@ -1,5 +1,12 @@
 [
 {
+    "id": 130,
+    "title": "Drone Interseptor Kinetik 'Mantis-K1': Presisi Serangan Jarak Dekat",
+    "cat": "MILITER",
+    "img": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800",
+    "body": "Menjelang akhir April 2026, taktik peperangan urban berubah drastis dengan peluncuran drone Mantis-K1. Berbeda dari drone kamikaze konvensional yang meledak, Mantis-K1 dirancang khusus untuk pertempuran jarak sangat dekat. Drone ini menggunakan lengan mekanik mikro dan algoritma AI yang meniru presisi serangan beladiri tradisional. Ia melumpuhkan drone musuh dengan melontarkan rentetan serangan kinetik berkecepatan tinggi tepat ke titik lemah rotor lawan. Tanpa bahan peledak, sistem ini menawarkan pelumpuhan target yang senyap dan nol risiko kerusakan kolateral (collateral damage) bagi warga sipil di area perkotaan."
+  },
+{
     "id": 129,
     "title": "NeuralLens: Lensa Kontak AR dengan Proyeksi Retina Langsung",
     "cat": "GADGET",

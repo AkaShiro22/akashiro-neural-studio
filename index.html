@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | System Online</title>
+    <title>NEURAL LOGIC | System Status & Social</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
@@ -27,8 +27,8 @@
             --border-glass: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s; }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; cursor: crosshair; }
+        * { margin: 0; padding: 0; box-sizing: border-box; transition: 0.3s; }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; }
 
         /* --- NAVIGATION --- */
         nav {
@@ -39,29 +39,39 @@
         .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); }
         .logo-box { padding: 5px 12px; background: var(--gradient); color: #000; border-radius: 10px; }
 
-        /* --- NEW: STATUS BAR --- */
+        /* --- STATUS BAR --- */
         .status-bar {
             background: rgba(0, 255, 136, 0.03);
             border-bottom: var(--border-glass);
             padding: 8px 6%;
-            display: flex;
-            gap: 20px;
-            font-size: 0.7rem;
-            font-family: 'Space Grotesk';
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            overflow-x: auto;
-            white-space: nowrap;
+            display: flex; gap: 20px; font-size: 0.7rem; font-family: 'Space Grotesk';
+            color: var(--muted); text-transform: uppercase; letter-spacing: 1px; overflow-x: auto;
         }
         .status-item { display: flex; align-items: center; gap: 6px; }
         .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 8px var(--accent); animation: blink 1.5s infinite; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
+        /* --- FLOATING SHARE SIDEBAR --- */
+        .share-sidebar {
+            position: fixed; left: 20px; top: 50%; transform: translateY(-50%);
+            display: flex; flex-direction: column; gap: 10px; z-index: 2500;
+        }
+        @media (max-width: 768px) { .share-sidebar { display: none; } }
+        .share-item {
+            width: 45px; height: 45px; border-radius: 12px; display: grid; place-items: center;
+            text-decoration: none; color: white; font-size: 1rem; font-weight: bold;
+            backdrop-filter: var(--glass-blur); border: var(--border-glass); transition: 0.3s;
+        }
+        .share-item:hover { transform: scale(1.1) translateX(5px); border-color: var(--accent); }
+        .sh-fb { background: #1877f2; }
+        .sh-x { background: #000; }
+        .sh-wa { background: #25d366; }
+        .sh-tg { background: #229ED9; }
+        .sh-copy { background: var(--gradient); color: #000; cursor: pointer; }
+
         /* --- HERO & FEED --- */
         .hero { padding: 50px 6% 20px; text-align: center; }
         .hero h1 { font-family: 'Space Grotesk'; font-size: 3rem; margin-bottom: 10px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
         .container { max-width: 1200px; margin: 0 auto; padding: 20px 6%; }
         #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
 
@@ -80,12 +90,24 @@
 
         /* --- FAB --- */
         .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 3000; }
-        .fab { width: 50px; height: 50px; border-radius: 15px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; backdrop-filter: var(--glass-blur); }
-
-        .btn-social { padding: 10px 15px; border-radius: 10px; border: none; color: white; cursor: pointer; font-size: 0.8rem; font-weight: 600; margin-top: 10px; }
+        .fab { 
+            width: 50px; height: 50px; border-radius: 15px; background: var(--card); 
+            border: 1px solid var(--accent); color: var(--accent); cursor: pointer; 
+            display: grid; place-items: center; backdrop-filter: var(--glass-blur); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        .fab:hover { background: var(--accent); color: #000; transform: scale(1.1); }
     </style>
 </head>
 <body class="dark-mode">
+
+<div class="share-sidebar">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://AkaShiro22.github.io" target="_blank" class="share-item sh-fb">FB</a>
+    <a href="https://twitter.com/intent/tweet?url=https://AkaShiro22.github.io" target="_blank" class="share-item sh-x">X</a>
+    <a href="https://api.whatsapp.com/send?text=Cek website teknologi keren: https://AkaShiro22.github.io" target="_blank" class="share-item sh-wa">WA</a>
+    <a href="https://t.me/share/url?url=https://AkaShiro22.github.io" target="_blank" class="share-item sh-tg">TG</a>
+    <div onclick="copyCurrentLink()" class="share-item sh-copy">🔗</div>
+</div>
 
 <nav>
     <a href="#" class="logo">
@@ -123,19 +145,20 @@
 
 <div class="fab-container">
     <button class="fab" onclick="window.open('https://saweria.co/akashiro', '_blank')" title="Support Me">☕</button>
-    <button class="fab" onclick="showSaved()">🔖</button>
-    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
+    <button class="fab" onclick="showSaved()" title="Bookmark">🔖</button>
+    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Top">▲</button>
 </div>
 
 <div id="modal" class="modal" onclick="closeModal()">
     <div class="m-content" onclick="event.stopPropagation()">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img id="m-img" style="width:100%; border-radius: 20px; margin-bottom: 20px;">
-        <h2 id="m-title" style="margin-bottom: 15px;"></h2>
-        <p id="m-body" style="color: var(--muted); line-height: 1.6;"></p>
-        <div style="margin-top: 25px; display: flex; gap: 10px;">
-            <button onclick="shareWA()" class="btn-social" style="background: #25d366;">WhatsApp</button>
-            <button onclick="speak()" class="btn-social" style="background: var(--accent); color: #000;">Dengar Audio</button>
+        <img id="m-img" style="width:100%; border-radius: 20px; margin-bottom: 20px; max-height: 400px; object-fit: cover;">
+        <h2 id="m-title" style="margin-bottom: 15px; font-family: 'Space Grotesk';"></h2>
+        <p id="m-body" style="color: var(--muted); line-height: 1.8; font-size: 1.1rem;"></p>
+        
+        <div style="margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <button onclick="speak()" style="padding: 12px 25px; border-radius: 12px; border: none; background: var(--accent); color: #000; font-weight: bold; cursor: pointer;">🔊 Dengar Audio</button>
+            <button onclick="shareSocialModal('wa')" style="padding: 12px 25px; border-radius: 12px; border: none; background: #25d366; color: white; font-weight: bold; cursor: pointer;">Share WhatsApp</button>
         </div>
     </div>
 </div>
@@ -143,51 +166,46 @@
 <script>
     let allData = [];
     let startTime = Date.now();
+    let currentArt = null;
 
-    // 1. UPDATE STATUS REALTIME
+    function copyCurrentLink() {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            alert("✅ Link Website disalin! Silakan tempel di Story Instagram.");
+        });
+    }
+
     function updateSystemStatus() {
-        // Update Uptime
-        const now = Date.now();
-        const diff = new Date(now - startTime);
+        const diff = new Date(Date.now() - startTime);
         const h = String(diff.getUTCHours()).padStart(2, '0');
         const m = String(diff.getUTCMinutes()).padStart(2, '0');
         const s = String(diff.getUTCSeconds()).padStart(2, '0');
         document.getElementById('uptime-timer').innerText = `${h}:${m}:${s}`;
-
-        // Update Pseudo-Ping (Simulasi kestabilan jaringan)
-        const ping = Math.floor(Math.random() * (45 - 20 + 1) + 20);
-        document.getElementById('ping-val').innerText = ping;
+        document.getElementById('ping-val').innerText = Math.floor(Math.random() * 25 + 20);
     }
 
     async function init() {
         try {
             const res = await fetch('data.json?v=' + Date.now());
             allData = await res.json();
-            
-            // Update Article Count di Status Bar
             document.getElementById('article-count').innerText = allData.length;
-            
             display(allData.sort((a,b) => b.id - a.id));
             setInterval(updateSystemStatus, 1000);
-        } catch (e) {
-            console.error("Gagal load data");
-        }
+        } catch (e) { console.error("Error loading data"); }
     }
 
     function display(data) {
         const feed = document.getElementById('feed');
         feed.innerHTML = data.map(a => `
             <div class="card" onclick='openModal(${JSON.stringify(a)})'>
-                <img src="${a.img}" class="card-img">
+                <img src="${a.img}" class="card-img" loading="lazy">
                 <div class="card-content">
-                    <small style="color:var(--accent)">${a.cat}</small>
-                    <h3 style="margin-top:5px">${a.title}</h3>
+                    <small style="color:var(--accent); font-weight:bold;">${a.cat}</small>
+                    <h3 style="margin-top:8px; line-height:1.3;">${a.title}</h3>
                 </div>
             </div>
         `).join('');
     }
 
-    let currentArt;
     function openModal(a) {
         currentArt = a;
         document.getElementById('m-img').src = a.img;
@@ -203,9 +221,10 @@
         window.speechSynthesis.cancel();
     }
 
-    function shareWA() {
-        const text = encodeURIComponent(`*${currentArt.title}*\n${window.location.href}`);
-        window.open(`https://api.whatsapp.com/send?text=${text}`);
+    function shareSocialModal(p) {
+        const url = encodeURIComponent(window.location.href);
+        const txt = encodeURIComponent(`*${currentArt.title}*\nBaca di Neural Logic: `);
+        if(p === 'wa') window.open(`https://api.whatsapp.com/send?text=${txt}${url}`);
     }
 
     function speak() {
@@ -215,13 +234,8 @@
         window.speechSynthesis.speak(msg);
     }
 
-    function toggleTheme() {
-        document.body.classList.toggle('light-mode');
-    }
-
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'id'}, 'google_translate_element');
-    }
+    function toggleTheme() { document.body.classList.toggle('light-mode'); }
+    function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'id'}, 'google_translate_element'); }
 
     init();
 </script>

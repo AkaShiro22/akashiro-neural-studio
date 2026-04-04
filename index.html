@@ -40,24 +40,26 @@
             box-shadow: 0 0 15px var(--accent); display: none;
         }
 
-        /* --- ELEGAN STATUS BAR --- */
-        .status-bar-container {
-            display: flex; justify-content: center; gap: 15px; margin: 25px auto;
-            padding: 10px 24px; max-width: fit-content;
-            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 100px; backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-            animation: fadeIn 1s ease;
+        /* --- LIVE STATUS CONSOLE --- */
+        .status-console {
+            display: flex; justify-content: center; gap: 25px; margin: 25px auto;
+            padding: 12px 28px; max-width: fit-content;
+            background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px; backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+            flex-wrap: wrap;
         }
 
-        .status-node { display: flex; align-items: center; gap: 8px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); }
-        .dot-pulse { position: relative; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 10px var(--accent); }
-        .dot-pulse::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 1px solid var(--accent); animation: ripple 2s infinite; }
+        .status-item { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 80px; }
+        .status-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; }
+        .status-data { font-family: 'Space Grotesk'; font-size: 0.85rem; color: var(--text); display: flex; align-items: center; gap: 6px; }
         
-        @keyframes ripple { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(2.5); opacity: 0; } }
-        .status-label { color: var(--text); opacity: 0.8; }
-        .status-value { color: var(--accent); font-family: 'Space Grotesk'; }
+        .live-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; position: relative; }
+        .live-dot::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 1px solid var(--accent); animation: pulse 2s infinite; }
+        
+        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
+        .accent-text { color: var(--accent); text-shadow: 0 0 10px rgba(0, 255, 136, 0.3); }
 
-        /* --- UI COMPONENTS --- */
+        /* --- NAVIGATION --- */
         nav {
             position: sticky; top: 0; z-index: 2000; padding: 15px 6%;
             background: var(--card); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
@@ -67,6 +69,7 @@
         .logo-box { padding: 5px 12px; background: var(--gradient); color: #000; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,136,0.3); }
         #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 2100; width: 0%; }
 
+        /* --- HERO --- */
         .hero { padding: 60px 6% 30px; text-align: center; }
         .hero h1 { font-family: 'Space Grotesk'; font-size: 3.5rem; margin-bottom: 10px; letter-spacing: -2px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .badge { display: inline-block; padding: 6px 16px; border-radius: 50px; background: rgba(0, 255, 136, 0.05); color: var(--accent); font-size: 0.75rem; font-weight: 700; border: 1px solid rgba(0,255,136,0.15); }
@@ -75,34 +78,21 @@
         .search-bar input { width: 100%; padding: 18px 28px; border-radius: 20px; border: var(--border-glass); background: var(--card); color: var(--text); font-family: inherit; font-size: 1.05rem; backdrop-filter: var(--glass-blur); }
         .search-bar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 25px rgba(0,255,136,0.15); }
 
-        .filter-container { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; padding: 0 6%; }
-        .filter-btn { padding: 10px 22px; border-radius: 15px; border: var(--border-glass); background: var(--card); color: var(--muted); cursor: pointer; font-weight: 600; font-size: 0.9rem; }
-        .filter-btn.active { background: var(--gradient); color: #000; border-color: transparent; box-shadow: 0 5px 15px rgba(0,255,136,0.2); }
-
+        /* --- FEED --- */
         #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 6% 60px; }
         .card { background: var(--card); border-radius: 28px; overflow: hidden; border: var(--border-glass); cursor: pointer; position: relative; backdrop-filter: var(--glass-blur); animation: slideUp 0.7s ease-out; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .card:hover { transform: translateY(-10px) scale(1.02); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
         .card-img { width: 100%; height: 220px; object-fit: cover; transition: 0.6s; }
-        .card:hover .card-img { transform: scale(1.1); }
         .card-content { padding: 25px; }
         .card-meta { display: flex; justify-content: space-between; margin-top: 15px; font-size: 0.8rem; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; }
 
-        /* --- MODAL --- */
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; z-index: 4000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
-        .m-content { background: var(--card); max-width: 800px; margin: 40px auto; border-radius: 35px; padding: 40px; position: relative; border: var(--border-glass); transform: scale(0.9); transition: 0.3s; }
-        .modal.open .m-content { transform: scale(1); }
-        .close { position: absolute; top: 25px; right: 30px; font-size: 2.5rem; color: var(--muted); cursor: pointer; }
-
         .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 3000; }
         .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.3rem; backdrop-filter: var(--glass-blur); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-        .fab:hover { background: var(--accent); color: #000; box-shadow: 0 0 20px var(--accent); }
-
-        .skeleton { background: rgba(255,255,255,0.03); border-radius: 28px; position: relative; overflow: hidden; height: 350px; }
+        
+        .skeleton { background: rgba(255,255,255,0.03); border-radius: 28px; height: 350px; position: relative; overflow: hidden; }
         .skeleton::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); animation: shimmer 1.5s infinite; }
         @keyframes shimmer { 100% { transform: translateX(100%); } }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body class="dark-mode">
@@ -124,34 +114,27 @@
     <h1 id="hero-title" class="notranslate">Neural Logic</h1>
     <p style="color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Navigasi masa depan IPTEK dengan estetika tinggi.</p>
 
-    <div class="status-bar-container">
-        <div class="status-node">
-            <div class="dot-pulse"></div>
+    <div class="status-console">
+        <div class="status-item">
             <span class="status-label">Network</span>
-            <span class="status-value" id="ping-status">Stable</span>
+            <span class="status-data"><div class="live-dot"></div> <span id="net-status" class="accent-text">ONLINE</span></span>
         </div>
-        <div style="width: 1px; height: 12px; background: rgba(255,255,255,0.1); align-self: center;"></div>
-        <div class="status-node">
+        <div class="status-item">
+            <span class="status-label">Uptime</span>
+            <span class="status-data accent-text" id="uptime-val">00:00:00</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">Live Views</span>
+            <span class="status-data accent-text" id="view-count">1,204</span>
+        </div>
+        <div class="status-item">
             <span class="status-label">Latency</span>
-            <span class="status-value" id="ms-value">-- ms</span>
-        </div>
-        <div style="width: 1px; height: 12px; background: rgba(255,255,255,0.1); align-self: center;"></div>
-        <div class="status-node">
-            <span class="status-label">Engine</span>
-            <span class="status-value">v25.1</span>
+            <span class="status-data accent-text" id="ping-val">24 ms</span>
         </div>
     </div>
 
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Cari teknologi atau inovasi..." onkeyup="handleSearch()">
-    </div>
-
-    <div class="filter-container">
-        <button class="filter-btn active" onclick="filterData('SEMUA', this)">Semua</button>
-        <button class="filter-btn" onclick="filterData('AI', this)">AI</button>
-        <button class="filter-btn" onclick="filterData('ANTARIKSA', this)">Space</button>
-        <button class="filter-btn" onclick="filterData('MILITER', this)">Militer</button>
-        <button class="filter-btn" onclick="filterData('GADGET', this)">Gadget</button>
     </div>
 </div>
 
@@ -167,41 +150,41 @@
     <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
 </div>
 
-<div id="modal" class="modal" onclick="closeModal()">
-    <div class="m-content" onclick="event.stopPropagation()">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img id="m-img" style="width:100%; border-radius: 25px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
-        <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 15px; font-size: 2rem;"></h1>
-        <div id="m-body" style="line-height: 1.8; color: var(--muted); margin-bottom: 30px;"></div>
-        <div style="display: flex; gap: 10px;">
-            <button onclick="speak()" style="background: var(--accent); color:#000; padding:12px 24px; border:none; border-radius:12px; font-weight:700; cursor:pointer;">🔊 Audio</button>
-            <button onclick="saveCurrent()" style="background: rgba(255,255,255,0.05); color:#fff; padding:12px 24px; border:var(--border-glass); border-radius:12px; font-weight:700; cursor:pointer;">🔖 Bookmark</button>
-        </div>
-    </div>
-</div>
-
 <script>
     let allData = [];
-    let currentArt = null;
+    let startTime = Date.now();
 
-    // --- LOGIC STATUS ELEGAN ---
-    function updateElegantStatus() {
-        const msElement = document.getElementById('ms-value');
-        const pingStatus = document.getElementById('ping-status');
-        const randomMs = Math.floor(Math.random() * (45 - 12 + 1)) + 12;
-        msElement.innerText = `${randomMs}ms`;
-        if (randomMs > 35) {
-            pingStatus.innerText = "Active";
-            pingStatus.style.color = "#ffaa00";
+    // --- LIVE INDICATOR LOGIC ---
+    function updateLiveStats() {
+        // Uptime Calculation
+        const diff = Math.floor((Date.now() - startTime) / 1000);
+        const hrs = String(Math.floor(diff / 3600)).padStart(2, '0');
+        const mins = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
+        const secs = String(diff % 60).padStart(2, '0');
+        document.getElementById('uptime-val').innerText = `${hrs}:${mins}:${secs}`;
+
+        // Live Views Simulation (Angka fluktuatif halus)
+        const currentViews = parseInt(document.getElementById('view-count').innerText.replace(',', ''));
+        const change = Math.floor(Math.random() * 5) - 2; // -2 sampai +2
+        document.getElementById('view-count').innerText = (currentViews + change).toLocaleString();
+
+        // Ping Simulation
+        const ping = Math.floor(Math.random() * (42 - 18 + 1)) + 18;
+        document.getElementById('ping-val').innerText = `${ping} ms`;
+
+        // Network Status Check
+        const netText = document.getElementById('net-status');
+        if(!navigator.onLine) {
+            netText.innerText = "OFFLINE";
+            netText.style.color = "#ff4444";
         } else {
-            pingStatus.innerText = "Stable";
-            pingStatus.style.color = "var(--accent)";
+            netText.innerText = "ONLINE";
+            netText.style.color = "var(--accent)";
         }
     }
-    setInterval(updateElegantStatus, 4000);
-    updateElegantStatus();
+    setInterval(updateLiveStats, 1000);
 
-    // Kursor Kustom
+    // --- CORE LOGIC ---
     const cursor = document.getElementById('cursor-tracker');
     if (window.matchMedia("(pointer: fine)").matches) {
         cursor.style.display = 'block';
@@ -227,10 +210,9 @@
 
     function display(data) {
         const feed = document.getElementById('feed');
-        if(data.length === 0) { feed.innerHTML = "<p>Data tidak ditemukan.</p>"; return; }
         feed.innerHTML = data.map(a => `
-            <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
-                <img src="${a.img}" class="card-img">
+            <div class="card">
+                <img src="${a.img}" class="card-img" onerror="this.src='https://via.placeholder.com/400x220/111/00ff88?text=Neural+Logic'">
                 <div class="card-content">
                     <span class="badge" style="font-size:0.6rem; margin-bottom:10px;">${a.cat}</span>
                     <h2 style="font-family:'Space Grotesk'; font-size:1.1rem;">${a.title}</h2>
@@ -245,54 +227,7 @@
         display(allData.filter(a => a.title.toLowerCase().includes(q) || a.cat.toLowerCase().includes(q)));
     }
 
-    function filterData(cat, btn) {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        if(cat === 'SEMUA') display(allData);
-        else display(allData.filter(a => a.cat.toUpperCase() === cat));
-    }
-
-    function openModal(a) {
-        currentArt = a;
-        document.getElementById('m-img').src = a.img;
-        document.getElementById('m-title').innerText = a.title;
-        document.getElementById('m-body').innerText = a.body;
-        const modal = document.getElementById('modal');
-        modal.style.display = 'block';
-        setTimeout(() => modal.classList.add('open'), 10);
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        const modal = document.getElementById('modal');
-        modal.classList.remove('open');
-        setTimeout(() => modal.style.display = 'none', 300);
-        document.body.style.overflow = 'auto';
-    }
-
     function toggleTheme() { document.body.classList.toggle('light-mode'); }
-
-    function speak() {
-        window.speechSynthesis.cancel();
-        const msg = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
-        msg.lang = 'id-ID';
-        window.speechSynthesis.speak(msg);
-    }
-
-    function saveCurrent() {
-        let saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(!saved.some(x => x.id === currentArt.id)) {
-            saved.push(currentArt);
-            localStorage.setItem('nl_saved', JSON.stringify(saved));
-            alert("Tersimpan!");
-        }
-    }
-
-    function showSaved() {
-        const saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(saved.length === 0) alert("Belum ada bookmark.");
-        else display(saved);
-    }
 
     window.onscroll = () => {
         let winScroll = document.documentElement.scrollTop;

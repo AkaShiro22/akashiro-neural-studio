@@ -3,202 +3,414 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Ultra Fix Edition</title>
+    <title>NEURAL LOGIC | Aesthetic v25.1</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <style>
         :root {
             --accent: #00ff88;
-            --bg: #050509; 
-            --card: rgba(17, 17, 24, 0.7); 
+            --bg: #050509;
+            --card: rgba(17, 17, 24, 0.6);
             --text: #f8fafc;
             --muted: #8892b0;
-            --glass-blur: blur(25px);
+            --glass-blur: blur(20px);
             --gradient: linear-gradient(135deg, #00ff88 0%, #0072ff 100%);
-            --border-glass: 1px solid rgba(255, 255, 255, 0.08);
+            --border-glass: 1px solid rgba(255, 255, 255, 0.04);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; transition: 0.3s; }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; }
-
-        /* --- FIX: SHARE SIDEBAR TIDAK MENGHALANGI KLIK --- */
-        .share-sidebar {
-            position: fixed; left: 15px; top: 50%; transform: translateY(-50%);
-            display: flex; flex-direction: column; gap: 12px; 
-            z-index: 9999; /* Sangat tinggi tapi tembus pandang */
-            pointer-events: none; 
-        }
-        .share-item {
-            width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
-            text-decoration: none; color: white; font-size: 0.8rem; font-weight: 800;
-            backdrop-filter: var(--glass-blur); border: 1px solid rgba(255,255,255,0.1); 
-            pointer-events: auto; /* Tombol ini baru bisa diklik */
-        }
-        .share-item:hover { transform: scale(1.1) translateX(8px); border-color: var(--accent); }
-        .sh-fb { background: #1877f2; }
-        .sh-x { background: #000; }
-        .sh-wa { background: #25d366; }
-        .sh-tg { background: #229ED9; }
-        .sh-copy { background: var(--gradient); color: #000; cursor: pointer; }
-
-        @media (max-width: 768px) {
-            .share-sidebar { 
-                left: 0; top: auto; bottom: 0; width: 100%; 
-                flex-direction: row; justify-content: space-around; 
-                background: var(--card); padding: 12px; transform: none;
-                border-top: var(--border-glass); pointer-events: auto;
-            }
+        .light-mode {
+            --bg: #f8fafc;
+            --card: rgba(255, 255, 255, 0.7);
+            --text: #0f172a;
+            --muted: #64748b;
+            --glass-blur: blur(15px);
+            --border-glass: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        /* --- UI NAVIGATION --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s, transform 0.2s cubic-bezier(0.2, 0, 0.2, 1); }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; cursor: none; }
+
+        /* --- CURSOR TRACKER --- */
+        #cursor-tracker {
+            position: fixed; width: 40px; height: 40px; background: rgba(0, 255, 136, 0.1);
+            border-radius: 50%; pointer-events: none; z-index: 10000;
+            transform: translate(-50%, -50%); border: 1px solid var(--accent);
+            box-shadow: 0 0 15px var(--accent); display: none;
+        }
+
+        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
+        body { top: 0px !important; }
+        .goog-te-gadget-simple {
+            background: var(--card) !important; backdrop-filter: var(--glass-blur) !important;
+            border: var(--border-glass) !important; padding: 6px 12px !important;
+            border-radius: 12px !important; font-family: inherit !important; cursor: pointer !important;
+        }
+        .goog-te-gadget-simple:hover { border-color: var(--accent) !important; }
+        .goog-te-menu-value span { color: var(--text) !important; font-size: 13px !important; font-weight: 600 !important; }
+
+        /* --- NAVIGATION --- */
         nav {
-            position: sticky; top: 0; z-index: 1000; padding: 15px 6%;
-            background: var(--card); backdrop-filter: var(--glass-blur);
+            position: sticky; top: 0; z-index: 2000; padding: 15px 6%;
+            background: var(--card); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
             border-bottom: var(--border-glass); display: flex; justify-content: space-between; align-items: center;
         }
-        .logo-box { padding: 5px 12px; background: var(--gradient); color: #000; border-radius: 10px; font-weight: bold; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); font-size: 1.3rem; }
+        .logo-box { padding: 5px 12px; background: var(--gradient); color: #000; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,136,0.3); }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 2100; width: 0%; }
 
-        .status-bar {
-            background: rgba(0, 255, 136, 0.05); border-bottom: var(--border-glass);
-            padding: 10px 6%; display: flex; gap: 20px; font-size: 0.7rem; font-family: 'Space Grotesk';
-            color: var(--muted); position: relative; z-index: 10;
-        }
-        .dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; animation: blink 1s infinite; }
-        @keyframes blink { 50% { opacity: 0.2; } }
+        /* --- HERO & SEARCH --- */
+        .hero { padding: 60px 6% 30px; text-align: center; }
+        .hero h1 { font-family: 'Space Grotesk'; font-size: 3rem; margin-bottom: 15px; letter-spacing: -1.5px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .badge { display: inline-block; padding: 6px 16px; border-radius: 50px; background: rgba(0, 255, 136, 0.05); color: var(--accent); font-size: 0.75rem; font-weight: 700; margin-bottom: 15px; border: 1px solid rgba(0,255,136,0.15); }
+        .search-bar { max-width: 550px; margin: 30px auto; position: relative; }
+        .search-bar input { width: 100%; padding: 18px 28px; border-radius: 20px; border: var(--border-glass); background: var(--card); color: var(--text); font-family: inherit; font-size: 1.05rem; backdrop-filter: var(--glass-blur); }
+        .search-bar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 25px rgba(0,255,136,0.15); }
+        .filter-container { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; padding: 0 6%; }
+        .filter-btn { padding: 10px 22px; border-radius: 15px; border: var(--border-glass); background: var(--card); color: var(--muted); cursor: pointer; font-weight: 600; font-size: 0.9rem; backdrop-filter: var(--glass-blur); }
+        .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+        .filter-btn.active { background: var(--gradient); color: #000; border-color: transparent; box-shadow: 0 5px 15px rgba(0,255,136,0.2); }
 
-        /* --- FIX: AREA ARTIKEL PRIORITAS TINGGI --- */
-        .container { 
-            max-width: 1200px; margin: 0 auto; padding: 30px 6% 120px; 
-            position: relative; z-index: 100; /* Di atas segalanya */
-        }
-        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
-        .card { 
-            background: var(--card); border-radius: 28px; overflow: hidden; border: var(--border-glass); 
-            cursor: pointer; backdrop-filter: var(--glass-blur); position: relative;
-        }
-        .card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,255,136,0.1); }
-        .card-img { width: 100%; height: 210px; object-fit: cover; pointer-events: none; }
-        .card-content { padding: 22px; pointer-events: none; }
+        /* --- FEED --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 6%; }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: var(--card); border-radius: 28px; overflow: hidden; border: var(--border-glass); cursor: pointer; position: relative; backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); animation: slideUp 0.7s ease-out; z-index: 1; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .card::before { content: ""; position: absolute; inset: 0; background: var(--gradient); filter: blur(20px); opacity: 0; z-index: -1; transition: opacity 0.6s; }
+        .card:hover::before { opacity: 0.15; }
+        .card:hover { transform: translateY(-10px) scale(1.02); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .card-img-container { width: 100%; height: 220px; overflow: hidden; position: relative; }
+        .card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1); }
+        .card:hover .card-img { transform: scale(1.1); }
+        .card-img-container::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(5,5,9,0.8)); }
+        .card-content { padding: 25px; position: relative; z-index: 2; }
+        .card-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; font-size: 0.8rem; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.03); padding-top: 15px; }
+
+        /* --- SKELETON --- */
+        .skeleton { background: rgba(255,255,255,0.03); position: relative; overflow: hidden; border-radius: 15px; }
+        .skeleton::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); animation: shimmer 1.5s infinite; }
+        @keyframes shimmer { 100% { transform: translateX(100%); } }
 
         /* --- MODAL --- */
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); display: none; z-index: 10000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
-        .m-content { background: var(--card); max-width: 800px; margin: 20px auto; border-radius: 35px; padding: 35px; border: var(--border-glass); position: relative; }
-        .close { position: absolute; top: 15px; right: 25px; font-size: 2.5rem; cursor: pointer; color: var(--muted); }
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; z-index: 4000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .m-content { background: var(--card); max-width: 850px; margin: 30px auto; border-radius: 35px; padding: 45px; position: relative; border: var(--border-glass); backdrop-filter: var(--glass-blur); box-shadow: 0 25px 50px rgba(0,0,0,0.6); transform: scale(0.9); transition: transform 0.3s; }
+        .modal.open .m-content { transform: scale(1); }
+        .ai-glow { padding: 22px; border-radius: 20px; background: rgba(0,255,136,0.02); border: 1px solid rgba(0,255,136,0.1); margin-bottom: 30px; position: relative; }
+        .ai-glow::before { content: ""; position: absolute; inset: -1px; background: var(--gradient); filter: blur(10px); opacity: 0.1; z-index: -1; border-radius: 20px; }
+        .close { position: absolute; top: 25px; right: 30px; font-size: 2.5rem; color: var(--muted); cursor: pointer; transition: color 0.3s; }
+        .close:hover { color: var(--accent); transform: rotate(90deg); }
 
-        /* --- FAB --- */
-        .fab-container { position: fixed; bottom: 85px; right: 25px; display: flex; flex-direction: column; gap: 15px; z-index: 5000; }
-        .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+        .btn-action { padding: 14px 28px; border-radius: 15px; border: none; cursor: pointer; font-weight: 700; display: flex; align-items: center; gap: 10px; font-size: 1rem; transition: transform 0.2s, box-shadow 0.3s; }
+        .btn-action:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+
+        .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 3000; }
+        .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.3rem; backdrop-filter: var(--glass-blur); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .fab:hover { background: var(--accent); color: #000; box-shadow: 0 0 20px var(--accent); }
+
+        #update-toast { transition: opacity 0.5s ease; }
+
+        /* --- STYLING TOMBOL SHARE MEDSOS --- */
+        .share-box { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; margin-top: 10px; }
+        .share-title { font-family: 'Space Grotesk'; font-size: 0.9rem; color: var(--muted); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .social-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        .btn-social { padding: 10px 18px; border-radius: 12px; border: none; cursor: pointer; font-weight: 600; font-size: 0.9rem; transition: transform 0.2s, opacity 0.3s; display: flex; align-items: center; gap: 8px; color: white; }
+        .btn-social:hover { transform: translateY(-3px); opacity: 0.85; }
+        .wa-btn { background: #25d366; }
+        .fb-btn { background: #1877f2; }
+        .x-btn { background: #000000; border: 1px solid rgba(255,255,255,0.2); }
+        .tg-btn { background: #229ED9; }
+        .ig-btn { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
     </style>
 </head>
-<body>
+<body class="dark-mode">
 
-<div class="share-sidebar">
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://AkaShiro22.github.io" target="_blank" class="share-item sh-fb">FB</a>
-    <a href="https://twitter.com/intent/tweet?url=https://AkaShiro22.github.io" target="_blank" class="share-item sh-x">X</a>
-    <a href="https://api.whatsapp.com/send?text=Cek website IPTEK: https://AkaShiro22.github.io" target="_blank" class="share-item sh-wa">WA</a>
-    <a href="https://t.me/share/url?url=https://AkaShiro22.github.io" target="_blank" class="share-item sh-tg">TG</a>
-    <div onclick="copyLink()" class="share-item sh-copy">🔗</div>
-</div>
+<div id="cursor-tracker"></div>
+<div id="scroll-progress"></div>
 
 <nav>
-    <div style="display:flex; align-items:center; gap:10px;">
+    <a href="javascript:location.reload()" class="logo">
         <span class="logo-box">NL</span>
-        <h2 style="font-family:'Space Grotesk'">NEURAL LOGIC</h2>
-    </div>
+        <span class="notranslate">NEURAL LOGIC</span>
+    </a>
     <div id="google_translate_element"></div>
+    <button class="fab" style="width:38px; height:38px; border:none; border-radius: 12px;" onclick="toggleTheme()" title="Theme">🌓</button>
 </nav>
 
-<div class="status-bar">
-    <div style="display:flex; align-items:center; gap:8px;"><div class="dot"></div> System: <span style="color:var(--accent)">Online</span></div>
-    <div>Uptime: <span id="timer">00:00:00</span></div>
-    <div>Ping: <span id="ping">24</span>ms</div>
+<div class="hero">
+    <div class="badge">Aesthetic Update v25.1</div>
+    <h1 id="hero-title" class="notranslate">Neural Logic</h1>
+    <p style="color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Navigasi masa depan IPTEK dengan estetika tinggi.</p>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Cari teknologi atau inovasi..." onkeyup="handleSearch()">
+    </div>
+
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterData('SEMUA', this)">Semua</button>
+        <button class="filter-btn" onclick="filterData('AI', this)">AI</button>
+        <button class="filter-btn" onclick="filterData('ANTARIKSA', this)">Space</button>
+        <button class="filter-btn" onclick="filterData('MILITER', this)">Militer</button>
+        <button class="filter-btn" onclick="filterData('GADGET', this)">Gadget</button>
+    </div>
 </div>
 
 <div class="container">
-    <div id="feed"></div>
+    <div id="feed">
+        <div class="card skeleton" style="height: 350px;"></div>
+        <div class="card skeleton" style="height: 350px;"></div>
+        <div class="card skeleton" style="height: 350px;"></div>
+    </div>
 </div>
 
 <div class="fab-container">
-    <button class="fab" onclick="window.open('https://saweria.co/akashiro', '_blank')">☕</button>
-    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
+    <button class="fab" onclick="window.open('https://saweria.co/akashiro', '_blank')" title="Dukung Saya"> ☕</button>
+
+    <button class="fab" onclick="showSaved()" title="Bookmark">🔖</button>
+    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Top">▲</button>
+</div>
+    <button class="fab" onclick="showSaved()" title="Bookmark">🔖</button>
+    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Top">▲</button>
 </div>
 
 <div id="modal" class="modal" onclick="closeModal()">
     <div class="m-content" onclick="event.stopPropagation()">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img id="m-img" style="width:100%; border-radius: 25px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
-        <h2 id="m-title" style="margin-bottom: 15px; font-family:'Space Grotesk'"></h2>
-        <div id="m-body" style="color:var(--muted); line-height:1.8; margin-bottom: 30px; font-size: 1.1rem;"></div>
-        <div style="display:flex; gap:12px;">
-            <button onclick="speak()" style="background:var(--accent); padding:14px 28px; border:none; border-radius:15px; font-weight:bold; cursor:pointer; color:#000;">🔊 Audio</button>
-            <button onclick="copyLink()" style="background:rgba(255,255,255,0.1); color:white; padding:14px 28px; border:1px solid rgba(255,255,255,0.2); border-radius:15px; font-weight:bold; cursor:pointer;">🔗 Salin Link</button>
+        <img id="m-img" style="width:100%; border-radius: 25px; margin-bottom: 30px; max-height: 400px; object-fit: cover; border: var(--border-glass);">
+
+        <div class="ai-glow">
+            <h4 style="color: var(--accent); margin-bottom: 8px; font-size: 0.95rem; font-family: 'Space Grotesk';">✨ Intelijen Neural:</h4>
+            <p id="m-ai" style="font-size: 0.95rem; line-height: 1.7; color: var(--text); font-style: italic;"></p>
         </div>
+
+        <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 20px; font-size: 2.2rem; line-height: 1.2; letter-spacing: -1px;"></h1>
+        <div id="m-body" style="line-height: 1.9; color: var(--muted); font-size: 1.1rem; margin-bottom: 35px;"></div>
+
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 25px;">
+            <button onclick="speak()" class="btn-action" style="background: var(--accent); color: #000;"><span style="font-size:1.2rem;">🔊</span> Dengar Audio</button>
+            <button onclick="saveCurrent()" class="btn-action" style="background: rgba(255,255,255,0.05); color:white; border: var(--border-glass);">🔖 Simpan Bookmark</button>
+        </div>
+
+        <div class="share-box">
+            <div class="share-title">🚀 Bagikan Inovasi Ini</div>
+            <div class="social-row">
+                <button onclick="shareSocial('wa')" class="btn-social wa-btn">💬 WhatsApp</button>
+                <button onclick="shareSocial('fb')" class="btn-social fb-btn">📘 Facebook</button>
+                <button onclick="shareSocial('x')" class="btn-social x-btn">🐦 X (Twitter)</button>
+                <button onclick="shareSocial('tg')" class="btn-social tg-btn">✈️ Telegram</button>
+                <button onclick="copyLinkIG()" class="btn-social ig-btn">🔗 Salin untuk IG</button>
+            </div>
+        </div>
+
     </div>
+</div>
+
+<div id="update-toast" style="display: none; position: fixed; bottom: 20px; right: 20px; background: rgba(0,0,0,0.8); color: #00ffcc; padding: 15px; border-radius: 10px; border-left: 5px solid #00ffcc; z-index: 1000; backdrop-filter: blur(5px);">
+    <span>🚀 Ada Artikel Baru!</span>
+    <button onclick="location.reload()" style="background: none; border: 1px solid #00ffcc; color: #00ffcc; margin-left: 10px; cursor: pointer; font-weight: bold; border-radius: 5px; padding: 5px 10px;">Refresh</button>
 </div>
 
 <script>
     let allData = [];
-    let start = Date.now();
+    let currentArt = null;
+    const cursor = document.getElementById('cursor-tracker');
+
+    // Kursor Kustom
+    if (window.matchMedia("(pointer: fine)").matches) {
+        cursor.style.display = 'block';
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, .card').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.style.transform = 'translate(-50%, -50%) scale(1.5)');
+            el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%, -50%) scale(1)');
+        });
+    }
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'id',
+            includedLanguages: 'en,id,ja,ko,ar,zh-CN,fr,de',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    function checkForUpdates(data) {
+        const toast = document.getElementById('update-toast');
+        const lastSeenId = localStorage.getItem('nl_last_id');
+        const currentLatestId = data[0].id;
+
+        if (lastSeenId && currentLatestId > parseInt(lastSeenId)) {
+            toast.style.display = 'flex';
+            toast.style.alignItems = 'center';
+            toast.style.opacity = '1';
+            try {
+                const audio = new Audio('https://www.soundjay.com/buttons/sounds/button-30.mp3');
+                audio.volume = 0.2; audio.play();
+            } catch(e) {}
+            setTimeout(() => { toast.style.opacity = "0"; setTimeout(() => { toast.style.display = 'none'; }, 500); }, 10000);
+        }
+        localStorage.setItem('nl_last_id', currentLatestId);
+    }
 
     async function init() {
         try {
             const res = await fetch('data.json?v=' + Date.now());
             allData = await res.json();
-            display(allData.sort((a,b) => b.id - a.id));
-            
-            setInterval(() => {
-                const d = new Date(Date.now() - start);
-                document.getElementById('timer').innerText = d.toISOString().substr(11, 8);
-                document.getElementById('ping').innerText = Math.floor(Math.random() * 12 + 18);
-            }, 1000);
-        } catch (e) { console.error("Data error"); }
+            const sortedData = allData.sort((a,b) => b.id - a.id);
+            if (sortedData.length > 0) checkForUpdates(sortedData);
+            setTimeout(() => { display(sortedData); }, 800);
+        } catch (error) {
+            console.error("Data.json bermasalah:", error);
+            document.getElementById('feed').innerHTML = "<p style='text-align:center; padding:50px;'>Gagal memuat portal. Cek data.json kamu.</p>";
+        }
     }
 
     function display(data) {
-        document.getElementById('feed').innerHTML = data.map(a => `
-            <div class="card" onclick='openModal(${JSON.stringify(a)})'>
-                <img src="${a.img}" class="card-img">
-                <div class="card-content">
-                    <small style="color:var(--accent); font-weight:bold">${a.cat}</small>
-                    <h3 style="margin-top:8px">${a.title}</h3>
+        const feed = document.getElementById('feed');
+        if(data.length === 0) {
+            feed.innerHTML = "<p style='text-align:center; grid-column: 1/-1; padding: 60px; color:var(--muted);'>Tidak ada inovasi ditemukan.</p>";
+            return;
+        }
+        feed.innerHTML = data.map(a => {
+            const words = a.body.split(' ').length;
+            const time = Math.ceil(words / 200);
+            return `
+                <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
+                    <div class="card-img-container">
+                        <img src="${a.img}" class="card-img" alt="${a.title}" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge" style="font-size: 0.65rem; padding: 4px 12px; margin-bottom:12px;">${a.cat}</span>
+                        <h2 style="font-family: 'Space Grotesk'; font-size: 1.2rem; line-height: 1.3;">${a.title}</h2>
+                        <div class="card-meta">
+                            <span>#${a.id}</span>
+                            <span>⏱️ ${time} min read</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
     }
 
-    let currentArt;
+    function handleSearch() {
+        const q = document.getElementById('searchInput').value.toLowerCase();
+        const filtered = allData.filter(a => a.title.toLowerCase().includes(q) || a.cat.toLowerCase().includes(q));
+        display(filtered);
+    }
+
+    function filterData(cat, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if(cat === 'SEMUA') {
+            display(allData); document.getElementById('hero-title').innerText = "Neural Logic";
+        } else {
+            const filtered = allData.filter(a => a.cat.toUpperCase() === cat);
+            display(filtered); document.getElementById('hero-title').innerText = cat;
+        }
+    }
+
     function openModal(a) {
         currentArt = a;
         document.getElementById('m-img').src = a.img;
         document.getElementById('m-title').innerText = a.title;
         document.getElementById('m-body').innerText = a.body;
-        document.getElementById('modal').style.display = 'block';
+
+        const summary = a.body.split('. ').slice(0, 2).join('. ') + "... [Neural Summary]";
+        document.getElementById('m-ai').innerText = summary;
+
+        const modal = document.getElementById('modal');
+        modal.style.display = 'block';
+        setTimeout(() => modal.classList.add('open'), 10);
         document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
-        document.getElementById('modal').style.display = 'none';
+        const modal = document.getElementById('modal');
+        modal.classList.remove('open');
+        setTimeout(() => modal.style.display = 'none', 300);
         document.body.style.overflow = 'auto';
         window.speechSynthesis.cancel();
     }
 
-    function copyLink() {
-        navigator.clipboard.writeText(window.location.href);
-        alert("✅ Link Berhasil Disalin!");
+    function toggleTheme() {
+        document.body.classList.toggle('light-mode');
+        localStorage.setItem('nl_theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
     }
 
     function speak() {
         window.speechSynthesis.cancel();
-        const msg = new SpeechSynthesisUtterance(currentArt.body);
-        msg.lang = 'id-ID';
+        const currentLangSpan = document.querySelector('.goog-te-menu-value span');
+        const currentLang = currentLangSpan ? currentLangSpan.innerText : 'Indonesian';
+        const msg = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
+        if (currentLang.includes('English')) msg.lang = 'en-US';
+        else if (currentLang.includes('Jepang') || currentLang.includes('Japanese')) msg.lang = 'ja-JP';
+        else msg.lang = 'id-ID';
         window.speechSynthesis.speak(msg);
     }
 
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'id'}, 'google_translate_element');
+    // --- FUNGSI SHARE MEDSOS BARU ---
+    function shareSocial(platform) {
+        // Ambil URL website saat ini
+        const url = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(currentArt.title);
+        const textWA = encodeURIComponent(`*${currentArt.title}*\n\nBaca inovasi selengkapnya di Neural Logic:\n${window.location.href}`);
+
+        let shareUrl = '';
+
+        if (platform === 'wa') {
+            shareUrl = `https://api.whatsapp.com/send?text=${textWA}`;
+        } else if (platform === 'fb') {
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        } else if (platform === 'x') {
+            shareUrl = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+        } else if (platform === 'tg') {
+            shareUrl = `https://t.me/share/url?url=${url}&text=${title}`;
+        }
+
+        // Buka tab atau aplikasi baru
+        if(shareUrl) window.open(shareUrl, '_blank', 'width=600,height=500');
     }
+
+    function copyLinkIG() {
+        // Karena IG tidak punya Web Share URL, sistem akan meng-copy teks
+        const copyText = `Baca inovasi: ${currentArt.title} \n\nDi Neural Logic: ${window.location.href}`;
+        navigator.clipboard.writeText(copyText).then(() => {
+            alert("✅ Teks dan Link berhasil disalin!\nSilakan paste di Instagram Story, DM, atau Bio Anda.");
+        }).catch(err => {
+            console.error('Gagal menyalin: ', err);
+            alert("Gagal menyalin link.");
+        });
+    }
+    // --------------------------------
+
+    function saveCurrent() {
+        let saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
+        if(!saved.some(x => x.id === currentArt.id)) {
+            saved.push(currentArt);
+            localStorage.setItem('nl_saved', JSON.stringify(saved));
+            alert("Berhasil disimpan di Bookmark! 🔖");
+        }
+    }
+
+    function showSaved() {
+        const saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
+        if(saved.length === 0) alert("Belum ada simpanan.");
+        else { display(saved); document.getElementById('hero-title').innerText = "Bookmark Saya"; }
+    }
+
+    window.onscroll = () => {
+        let winScroll = document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        document.getElementById("scroll-progress").style.width = (winScroll / height) * 100 + "%";
+    };
+
+    if(localStorage.getItem('nl_theme') === 'light') document.body.classList.add('light-mode');
     init();
 </script>
+
 </body>
 </html>

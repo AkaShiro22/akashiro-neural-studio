@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Aesthetic v25.1</title>
+    <title>NEURAL LOGIC | Live v25.1</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -46,7 +46,7 @@
             padding: 12px 28px; max-width: fit-content;
             background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 20px; backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-            flex-wrap: wrap;
+            flex-wrap: wrap; animation: fadeIn 1s ease;
         }
 
         .status-item { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 80px; }
@@ -84,8 +84,16 @@
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .card:hover { transform: translateY(-10px) scale(1.02); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
         .card-img { width: 100%; height: 220px; object-fit: cover; transition: 0.6s; }
+        .card:hover .card-img { transform: scale(1.1); }
         .card-content { padding: 25px; }
         .card-meta { display: flex; justify-content: space-between; margin-top: 15px; font-size: 0.8rem; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; }
+
+        /* --- MODAL --- */
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; z-index: 4000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
+        .m-content { background: var(--card); max-width: 800px; margin: 40px auto; border-radius: 35px; padding: 40px; position: relative; border: var(--border-glass); transform: scale(0.9); transition: 0.3s; }
+        .modal.open { display: block; }
+        .modal.open .m-content { transform: scale(1); }
+        .close { position: absolute; top: 25px; right: 30px; font-size: 2.5rem; color: var(--muted); cursor: pointer; }
 
         .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 3000; }
         .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.3rem; backdrop-filter: var(--glass-blur); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
@@ -93,6 +101,7 @@
         .skeleton { background: rgba(255,255,255,0.03); border-radius: 28px; height: 350px; position: relative; overflow: hidden; }
         .skeleton::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); animation: shimmer 1.5s infinite; }
         @keyframes shimmer { 100% { transform: translateX(100%); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body class="dark-mode">
@@ -129,7 +138,7 @@
         </div>
         <div class="status-item">
             <span class="status-label">Latency</span>
-            <span class="status-data accent-text" id="ping-val">24 ms</span>
+            <span class="status-data accent-text" id="ping-val">-- ms</span>
         </div>
     </div>
 
@@ -150,41 +159,46 @@
     <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
 </div>
 
+<div id="modal" class="modal" onclick="closeModal()">
+    <div class="m-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="m-img" src="" style="width:100%; border-radius: 25px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
+        <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 15px; font-size: 2rem;"></h1>
+        <div id="m-body" style="line-height: 1.8; color: var(--muted); margin-bottom: 30px; font-size: 1.05rem;"></div>
+        <div style="display: flex; gap: 10px;">
+            <button onclick="speak()" style="background: var(--accent); color:#000; padding:12px 24px; border:none; border-radius:12px; font-weight:700; cursor:pointer;">🔊 Audio</button>
+            <button onclick="saveCurrent()" style="background: rgba(255,255,255,0.05); color:#fff; padding:12px 24px; border:var(--border-glass); border-radius:12px; font-weight:700; cursor:pointer;">🔖 Bookmark</button>
+        </div>
+    </div>
+</div>
+
 <script>
     let allData = [];
+    let currentArt = null;
     let startTime = Date.now();
 
     // --- LIVE INDICATOR LOGIC ---
     function updateLiveStats() {
-        // Uptime Calculation
         const diff = Math.floor((Date.now() - startTime) / 1000);
         const hrs = String(Math.floor(diff / 3600)).padStart(2, '0');
         const mins = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
         const secs = String(diff % 60).padStart(2, '0');
         document.getElementById('uptime-val').innerText = `${hrs}:${mins}:${secs}`;
 
-        // Live Views Simulation (Angka fluktuatif halus)
-        const currentViews = parseInt(document.getElementById('view-count').innerText.replace(',', ''));
-        const change = Math.floor(Math.random() * 5) - 2; // -2 sampai +2
-        document.getElementById('view-count').innerText = (currentViews + change).toLocaleString();
+        const views = document.getElementById('view-count');
+        const currentViews = parseInt(views.innerText.replace(',', ''));
+        views.innerText = (currentViews + (Math.floor(Math.random() * 3) - 1)).toLocaleString();
 
-        // Ping Simulation
-        const ping = Math.floor(Math.random() * (42 - 18 + 1)) + 18;
+        const ping = Math.floor(Math.random() * (45 - 15 + 1)) + 15;
         document.getElementById('ping-val').innerText = `${ping} ms`;
 
-        // Network Status Check
         const netText = document.getElementById('net-status');
-        if(!navigator.onLine) {
-            netText.innerText = "OFFLINE";
-            netText.style.color = "#ff4444";
-        } else {
-            netText.innerText = "ONLINE";
-            netText.style.color = "var(--accent)";
-        }
+        netText.innerText = navigator.onLine ? "ONLINE" : "OFFLINE";
+        netText.style.color = navigator.onLine ? "var(--accent)" : "#ff4444";
     }
-    setInterval(updateLiveStats, 1000);
+    setInterval(updateLiveStats, 2000);
 
-    // --- CORE LOGIC ---
+    // --- CORE APP LOGIC ---
     const cursor = document.getElementById('cursor-tracker');
     if (window.matchMedia("(pointer: fine)").matches) {
         cursor.style.display = 'block';
@@ -202,16 +216,18 @@
         try {
             const res = await fetch('data.json?v=' + Date.now());
             allData = await res.json();
-            setTimeout(() => display(allData.sort((a,b) => b.id - a.id)), 1000);
+            setTimeout(() => display(allData.sort((a,b) => b.id - a.id)), 800);
         } catch (e) {
-            document.getElementById('feed').innerHTML = "<p>Gagal memuat konten.</p>";
+            document.getElementById('feed').innerHTML = "<p style='text-align:center; color:var(--muted); grid-column: 1/-1;'>Gagal memuat data.json</p>";
         }
     }
 
     function display(data) {
         const feed = document.getElementById('feed');
+        if(data.length === 0) { feed.innerHTML = "<p>Data tidak ditemukan.</p>"; return; }
+        
         feed.innerHTML = data.map(a => `
-            <div class="card">
+            <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
                 <img src="${a.img}" class="card-img" onerror="this.src='https://via.placeholder.com/400x220/111/00ff88?text=Neural+Logic'">
                 <div class="card-content">
                     <span class="badge" style="font-size:0.6rem; margin-bottom:10px;">${a.cat}</span>
@@ -222,12 +238,55 @@
         `).join('');
     }
 
+    function openModal(a) {
+        currentArt = a;
+        document.getElementById('m-img').src = a.img;
+        document.getElementById('m-title').innerText = a.title;
+        document.getElementById('m-body').innerText = a.body;
+        
+        const modal = document.getElementById('modal');
+        modal.style.display = 'block';
+        setTimeout(() => modal.classList.add('open'), 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.classList.remove('open');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
     function handleSearch() {
         const q = document.getElementById('searchInput').value.toLowerCase();
         display(allData.filter(a => a.title.toLowerCase().includes(q) || a.cat.toLowerCase().includes(q)));
     }
 
     function toggleTheme() { document.body.classList.toggle('light-mode'); }
+
+    function speak() {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
+        msg.lang = 'id-ID';
+        window.speechSynthesis.speak(msg);
+    }
+
+    function saveCurrent() {
+        let saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
+        if(!saved.some(x => x.id === currentArt.id)) {
+            saved.push(currentArt);
+            localStorage.setItem('nl_saved', JSON.stringify(saved));
+            alert("Berhasil disimpan ke bookmark!");
+        }
+    }
+
+    function showSaved() {
+        const saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
+        if(saved.length === 0) alert("Belum ada bookmark tersimpan.");
+        else display(saved);
+    }
 
     window.onscroll = () => {
         let winScroll = document.documentElement.scrollTop;

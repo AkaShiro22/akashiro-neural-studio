@@ -929,37 +929,5 @@
     "title": "Era Layar Fisik Berakhir: Integrasi 'Holo-Sync' pada Perangkat Transparan",
     "img": "https://image_url_placeholder/holographic_device.jpg",
     "body": "Peluncuran perangkat genggam transparan dengan teknologi Quantum-Dot Glass yang memproyeksikan antarmuka holografik 3D, memungkinkan interaksi data tanpa sentuhan fisik."
-  },
-{
-  "article_id": "135",
-  "publish_date": "2026-04-04",
-  "category": "GADGET & WEARABLE",
-  "title": "Cincin Modular 'Omni-Ring': Masa Depan Kendali Cerdas di Ujung Jari",
-  "visual_content": {
-    "image_id": "http://googleusercontent.com/image_generation_content/2",
-    "description": "Sebuah cincin modular futuristik di jari telunjuk yang memproyeksikan hologram kalender April 2026 dan kontrol rumah pintar dengan cahaya biru elektrik di ruang tamu minimalis."
-  },
-  "audio_content": {
-    "status": "Ready to play in chat",
-    "title": "Masa Depan di Kulit",
-    "genre": "Ambient Electronic",
-    "duration": "30 seconds",
-    "summary": "Trek atmosferik futuristik dengan narasi tentang transisi dari layar fisik ke antarmuka saraf dan holografik."
-  },
-  "content_body": {
-    "headline": "Revolusi Cincin Modular: Menggantikan Peran Smartphone dalam Kehidupan Sehari-hari",
-    "paragraphs": [
-      "Pada April 2026, tren gadget dunia bergeser dari perangkat genggam ke perangkat yang dapat dikenakan secara diskret namun bertenaga tinggi. 'Omni-Ring' adalah inovasi terbaru yang menggunakan material graphene fleksibel dan proyektor mikro-laser untuk menciptakan antarmuka digital tepat di atas telapak tangan pengguna.",
-      "Fitur unggulannya mencakup sistem 'Neurol-Haptic' yang memberikan sensasi sentuhan pada proyeksi hologram, memungkinkan pengguna untuk 'menekan' tombol cahaya atau 'menggeser' jadwal kalender di udara seolah-olah benda tersebut nyata.",
-      "Selain kontrol rumah pintar, Omni-Ring juga berfungsi sebagai dompet digital biometrik tingkat tinggi dan pemantau kesehatan yang terintegrasi langsung dengan asisten AI personal, menjadikan smartphone tradisional hampir tidak relevan lagi untuk aktivitas harian."
-    ],
-    "key_features": [
-      "Proyeksi Hologram HD 360 derajat",
-      "Segmen modular yang dapat diganti (baterai, sensor, proyektor)",
-      "Pengisian daya nirkabel melalui panas tubuh (Thermo-Charge)",
-      "Sinkronisasi saraf untuk kontrol tanpa suara"
-    ]
-  },
-  "explanation": "Artikel ini menyoroti evolusi gadget dari bentuk smartphone konvensional menuju perangkat 'invisible tech' berupa cincin modular. Fokus utamanya adalah pada kemudahan interaksi manusia dengan data melalui hologram dan kontrol haptik, serta bagaimana teknologi kini semakin menyatu dengan gaya hidup minimalis dan kesehatan personal di tahun 2026."
-}
+  }
 ]

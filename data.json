@@ -915,5 +915,19 @@
     "cat": "MEDIS",
     "img": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000",
     "body": "Memasuki April 2026, teknologi Bio-Digital Twin resmi diimplementasikan. Teknologi ini menciptakan replika digital organ pasien secara real-time menggunakan sensor nano dan jaringan 6G. Dokter kini dapat mensimulasikan operasi atau reaksi obat pada kembaran digital pasien sebelum tindakan nyata dilakukan. Selain itu, Haptic-Glove v5 memungkinkan bedah jarak jauh dengan sensasi sentuhan nyata, sementara robot AI memantau kesehatan mental pasien di ruang pemulihan secara otonom."
+  },
+  {
+    "id": 132,
+    "cat": "GREEN TECH",
+    "title": "Foto-Bioreaktor Alga Portabel: Solusi Penyerap Polusi Mandiri",
+    "img": "https://image_url_placeholder/algae_bioreactor.jpg",
+    "body": "Sistem foto-bioreaktor modular 'Alga-Wall 3.0' menggunakan mikroalga untuk menyerap CO2 sepuluh kali lebih cepat dari pohon, sekaligus memproduksi oksigen real-time untuk hunian urban."
+  },
+  {
+    "id": 133,
+    "cat": "GADGET & IOT",
+    "title": "Era Layar Fisik Berakhir: Integrasi 'Holo-Sync' pada Perangkat Transparan",
+    "img": "https://image_url_placeholder/holographic_device.jpg",
+    "body": "Peluncuran perangkat genggam transparan dengan teknologi Quantum-Dot Glass yang memproyeksikan antarmuka holografik 3D, memungkinkan interaksi data tanpa sentuhan fisik."
   }
 ]

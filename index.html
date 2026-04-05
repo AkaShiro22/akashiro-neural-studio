@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>NEURAL LOGIC | Inovasi Teknologi & Estetika Digital</title>
-    <meta name="description" content="Neural Logic adalah platform masa depan yang menyajikan artikel teknologi gadget terbaru, panduan otomotif estetik, dan galeri desain visual.">
-    <meta name="keywords" content="Neural Logic, Teknologi 2026, Gadget, Vario 160, Fotografi Estetik">
-    <meta name="author" content="Neural Logic Team">
+    <title>NEURAL LOGIC | Tech Innovation & Digital Aesthetics</title>
+    <meta name="description" content="Neural Logic: A futuristic platform exploring 2026 tech trends, high-end gadget reviews, and professional digital photography aesthetics.">
+    <meta name="keywords" content="Neural Logic, Future Tech 2026, Digital Art, Tech Reviews, Minimalist Web Design">
+    <meta name="author" content="Neural Logic">
     <link rel="canonical" href="https://neurallogic.eu.cc/" />
 
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <style>
         :root {
@@ -36,36 +34,8 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s, transform 0.2s cubic-bezier(0.2, 0, 0.2, 1); }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; cursor: default; }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; }
 
-        /* --- CURSOR TRACKER --- */
-        #cursor-tracker {
-            position: fixed; width: 40px; height: 40px; background: rgba(0, 255, 136, 0.1);
-            border-radius: 50%; pointer-events: none; z-index: 10000;
-            transform: translate(-50%, -50%); border: 1px solid var(--accent);
-            box-shadow: 0 0 15px var(--accent); display: none;
-        }
-
-        /* --- LIVE STATUS CONSOLE --- */
-        .status-console {
-            display: flex; justify-content: center; gap: 25px; margin: 25px auto;
-            padding: 12px 28px; max-width: fit-content;
-            background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 20px; backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-            flex-wrap: wrap; animation: fadeIn 1s ease;
-        }
-
-        .status-item { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 80px; }
-        .status-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; }
-        .status-data { font-family: 'Space Grotesk'; font-size: 0.85rem; color: var(--text); display: flex; align-items: center; gap: 6px; }
-
-        .live-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; position: relative; }
-        .live-dot::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 1px solid var(--accent); animation: pulse 2s infinite; }
-
-        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
-        .accent-text { color: var(--accent); text-shadow: 0 0 10px rgba(0, 255, 136, 0.3); }
-
-        /* --- NAVIGATION --- */
         nav {
             position: sticky; top: 0; z-index: 2000; padding: 15px 6%;
             background: var(--card); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
@@ -75,130 +45,113 @@
         .logo-box { padding: 5px 12px; background: var(--gradient); color: #000; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,136,0.3); }
         #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 2100; width: 0%; }
 
-        /* --- HERO --- */
         .hero { padding: 60px 6% 30px; text-align: center; }
         .hero h1 { font-family: 'Space Grotesk'; font-size: 3.5rem; margin-bottom: 10px; letter-spacing: -2px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .badge { display: inline-block; padding: 6px 16px; border-radius: 50px; background: rgba(0, 255, 136, 0.05); color: var(--accent); font-size: 0.75rem; font-weight: 700; border: 1px solid rgba(0,255,136,0.15); }
 
-        .search-bar { max-width: 550px; margin: 30px auto; position: relative; }
-        .search-bar input { width: 100%; padding: 18px 28px; border-radius: 20px; border: var(--border-glass); background: var(--card); color: var(--text); font-family: inherit; font-size: 1.05rem; backdrop-filter: var(--glass-blur); }
-        .search-bar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 25px rgba(0,255,136,0.15); }
+        .status-console {
+            display: flex; justify-content: center; gap: 25px; margin: 25px auto;
+            padding: 12px 28px; max-width: fit-content;
+            background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px; backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+            flex-wrap: wrap;
+        }
+        .status-item { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 80px; }
+        .status-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; }
+        .status-data { font-family: 'Space Grotesk'; font-size: 0.85rem; color: var(--text); display: flex; align-items: center; gap: 6px; }
+        .live-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; position: relative; }
+        .live-dot::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 1px solid var(--accent); animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
 
-        /* --- FEED --- */
+        .search-bar { max-width: 550px; margin: 30px auto; position: relative; }
+        .search-bar input { width: 100%; padding: 18px 28px; border-radius: 20px; border: var(--border-glass); background: var(--card); color: var(--text); font-family: inherit; font-size: 1.05rem; }
+        .search-bar input:focus { outline: none; border-color: var(--accent); }
+
         #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 6% 60px; }
-        .card { background: var(--card); border-radius: 28px; overflow: hidden; border: var(--border-glass); cursor: pointer; position: relative; backdrop-filter: var(--glass-blur); animation: slideUp 0.7s ease-out; }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .card:hover { transform: translateY(-10px) scale(1.02); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .card { background: var(--card); border-radius: 28px; overflow: hidden; border: var(--border-glass); cursor: pointer; position: relative; backdrop-filter: var(--glass-blur); }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
         .card-img { width: 100%; height: 220px; object-fit: cover; transition: 0.6s; }
-        .card:hover .card-img { transform: scale(1.1); }
         .card-content { padding: 25px; }
         .card-meta { display: flex; justify-content: space-between; margin-top: 15px; font-size: 0.8rem; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; }
 
-        /* --- MODAL --- */
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; z-index: 4000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
-        .m-content { background: var(--card); max-width: 800px; margin: 40px auto; border-radius: 35px; padding: 40px; position: relative; border: var(--border-glass); transform: scale(0.9); transition: 0.3s; }
+        .m-content { background: var(--card); max-width: 800px; margin: 40px auto; border-radius: 35px; padding: 40px; border: var(--border-glass); }
         .modal.open { display: block; }
-        .modal.open .m-content { transform: scale(1); }
-        .close { position: absolute; top: 25px; right: 30px; font-size: 2.5rem; color: var(--muted); cursor: pointer; }
-
-        /* --- SHARE BUTTONS --- */
-        .share-container {
-            margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05);
-            display: flex; flex-direction: column; gap: 15px;
-        }
-        .share-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 1.5px; }
-        .share-grid { display: flex; gap: 10px; flex-wrap: wrap; }
-        .share-btn {
-            padding: 10px 18px; border-radius: 12px; border: var(--border-glass);
-            background: rgba(255,255,255,0.03); color: var(--text); font-size: 0.85rem;
-            font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;
-        }
-        .share-btn:hover { background: var(--accent); color: #000; border-color: transparent; box-shadow: 0 0 15px var(--accent); }
+        .close { float: right; font-size: 2.5rem; color: var(--muted); cursor: pointer; }
 
         .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 3000; }
-        .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.3rem; backdrop-filter: var(--glass-blur); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-
-        .skeleton { background: rgba(255,255,255,0.03); border-radius: 28px; height: 350px; position: relative; overflow: hidden; }
-        .skeleton::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); animation: shimmer 1.5s infinite; }
-        @keyframes shimmer { 100% { transform: translateX(100%); } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.3rem; backdrop-filter: var(--glass-blur); }
+        
+        /* About Section */
+        .about-section { padding: 60px 6%; max-width: 900px; margin: 0 auto; text-align: center; border-top: var(--border-glass); }
+        .about-text { color: var(--muted); line-height: 1.8; font-size: 1.1rem; margin-top: 20px; }
     </style>
 </head>
 <body class="dark-mode">
 
-<div id="cursor-tracker"></div>
 <div id="scroll-progress"></div>
 
 <nav>
-    <a href="javascript:location.reload()" class="logo">
+    <a href="/" class="logo">
         <span class="logo-box">NL</span>
         <span class="notranslate">NEURAL LOGIC</span>
     </a>
-    <div id="google_translate_element"></div>
     <button class="fab" style="width:38px; height:38px; border:none; border-radius: 12px;" onclick="toggleTheme()">🌓</button>
 </nav>
 
 <div class="hero">
-    <div class="badge">Neural Network v25.1</div>
-    <h1 id="hero-title" class="notranslate">Neural Logic</h1>
-    <p style="color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Pusat informasi teknologi, tren gadget 2026, dan estetika digital modern.</p>
+    <div class="badge">Intelligence Network v25.1</div>
+    <h1 class="notranslate">Neural Logic</h1>
+    <p style="color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Where advanced technology meets digital craftsmanship.</p>
 
     <div class="status-console">
         <div class="status-item">
             <span class="status-label">Network</span>
-            <span class="status-data"><div class="live-dot"></div> <span id="net-status" class="accent-text">ONLINE</span></span>
+            <span class="status-data"><div class="live-dot"></div> <span id="net-status" style="color:var(--accent)">ONLINE</span></span>
         </div>
         <div class="status-item">
             <span class="status-label">Uptime</span>
-            <span class="status-data accent-text" id="uptime-val">00:00:00</span>
-        </div>
-        <div class="status-item">
-            <span class="status-label">Live Views</span>
-            <span class="status-data accent-text" id="view-count">1,204</span>
+            <span class="status-data" id="uptime-val" style="color:var(--accent)">00:00:00</span>
         </div>
         <div class="status-item">
             <span class="status-label">Latency</span>
-            <span class="status-data accent-text" id="ping-val">-- ms</span>
+            <span class="status-data" id="ping-val" style="color:var(--accent)">-- ms</span>
         </div>
     </div>
 
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Cari tren teknologi..." onkeyup="handleSearch()">
+        <input type="text" id="searchInput" placeholder="Search innovation..." onkeyup="handleSearch()">
     </div>
 </div>
 
-<main id="feed">
-    <div class="skeleton"></div>
-    <div class="skeleton"></div>
-    <div class="skeleton"></div>
-</main>
+<main id="feed"></main>
+
+<section class="about-section">
+    <div class="badge">The Architect</div>
+    <h2 style="font-family: 'Space Grotesk'; font-size: 2rem; margin-top: 15px;">Bridging Logic & Art</h2>
+    <p class="about-text">
+        Neural Logic is a high-performance digital laboratory. 
+        Developed entirely via <span style="color:var(--accent)">Termux</span> and deployed through 
+        <span style="color:var(--accent)">Vercel</span>, this platform serves as an exploration hub for 
+        next-gen gadgetry, automotive preservation, and professional visual aesthetics.
+    </p>
+</section>
 
 <div class="fab-container">
-    <button class="fab" title="Support" onclick="window.open('https://saweria.co/akashiro', '_blank')">☕</button>
-    <button class="fab" title="Saved" onclick="showSaved()">🔖</button>
-    <button class="fab" title="Top" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
+    <button class="fab" onclick="window.open('https://saweria.co/akashiro', '_blank')">☕</button>
+    <button class="fab" onclick="showSaved()">🔖</button>
+    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
 </div>
 
 <div id="modal" class="modal" onclick="closeModal()">
     <div class="m-content" onclick="event.stopPropagation()">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img id="m-img" src="" alt="Neural Logic Content" style="width:100%; border-radius: 25px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
+        <img id="m-img" src="" style="width:100%; border-radius: 25px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
         <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 15px; font-size: 2rem;"></h1>
-        <div id="m-body" style="line-height: 1.8; color: var(--muted); margin-bottom: 30px; font-size: 1.05rem;"></div>
-
+        <div id="m-body" style="line-height: 1.8; color: var(--muted); margin-bottom: 30px;"></div>
         <div style="display: flex; gap: 10px;">
             <button onclick="speak()" style="background: var(--accent); color:#000; padding:12px 24px; border:none; border-radius:12px; font-weight:700; cursor:pointer;">🔊 Audio</button>
-            <button onclick="saveCurrent()" style="background: rgba(255,255,255,0.05); color:#fff; padding:12px 24px; border:var(--border-glass); border-radius:12px; font-weight:700; cursor:pointer;">🔖 Simpan</button>
-        </div>
-
-        <div class="share-container">
-            <span class="share-label">Bagikan ke Jaringan</span>
-            <div class="share-grid">
-                <button class="share-btn" onclick="shareTo('whatsapp')">🟢 WhatsApp</button>
-                <button class="share-btn" onclick="shareTo('facebook')">🔵 Facebook</button>
-                <button class="share-btn" onclick="shareTo('x')">⚫ X (Twitter)</button>
-                <button class="share-btn" onclick="shareTo('native')">🌐 Salin Link</button>
-            </div>
+            <button onclick="saveCurrent()" style="background: rgba(255,255,255,0.05); color:#fff; padding:12px 24px; border:var(--border-glass); border-radius:12px; font-weight:700; cursor:pointer;">🔖 Save</button>
         </div>
     </div>
 </div>
@@ -214,31 +167,17 @@
         const mins = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
         const secs = String(diff % 60).padStart(2, '0');
         document.getElementById('uptime-val').innerText = `${hrs}:${mins}:${secs}`;
-        const views = document.getElementById('view-count');
-        views.innerText = (parseInt(views.innerText.replace(',', '')) + (Math.floor(Math.random() * 3) - 1)).toLocaleString();
-        document.getElementById('ping-val').innerText = `${Math.floor(Math.random() * 30) + 10} ms`;
-        const net = document.getElementById('net-status');
-        net.innerText = navigator.onLine ? "ONLINE" : "OFFLINE";
-        net.style.color = navigator.onLine ? "var(--accent)" : "#ff4444";
+        document.getElementById('ping-val').innerText = `${Math.floor(Math.random() * 25) + 5} ms`;
     }
-    setInterval(updateLiveStats, 2000);
-
-    const cursor = document.getElementById('cursor-tracker');
-    if (window.matchMedia("(pointer: fine)").matches) {
-        cursor.style.display = 'block';
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-    }
+    setInterval(updateLiveStats, 1000);
 
     async function init() {
         try {
             const res = await fetch('data.json?v=' + Date.now());
             allData = await res.json();
-            setTimeout(() => display(allData.sort((a,b) => b.id - a.id)), 800);
+            display(allData.sort((a,b) => b.id - a.id));
         } catch (e) {
-            document.getElementById('feed').innerHTML = "<p style='text-align:center; grid-column:1/-1;'>Gagal memuat data konten.</p>";
+            document.getElementById('feed').innerHTML = "<p style='text-align:center;'>Waiting for incoming data...</p>";
         }
     }
 
@@ -246,7 +185,7 @@
         const feed = document.getElementById('feed');
         feed.innerHTML = data.map(a => `
             <article class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
-                <img src="${a.img}" alt="${a.title}" class="card-img" onerror="this.src='https://via.placeholder.com/400x220/111/00ff88?text=Neural+Logic'">
+                <img src="${a.img}" alt="${a.title}" class="card-img">
                 <div class="card-content">
                     <span class="badge" style="font-size:0.6rem; margin-bottom:10px;">${a.cat}</span>
                     <h2 style="font-family:'Space Grotesk'; font-size:1.1rem;">${a.title}</h2>
@@ -259,43 +198,17 @@
     function openModal(a) {
         currentArt = a;
         document.getElementById('m-img').src = a.img;
-        document.getElementById('m-img').alt = a.title;
         document.getElementById('m-title').innerText = a.title;
         document.getElementById('m-body').innerText = a.body;
         const modal = document.getElementById('modal');
         modal.style.display = 'block';
         setTimeout(() => modal.classList.add('open'), 10);
-        document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
         const modal = document.getElementById('modal');
         modal.classList.remove('open');
-        setTimeout(() => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }, 300);
-    }
-
-    function shareTo(platform) {
-        const text = `Simak update teknologi terbaru: ${currentArt.title} - Neural Logic`;
-        const url = window.location.href;
-
-        if (platform === 'whatsapp') {
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + " " + url)}`, '_blank');
-        } else if (platform === 'facebook') {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
-        } else if (platform === 'x') {
-            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
-        } else if (platform === 'native') {
-            if (navigator.share) {
-                navigator.share({ title: currentArt.title, text: text, url: url });
-            } else {
-                navigator.clipboard.writeText(url);
-                alert("Tautan berhasil disalin ke clipboard!");
-            }
-        }
-    }
-
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'id', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        setTimeout(() => { modal.style.display = 'none'; }, 300);
     }
 
     function handleSearch() {
@@ -308,7 +221,7 @@
     function speak() {
         window.speechSynthesis.cancel();
         const msg = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
-        msg.lang = 'id-ID';
+        msg.lang = 'en-US';
         window.speechSynthesis.speak(msg);
     }
 
@@ -317,13 +230,13 @@
         if(!saved.some(x => x.id === currentArt.id)) {
             saved.push(currentArt);
             localStorage.setItem('nl_saved', JSON.stringify(saved));
-            alert("Tersimpan di bookmark lokal!");
+            alert("Stored in Local Archive.");
         }
     }
 
     function showSaved() {
         const saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(saved.length === 0) alert("Belum ada konten yang disimpan.");
+        if(saved.length === 0) alert("No archived data found.");
         else display(saved);
     }
 

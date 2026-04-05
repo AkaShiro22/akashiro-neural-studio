@@ -1,962 +1,983 @@
 [
-{
+  {
     "id": 1,
-    "cat": "SAINS",
-    "title": "Rekayasa Cuaca: Hujan Buatan Presisi Untuk Atasi Kekeringan",
+    "cat": "SCIENCE",
+    "title": "Weather Engineering: Precision Cloud Seeding to Overcome Drought",
     "img": "https://picsum.photos/seed/tech1/800/450",
-    "body": "Teknologi penyemaian awan terbaru menggunakan ionisasi udara yang lebih akurat, memungkinkan hujan turun tepat di atas area persawahan yang membutuhkan tanpa mengganggu wilayah lain."
+    "body": "The latest cloud seeding technology uses more accurate air ionization, allowing rain to fall precisely over needed farmland without disturbing other areas."
   },
- {
+  {
     "id": 2,
-    "cat": "KESEHATAN",
-    "title": "Sikat Gigi Pintar Deteksi Gejala Kanker Mulut",
+    "cat": "HEALTH",
+    "title": "Smart Toothbrush Detects Oral Cancer Symptoms",
     "img": "https://picsum.photos/seed/tech2/800/450",
-    "body": "Dilengkapi dengan sensor kimia, sikat gigi ini menganalisis air liur setiap pagi untuk memantau kesehatan tubuh secara keseluruhan dan memberikan peringatan dini jika ada sel abnormal."
+    "body": "Equipped with chemical sensors, this toothbrush analyzes saliva every morning to monitor overall body health and provide early warnings if abnormal cells are present."
   },
   {
     "id": 3,
     "cat": "GREEN TECH",
-    "title": "Sepatu Lari Yang Bisa Mengisi Daya Baterai HP Sambil Berjalan",
+    "title": "Running Shoes That Can Charge Phone Batteries While Walking",
     "img": "https://picsum.photos/seed/tech3/800/450",
-    "body": "Sol sepatu ini mengandung bahan piezoelektrik yang mengubah tekanan langkah kaki menjadi energi listrik. Cukup berjalan 5.000 langkah untuk menambah daya HP sebesar 20%."
+    "body": "The soles of these shoes contain piezoelectric materials that convert footstep pressure into electrical energy. Simply walking 5,000 steps can add 20% to a phone's power."
   },
   {
     "id": 4,
-    "cat": "ANTARIKSA",
-    "title": "Satelit Pembersih Sampah Luar Angkasa Mulai Beroperasi",
+    "cat": "SPACE",
+    "title": "Space Debris Cleaning Satellite Begins Operation",
     "img": "https://picsum.photos/seed/tech4/800/450",
-    "body": "Jaring laser raksasa mulai menarik puing-puing satelit mati di orbit bumi untuk dibakar secara aman di atmosfer, menjaga jalur penerbangan antariksa tetap bersih."
+    "body": "Giant laser nets have begun pulling dead satellite debris in Earth's orbit to be safely burned in the atmosphere, keeping space flight paths clear."
   },
   {
     "id": 5,
     "cat": "GADGET",
-    "title": "Earbud Penerjemah Bahasa Hewan Mulai Dijual Terbatas",
+    "title": "Animal Language Translation Earbuds Go on Limited Sale",
     "img": "https://picsum.photos/seed/tech5/800/450",
-    "body": "Menggunakan database frekuensi suara anjing dan kucing, AI ini menerjemahkan emosi hewan peliharaan menjadi kata-kata sederhana di layar smartphone Anda."
+    "body": "Using a database of dog and cat vocal frequencies, this AI translates pet emotions into simple words on your smartphone screen."
   },
   {
     "id": 6,
-    "cat": "SAINS",
-    "title": "Baterai Berbahan Dasar Berlian Dari Limbah Nuklir",
+    "cat": "SCIENCE",
+    "title": "Diamond-Based Batteries from Nuclear Waste",
     "img": "https://picsum.photos/seed/tech6/800/450",
-    "body": "Teknologi baru mengubah karbon limbah nuklir menjadi berlian buatan yang menghasilkan listrik kecil namun stabil selama ribuan tahun tanpa perlu diisi ulang."
+    "body": "New technology converts nuclear waste carbon into artificial diamonds that generate small but stable electricity for thousands of years without needing a recharge."
   },
   {
     "id": 7,
-    "cat": "AI & ROBOTIK",
-    "title": "Drone Pengantar Paket Kini Bisa Masuk ke Jendela Apartemen",
+    "cat": "AI & ROBOTICS",
+    "title": "Package Delivery Drones Can Now Enter Apartment Windows",
     "img": "https://picsum.photos/seed/tech7/800/450",
-    "body": "Dengan sensor anti-tabrak yang lebih canggih, drone kurir kini mampu bermanuver di lorong sempit gedung tinggi untuk mengantar pesanan langsung ke tangan pelanggan."
+    "body": "With more advanced anti-collision sensors, courier drones are now able to maneuver through narrow high-rise corridors to deliver orders directly to customers' hands."
   },
   {
     "id": 8,
-    "cat": "KESEHATAN",
-    "title": "Terapi Musik Berbasis Gelombang Otak Untuk Atasi Insomnia",
+    "cat": "HEALTH",
+    "title": "Brainwave-Based Music Therapy to Overcome Insomnia",
     "img": "https://picsum.photos/seed/tech8/800/450",
-    "body": "Penelitian terbaru bulan ini membuktikan frekuensi suara tertentu yang dipersonalisasi bisa menidurkan orang dalam waktu kurang dari 3 menit tanpa bantuan obat-obatan."
+    "body": "Recent research this month proves that specific personalized sound frequencies can put people to sleep in less than 3 minutes without the help of medication."
   },
   {
     "id": 9,
     "cat": "GREEN TECH",
-    "title": "Pembersih Udara Raksasa Berbentuk Pohon di Pusat Jakarta",
+    "title": "Giant Tree-Shaped Air Purifier in Central Jakarta",
     "img": "https://picsum.photos/seed/tech9/800/450",
-    "body": "Menara setinggi 20 meter ini mampu menyaring polusi udara setara dengan 1.000 pohon asli. Alat ini bertenaga surya dan melepaskan oksigen murni ke lingkungan sekitarnya."
+    "body": "This 20-meter tower is capable of filtering air pollution equivalent to 1,000 real trees. It is solar-powered and releases pure oxygen into the surrounding environment."
   },
   {
     "id": 10,
-    "cat": "TRANSPORTASI",
-    "title": "Jalan Tol Khusus Mobil Otonom Mulai Dibuka di Cipularang",
+    "cat": "TRANSPORTATION",
+    "title": "Autonomous Vehicle Only Highway Lane Opens in Cipularang",
     "img": "https://picsum.photos/seed/tech10/800/450",
-    "body": "Lajur kanan tol kini dikhususkan untuk mobil tanpa sopir yang saling berkomunikasi. Kecepatan rata-rata di lajur ini stabil di 150 km/jam tanpa risiko kecelakaan karena sistem sinkronisasi AI."
+    "body": "The right lane of the highway is now dedicated to driverless cars that communicate with each other. Average speeds in this lane are stable at 150 km/h with no risk of accidents due to AI synchronization."
   },
   {
     "id": 11,
-    "cat": "ANTARIKSA",
-    "title": "Teleskop Amatir Kini Bisa Melihat Cincin Saturnus dari HP",
+    "cat": "SPACE",
+    "title": "Amateur Telescopes Can Now See Saturn's Rings from a Phone",
     "img": "https://picsum.photos/seed/tech11/800/450",
-    "body": "Integrasi lensa digital pintar memungkinkan teleskop rumahan terhubung ke cloud AI untuk menjernihkan gambar planet secara real-time, memberikan pengalaman ala astronom profesional."
+    "body": "Integration of smart digital lenses allows home telescopes to connect to the AI cloud to clear up planetary images in real-time, providing a professional astronomer-like experience."
   },
   {
     "id": 12,
     "cat": "GADGET",
-    "title": "Keyboard Hologram Portable: Mengetik di Atas Meja Apapun",
+    "title": "Portable Hologram Keyboard: Type on Any Table",
     "img": "https://picsum.photos/seed/tech12/800/450",
-    "body": "Alat sekecil korek api ini memproyeksikan layout keyboard penuh ke permukaan datar. Sensor laser mendeteksi ketukan jari dengan sangat akurat tanpa perlu membawa keyboard fisik yang berat."
+    "body": "A device as small as a lighter projects a full keyboard layout onto flat surfaces. Laser sensors detect finger taps with high accuracy without the need for a heavy physical keyboard."
   },
   {
     "id": 13,
-    "cat": "AI & ROBOTIK",
-    "title": "Fashion AI: Baju yang Bisa Berubah Warna Lewat Aplikasi",
+    "cat": "AI & ROBOTICS",
+    "title": "Fashion AI: Clothes That Can Change Color via App",
     "img": "https://picsum.photos/seed/tech13/800/450",
-    "body": "Menggunakan serat kain e-ink, pakaian masa kini bisa berubah motif dan warna sesuai mood pengguna. Cukup pilih tema di smartphone, dan warna baju Anda akan berubah seketika."
+    "body": "Using e-ink fabric fibers, modern clothing can change patterns and colors according to the user's mood. Simply pick a theme on your smartphone, and your clothes change instantly."
   },
   {
     "id": 14,
-    "cat": "SAINS",
-    "title": "Penemuan Spesies Ikan Transparan di Palung Jawa",
+    "cat": "SCIENCE",
+    "title": "Transparent Fish Species Discovered in Java Trench",
     "img": "https://picsum.photos/seed/tech14/800/450",
-    "body": "Ekspedisi laut dalam di selatan Jawa menemukan ekosistem baru di kedalaman 7.000 meter. Ikan-ikan ini memiliki tubuh yang sepenuhnya bening dan mampu menghasilkan cahaya bioluminescent sendiri."
+    "body": "Deep-sea expeditions south of Java found a new ecosystem at a depth of 7,000 meters. These fish have completely clear bodies and can produce their own bioluminescent light."
   },
   {
     "id": 15,
-    "cat": "KESEHATAN",
-    "title": "Kacamata Pendeteksi Penyakit Lewat Pemindaian Mata",
+    "cat": "HEALTH",
+    "title": "Disease-Detecting Glasses via Eye Scanning",
     "img": "https://picsum.photos/seed/tech15/800/450",
-    "body": "Cukup dengan memakai kacamata ini selama 10 detik, sistem AI akan menganalisis pembuluh darah di retina untuk mendeteksi tanda awal diabetes, hipertensi, hingga risiko stroke."
+    "body": "Just by wearing these glasses for 10 seconds, the AI system will analyze retinal blood vessels to detect early signs of diabetes, hypertension, and stroke risk."
   },
   {
     "id": 16,
     "cat": "GREEN TECH",
-    "title": "Plastik Berbahan Singkong Kini Benar-benar Bisa Dimakan",
+    "title": "Cassava-Based Plastics are Now Truly Edible",
     "img": "https://picsum.photos/seed/tech16/800/450",
-    "body": "Inovasi kemasan makanan terbaru di April 2026 membuat sampah plastik menjadi sejarah. Kemasannya tidak hanya larut di air, tapi mengandung nutrisi yang aman dikonsumsi manusia atau hewan."
+    "body": "The latest food packaging innovation in April 2026 makes plastic waste history. The packaging not only dissolves in water but also contains nutrients safe for human or animal consumption."
   },
   {
     "id": 17,
     "cat": "GADGET",
-    "title": "Lensa Kontak Zoom: Kedipkan Mata Untuk Melihat Jarak Jauh",
+    "title": "Zoom Contact Lenses: Blink Your Eyes to See Far Distances",
     "img": "https://picsum.photos/seed/tech17/800/450",
-    "body": "Lensa kontak pintar ini memungkinkan pengguna melakukan zoom optik 3x hanya dengan pola kedipan mata tertentu. Sangat berguna bagi jurnalis dan pengamat alam liar."
+    "body": "These smart contact lenses allow users to perform 3x optical zoom just with specific blinking patterns. Very useful for journalists and wildlife observers."
   },
   {
     "id": 18,
-    "cat": "TRANSPORTASI",
-    "title": "Motor Listrik Vario 2026: Jarak Tempuh Tembus 500 KM Sekali Cas",
+    "cat": "TRANSPORTATION",
+    "title": "Vario 2026 Electric Motor: Range Reaches 500 KM on One Charge",
     "img": "https://picsum.photos/seed/tech18/800/450",
-    "body": "Honda merilis pembaruan baterai solid-state untuk motor listrik terlarisnya. Dengan efisiensi tinggi dan bodi anti-pudar, motor ini menjadi primadona baru di jalanan kota besar April ini."
+    "body": "Honda released a solid-state battery update for its best-selling electric motorcycle. With high efficiency and a fade-resistant body, this bike has become a new favorite on city streets this April."
   },
   {
     "id": 19,
-    "cat": "SAINS",
-    "title": "Teleportasi Partikel Sejauh 100 KM Berhasil Dilakukan di Lab",
+    "cat": "SCIENCE",
+    "title": "Particle Teleportation Over 100 KM Successfully Performed in Lab",
     "img": "https://picsum.photos/seed/tech19/800/450",
-    "body": "Ilmuwan fisika kuantum berhasil mengirimkan informasi instan antara dua titik sejauh 100 km. Ini adalah dasar bagi internet kuantum masa depan yang tidak bisa diretas oleh siapapun."
+    "body": "Quantum physics scientists have successfully sent instant information between two points 100 km apart. This is the foundation for a future quantum internet that cannot be hacked."
   },
   {
     "id": 20,
-    "cat": "AI & ROBOTIK",
-    "title": "Dosen AI Kini Mengajar di Universitas Terkemuka Indonesia",
+    "cat": "AI & ROBOTICS",
+    "title": "AI Lecturers Now Teaching at Leading Indonesian Universities",
     "img": "https://picsum.photos/seed/tech20/800/450",
-    "body": "Mahasiswa kini bisa berkonsultasi 24 jam dengan avatar AI yang memiliki pengetahuan seluruh jurnal ilmiah di dunia. Dosen manusia kini lebih fokus pada diskusi etika dan bimbingan moral siswa."
+    "body": "Students can now consult 24/7 with AI avatars that possess knowledge of all scientific journals in the world. Human lecturers now focus more on ethical discussions and moral guidance."
   },
   {
     "id": 21,
     "cat": "GREEN TECH",
-    "title": "Hutan Vertikal Pintar di IKN Mampu Turunkan Suhu Kota 5 Derajat",
+    "title": "Smart Vertical Forest in IKN Able to Lower City Temperature by 5 Degrees",
     "img": "https://picsum.photos/seed/tech21/800/450",
-    "body": "Pembangunan gedung-gedung tinggi di Ibu Kota Nusantara (IKN) April 2026 ini dilengkapi dengan sensor kelembapan otomatis yang mengelola tanaman di dinding gedung, menciptakan micro-climate yang sejuk di tengah kota."
+    "body": "High-rise construction in the New Capital City (IKN) in April 2026 is equipped with automatic humidity sensors managing wall plants, creating a cool micro-climate in the city center."
   },
   {
     "id": 22,
-    "cat": "KESEHATAN",
-    "title": "Pil Pintar 'Nano-Doc' Bisa Bersihkan Plak Jantung Secara Otomatis",
+    "cat": "HEALTH",
+    "title": "'Nano-Doc' Smart Pill Can Automatically Clear Heart Plaque",
     "img": "https://picsum.photos/seed/tech22/800/450",
-    "body": "Obat berbasis robot mikroskopis (nanobot) resmi disetujui. Setelah diminum, nanobot ini akan masuk ke aliran darah, mencari penyumbatan arteri, dan membersihkannya tanpa perlu prosedur operasi besar."
+    "body": "Medicine based on microscopic robots (nanobots) has been officially approved. Once swallowed, these nanobots enter the bloodstream, find arterial blockages, and clear them without major surgery."
   },
   {
     "id": 23,
-    "cat": "ANTARIKSA",
-    "title": "NASA Temukan Tanda Kehidupan Mikroba di Enceladus",
+    "cat": "SPACE",
+    "title": "NASA Finds Signs of Microbial Life on Enceladus",
     "img": "https://picsum.photos/seed/tech23/800/450",
-    "body": "Robot penjelajah bawah laut NASA mengirimkan data mengejutkan dari bulan milik Saturnus, Enceladus. Ditemukan molekul organik kompleks yang mengindikasikan adanya kehidupan mikroba di bawah lapisan es tebal."
+    "body": "NASA's undersea rover sent back surprising data from Saturn's moon, Enceladus. Complex organic molecules were found, indicating microbial life beneath the thick ice layer."
   },
   {
     "id": 24,
     "cat": "GADGET",
-    "title": "Smartphone Tanpa Baterai Pertama: Mengambil Energi dari Udara",
+    "title": "First Battery-Free Smartphone: Drawing Energy from the Air",
     "img": "https://picsum.photos/seed/tech24/800/450",
-    "body": "Startup asal Silicon Valley merilis ponsel yang menggunakan teknologi 'Air-Harvesting'. Ponsel ini mengisi daya secara konstan melalui gelombang radio dan WiFi di sekitar, membuat charger kabel menjadi kuno."
+    "body": "A Silicon Valley startup released a phone using 'Air-Harvesting' technology. The phone charges constantly through surrounding radio and WiFi waves, making cable chargers obsolete."
   },
   {
     "id": 25,
-    "cat": "AI & ROBOTIK",
-    "title": "AI 'Socrates' Mulai Digunakan Sebagai Hakim Mediasi di Indonesia",
+    "cat": "AI & ROBOTICS",
+    "title": "'Socrates' AI Begins Use as Mediation Judge in Indonesia",
     "img": "https://picsum.photos/seed/tech25/800/450",
-    "body": "Kementerian Hukum meluncurkan pilot project AI Socrates untuk membantu menyelesaikan sengketa perdata ringan. Sistem ini mampu menganalisis ribuan pasal dalam detik untuk memberikan solusi paling adil bagi kedua belah pihak."
+    "body": "The Ministry of Law launched a pilot project using the Socrates AI to help resolve light civil disputes. The system can analyze thousands of articles in seconds to provide the fairest solution for both parties."
   },
   {
     "id": 26,
-    "cat": "SAINS",
-    "title": "Obat Penghambat Penuaan Mulai Masuk Tahap Uji Klinis Terakhir",
+    "cat": "SCIENCE",
+    "title": "Anti-Aging Drug Enters Final Clinical Trial Phase",
     "img": "https://picsum.photos/seed/tech26/800/450",
-    "body": "Senolitik baru yang ditemukan ilmuwan diklaim mampu memperbaiki sel-sel yang rusak akibat usia. Jika berhasil, harapan hidup manusia bisa meningkat rata-rata hingga 120 tahun."
+    "body": "A new senolytic discovered by scientists is claimed to be able to repair cells damaged by age. If successful, human life expectancy could increase to an average of 120 years."
   },
   {
     "id": 27,
     "cat": "GADGET",
-    "title": "Baterai Smartwatch Tahan 1 Bulan Berkat Teknologi Nuklir Mini",
+    "title": "Smartwatch Battery Lasts 1 Month Thanks to Mini Nuclear Tech",
     "img": "https://picsum.photos/seed/tech27/800/450",
-    "body": "Pengguna tidak perlu lagi mengisi daya jam tangan setiap hari. Baterai sel tritium yang aman kini memungkinkan perangkat wearable tetap aktif selama berbulan-bulan tanpa henti."
+    "body": "Users no longer need to charge their watches every day. Safe tritium cell batteries now allow wearable devices to stay active for months without stopping."
   },
   {
     "id": 28,
     "cat": "GREEN TECH",
-    "title": "Daging Lab Halal Mulai Tersedia di Supermarket Lokal",
+    "title": "Halal Lab-Grown Meat Now Available in Local Supermarkets",
     "img": "https://picsum.photos/seed/tech28/800/450",
-    "body": "Daging hasil kultur sel tanpa penyembelihan hewan resmi mendapatkan sertifikasi keamanan pangan. Ini menjadi solusi bagi krisis pangan global dan peternakan yang merusak lingkungan."
+    "body": "Meat from cell cultures without animal slaughter has officially received food safety certification. This is a solution for the global food crisis and environmentally damaging farming."
   },
   {
     "id": 29,
-    "cat": "TRANSPORTASI",
-    "title": "Kereta Cepat Hyperloop Jakarta-Bandung Hanya 8 Menit",
+    "cat": "TRANSPORTATION",
+    "title": "Jakarta-Bandung Hyperloop Only 8 Minutes",
     "img": "https://picsum.photos/seed/tech29/800/450",
-    "body": "Uji coba teknologi tabung vakum (Hyperloop) menunjukkan hasil yang stabil. Dengan kecepatan 1.200 km/jam, konsep perjalanan antar kota di Indonesia akan berubah total tahun depan."
+    "body": "Vacuum tube technology (Hyperloop) trials show stable results. With speeds of 1,200 km/h, the concept of inter-city travel in Indonesia will completely change next year."
   },
   {
     "id": 30,
-    "cat": "AI & ROBOTIK",
-    "title": "Pabrik Tanpa Manusia Pertama Resmi Beroperasi di Cikarang",
+    "cat": "AI & ROBOTICS",
+    "title": "First Humanless Factory Officially Operates in Cikarang",
     "img": "https://picsum.photos/seed/tech30/800/450",
-    "body": "Seluruh proses produksi barang elektronik di pabrik ini dikelola oleh sistem koordinasi AI dan robot otonom. Efisiensi produksi meningkat hingga 300 persen dibandingkan tenaga manual."
+    "body": "The entire electronic production process at this factory is managed by an AI coordination system and autonomous robots. Production efficiency increased by 300 percent compared to manual labor."
   },
   {
     "id": 31,
     "cat": "GADGET",
-    "title": "Earphone Penerjemah Instan: Pahami 50 Bahasa Tanpa Delay",
+    "title": "Instant Translation Earphones: Understand 50 Languages with No Delay",
     "img": "https://picsum.photos/seed/tech31/800/450",
-    "body": "Google Buds Pro 2026 mampu menerjemahkan percakapan orang asing secara langsung ke telinga Anda. Komunikasi global kini tidak lagi terhalang oleh perbedaan bahasa."
+    "body": "Google Buds Pro 2026 are capable of translating foreign conversations directly into your ear. Global communication is no longer hindered by language differences."
   },
   {
     "id": 32,
-    "cat": "ANTARIKSA",
-    "title": "Teleskop James Webb Temukan Tanda Oksigen di Planet Proxima B",
+    "cat": "SPACE",
+    "title": "James Webb Telescope Finds Signs of Oxygen on Proxima B",
     "img": "https://picsum.photos/seed/tech32/800/450",
-    "body": "NASA mengonfirmasi adanya atmosfer yang mengandung oksigen di planet tetangga kita. Penemuan ini memicu spekulasi kuat mengenai adanya kehidupan di luar tata surya kita."
+    "body": "NASA confirmed an atmosphere containing oxygen on our neighboring planet. This discovery has sparked strong speculation about life outside our solar system."
   },
   {
     "id": 33,
-    "cat": "KESEHATAN",
-    "title": "Lensa Kontak Pintar Bisa Deteksi Kadar Gula Darah Real-time",
+    "cat": "HEALTH",
+    "title": "Smart Contact Lenses Can Detect Blood Sugar Levels in Real-time",
     "img": "https://picsum.photos/seed/tech33/800/450",
-    "body": "Penderita diabetes kini tidak perlu lagi melakukan suntik jari. Lensa kontak ini memantau glukosa melalui air mata dan mengirimkan datanya langsung ke smartwatch pengguna."
+    "body": "Diabetes patients no longer need to perform finger pricks. These contact lenses monitor glucose through tears and send the data directly to the user's smartwatch."
   },
   {
     "id": 34,
     "cat": "GREEN TECH",
-    "title": "Aspal Penyerap Polusi Mulai Diterapkan di Kota Besar",
+    "title": "Pollution-Absorbing Asphalt Begins Implementation in Large Cities",
     "img": "https://picsum.photos/seed/tech34/800/450",
-    "body": "Material jalan baru yang mengandung katalis titanium dioksida mampu menetralkan gas buang kendaraan saat terkena sinar matahari. Udara di pusat kota kini terasa lebih segar."
+    "body": "New road material containing titanium dioxide catalysts is able to neutralize vehicle exhaust gases when exposed to sunlight. City center air now feels fresher."
   },
   {
     "id": 35,
-    "cat": "SAINS",
-    "title": "Komputer Kuantum Portabel Pertama Resmi Diperkenalkan",
+    "cat": "SCIENCE",
+    "title": "First Portable Quantum Computer Officially Introduced",
     "img": "https://picsum.photos/seed/tech35/800/450",
-    "body": "IBM berhasil memperkecil ukuran komputer kuantum hingga sebesar koper. Perangkat ini mampu memecahkan enkripsi paling rumit di dunia hanya dalam hitungan milidetik saja."
+    "body": "IBM has successfully reduced the size of a quantum computer to the size of a suitcase. This device can crack the most complex encryptions in the world in just milliseconds."
   },
   {
     "id": 36,
-    "cat": "TRANSPORTASI",
-    "title": "Mobil Listrik Bertenaga Garam Mulai Uji Coba di Jalan Tol",
+    "cat": "TRANSPORTATION",
+    "title": "Salt-Powered Electric Cars Start Trials on Highways",
     "img": "https://picsum.photos/seed/tech36/800/450",
-    "body": "Alternatif lithium ditemukan dalam bentuk baterai ion natrium (garam laut). Mobil ini memiliki jarak tempuh yang sama namun dengan harga produksi yang jauh lebih murah dan ramah lingkungan."
+    "body": "A lithium alternative has been found in the form of sodium-ion (sea salt) batteries. These cars have the same range but with much cheaper production costs and are environmentally friendly."
   },
   {
     "id": 37,
-    "cat": "AI & ROBOTIK",
-    "title": "AI Pengacara Pertama Menangkan Kasus di Pengadilan Internasional",
+    "cat": "AI & ROBOTICS",
+    "title": "First AI Lawyer Wins Case in International Court",
     "img": "https://picsum.photos/seed/tech37/800/450",
-    "body": "Sistem hukum berbasis AI terbukti mampu menganalisis jutaan dokumen hukum dalam hitungan detik. AI ini berhasil membela hak paten sebuah startup teknologi melawan perusahaan raksasa."
+    "body": "An AI-based legal system proved capable of analyzing millions of legal documents in seconds. The AI successfully defended the patent rights of a tech startup against a giant corporation."
   },
   {
     "id": 38,
     "cat": "GADGET",
-    "title": "Laptop Tanpa Keyboard Fisik: Era Layar Hologram Holographic",
+    "title": "Laptop Without Physical Keyboard: Era of Holographic Screens",
     "img": "https://picsum.photos/seed/tech38/800/450",
-    "body": "Asus memperkenalkan laptop Zenbook Vision yang menggunakan proyeksi laser sebagai keyboard dan trackpad. Perangkat ini jauh lebih tipis dan ringan dibandingkan laptop konvensional lainnya."
+    "body": "Asus introduced the Zenbook Vision laptop which uses laser projection as a keyboard and trackpad. This device is much thinner and lighter than other conventional laptops."
   },
   {
     "id": 39,
-    "cat": "ANTARIKSA",
-    "title": "Wisata Bulan Komersial Pertama Dibuka: Tiket Seharga 1 Miliar",
+    "cat": "SPACE",
+    "title": "First Commercial Moon Tourism Opens: Tickets Priced at 1 Billion",
     "img": "https://picsum.photos/seed/tech39/800/450",
-    "body": "Blue Origin merilis paket perjalanan orbit bulan selama 3 hari. Meskipun mahal, daftar tunggu untuk wisata luar angkasa ini sudah penuh hingga tahun 2028 oleh para konglomerat dunia."
+    "body": "Blue Origin released a 3-day lunar orbit travel package. Despite the high price, the waitlist for space tourism is already full through 2028 with global billionaires."
   },
   {
     "id": 40,
-    "cat": "KESEHATAN",
-    "title": "Printer 3D Organ Tubuh Mulai Digunakan di RS Nasional",
+    "cat": "HEALTH",
+    "title": "3D Organ Printers Start Use in National Hospitals",
     "img": "https://picsum.photos/seed/tech40/800/450",
-    "body": "Teknologi cetak jaringan hidup kini memungkinkan transplantasi ginjal tanpa daftar tunggu panjang. Organ dicetak menggunakan sel punca pasien sendiri sehingga risiko penolakan tubuh menjadi nol."
+    "body": "Live tissue printing technology now allows kidney transplants without long waiting lists. Organs are printed using the patient's own stem cells so the risk of body rejection is zero."
   },
   {
     "id": 41,
     "cat": "GREEN TECH",
-    "title": "Panel Surya Transparan Kini Bisa Dipasang di Jendela Apartemen",
+    "title": "Transparent Solar Panels Can Now Be Installed in Apartment Windows",
     "img": "https://picsum.photos/seed/tech41/800/450",
-    "body": "Teknologi kaca jendela penghasil listrik mulai diproduksi massal. Jendela ini tetap bening namun mampu menyerap sinar UV untuk dikonversi menjadi energi listrik bagi peralatan rumah tangga."
+    "body": "Electricity-generating window glass technology has entered mass production. These windows remain clear but are able to absorb UV rays to be converted into electrical energy for household appliances."
   },
   {
     "id": 42,
-    "cat": "SAINS",
-    "title": "Ilmuwan Berhasil Ciptakan Matahari Buatan Berdurasi 1 Jam",
+    "cat": "SCIENCE",
+    "title": "Scientists Successfully Create Artificial Sun Lasting 1 Hour",
     "img": "https://picsum.photos/seed/tech42/800/450",
-    "body": "Reaktor fusi nuklir di Korea Selatan mencatat rekor dunia baru dengan mempertahankan plasma panas selama satu jam penuh. Ini adalah langkah besar menuju energi bersih yang tidak terbatas bagi bumi."
+    "body": "A nuclear fusion reactor in South Korea set a new world record by maintaining hot plasma for a full hour. This is a major step toward unlimited clean energy for Earth."
   },
   {
     "id": 43,
     "cat": "GADGET",
-    "title": "Apple Glass Pro Gantikan iPhone: Era Layar Virtual Dimulai",
+    "title": "Apple Glass Pro Replaces iPhone: Virtual Screen Era Begins",
     "img": "https://picsum.photos/seed/tech43/800/450",
-    "body": "Apple resmi menghentikan produksi seri iPhone reguler dan beralih fokus ke Apple Glass. Kacamata pintar ini memproyeksikan antarmuka langsung ke retina mata pengguna dengan resolusi 8K."
+    "body": "Apple officially halted production of the regular iPhone series and shifted focus to Apple Glass. These smart glasses project an interface directly onto the user's retina with 8K resolution."
   },
   {
     "id": 44,
-    "cat": "AI & ROBOTIK",
-    "title": "Robot Pelayan Optimus Mulai Bekerja di Restoran Cepat Saji",
+    "cat": "AI & ROBOTICS",
+    "title": "Optimus Robot Waiters Start Working in Fast Food Restaurants",
     "img": "https://picsum.photos/seed/tech44/800/450",
-    "body": "Tesla mulai mendistribusikan robot humanoid Optimus untuk sektor jasa. Robot ini mampu memahami pesanan suara dalam berbagai bahasa daerah Indonesia dan menyajikan makanan dengan sangat presisi."
+    "body": "Tesla began distributing Optimus humanoid robots for the service sector. These robots can understand voice orders in various Indonesian regional languages and serve food with high precision."
   },
   {
     "id": 45,
-    "cat": "TRANSPORTASI",
-    "title": "Taksi Terbang EHang Resmi Mengudara di Langit Jakarta",
+    "cat": "TRANSPORTATION",
+    "title": "EHang Flying Taxis Officially Take to the Jakarta Skies",
     "img": "https://picsum.photos/seed/tech45/800/450",
-    "body": "Kemenhub meresmikan izin operasional taksi udara otonom untuk rute Bandara Soetta ke Sudirman. Perjalanan yang biasanya memakan waktu 2 jam kini hanya ditempuh dalam 15 menit saja."
+    "body": "The Ministry of Transportation inaugurated operational permits for autonomous air taxis for the Soetta Airport to Sudirman route. A trip that usually takes 2 hours is now completed in just 15 minutes."
   },
   {
     "id": 46,
-    "cat": "KESEHATAN",
-    "title": "Neuralink Telepathy: Orang Lumpuh Kini Bisa Mengetik dengan Pikiran",
+    "cat": "HEALTH",
+    "title": "Neuralink Telepathy: Paralyzed People Can Now Type with Their Minds",
     "img": "https://picsum.photos/seed/tech46/800/450",
-    "body": "Chip otak Neuralink versi 4.0 resmi mendapatkan izin edar di Asia. Pasien dengan kelumpuhan saraf total kini dapat mengoperasikan komputer dan smartphone hanya dengan membayangkan gerakan tangan."
+    "body": "Neuralink brain chip version 4.0 officially received marketing authorization in Asia. Patients with total nerve paralysis can now operate computers and smartphones just by imagining hand movements."
   },
   {
     "id": 47,
     "cat": "GREEN TECH",
-    "title": "Baterai Nuklir Mini untuk Rumah: Listrik Gratis Selama 50 Tahun",
+    "title": "Mini Nuclear Home Batteries: Free Electricity for 50 Years",
     "img": "https://picsum.photos/seed/tech47/800/450",
-    "body": "Startup asal Bandung berhasil menciptakan sel daya berbasis isotop aman yang bisa menghidupi satu rumah tanpa perlu panel surya atau kabel PLN. Teknologi ini diklaim sangat stabil dan anti-meledak."
+    "body": "A Bandung-based startup successfully created a power cell based on safe isotopes that can power a house without solar panels or PLN cables. This technology is claimed to be very stable and explosion-proof."
   },
   {
     "id": 48,
-    "cat": "ANTARIKSA",
-    "title": "SpaceX Starship Mendarat di Mars: Koloni Manusia Pertama Dimulai",
+    "cat": "SPACE",
+    "title": "SpaceX Starship Lands on Mars: First Human Colony Begins",
     "img": "https://picsum.photos/seed/tech48/800/450",
-    "body": "Elon Musk mengumumkan keberhasilan pendaratan kru pertama di Mars minggu ini. Robot otonom mulai membangun kubah pelindung radiasi untuk tempat tinggal astronot permanen tahun depan."
+    "body": "Elon Musk announced the successful landing of the first crew on Mars this week. Autonomous robots have begun building radiation-shielded domes for permanent astronaut residences next year."
   },
   {
     "id": 49,
     "cat": "GADGET",
-    "title": "Samsung Galaxy Z-Roll: Smartphone Layar Gulung Pertama di Jakarta",
+    "title": "Samsung Galaxy Z-Roll: First Rollable Smartphone in Jakarta",
     "img": "https://picsum.photos/seed/tech49/800/450",
-    "body": "Era layar lipat berakhir, berganti ke layar gulung. Samsung resmi merilis Galaxy Z-Roll yang bisa melebar dari 6 inci menjadi 10 inci hanya dengan satu sentuhan sensor haptik di bingkai ponsel."
+    "body": "The era of foldable screens ends, shifting to rollable screens. Samsung officially released the Galaxy Z-Roll which can widen from 6 inches to 10 inches with just one touch of a haptic sensor on the phone frame."
   },
   {
     "id": 50,
-    "cat": "AI & ROBOTIK",
-    "title": "OpenAI Sora 3.0: Film Pendek AI Kini Bisa Buat dalam 5 Menit",
+    "cat": "AI & ROBOTICS",
+    "title": "OpenAI Sora 3.0: AI Short Films Can Now Be Made in 5 Minutes",
     "img": "https://picsum.photos/seed/tech50/800/450",
-    "body": "Pada April 2026, OpenAI merilis Sora 3.0 yang memungkinkan konsistensi karakter sempurna. Para kreator konten di Indonesia kini mulai beralih ke produksi film berbasis AI sepenuhnya tanpa perlu kru besar."
+    "body": "In April 2026, OpenAI released Sora 3.0 which allows perfect character consistency. Content creators in Indonesia have begun shifting fully to AI-based film production without needing large crews."
+  },
+  {
+    "id": 76,
+    "cat": "HEADLINE",
+    "title": "Neural Logic Portal v21.0 Officially Released",
+    "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=500",
+    "body": "A massive update to the Neural Logic website brings Auto-Sort, Audio Reading, and AI Summary features to help readers get the fastest science and technology info."
+  },
+  {
+    "id": 101,
+    "title": "Importance of Changing Motorcycle Oil Based on Mileage",
+    "cat": "AUTOMOTIVE",
+    "img": "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=800",
+    "body": "To keep Vario 160 engine performance smooth, changing oil every two thousand kilometers is highly recommended. Clean oil ensures low engine friction and keeps engine temperature stable in the April heat."
+  },
+  {
+    "id": 125,
+    "title": "Vario 160 ABS: Secrets to Keeping Paint Glossy in Tropical Climates",
+    "cat": "AUTOMOTIVE",
+    "img": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=800",
+    "body": "Paint maintenance on the Honda Vario 160 ABS requires special attention. Excessive UV rays in April can fade color pigments. Use silicone-based protective fluids and avoid washing with dish soap as its acidic nature can erode the clear coat. Ensure you use high-quality microfiber when wiping to avoid fine scratches."
   },
   {
     "id": 51,
     "cat": "GADGET",
-    "title": "Sikat Gigi Pintar Deteksi Gejala Kanker Mulut",
+    "title": "Smart Toothbrush Detects Oral Cancer Symptoms",
     "img": "https://picsum.photos/seed/tech26/800/450",
-    "body": "Dilengkapi dengan sensor kimia, sikat gigi ini menganalisis air liur setiap pagi untuk memantau kesehatan tubuh secara keseluruhan."
+    "body": "Equipped with chemical sensors, this toothbrush analyzes saliva every morning to monitor overall body health."
   },
   {
     "id": 52,
-    "cat": "SAINS",
-    "title": "Rekayasa Cuaca: Hujan Buatan Presisi Untuk Atasi Kekeringan",
+    "cat": "SCIENCE",
+    "title": "Weather Engineering: Precision Artificial Rain to Overcome Drought",
     "img": "https://picsum.photos/seed/tech27/800/450",
-    "body": "Teknologi penyemaian awan terbaru menggunakan drone otonom yang menembakkan ion perak ke titik koordinat awan yang paling potensial secara presisi untuk menurunkan hujan di area pertanian yang kekeringan."
+    "body": "The latest cloud seeding technology uses autonomous drones that fire silver ions at the most potential cloud coordinate points with precision to bring rain to parched agricultural areas."
   },
   {
     "id": 53,
     "cat": "GREEN TECH",
-    "title": "Sepatu Lari Yang Bisa Mengisi Daya Baterai HP Sambil Berjalan",
+    "title": "Running Shoes That Can Charge Phone Batteries While Walking",
     "img": "https://picsum.photos/seed/tech28/800/450",
-    "body": "Sol sepatu ini mengandung bahan piezoelektrik yang mengubah tekanan langkah kaki menjadi energi listrik kecil namun berguna."
+    "body": "The soles of these shoes contain piezoelectric materials that convert footstep pressure into small but useful electrical energy."
   },
   {
     "id": 54,
-    "cat": "KESEHATAN",
-    "title": "Terapi Musik Berbasis Gelombang Otak Untuk Atasi Insomnia",
+    "cat": "HEALTH",
+    "title": "Brainwave-Based Music Therapy to Overcome Insomnia",
     "img": "https://picsum.photos/seed/tech29/800/450",
-    "body": "Penelitian terbaru membuktikan frekuensi suara tertentu yang dipersonalisasi bisa menidurkan orang dalam waktu kurang dari 3 menit tanpa obat."
+    "body": "Recent research proves that specific personalized sound frequencies can put people to sleep in less than 3 minutes without medication."
   },
   {
     "id": 55,
-    "cat": "ANTARIKSA",
-    "title": "Teleskop Amatir Kini Bisa Melihat Cincin Saturnus dari HP",
+    "cat": "SPACE",
+    "title": "Amateur Telescopes Can Now See Saturn's Rings from a Phone",
     "img": "https://picsum.photos/seed/tech30/800/450",
-    "body": "Integrasi lensa digital pintar memungkinkan teleskop rumahan terhubung ke cloud AI untuk menjernihkan gambar planet secara real-time."
+    "body": "Smart digital lens integration allows home telescopes to connect to the AI cloud to clear up planetary images in real-time."
   },
   {
     "id": 56,
-    "cat": "AI & ROBOTIK",
-    "title": "Fashion AI: Baju yang Bisa Berubah Warna Lewat Aplikasi",
+    "cat": "AI & ROBOTICS",
+    "title": "Fashion AI: Clothes That Can Change Color via App",
     "img": "https://picsum.photos/seed/tech31/800/450",
-    "body": "Menggunakan serat kain e-ink, pakaian masa kini bisa berubah motif dan warna sesuai mood pengguna hanya dengan satu klik di ponsel."
+    "body": "Using e-ink fabric fibers, modern clothing can change patterns and colors according to the user's mood with just one click on a phone."
   },
   {
     "id": 57,
     "cat": "GADGET",
-    "title": "Earbud Penerjemah Bahasa Hewan Mulai Dijual Terbatas",
+    "title": "Animal Language Translation Earbuds Go on Limited Sale",
     "img": "https://picsum.photos/seed/tech32/800/450",
-    "body": "Menggunakan database frekuensi suara anjing dan kucing, AI ini menerjemahkan emosi hewan peliharaan menjadi kata-kata sederhana di smartphone Anda."
+    "body": "Using a database of dog and cat vocal frequencies, this AI translates pet emotions into simple words on your smartphone."
   },
   {
     "id": 58,
-    "cat": "SAINS",
-    "title": "Penemuan Spesies Ikan Transparan di Palung Jawa",
+    "cat": "SCIENCE",
+    "title": "Discovery of Transparent Fish Species in the Java Trench",
     "img": "https://picsum.photos/seed/tech33/800/450",
-    "body": "Ekspedisi laut dalam menemukan ekosistem baru di kedalaman 7.000 meter. Ikan-ikan ini memiliki tubuh bening dan menghasilkan cahaya bioluminescent sendiri."
+    "body": "A deep-sea expedition discovered a new ecosystem at a depth of 7,000 meters. These fish have clear bodies and produce their own bioluminescent light."
   },
   {
     "id": 59,
     "cat": "GREEN TECH",
-    "title": "Pembersih Udara Raksasa Berbentuk Pohon di Pusat Jakarta",
+    "title": "Giant Tree-Shaped Air Purifier in Central Jakarta",
     "img": "https://picsum.photos/seed/tech34/800/450",
-    "body": "Menara setinggi 20 meter ini mampu menyaring polusi udara setara dengan 1.000 pohon asli, menggunakan tenaga surya murni."
+    "body": "This 20-meter tower is capable of filtering air pollution equivalent to 1,000 real trees, using pure solar power."
   },
   {
     "id": 60,
-    "cat": "TRANSPORTASI",
-    "title": "Jalan Tol Khusus Mobil Otonom Mulai Dibuka di Cipularang",
+    "cat": "TRANSPORTATION",
+    "title": "Autonomous Vehicle Only Highway Lane Opens in Cipularang",
     "img": "https://picsum.photos/seed/tech35/800/450",
-    "body": "Lajur kanan tol kini dikhususkan untuk mobil tanpa sopir yang saling berkomunikasi untuk menjaga kecepatan stabil 150 km/jam tanpa risiko kecelakaan."
+    "body": "The right lane of the highway is now dedicated to driverless cars that communicate with each other to maintain a stable speed of 150 km/h without the risk of accidents."
   },
   {
     "id": 61,
-    "cat": "KESEHATAN",
-    "title": "Kacamata Pendeteksi Gejala Stroke Lewat Pemindaian Retina",
+    "cat": "HEALTH",
+    "title": "Stroke Symptom Detection Glasses via Retinal Scanning",
     "img": "https://picsum.photos/seed/tech36/800/450",
-    "body": "Cukup dengan memakai kacamata ini selama 10 detik, sistem AI akan menganalisis pembuluh darah di retina untuk memberikan peringatan dini risiko stroke."
+    "body": "Just by wearing these glasses for 10 seconds, the AI system will analyze retinal blood vessels to provide early warning of stroke risk."
   },
   {
     "id": 62,
-    "cat": "AI & ROBOTIK",
-    "title": "Drone Kurir Kini Dilengkapi AI Anti-Tabrak di Lorong Sempit",
+    "cat": "AI & ROBOTICS",
+    "title": "Courier Drones Now Equipped with Anti-Collision AI in Narrow Corridors",
     "img": "https://picsum.photos/seed/tech37/800/450",
-    "body": "Sistem navigasi terbaru memungkinkan drone mengantar paket langsung ke balkon apartemen tanpa bantuan manusia, menghindari kabel dan jemuran dengan sempurna."
+    "body": "The latest navigation system allows drones to deliver packages directly to apartment balconies without human assistance, perfectly avoiding cables and clotheslines."
   },
   {
     "id": 63,
     "cat": "GADGET",
-    "title": "Keyboard Hologram Portable: Mengetik di Atas Meja Apapun",
+    "title": "Portable Hologram Keyboard: Type on Any Table",
     "img": "https://picsum.photos/seed/tech38/800/450",
-    "body": "Alat sekecil korek api ini memproyeksikan layout keyboard penuh ke permukaan datar. Sensor laser mendeteksi ketukan jari dengan sangat akurat."
+    "body": "A device as small as a lighter projects a full keyboard layout onto flat surfaces. Laser sensors detect finger taps with high accuracy."
   },
   {
     "id": 64,
-    "cat": "SAINS",
-    "title": "Baterai Berbahan Berlian Dari Limbah Nuklir Bisa Bertahan 100 Tahun",
+    "cat": "SCIENCE",
+    "title": "Diamond-Based Batteries from Nuclear Waste Can Last 100 Years",
     "img": "https://picsum.photos/seed/tech39/800/450",
-    "body": "Teknologi baru mengubah karbon limbah nuklir menjadi berlian buatan yang menghasilkan listrik stabil selama berabad-abad. Solusi energi bersih untuk sensor di laut dalam."
+    "body": "New technology converts nuclear waste carbon into artificial diamonds that generate stable electricity for centuries. A clean energy solution for deep-sea sensors."
   },
   {
     "id": 65,
-    "cat": "ANTARIKSA",
-    "title": "Hotel Luar Angkasa 'Voyager' Mulai Terima Reservasi Pertama",
+    "cat": "SPACE",
+    "title": "'Voyager' Space Hotel Begins Accepting First Reservations",
     "img": "https://picsum.photos/seed/tech40/800/450",
-    "body": "Orbit Earth kini punya destinasi liburan baru. Stasiun luar angkasa Voyager menawarkan pengalaman tidur tanpa gravitasi dengan pemandangan Bumi yang luar biasa selama 3 malam."
+    "body": "Earth's orbit now has a new holiday destination. The Voyager space station offers a zero-gravity sleeping experience with extraordinary Earth views for 3 nights."
   },
   {
     "id": 66,
     "cat": "GREEN TECH",
-    "title": "Plastik Berbahan Singkong Kini Benar-benar Bisa Dimakan",
+    "title": "Cassava-Based Plastics are Now Truly Edible",
     "img": "https://picsum.photos/seed/tech41/800/450",
-    "body": "Inovasi kemasan makanan terbaru di April 2026 membuat sampah plastik menjadi sejarah. Kemasannya tidak hanya larut di air, tapi mengandung nutrisi yang aman dikonsumsi manusia."
+    "body": "The latest food packaging innovation in April 2026 makes plastic waste history. The packaging not only dissolves in water but also contains nutrients safe for human consumption."
   },
   {
     "id": 67,
-    "cat": "AI & ROBOTIK",
-    "title": "Dosen AI Kini Mengajar di Universitas Terkemuka Indonesia",
+    "cat": "AI & ROBOTICS",
+    "title": "AI Lecturers Now Teaching at Leading Indonesian Universities",
     "img": "https://picsum.photos/seed/tech42/800/450",
-    "body": "Mahasiswa kini bisa berkonsultasi 24 jam dengan avatar AI yang memiliki pengetahuan seluruh jurnal ilmiah di dunia. Dosen manusia kini lebih fokus pada diskusi etika dan bimbingan moral siswa."
+    "body": "Students can now consult 24/7 with AI avatars that possess knowledge of all scientific journals in the world. Human lecturers now focus more on ethical discussions and moral guidance for students."
   },
   {
     "id": 68,
     "cat": "GADGET",
-    "title": "Lensa Kontak Zoom: Kedipkan Mata Untuk Melihat Jarak Jauh",
+    "title": "Zoom Contact Lenses: Blink Your Eyes to See Far Distances",
     "img": "https://picsum.photos/seed/tech43/800/450",
-    "body": "Lensa kontak pintar ini memungkinkan pengguna melakukan zoom optik 3x hanya dengan pola kedipan mata tertentu. Sangat berguna bagi jurnalis dan pengamat alam liar."
+    "body": "These smart contact lenses allow users to perform 3x optical zoom just with specific blinking patterns. Very useful for journalists and wildlife observers."
   },
   {
     "id": 69,
-    "cat": "SAINS",
-    "title": "Teleportasi Partikel Sejauh 100 KM Berhasil Dilakukan di Lab",
+    "cat": "SCIENCE",
+    "title": "Particle Teleportation Over 100 KM Successfully Performed in Lab",
     "img": "https://picsum.photos/seed/tech44/800/450",
-    "body": "Ilmuwan fisika kuantum berhasil mengirimkan informasi instan antara dua titik sejauh 100 km. Ini adalah dasar bagi internet kuantum masa depan yang tidak bisa diretas oleh siapapun."
+    "body": "Quantum physics scientists have successfully sent instant information between two points 100 km apart. This is the foundation for a future quantum internet that cannot be hacked by anyone."
   },
   {
     "id": 70,
-    "cat": "TRANSPORTASI",
-    "title": "Motor Listrik Vario 2026: Jarak Tempuh Tembus 500 KM Sekali Cas",
+    "cat": "TRANSPORTATION",
+    "title": "Vario 2026 Electric Motor: Range Reaches 500 KM on One Charge",
     "img": "https://picsum.photos/seed/tech45/800/450",
-    "body": "Honda merilis pembaruan baterai solid-state untuk motor listrik terlarisnya. Dengan efisiensi tinggi dan bodi anti-pudar, motor ini menjadi primadona baru di jalanan kota besar April ini."
+    "body": "Honda released a solid-state battery update for its best-selling electric motorcycle. With high efficiency and a fade-resistant body, this bike has become a new favorite on city streets this April."
   },
   {
     "id": 71,
     "cat": "GREEN TECH",
-    "title": "Hutan Vertikal Pintar di IKN Mampu Turunkan Suhu Kota 5 Derajat",
+    "title": "Smart Vertical Forest in IKN Able to Lower City Temperature by 5 Degrees",
     "img": "https://picsum.photos/seed/tech46/800/450",
-    "body": "Pembangunan gedung-gedung tinggi di Ibu Kota Nusantara (IKN) April 2026 ini dilengkapi dengan sensor kelembapan otomatis yang mengelola tanaman di dinding gedung, menciptakan micro-climate yang sejuk di tengah kota."
+    "body": "High-rise construction in the New Capital City (IKN) in April 2026 is equipped with automatic humidity sensors managing wall plants, creating a cool micro-climate in the city center."
   },
   {
     "id": 72,
-    "cat": "KESEHATAN",
-    "title": "Pil Pintar 'Nano-Doc' Bisa Bersihkan Plak Jantung Secara Otomatis",
+    "cat": "HEALTH",
+    "title": "'Nano-Doc' Smart Pill Can Automatically Clear Heart Plaque",
     "img": "https://picsum.photos/seed/tech47/800/450",
-    "body": "Obat berbasis robot mikroskopis (nanobot) resmi disetujui. Setelah diminum, nanobot ini akan masuk ke aliran darah, mencari penyumbatan arteri, dan membersihkannya tanpa perlu prosedur operasi besar."
+    "body": "Medicine based on microscopic robots (nanobots) has been officially approved. Once swallowed, these nanobots enter the bloodstream, find arterial blockages, and clear them without major surgery."
   },
   {
     "id": 73,
-    "cat": "ANTARIKSA",
-    "title": "NASA Temukan Tanda Kehidupan Mikroba di Enceladus",
+    "cat": "SPACE",
+    "title": "NASA Finds Signs of Microbial Life on Enceladus",
     "img": "https://picsum.photos/seed/tech48/800/450",
-    "body": "Robot penjelajah bawah laut NASA mengirimkan data mengejutkan dari bulan milik Saturnus, Enceladus. Ditemukan molekul organik kompleks yang mengindikasikan adanya kehidupan mikroba di bawah lapisan es tebal."
+    "body": "NASA's undersea rover sent back surprising data from Saturn's moon, Enceladus. Complex organic molecules were found, indicating microbial life beneath the thick ice layer."
   },
   {
     "id": 74,
     "cat": "GADGET",
-    "title": "Smartphone Tanpa Baterai Pertama: Mengambil Energi dari Udara",
+    "title": "First Battery-Free Smartphone: Drawing Energy from the Air",
     "img": "https://picsum.photos/seed/tech49/800/450",
-    "body": "Startup asal Silicon Valley merilis ponsel yang menggunakan teknologi 'Air-Harvesting'. Ponsel ini mengisi daya secara konstan melalui gelombang radio dan WiFi di sekitar, membuat charger kabel menjadi kuno."
+    "body": "A Silicon Valley startup released a phone using 'Air-Harvesting' technology. The phone charges constantly through surrounding radio and WiFi waves, making cable chargers obsolete."
   },
   {
     "id": 75,
-    "cat": "AI & ROBOTIK",
-    "title": "AI 'Socrates' Mulai Digunakan Sebagai Hakim Mediasi di Indonesia",
+    "cat": "AI & ROBOTICS",
+    "title": "'Socrates' AI Begins Use as Mediation Judge in Indonesia",
     "img": "https://picsum.photos/seed/tech50/800/450",
-    "body": "Kementerian Hukum meluncurkan pilot project AI Socrates untuk membantu menyelesaikan sengketa perdata ringan. Sistem ini mampu menganalisis ribuan pasal dalam detik untuk memberikan solusi paling adil bagi kedua belah pihak."
+    "body": "The Ministry of Law launched a pilot project using the Socrates AI to help resolve light civil disputes. The system can analyze thousands of articles in seconds to provide the fairest solution for both parties."
   },
   {
     "id": 76,
-    "cat": "BERITA UTAMA",
-    "title": "Portal Neural Logic v21.0 Resmi Dirilis",
+    "cat": "HEADLINE",
+    "title": "Neural Logic Portal v21.0 Officially Released",
     "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=500",
-    "body": "Update besar-besaran website Neural Logic menghadirkan fitur Auto-Sort, Audio Reading, dan AI Summary untuk memudahkan pembaca mendapatkan info IPTEK tercepat."
+    "body": "A massive update to the Neural Logic website brings Auto-Sort, Audio Reading, and AI Summary features to help readers get the fastest science and technology info."
   },
   {
     "id": 77,
-    "cat": "TEKNOLOGI",
-    "title": "Internet 6G Mulai Uji Coba: Unduh 1TB per Detik",
+    "cat": "TECHNOLOGY",
+    "title": "6G Internet Trial Begins: Download 1TB per Second",
     "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500",
-    "body": "Jaringan 6G menjanjikan latensi nol. Kini mengunduh seluruh koleksi film di Netflix hanya membutuhkan waktu kurang dari 2 detik saja."
+    "body": "The 6G network promises zero latency. Now downloading an entire Netflix movie collection takes less than 2 seconds."
   },
   {
     "id": 78,
-    "cat": "KESEHATAN",
-    "title": "Vaksin Kanker Universal Mulai Disebar",
+    "cat": "HEALTH",
+    "title": "Universal Cancer Vaccine Distribution Begins",
     "img": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=500",
-    "body": "WHO menyetujui distribusi vaksin mRNA yang mampu mengenali 50 jenis sel kanker berbeda sebelum berkembang menjadi tumor berbahaya."
+    "body": "The WHO approved the distribution of an mRNA vaccine capable of recognizing 50 different types of cancer cells before they develop into dangerous tumors."
   },
   {
     "id": 79,
     "cat": "AI",
-    "title": "Film AI Pertama Menangkan Piala Oscar",
+    "title": "First AI Film Wins Oscar",
     "img": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500",
-    "body": "Sebuah film yang seluruh naskah, visual, dan aktingnya dihasilkan oleh AI memenangkan penghargaan film terbaik, memicu debat besar di Hollywood."
+    "body": "A film whose entire script, visuals, and acting were generated by AI won the Best Picture award, sparking a major debate in Hollywood."
   },
   {
     "id": 80,
-    "cat": "SAINS",
-    "title": "Ilmuwan Temukan Oksigen di Bulan",
+    "cat": "SCIENCE",
+    "title": "Scientists Find Oxygen on the Moon",
     "img": "https://images.unsplash.com/photo-1532634896-26909d0d4b89?q=80&w=500",
-    "body": "Ekstraksi batuan regolith bulan terbukti bisa menghasilkan oksigen dalam jumlah besar, mempermudah pembangunan pangkalan permanen manusia di bulan."
+    "body": "Extraction of lunar regolith rock is proven to produce large amounts of oxygen, facilitating the construction of permanent human bases on the moon."
   },
   {
     "id": 81,
-    "cat": "TRANSPORTASI",
-    "title": "Kereta Hyperloop Jakarta-Surabaya 45 Menit",
+    "cat": "TRANSPORTATION",
+    "title": "Jakarta-Surabaya Hyperloop in 45 Minutes",
     "img": "https://images.unsplash.com/photo-1515162305114-8d3da120aa43?q=80&w=500",
-    "body": "Proyek transportasi tercepat di Indonesia resmi memulai uji coba. Penumpang dari Jakarta ke Surabaya kini bisa tiba dalam waktu kurang dari satu jam."
+    "body": "Indonesia's fastest transportation project officially begins trials. Passengers from Jakarta to Surabaya can now arrive in less than one hour."
   },
   {
     "id": 82,
     "cat": "GADGET",
-    "title": "Laptop Lipat Tiga Kali Layar 30 Inci Meluncur",
+    "title": "Triple-Fold Laptop with 30-Inch Screen Launches",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=500",
-    "body": "Laptop masa depan ini bisa dilipat sekecil tablet namun saat dibuka penuh menjadi layar workstation sebesar 30 inci tanpa sambungan."
+    "body": "This future laptop can be folded as small as a tablet but when fully opened becomes a 30-inch workstation screen without seams."
   },
   {
     "id": 83,
     "cat": "SECURITY",
-    "title": "Password Resmi Dihapus: Otentikasi Pikirian Hadir",
+    "title": "Password Officially Removed: Thought Authentication Arrives",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500",
-    "body": "Sistem keamanan terbaru menggunakan gelombang otak unik pengguna untuk membuka perangkat. Tidak bisa dihack meski pengguna sedang tidur."
+    "body": "The latest security system uses unique brainwaves of users to unlock devices. It cannot be hacked even when the user is sleeping."
   },
   {
     "id": 84,
-    "cat": "KRIPTO",
-    "title": "Bitcoin Menjadi Mata Uang Resmi Global",
+    "cat": "CRYPTO",
+    "title": "Bitcoin Becomes Official Global Currency",
     "img": "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=500",
-    "body": "Lebih dari 50 negara sepakat menggunakan aset digital sebagai cadangan devisa utama menggantikan sistem mata uang lama yang inflasi."
+    "body": "More than 50 countries agreed to use digital assets as main foreign exchange reserves, replacing the old inflationary currency system."
   },
   {
     "id": 85,
-    "cat": "BIOTEK",
-    "title": "Daging Lab Murah Kini Tersedia di Supermarket",
+    "cat": "BIOTECH",
+    "title": "Cheap Lab Meat Now Available in Supermarkets",
     "img": "https://images.unsplash.com/photo-1514460399165-2110e4738aa4?q=80&w=500",
-    "body": "Daging sapi hasil budidaya sel tanpa menyembelih hewan kini harganya lebih murah dari daging konvensional, menjadi solusi pangan ramah lingkungan."
+    "body": "Beef grown from cell cultures without animal slaughter is now cheaper than conventional meat, becoming an eco-friendly food solution."
   },
   {
     "id": 86,
-    "cat": "PENDIDIKAN",
-    "title": "Guru AI Mulai Mengajar di Sekolah Dasar Jakarta",
+    "cat": "EDUCATION",
+    "title": "AI Teachers Start Teaching at Jakarta Elementary Schools",
     "img": "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=500",
-    "body": "Pilot project sekolah masa depan menggunakan hologram guru AI yang bisa menjawab pertanyaan siswa secara personal sesuai kecepatan belajar masing-masing anak."
+    "body": "A future school pilot project uses AI teacher holograms that can answer student questions personally according to each child's learning pace."
   },
   {
     "id": 87,
     "cat": "GADGET",
-    "title": "Lensa Kontak AR: Layar Monitor Ada di Mata Anda",
+    "title": "AR Contact Lenses: Monitor Screens in Your Eyes",
     "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=500",
-    "body": "Teknologi lensa kontak pintar memungkinkan pengguna melihat navigasi GPS dan notifikasi pesan langsung di depan mata tanpa kacamata tambahan."
+    "body": "Smart contact lens technology allows users to see GPS navigation and message notifications directly in front of their eyes without additional glasses."
   },
   {
     "id": 88,
-    "cat": "LINGKUNGAN",
-    "title": "Mesin Penyedot Karbon Raksasa Mulai Beroperasi",
+    "cat": "ENVIRONMENT",
+    "title": "Giant Carbon Suction Machine Begins Operation",
     "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=500",
-    "body": "Islandia mengaktifkan pabrik penyedot polusi udara terbesar yang mengubah karbon dioksida menjadi batu mineral dalam waktu kurang dari dua tahun."
+    "body": "Iceland activated the largest air pollution suction plant that converts carbon dioxide into mineral rock in less than two years."
   },
   {
     "id": 89,
-    "cat": "ANTARIKSA",
-    "title": "Hotel Luar Angkasa Pertama Mulai Terima Reservasi",
+    "cat": "SPACE",
+    "title": "First Space Hotel Starts Accepting Reservations",
     "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=500",
-    "body": "Stasiun luar angkasa komersial Voyager Class siap menampung turis mulai akhir tahun ini. Harga per malam dibanderol 500 ribu dolar AS."
+    "body": "The Voyager Class commercial space station is ready to host tourists starting late this year. The price per night is set at 500 thousand USD."
   },
   {
     "id": 90,
     "cat": "AI",
-    "title": "AI Sekarang Bisa Menulis Lagu Hits dalam 5 Detik",
+    "title": "AI Can Now Write Hit Songs in 5 Seconds",
     "img": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=500",
-    "body": "Platform musik baru meluncurkan fitur di mana pengguna cukup memberikan perintah suara untuk membuat lagu lengkap dengan lirik dan vokal berkualitas studio."
+    "body": "A new music platform launched a feature where users simply give a voice command to create a complete song with studio-quality lyrics and vocals."
   },
   {
     "id": 91,
-    "cat": "TEKNOLOGI",
-    "title": "Baterai HP Kini Tahan 1 Bulan Sekali Cas",
+    "cat": "TECHNOLOGY",
+    "title": "Phone Battery Now Lasts 1 Month on One Charge",
     "img": "https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=500",
-    "body": "Penemuan baterai berbasis graphene padat memungkinkan smartphone bertahan 30 hari dalam sekali pengisian daya tanpa menambah ketebalan ponsel."
+    "body": "The discovery of dense graphene-based batteries allows smartphones to last 30 days on a single charge without increasing the phone's thickness."
   },
   {
     "id": 92,
-    "cat": "ENERGI",
-    "title": "Matahari Buatan China Cetak Rekor Suhu Baru",
+    "cat": "ENERGY",
+    "title": "China's Artificial Sun Sets New Temperature Record",
     "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500",
-    "body": "Reaktor fusi nuklir EAST di China berhasil menyala stabil selama 20 menit pada suhu 150 juta derajat Celcius, mendekati sumber energi bersih tanpa batas."
+    "body": "The EAST nuclear fusion reactor in China successfully maintained a stable 150 million degrees Celsius for 20 minutes, nearing an unlimited clean energy source."
   },
   {
     "id": 93,
     "cat": "INTERNET",
-    "title": "Starlink 2.0: Internet 10Gbps Merata di Seluruh Desa",
+    "title": "Starlink 2.0: 10Gbps Internet Reaches Every Village",
     "img": "https://images.unsplash.com/photo-1527333656061-ca7adf608ae1?q=80&w=500",
-    "body": "Elon Musk mengumumkan upgrade satelit Starlink yang mampu memberikan kecepatan 10Gbps ke pelosok hutan Kalimantan dan Papua tanpa lag."
+    "body": "Elon Musk announced a Starlink satellite upgrade capable of providing 10Gbps speed to the remote forests of Kalimantan and Papua without lag."
   },
   {
     "id": 94,
     "cat": "GAME",
-    "title": "PlayStation 6 Bocor ke Publik: Gunakan Chip Quantum",
+    "title": "PlayStation 6 Leaked: Uses Quantum Chip",
     "img": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=500",
-    "body": "Sony dilaporkan sedang menguji PS6 dengan teknologi ray-tracing real-time yang tidak terbatas, memberikan grafis yang mustahil dibedakan dengan dunia nyata."
+    "body": "Sony is reportedly testing the PS6 with unlimited real-time ray-tracing technology, providing graphics impossible to distinguish from the real world."
   },
   {
     "id": 95,
-    "cat": "KESEHATAN",
-    "title": "Chip Neuralink Sembuhkan Kelumpuhan Total",
+    "cat": "HEALTH",
+    "title": "Neuralink Chip Cures Total Paralysis",
     "img": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=500",
-    "body": "Seorang pasien lumpuh berhasil berjalan kembali setelah dipasang chip Neuralink generasi ke-4 yang menghubungkan otak langsung ke saraf tulang belakang melalui sinyal bluetooth."
+    "body": "A paralyzed patient successfully walked again after being implanted with a 4th generation Neuralink chip that connects the brain directly to the spinal cord via bluetooth signals."
   },
   {
     "id": 96,
-    "cat": "OTOMOTIF",
-    "title": "Mobil Terbang Pertama Beroperasi di Jakarta",
+    "cat": "AUTOMOTIVE",
+    "title": "First Flying Car Operates in Jakarta",
     "img": "https://images.unsplash.com/photo-1506610654-064fbba47ad0?q=80&w=500",
-    "body": "Dinas Perhubungan DKI Jakarta meresmikan jalur udara untuk taksi terbang elektrik (eVTOL). Rute pertama melayani rute Bandara Soekarno-Hatta ke Sudirman dalam 8 menit."
+    "body": "The DKI Jakarta Transportation Agency inaugurated air routes for electric flying taxis (eVTOL). The first route serves the Soekarno-Hatta Airport to Sudirman route in 8 minutes."
   },
   {
     "id": 97,
-    "cat": "ROBOTIK",
-    "title": "Robot Pelayan Rumah Tangga Kini Seharga Motor",
+    "cat": "ROBOTICS",
+    "title": "Household Servant Robots Now Price of a Motorcycle",
     "img": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=500",
-    "body": "Harga robot humanoid untuk mencuci piring dan menyetrika pakaian turun drastis di April 2026. Kini keluarga menengah bisa memiliki asisten robotik seharga 30 juta rupiah."
+    "body": "The price of humanoid robots for washing dishes and ironing clothes dropped drastically in April 2026. Middle-class families can now have a robotic assistant for 30 million rupiah."
   },
   {
     "id": 98,
     "cat": "GADGET",
-    "title": "Smartphone Transparan Samsung Mulai Dijual",
+    "title": "Transparent Samsung Smartphone Goes on Sale",
     "img": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?q=80&w=500",
-    "body": "Samsung Galaxy Glass resmi hadir dengan layar OLED transparan 90%. Semua komponen mesin disembunyikan di bagian bawah bezel yang sangat tipis."
+    "body": "The Samsung Galaxy Glass is officially here with a 90% transparent OLED screen. All components are hidden in the ultra-thin bottom bezel."
   },
   {
     "id": 99,
     "cat": "AI",
-    "title": "GPT-6 Resmi Diluncurkan: Bisa Merasakan Emosi",
+    "title": "GPT-6 Officially Launched: Can Feel Emotions",
     "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=500",
-    "body": "OpenAI merilis GPT-6 yang memiliki modul empati. AI ini tidak hanya menjawab teks, tapi bisa mendeteksi kesedihan pengguna melalui nada suara dan memberikan dukungan psikologis."
+    "body": "OpenAI released GPT-6 which features an empathy module. This AI not only answers text but can detect user sadness through voice tone and provide psychological support."
   },
   {
     "id": 100,
-    "cat": "ANTARIKSA",
-    "title": "Koloni Mars Pertama Berhasil Panen Kentang",
+    "cat": "SPACE",
+    "title": "First Mars Colony Successfully Harvests Potatoes",
     "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=500",
-    "body": "Astronot di kawah Jezero Mars melaporkan keberhasilan panen kentang hidroponik pertama dengan nutrisi tanah Mars yang telah difilter. Ini langkah besar bagi kemandirian pangan di luar bumi."
+    "body": "Astronauts in Mars' Jezero crater reported the first successful hydroponic potato harvest using filtered Mars soil nutrients. This is a major step toward food independence off-Earth."
   },
   {
     "id": 101,
-    "title": "Pentingnya Mengganti Oli Motor Sesuai Kilometer",
+    "title": "Importance of Changing Motorcycle Oil Based on Mileage",
     "cat": "AUTOMOTIVE",
     "img": "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=800",
-    "body": "Untuk menjaga performa mesin Vario 160 tetap halus, penggantian oli setiap dua ribu kilometer sangat dianjurkan. Oli yang bersih memastikan gesekan mesin tetap rendah dan suhu mesin tetap terjaga stabil di cuaca panas April."
+    "body": "To keep Vario 160 engine performance smooth, oil changes every two thousand kilometers are highly recommended. Clean oil ensures low engine friction and keeps engine temperature stable in the April heat."
   },
   {
     "id": 102,
-    "title": "Menemukan Lubang Hitam Terdekat dari Bumi",
-    "cat": "ANTARIKSA",
+    "title": "Finding the Closest Black Hole to Earth",
+    "cat": "SPACE",
     "img": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800",
-    "body": "Astronom mendeteksi adanya lubang hitam yang hanya berjarak seribu tahun cahaya dari Bumi. Lubang hitam ini tidak aktif, sehingga tidak memancarkan radiasi berbahaya, namun keberadaannya mengubah teori distribusi massa galaksi."
+    "body": "Astronomers detected a black hole just a thousand light-years from Earth. This black hole is inactive, so it doesn't emit dangerous radiation, but its presence changes the theory of galactic mass distribution."
   },
   {
     "id": 103,
-    "title": "AI dalam Produksi Musik Sinematik",
+    "title": "AI in Cinematic Music Production",
     "cat": "AI",
     "img": "https://images.unsplash.com/photo-1514525253361-bee8718a74a2?q=80&w=800",
-    "body": "Komposer film kini menggunakan bantuan AI untuk membuat aransemen orkestra dasar. Ini mempercepat proses produksi musik tanpa menghilangkan sentuhan emosional yang tetap harus dilakukan oleh manusia."
+    "body": "Film composers now use AI to create basic orchestral arrangements. This speeds up the music production process without losing the emotional touch that must remain human-made."
   },
   {
     "id": 104,
-    "title": "Fotografi Makro: Menjelajahi Dunia Mikro di Taman Rumah",
+    "title": "Macro Photography: Exploring the Micro World in Your Garden",
     "cat": "CREATIVE",
     "img": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800",
-    "body": "Lensa makro memungkinkan kita melihat detail serangga dan bunga yang tak terlihat mata telanjang. Kuncinya adalah kesabaran dan penggunaan tripod untuk menghindari blur akibat guncangan tangan yang sangat kecil."
+    "body": "Macro lenses allow us to see details of insects and flowers invisible to the naked eye. The key is patience and using a tripod to avoid blur from tiny hand tremors."
   },
   {
     "id": 105,
-    "title": "Generasi Baru Chip Biometrik untuk Pembayaran Tanpa Kontak",
-    "cat": "SAINS",
+    "title": "New Generation Biometric Chips for Contactless Payment",
+    "cat": "SCIENCE",
     "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
-    "body": "Sistem pembayaran kini beralih ke verifikasi pola pembuluh darah di telapak tangan. Teknologi ini dianggap jauh lebih aman daripada sidik jari konvensional karena hampir tidak mungkin untuk diduplikasi."
+    "body": "Payment systems are now shifting to palm vein pattern verification. This technology is considered far safer than conventional fingerprints because it is nearly impossible to duplicate."
   },
   {
     "id": 106,
-    "title": "Smart Helmet dengan Head-Up Display (HUD)",
+    "title": "Smart Helmet with Head-Up Display (HUD)",
     "cat": "AUTOMOTIVE",
     "img": "https://images.unsplash.com/photo-1591704901662-dc6092040a15?q=80&w=800",
-    "body": "Helm masa depan kini dilengkapi layar transparan yang menampilkan kecepatan, navigasi GPS, dan notifikasi smartphone tepat di depan mata pengendara tanpa mengalihkan pandangan dari jalan raya."
+    "body": "Future helmets are now equipped with transparent screens displaying speed, GPS navigation, and smartphone notifications right in front of the rider's eyes without distracting from the road."
   },
   {
     "id": 107,
-    "title": "SpaceX Starship: Uji Coba Penerbangan Kargo ke Mars",
-    "cat": "ANTARIKSA",
+    "title": "SpaceX Starship: Cargo Flight Test to Mars",
+    "cat": "SPACE",
     "img": "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=800",
-    "body": "Elon Musk mengumumkan bahwa Starship akan melakukan simulasi pendaratan kargo di Mars tahun ini. Misi tanpa awak ini krusial untuk memastikan keselamatan astronot yang akan dikirim dalam dekade berikutnya."
+    "body": "Elon Musk announced that Starship will conduct a cargo landing simulation on Mars this year. This unmanned mission is crucial to ensure the safety of astronauts sent in the next decade."
   },
   {
     "id": 108,
-    "title": "Pemanfaatan Energi Matahari Terpusat di Gurun Sahara",
-    "cat": "SAINS",
+    "title": "Concentrated Solar Energy Utilization in the Sahara Desert",
+    "cat": "SCIENCE",
     "img": "https://images.unsplash.com/photo-1509391366360-fe5bb629550b?q=80&w=800",
-    "body": "Proyek energi surya raksasa di Sahara mulai memasok listrik ke benua Eropa. Teknologi ini menggunakan ribuan cermin untuk memusatkan cahaya matahari ke satu titik guna menghasilkan uap penggerak turbin listrik."
+    "body": "A giant solar energy project in the Sahara began supplying electricity to Europe. The technology uses thousands of mirrors to focus sunlight to a single point to generate steam for electric turbines."
   },
   {
     "id": 109,
-    "title": "Teknik Komposisi Simetri dalam Arsitektur Modern",
+    "title": "Symmetry Composition Techniques in Modern Architecture",
     "cat": "CREATIVE",
     "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
-    "body": "Simetri menciptakan keseimbangan visual yang memuaskan. Dalam fotografi arsitektur, mengambil gambar tepat dari tengah bangunan akan memberikan kesan megah dan rapi, sangat cocok untuk diunggah di galeri media sosial yang estetik."
+    "body": "Symmetry creates a satisfying visual balance. In architectural photography, taking pictures exactly from the center of a building gives a grand and neat impression, perfect for aesthetic social media galleries."
   },
   {
     "id": 110,
-    "title": "Masa Depan AI: Robot Pendamping untuk Lansia",
+    "title": "Future of AI: Companion Robots for the Elderly",
     "cat": "AI",
     "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800",
-    "body": "Robot humanoid dengan kecerdasan emosional kini mulai digunakan di panti jompo. Mereka mampu mengenali ekspresi kesedihan dan memberikan dukungan percakapan yang menenangkan bagi para lansia yang merasa kesepian."
+    "body": "Humanoid robots with emotional intelligence are starting to be used in nursing homes. They are able to recognize expressions of sadness and provide soothing conversational support for lonely seniors."
   },
   {
     "id": 111,
-    "title": "Efek Coating Keramik pada Bodi Plastik Motor",
+    "title": "Effects of Ceramic Coating on Motorcycle Plastic Bodies",
     "cat": "AUTOMOTIVE",
     "img": "https://images.unsplash.com/photo-1599256621730-535171e28e50?q=80&w=800",
-    "body": "Coating keramik tidak hanya untuk mobil mewah. Pada bodi motor plastik, coating ini memberikan lapisan permanen yang menolak debu dan air, sehingga motor Vario 160 kamu tetap terlihat seperti baru meski terkena hujan."
+    "body": "Ceramic coating is not just for luxury cars. On plastic motorcycle bodies, this coating provides a permanent layer that repels dust and water, so your Vario 160 looks like new even after rain."
   },
   {
     "id": 112,
-    "title": "Teleskop James Webb Temukan Tanda Air di Planet Ekstra-Surya",
-    "cat": "ANTARIKSA",
+    "title": "James Webb Telescope Finds Signs of Water on Extra-Solar Planet",
+    "cat": "SPACE",
     "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=800",
-    "body": "Penemuan uap air di atmosfer planet K2-18b memberikan harapan baru dalam pencarian kehidupan di luar bumi. Planet ini terletak di zona layak huni bintangnya, memicu penelitian lebih dalam oleh para ilmuwan dunia."
+    "body": "The discovery of water vapor in the atmosphere of planet K2-18b provides new hope in the search for life outside Earth. This planet is located in its star's habitable zone, sparking deeper research."
   },
   {
     "id": 113,
-    "title": "Kecerdasan Buatan dalam Mengelola Lalu Lintas Kota",
+    "title": "Artificial Intelligence in Managing City Traffic",
     "cat": "AI",
     "img": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800",
-    "body": "Sistem lampu lalu lintas pintar kini menggunakan sensor AI untuk mendeteksi kepadatan kendaraan secara real-time. Ini mengurangi kemacetan kota hingga tiga puluh persen dan menurunkan tingkat stres pengendara di jam sibuk."
+    "body": "Smart traffic light systems now use AI sensors to detect vehicle density in real-time. This reduces city congestion by thirty percent and lowers driver stress levels during rush hour."
   },
   {
     "id": 114,
-    "title": "Psikologi Warna dalam Fotografi Potret Anak",
+    "title": "Color Psychology in Children's Portrait Photography",
     "cat": "CREATIVE",
     "img": "https://images.unsplash.com/photo-1481841395932-a1c30149520e?q=80&w=800",
-    "body": "Mengambil foto anak-anak dengan pakaian bertema putri kerajaan memerlukan latar belakang warna pastel. Warna ini memberikan kesan lembut dan ceria, membuat subjek foto terlihat menonjol namun tetap estetik dan artistik."
+    "body": "Taking photos of children with royal princess themed clothing requires pastel color backgrounds. These colors give a soft and cheerful impression, making the subject stand out while remaining artistic."
   },
   {
     "id": 115,
-    "title": "Perawatan Ban Motor ABS di Musim Hujan",
+    "title": "Maintenance of ABS Motorcycle Tires in Rainy Season",
     "cat": "AUTOMOTIVE",
     "img": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800",
-    "body": "Sistem ABS pada Vario 160 sangat bergantung pada traksi ban. Pastikan alur ban tidak gundul untuk menghindari slip saat pengereman mendadak di jalanan licin bulan April ini. Tekanan angin harus selalu ideal sesuai standar pabrikan."
+    "body": "The ABS system on the Vario 160 relies heavily on tire traction. Ensure tire grooves are not worn to avoid slips during sudden braking on slippery roads this April. Air pressure must always be ideal."
   },
   {
     "id": 116,
-    "title": "Keamanan Siber: Melindungi Identitas di Era Deepfake",
+    "title": "Cyber Security: Protecting Identity in the Deepfake Era",
     "cat": "AI",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
-    "body": "Seiring maraknya video palsu berbasis AI, teknologi blockchain mulai digunakan untuk memverifikasi keaslian video. Pengguna dihimbau lebih waspada terhadap panggilan video dari nomor tak dikenal yang meminta data pribadi."
+    "body": "With the rise of AI-based fake videos, blockchain technology is being used to verify video authenticity. Users are urged to be more wary of video calls from unknown numbers asking for personal data."
   },
   {
     "id": 117,
-    "title": "Menangkap Keindahan Galaksi Andromeda dari Kamera HP",
-    "cat": "ANTARIKSA",
+    "title": "Capturing the Beauty of the Andromeda Galaxy from a Phone Camera",
+    "cat": "SPACE",
     "img": "https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=800",
-    "body": "Dengan mode astrofotografi terbaru di smartphone 2026, memotret bintang kini tidak butuh kamera mahal. Cukup gunakan tripod dan long-exposure sepuluh detik untuk menangkap detail kabut galaksi di langit malam yang cerah."
+    "body": "With the latest astrophotography mode in 2026 smartphones, photographing stars doesn't need expensive cameras. Just use a tripod and a ten-second long-exposure to capture galaxy details."
   },
   {
     "id": 118,
-    "title": "Revolusi Baterai Padat: Jarak Tempuh Motor Listrik Meningkat",
-    "cat": "SAINS",
+    "title": "Solid Battery Revolution: Electric Motor Range Increases",
+    "cat": "SCIENCE",
     "img": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800",
-    "body": "Ilmuwan berhasil menciptakan baterai solid-state yang lebih ringan dan aman. Teknologi ini diprediksi akan diadopsi secara massal pada akhir tahun 2026, membuat motor listrik mampu menempuh jarak hingga lima ratus kilometer sekali isi."
+    "body": "Scientists successfully created lighter and safer solid-state batteries. This technology is predicted to be mass-adopted by late 2026, enabling electric motors to travel up to 500 km on one charge."
   },
   {
     "id": 119,
-    "title": "Edit Foto Estetik dengan AI In-Painting",
+    "title": "Aesthetic Photo Editing with AI In-Painting",
     "cat": "CREATIVE",
     "img": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800",
-    "body": "Teknologi Generative AI kini menyatu di aplikasi edit foto. Kamu bisa menghilangkan objek yang mengganggu hanya dengan satu sentuhan, sementara AI akan mengisi kekosongan latar belakang agar terlihat sangat nyata dan profesional."
+    "body": "Generative AI technology is now integrated in photo editing apps. You can remove distracting objects with one touch, while the AI fills the background to look real and professional."
   },
   {
     "id": 120,
-    "title": "Tren Warna Matte vs Metallic di Industri Otomotif 2026",
+    "title": "Matte vs Metallic Color Trends in 2026 Automotive Industry",
     "cat": "AUTOMOTIVE",
     "img": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800",
-    "body": "Warna matte masih mendominasi pasar motor matic besar. Namun, pemeliharaannya lebih sulit karena tidak bisa dipoles. Pengguna disarankan menggunakan matte-protection khusus untuk menjaga tekstur bodi tetap halus dan tidak bercak."
+    "body": "Matte colors still dominate the large matic motorcycle market. However, maintenance is harder as they can't be polished. Users are advised to use special matte-protection to keep the body texture smooth."
   },
   {
     "id": 121,
-    "title": "Kecerdasan Buatan dalam Diagnosa Medis Mandiri",
+    "title": "Artificial Intelligence in Self-Medical Diagnosis",
     "cat": "AI",
     "img": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800",
-    "body": "Aplikasi kesehatan berbasis AI kini dapat mendeteksi gejala awal penyakit jantung hanya melalui pemindaian pola denyut nadi dari kamera smartphone. Akurasinya mencapai sembilan puluh delapan persen di tahun 2026."
+    "body": "AI-based health apps can now detect early signs of heart disease just by scanning pulse patterns from a smartphone camera. Accuracy reaches ninety-eight percent in 2026."
   },
   {
     "id": 122,
-    "title": "Misi Artemis IV: Manusia Kembali Menjelajah Bulan",
-    "cat": "ANTARIKSA",
+    "title": "Artemis IV Mission: Humans Return to Explore the Moon",
+    "cat": "SPACE",
     "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800",
-    "body": "NASA mengonfirmasi peluncuran Artemis IV pada akhir April 2026. Fokus misi kali ini adalah membangun stasiun luar angkasa pertama di orbit Bulan yang akan menjadi pintu gerbang menuju Planet Mars di masa depan."
+    "body": "NASA confirmed the Artemis IV launch in late April 2026. The mission focus is building the first space station in lunar orbit, serving as a gateway to Mars in the future."
   },
   {
     "id": 123,
-    "title": "Neural Engine 5: Revolusi AI Mobile Tahun 2026",
+    "title": "Neural Engine 5: 2026 Mobile AI Revolution",
     "cat": "AI",
     "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800",
-    "body": "Prosesor Neural terbaru kini mampu menjalankan model bahasa besar secara offline di smartphone. Ini memungkinkan privasi data pengguna tetap terjaga sambil memberikan respons asisten pintar yang instan tanpa delay internet."
+    "body": "The latest Neural processors can now run large language models offline on smartphones. This keeps user data private while providing instant smart assistant responses without internet delay."
   },
   {
     "id": 124,
-    "title": "Teknik Pencahayaan Golden Hour untuk Fotografi Motor",
+    "title": "Golden Hour Lighting Technique for Motorcycle Photography",
     "cat": "CREATIVE",
     "img": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=800",
-    "body": "Untuk mendapatkan foto motor yang terlihat 'handal', manfaatkan cahaya matahari pukul 5 sore. Cahaya rendah memberikan kontur tajam pada bodi motor Vario 160. Gunakan teknik low-angle untuk memberikan kesan gagah dan pastikan fokus terkunci pada bagian lampu depan untuk estetika maksimal."
+    "body": "To get motorcycle photos that look 'capable', use the 5 PM sunlight. Low light gives sharp contours to the Vario 160 body. Use low-angle techniques for a grand impression and lock focus on the headlight."
   },
   {
     "id": 125,
-    "title": "Vario 160 ABS: Rahasia Cat Tetap Glossy di Iklim Tropis",
+    "title": "Vario 160 ABS: Secrets to Keeping Paint Glossy in Tropical Climates",
     "cat": "AUTOMOTIVE",
     "img": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=800",
-    "body": "Pemeliharaan cat pada Honda Vario 160 ABS memerlukan perhatian khusus. Sinar UV berlebih di bulan April dapat memudarkan pigmen warna. Gunakan cairan pelindung berbasis silikon dan hindari mencuci dengan sabun cuci piring karena sifat asamnya dapat mengikis lapisan clear coat. Pastikan menggunakan microfiber berkualitas saat mengelap untuk menghindari goresan halus."
+    "body": "Paint maintenance on the Honda Vario 160 ABS requires special attention. Excessive UV rays in April can fade color pigments. Use silicone-based protective fluids and avoid dish soap. Use high-quality microfiber."
   },
   {
     "id": 126,
-    "title": "Sinar Optik 6G: Melampaui Batas Kecepatan Nirkabel 2026",
-    "cat": "TEKNOLOGI",
+    "title": "6G Optical Beam: Beyond 2026 Wireless Speed Limits",
+    "cat": "TECHNOLOGY",
     "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800",
-    "body": "Memasuki April 2026, teknologi transmisi data nirkabel berbasis Sinar Optik 6G mulai diuji coba secara massal. Teknologi ini tidak lagi mengandalkan spektrum radio konvensional, melainkan menggunakan gelombang cahaya terarah yang mampu mengirimkan data hingga satu terabit per detik. Inovasi ini memungkinkan pengunduhan data besar dalam hitungan milidetik dengan latensi yang hampir nol, mendukung ekosistem metaverse dan pembedahan jarak jauh secara real-time di seluruh dunia."
+    "body": "Entering April 2026, 6G Optical Beam wireless data transmission trials began. This technology uses directed light waves capable of sending up to one terabit per second, supporting real-time metaverse ecosystems."
   },
   {
     "id": 127,
-    "title": "Aegis-X: Sistem Intersepsi Laser Otonom Generasi 2026",
-    "cat": "MILITER",
+    "title": "Aegis-X: 2026 Generation Autonomous Laser Interception System",
+    "cat": "MILITARY",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
-    "body": "Pada April 2026, teknologi pertahanan udara memasuki era baru dengan peluncuran Aegis-X, sistem intersepsi berbasis laser solid-state berkekuatan tinggi. Berbeda dengan proyektil fisik, Aegis-X menggunakan kecerdasan buatan untuk melacak dan melumpuhkan kawanan drone (drone swarm) serta rudal hipersonik dalam hitungan detik menggunakan energi terarah. Sistem ini memiliki biaya operasional yang sangat rendah per tembakan dan akurasi mutlak, menjadikannya perisai utama bagi kota-kota pintar masa depan dari ancaman udara modern."
+    "body": "In April 2026, air defense enters a new era with Aegis-X, a high-power solid-state laser interception system. It uses AI to track and disable drone swarms and hypersonic missiles in seconds."
   },
   {
     "id": 128,
-    "title": "Layar Fotovoltaik: Masa Depan Gadget Tanpa Kabel Charger",
-    "cat": "TEKNOLOGI",
+    "title": "Photovoltaic Screens: The Future of Gadgets Without Charger Cables",
+    "cat": "TECHNOLOGY",
     "img": "https://images.unsplash.com/photo-1509391366360-fe5bbfaad89d?q=80&w=800",
-    "body": "Memasuki pertengahan April 2026, peneliti berhasil mengintegrasikan sel surya transparan ke dalam panel layar AMOLED. Teknologi ini memungkinkan perangkat elektronik seperti smartphone dan laptop mengisi daya secara terus-menerus menggunakan energi cahaya dari lampu ruangan maupun matahari tanpa memerlukan kabel. Dengan efisiensi konversi energi mencapai 25%, inovasi ini diprediksi akan mengakhiri ketergantungan manusia pada pengisi daya fisik di akhir tahun 2026."
+    "body": "In mid-April 2026, researchers integrated transparent solar cells into AMOLED panels. This allows devices to charge continuously from ambient light or sun, ending reliance on physical chargers."
   },
   {
     "id": 129,
-    "title": "NeuralLens: Lensa Kontak AR dengan Proyeksi Retina Langsung",
+    "title": "NeuralLens: AR Contact Lenses with Direct Retinal Projection",
     "cat": "GADGET",
     "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800",
-    "body": "Pada pertengahan April 2026, prototipe publik pertama dari NeuralLens resmi diperkenalkan. Lensa kontak pintar ini perlahan mulai menggantikan fungsi layar smartphone dengan memproyeksikan antarmuka Augmented Reality (AR) langsung ke retina mata pengguna. Ditenagai secara biomimetik oleh panas tubuh dan gesekan kedipan mata sebagai sumber energi mikro, NeuralLens memungkinkan penggunanya untuk melakukan navigasi pemetaan, terjemahan bahasa real-time, hingga membaca notifikasi tanpa perlu memegang perangkat fisik apa pun."
+    "body": "In mid-April 2026, the first public prototype of NeuralLens was introduced. These smart lenses replace smartphone screens by projecting Augmented Reality (AR) directly to the user's retina."
   },
   {
     "id": 130,
-    "title": "Drone Interseptor Kinetik 'Mantis-K1': Presisi Serangan Jarak Dekat",
-    "cat": "MILITER",
+    "title": "Kinetic Interceptor Drone 'Mantis-K1': Close Range Strike Precision",
+    "cat": "MILITARY",
     "img": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800",
-    "body": "Menjelang akhir April 2026, taktik peperangan urban berubah drastis dengan peluncuran drone Mantis-K1. Berbeda dari drone kamikaze konvensional yang meledak, Mantis-K1 dirancang khusus untuk pertempuran jarak sangat dekat. Drone ini menggunakan lengan mekanik mikro dan algoritma AI yang meniru presisi serangan beladiri tradisional. Ia melumpuhkan drone musuh dengan melontarkan rentetan serangan kinetik berkecepatan tinggi tepat ke titik lemah rotor lawan. Tanpa bahan peledak, sistem ini menawarkan pelumpuhan target yang senyap dan nol risiko kerusakan kolateral (collateral damage) bagi warga sipil di area perkotaan."
+    "body": "By late April 2026, urban warfare changed with the Mantis-K1. It uses micro mechanical arms and AI algorithms mimicking traditional martial arts strikes to disable enemy drones without explosives."
   },
   {
     "id": 131,
-    "title": "Bio-Digital Twin: Revolusi RS Pintar 2026",
-    "cat": "MEDIS",
+    "title": "Bio-Digital Twin: 2026 Smart Hospital Revolution",
+    "cat": "MEDICAL",
     "img": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000",
-    "body": "Memasuki April 2026, teknologi Bio-Digital Twin resmi diimplementasikan. Teknologi ini menciptakan replika digital organ pasien secara real-time menggunakan sensor nano dan jaringan 6G. Dokter kini dapat mensimulasikan operasi atau reaksi obat pada kembaran digital pasien sebelum tindakan nyata dilakukan. Selain itu, Haptic-Glove v5 memungkinkan bedah jarak jauh dengan sensasi sentuhan nyata, sementara robot AI memantau kesehatan mental pasien di ruang pemulihan secara otonom."
+    "body": "Entering April 2026, Bio-Digital Twin technology was implemented. It creates digital replicas of patient organs in real-time. Doctors can simulate surgeries or drug reactions before the real procedure."
   },
   {
     "id": 132,
     "cat": "GREEN TECH",
-    "title": "Foto-Bioreaktor Alga Portabel: Solusi Penyerap Polusi Mandiri",
+    "title": "Portable Algae Photo-Bioreactor: Independent Pollution Absorption Solution",
     "img": "https://image_url_placeholder/algae_bioreactor.jpg",
-    "body": "Sistem foto-bioreaktor modular 'Alga-Wall 3.0' menggunakan mikroalga untuk menyerap CO2 sepuluh kali lebih cepat dari pohon, sekaligus memproduksi oksigen real-time untuk hunian urban."
+    "body": "The modular 'Alga-Wall 3.0' photo-bioreactor system uses microalgae to absorb CO2 ten times faster than trees, while producing real-time oxygen for urban dwellings."
   },
   {
     "id": 133,
     "cat": "GADGET & IOT",
-    "title": "Era Layar Fisik Berakhir: Integrasi 'Holo-Sync' pada Perangkat Transparan",
+    "title": "Era of Physical Screens Ends: 'Holo-Sync' Integration on Transparent Devices",
     "img": "https://image_url_placeholder/holographic_device.jpg",
-    "body": "Peluncuran perangkat genggam transparan dengan teknologi Quantum-Dot Glass yang memproyeksikan antarmuka holografik 3D, memungkinkan interaksi data tanpa sentuhan fisik."
+    "body": "Launch of transparent handheld devices with Quantum-Dot Glass technology that projects 3D holographic interfaces, allowing data interaction without physical touch."
   },
-{
+  {
     "id": 134,
     "cat": "GADGET & WEARABLE",
-    "title": "Selamat Tinggal Layar Retak: Revolusi Ponsel Stiker 'Skin-Sync' 2026",
+    "title": "Goodbye Cracked Screens: 2026 'Skin-Sync' Sticker Phone Revolution",
     "img": "https://picsum.photos/seed/skin134/800/450",
-    "body": "Smartphone ultra-tipis berbentuk stiker kulit yang menggunakan teknologi bio-holografik untuk menampilkan data kesehatan dan pesan langsung di atas permukaan tangan pengguna."
+    "body": "Ultra-thin skin-sticker smartphones using bio-holographic technology to display health data and messages directly on the surface of the user's hand."
   },
   {
     "id": 135,
     "cat": "GADGET & WEARABLE",
-    "title": "Cincin Modular 'Omni-Ring': Masa Depan Kendali Cerdas di Ujung Jari",
+    "title": "Modular Ring 'Omni-Ring': Future of Smart Control at Your Fingertips",
     "img": "https://picsum.photos/seed/ring135/800/450",
-    "body": "Cincin pintar berbahan graphene yang memproyeksikan kontrol rumah pintar dan kalender holografik, menggantikan peran smartphone untuk interaksi harian yang lebih minimalis."
+    "body": "Graphene smart ring that projects smart home controls and holographic calendars, replacing the role of smartphones for more minimalist daily interactions."
   },
   {
     "id": 136,
-    "cat": "TEKNOLOGI",
-    "title": "Neuro-Sync: Era Pasca-Layar Dimulai April 2026",
+    "cat": "TECHNOLOGY",
+    "title": "Neuro-Sync: Post-Screen Era Begins April 2026",
     "img": "https://picsum.photos/seed/neuro2026/800/450",
-    "audio_desc": "Narasi Lo-Fi Hip Hop: Menjelaskan transisi manusia menuju antarmuka saraf non-invasif dan kedaulatan data kognitif.",
-    "body": "Bulan ini menandai akhir dari dominasi layar fisik. Teknologi Neuro-Sync menggunakan sensor hibrida bio-organik non-invasif yang memungkinkan komunikasi otak-ke-digital secara instan. Fitur 'Shared Cognition' kini memungkinkan tim profesional untuk berbagi aliran pemikiran secara langsung dalam ruang kerja virtual, meningkatkan efisiensi kolaborasi hingga empat kali lipat. Namun, inovasi ini memicu perdebatan global mengenai privasi pikiran dan kedaulatan data kognitif manusia."
+    "audio_desc": "Lo-Fi Hip Hop Narrative: Explaining human transition to non-invasive neural interfaces and cognitive data sovereignty.",
+    "body": "This month marks the end of physical screen dominance. Neuro-Sync technology uses non-invasive bio-organic hybrid sensors for instant brain-to-digital communication."
   },
   {
     "id": 137,
-    "cat": "TEKNOLOGI",
-    "title": "Hologram 6G: Komunikasi Tanpa Batas Ruang dan Waktu",
+    "cat": "TECHNOLOGY",
+    "title": "6G Hologram: Communication Without Space and Time Limits",
     "img": "http://googleusercontent.com/image_generation_content/1",
-    "body": "Memasuki April 2026, era panggilan video 2D mulai ditinggalkan. Jaringan 6G yang kini stabil memungkinkan transmisi data holografik real-time dengan latensi nol. Perangkat 'Holobox' terbaru mampu memproyeksikan lawan bicara dalam bentuk 3D yang sangat nyata di tengah ruangan tanpa memerlukan kacamata khusus, menciptakan sensasi kehadiran fisik yang autentik."
+    "body": "Entering April 2026, the 2D video call era is being left behind. Stable 6G networks now allow real-time holographic data transmission with zero latency."
   }
 ]

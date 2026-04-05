@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Live v25.1</title>
+    
+    <title>NEURAL LOGIC | Inovasi Teknologi & Estetika Digital</title>
+    <meta name="description" content="Neural Logic adalah platform masa depan yang menyajikan artikel teknologi gadget terbaru, panduan otomotif estetik, dan galeri desain visual.">
+    <meta name="keywords" content="Neural Logic, Teknologi 2026, Gadget, Vario 160, Fotografi Estetik">
+    <meta name="author" content="Neural Logic Team">
+    <link rel="canonical" href="https://neurallogic.eu.cc/" />
+
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -30,7 +36,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s, transform 0.2s cubic-bezier(0.2, 0, 0.2, 1); }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; cursor: none; }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; top: 0 !important; cursor: default; }
 
         /* --- CURSOR TRACKER --- */
         #cursor-tracker {
@@ -52,10 +58,10 @@
         .status-item { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 80px; }
         .status-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; }
         .status-data { font-family: 'Space Grotesk'; font-size: 0.85rem; color: var(--text); display: flex; align-items: center; gap: 6px; }
-        
+
         .live-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; position: relative; }
         .live-dot::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 1px solid var(--accent); animation: pulse 2s infinite; }
-        
+
         @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
         .accent-text { color: var(--accent); text-shadow: 0 0 10px rgba(0, 255, 136, 0.3); }
 
@@ -102,16 +108,16 @@
         }
         .share-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 1.5px; }
         .share-grid { display: flex; gap: 10px; flex-wrap: wrap; }
-        .share-btn { 
-            padding: 10px 18px; border-radius: 12px; border: var(--border-glass); 
-            background: rgba(255,255,255,0.03); color: var(--text); font-size: 0.85rem; 
+        .share-btn {
+            padding: 10px 18px; border-radius: 12px; border: var(--border-glass);
+            background: rgba(255,255,255,0.03); color: var(--text); font-size: 0.85rem;
             font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;
         }
         .share-btn:hover { background: var(--accent); color: #000; border-color: transparent; box-shadow: 0 0 15px var(--accent); }
 
         .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 3000; }
         .fab { width: 55px; height: 55px; border-radius: 18px; background: var(--card); border: 1px solid var(--accent); color: var(--accent); cursor: pointer; display: grid; place-items: center; font-size: 1.3rem; backdrop-filter: var(--glass-blur); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-        
+
         .skeleton { background: rgba(255,255,255,0.03); border-radius: 28px; height: 350px; position: relative; overflow: hidden; }
         .skeleton::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); animation: shimmer 1.5s infinite; }
         @keyframes shimmer { 100% { transform: translateX(100%); } }
@@ -135,7 +141,7 @@
 <div class="hero">
     <div class="badge">Neural Network v25.1</div>
     <h1 id="hero-title" class="notranslate">Neural Logic</h1>
-    <p style="color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Media Inovasi & Masa Depan IPTEK dalam satu ekosistem.</p>
+    <p style="color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Pusat informasi teknologi, tren gadget 2026, dan estetika digital modern.</p>
 
     <div class="status-console">
         <div class="status-item">
@@ -157,41 +163,41 @@
     </div>
 
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Cari teknologi..." onkeyup="handleSearch()">
+        <input type="text" id="searchInput" placeholder="Cari tren teknologi..." onkeyup="handleSearch()">
     </div>
 </div>
 
-<div id="feed">
+<main id="feed">
     <div class="skeleton"></div>
     <div class="skeleton"></div>
     <div class="skeleton"></div>
-</div>
+</main>
 
 <div class="fab-container">
-    <button class="fab" onclick="window.open('https://saweria.co/akashiro', '_blank')">☕</button>
-    <button class="fab" onclick="showSaved()">🔖</button>
-    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
+    <button class="fab" title="Support" onclick="window.open('https://saweria.co/akashiro', '_blank')">☕</button>
+    <button class="fab" title="Saved" onclick="showSaved()">🔖</button>
+    <button class="fab" title="Top" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
 </div>
 
 <div id="modal" class="modal" onclick="closeModal()">
     <div class="m-content" onclick="event.stopPropagation()">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img id="m-img" src="" style="width:100%; border-radius: 25px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
+        <img id="m-img" src="" alt="Neural Logic Content" style="width:100%; border-radius: 25px; margin-bottom: 25px; max-height: 400px; object-fit: cover;">
         <h1 id="m-title" style="font-family: 'Space Grotesk'; margin-bottom: 15px; font-size: 2rem;"></h1>
         <div id="m-body" style="line-height: 1.8; color: var(--muted); margin-bottom: 30px; font-size: 1.05rem;"></div>
-        
+
         <div style="display: flex; gap: 10px;">
             <button onclick="speak()" style="background: var(--accent); color:#000; padding:12px 24px; border:none; border-radius:12px; font-weight:700; cursor:pointer;">🔊 Audio</button>
             <button onclick="saveCurrent()" style="background: rgba(255,255,255,0.05); color:#fff; padding:12px 24px; border:var(--border-glass); border-radius:12px; font-weight:700; cursor:pointer;">🔖 Simpan</button>
         </div>
 
         <div class="share-container">
-            <span class="share-label">Share to Intelligence Network</span>
+            <span class="share-label">Bagikan ke Jaringan</span>
             <div class="share-grid">
                 <button class="share-btn" onclick="shareTo('whatsapp')">🟢 WhatsApp</button>
                 <button class="share-btn" onclick="shareTo('facebook')">🔵 Facebook</button>
                 <button class="share-btn" onclick="shareTo('x')">⚫ X (Twitter)</button>
-                <button class="share-btn" onclick="shareTo('native')">🌐 Lainnya</button>
+                <button class="share-btn" onclick="shareTo('native')">🌐 Salin Link</button>
             </div>
         </div>
     </div>
@@ -202,7 +208,6 @@
     let currentArt = null;
     let startTime = Date.now();
 
-    // --- LIVE INDICATORS ---
     function updateLiveStats() {
         const diff = Math.floor((Date.now() - startTime) / 1000);
         const hrs = String(Math.floor(diff / 3600)).padStart(2, '0');
@@ -218,7 +223,6 @@
     }
     setInterval(updateLiveStats, 2000);
 
-    // --- CORE LOGIC ---
     const cursor = document.getElementById('cursor-tracker');
     if (window.matchMedia("(pointer: fine)").matches) {
         cursor.style.display = 'block';
@@ -234,27 +238,28 @@
             allData = await res.json();
             setTimeout(() => display(allData.sort((a,b) => b.id - a.id)), 800);
         } catch (e) {
-            document.getElementById('feed').innerHTML = "<p style='text-align:center; grid-column:1/-1;'>Gagal memuat data.json</p>";
+            document.getElementById('feed').innerHTML = "<p style='text-align:center; grid-column:1/-1;'>Gagal memuat data konten.</p>";
         }
     }
 
     function display(data) {
         const feed = document.getElementById('feed');
         feed.innerHTML = data.map(a => `
-            <div class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
-                <img src="${a.img}" class="card-img" onerror="this.src='https://via.placeholder.com/400x220/111/00ff88?text=Neural+Logic'">
+            <article class="card" onclick='openModal(${JSON.stringify(a).replace(/'/g, "&apos;")})'>
+                <img src="${a.img}" alt="${a.title}" class="card-img" onerror="this.src='https://via.placeholder.com/400x220/111/00ff88?text=Neural+Logic'">
                 <div class="card-content">
                     <span class="badge" style="font-size:0.6rem; margin-bottom:10px;">${a.cat}</span>
                     <h2 style="font-family:'Space Grotesk'; font-size:1.1rem;">${a.title}</h2>
-                    <div class="card-meta"><span>#${a.id}</span><span>⏱️ ${Math.ceil(a.body.split(' ').length/200)} min</span></div>
+                    <div class="card-meta"><span>#${a.id}</span><span>⏱️ ${Math.ceil(a.body.split(' ').length/200)} min read</span></div>
                 </div>
-            </div>
+            </article>
         `).join('');
     }
 
     function openModal(a) {
         currentArt = a;
         document.getElementById('m-img').src = a.img;
+        document.getElementById('m-img').alt = a.title;
         document.getElementById('m-title').innerText = a.title;
         document.getElementById('m-body').innerText = a.body;
         const modal = document.getElementById('modal');
@@ -269,9 +274,8 @@
         setTimeout(() => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }, 300);
     }
 
-    // --- SHARE LOGIC ---
     function shareTo(platform) {
-        const text = `Baca Inovasi Terbaru: ${currentArt.title} - Neural Logic`;
+        const text = `Simak update teknologi terbaru: ${currentArt.title} - Neural Logic`;
         const url = window.location.href;
 
         if (platform === 'whatsapp') {
@@ -285,7 +289,7 @@
                 navigator.share({ title: currentArt.title, text: text, url: url });
             } else {
                 navigator.clipboard.writeText(url);
-                alert("Tautan berhasil disalin!");
+                alert("Tautan berhasil disalin ke clipboard!");
             }
         }
     }
@@ -313,13 +317,13 @@
         if(!saved.some(x => x.id === currentArt.id)) {
             saved.push(currentArt);
             localStorage.setItem('nl_saved', JSON.stringify(saved));
-            alert("Tersimpan!");
+            alert("Tersimpan di bookmark lokal!");
         }
     }
 
     function showSaved() {
         const saved = JSON.parse(localStorage.getItem('nl_saved')) || [];
-        if(saved.length === 0) alert("Kosong.");
+        if(saved.length === 0) alert("Belum ada konten yang disimpan.");
         else display(saved);
     }
 

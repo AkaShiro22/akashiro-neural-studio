@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Tech Innovation</title>
-    <meta name="description" content="Futuristic platform for 2026 gadget trends.">
+    <title>NEURAL LOGIC | Tech 2026</title>
+    <meta name="description" content="Futuristic tech hub.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,48 +18,44 @@
             --border-glass: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .card-img { height: 180px; }
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; min-height: 100vh; }
         
+        /* 1. Progress Bar & Nav */
         #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 0%; z-index: 1001; transition: width 0.2s; }
-
         nav { position: sticky; top: 0; z-index: 100; padding: 12px 6%; background: rgba(5, 5, 9, 0.8); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; border-bottom: var(--border-glass); }
-        .logo { font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; display: flex; align-items: center; }
+        .logo { font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); text-decoration: none; display: flex; align-items: center; }
         .logo-box { padding: 4px 10px; background: var(--gradient); color: #000; border-radius: 8px; margin-right: 8px; }
 
-        .btn-saweria { background: #faae2b; color: #000; padding: 8px 16px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        /* 2. Search Bar */
+        .search-container { padding: 0 6%; margin: 20px 0; }
+        #searchInput { width: 100%; padding: 14px 20px; border-radius: 16px; background: var(--card); border: var(--border-glass); color: #fff; outline: none; transition: 0.3s; }
+        #searchInput:focus { border-color: var(--accent); box-shadow: 0 0 15px rgba(0, 255, 136, 0.1); }
 
-        .hero { padding: 50px 6% 30px; text-align: center; }
-        .hero h1 { font-family: 'Space Grotesk'; font-size: 3.5rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
+        /* 3. Hero & Feed */
+        .hero { padding: 30px 6% 10px; text-align: center; }
+        .hero h1 { font-family: 'Space Grotesk'; font-size: clamp(2rem, 8vw, 3.5rem); background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        /* Mencegah Layout Shift */
-        #feed { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-            gap: 25px; 
-            padding: 20px 6% 60px; 
-            min-height: 80vh; 
-        }
-        
-        .card { background: var(--card); border-radius: 24px; overflow: hidden; border: var(--border-glass); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; }
-        .card:hover { transform: translateY(-8px); border-color: var(--accent); }
-        .card-img { width: 100%; height: 220px; object-fit: cover; background: #111; }
-        .card-content { padding: 22px; }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px 6% 80px; min-height: 60vh; }
 
+        /* 4. Skeleton Loading & Card */
+        .card { background: var(--card); border-radius: 24px; overflow: hidden; border: var(--border-glass); transition: 0.3s; cursor: pointer; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; background: #111; }
+        .card-content { padding: 20px; }
+
+        .skeleton { background: linear-gradient(90deg, #111 25%, #1a1a24 50%, #111 75%); background-size: 200% 100%; animation: loading 1.5s infinite; height: 200px; border-radius: 24px; }
+        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+        /* 5. Modal & FAB */
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(10px); }
-        .m-content { background: #0f0f16; max-width: 650px; margin: 40px auto; border-radius: 30px; padding: 30px; border: var(--border-glass); position: relative; }
+        .m-content { background: #0f0f16; max-width: 600px; margin: 40px auto; border-radius: 28px; padding: 25px; border: var(--border-glass); }
         
-        .fab-container { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 99; }
-        .fab { width: 50px; height: 50px; border-radius: 18px; background: #161622; border: var(--border-glass); color: var(--text); cursor: pointer; display: grid; place-items: center; transition: 0.3s; }
-        .fab-saweria { background: #faae2b; color: #000; border: none; font-size: 1.2rem; }
+        .fab-container { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 99; }
+        .fab { width: 50px; height: 50px; border-radius: 16px; background: #161622; border: var(--border-glass); color: #fff; cursor: pointer; display: grid; place-items: center; }
+        .fab-saweria { background: #faae2b; color: #000; border: none; font-weight: bold; }
 
-        .share-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 25px; padding-top: 20px; border-top: var(--border-glass); }
-        .share-btn { padding: 10px 15px; border-radius: 12px; border: var(--border-glass); background: #1a1a24; color: var(--text); font-size: 0.8rem; cursor: pointer; }
+        .share-btn { padding: 10px 15px; border-radius: 12px; border: var(--border-glass); background: #1a1a24; color: #fff; cursor: pointer; font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -68,39 +64,45 @@
 
 <nav>
     <a href="/" class="logo"><span class="logo-box">NL</span>NEURAL LOGIC</a>
-    <a href="https://saweria.co/akashiro" target="_blank" class="btn-saweria">Support ☕</a>
+    <a href="https://saweria.co/akashiro" target="_blank" style="text-decoration:none" class="fab-saweria">
+        <div style="padding: 8px 15px; border-radius: 10px;">Support ☕</div>
+    </a>
 </nav>
 
 <header class="hero">
     <h1>Neural Logic</h1>
-    <div class="status-console">
-        <span class="accent-text">PING: <span id="ping-val">-- ms</span></span>
-        <span>SYS: ACTIVE</span>
-    </div>
 </header>
 
-<main id="feed"></main>
-
-<div class="fab-container">
-    <button class="fab fab-saweria" aria-label="Support Saweria" onclick="window.open('https://saweria.co/akashiro', '_blank')">☕</button>
-    <button class="fab" aria-label="Scroll to top" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search tech articles..." aria-label="Search">
 </div>
 
-<div id="modal" class="modal" role="dialog" aria-modal="true">
+<main id="feed">
+    <div class="skeleton"></div>
+    <div class="skeleton"></div>
+    <div class="skeleton"></div>
+</main>
+
+<div class="fab-container">
+    <button class="fab fab-saweria" onclick="window.open('https://saweria.co/akashiro')">☕</button>
+    <button class="fab" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
+</div>
+
+<div id="modal" class="modal">
     <div class="m-content">
-        <img id="m-img" src="" alt="Article Visual" style="width:100%; border-radius: 20px; margin-bottom: 20px; object-fit: cover; max-height: 300px;">
-        <h2 id="m-title" style="margin-bottom: 12px; font-family: 'Space Grotesk'; color: var(--accent);"></h2>
-        <p id="m-body" style="color: var(--muted); line-height: 1.6; font-size: 1.05rem; margin-bottom: 25px;"></p>
+        <img id="m-img" src="" alt="" style="width:100%; border-radius: 20px; margin-bottom: 20px; object-fit: cover; max-height: 250px;">
+        <h2 id="m-title" style="margin-bottom: 12px; color: var(--accent);"></h2>
+        <p id="m-body" style="color: var(--muted); line-height: 1.6; margin-bottom: 25px;"></p>
         
-        <div style="display: flex; gap: 12px;">
-            <button onclick="speak()" style="background: var(--accent); color:#000; padding:12px 25px; border:none; border-radius:12px; font-weight:700; cursor:pointer; flex: 1;">🔊 Listen Article</button>
+        <div style="display: flex; gap: 10px;">
+            <button onclick="speak()" style="background: var(--accent); color:#000; padding:12px 20px; border:none; border-radius:12px; font-weight:700; cursor:pointer; flex: 1;">🔊 Listen</button>
             <button onclick="closeModal()" style="background:#222; color:#fff; padding:12px 20px; border:none; border-radius:12px; cursor:pointer;">Close</button>
         </div>
 
-        <div class="share-grid">
-            <button class="share-btn" onclick="shareTo('whatsapp')">WhatsApp</button>
-            <button class="share-btn" onclick="shareTo('x')">X / Twitter</button>
-            <button class="share-btn" onclick="shareTo('native')">📋 Copy</button>
+        <div style="margin-top: 20px; display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="share-btn" onclick="shareTo('whatsapp')">WA</button>
+            <button class="share-btn" onclick="shareTo('x')">X</button>
+            <button class="share-btn" onclick="shareTo('native')">Copy Link</button>
         </div>
     </div>
 </div>
@@ -109,39 +111,48 @@
     let allData = [];
     let currentArt = null;
 
-    window.onscroll = function() {
-        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    // Progress Scroll
+    window.onscroll = () => {
+        let winScroll = document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
-        document.getElementById("progress-bar").style.width = scrolled + "%";
+        document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
     };
 
+    // Load Data
     async function init() {
         try {
             const res = await fetch('data.json');
             allData = await res.json();
             renderFeed(allData);
-        } catch (e) { console.error("Data failed to load"); }
+        } catch (e) { console.error("Error loading JSON"); }
     }
 
     function renderFeed(data) {
         const feed = document.getElementById('feed');
-        feed.innerHTML = data.map((a, index) => `
-            <article class="card" onclick='openModal(${index})'>
-                <img src="${a.img}" 
-                     loading="${index < 2 ? 'eager' : 'lazy'}" 
-                     ${index < 2 ? 'fetchpriority="high"' : ''}
-                     alt="${a.title}" class="card-img">
+        if (data.length === 0) {
+            feed.innerHTML = "<p style='text-align:center; grid-column: 1/-1;'>No articles found.</p>";
+            return;
+        }
+        feed.innerHTML = data.map((a, i) => `
+            <article class="card" onclick="openModal(${allData.indexOf(a)})">
+                <img src="${a.img}" loading="${i < 2 ? 'eager' : 'lazy'}" ${i < 2 ? 'fetchpriority="high"' : ''} class="card-img" alt="${a.title}">
                 <div class="card-content">
-                    <p style="color: var(--accent); font-size: 0.7rem; font-weight: 700; margin-bottom: 8px;">${a.cat}</p>
-                    <h3 style="font-size: 1.1rem; line-height: 1.3;">${a.title}</h3>
+                    <small style="color:var(--accent)">${a.cat}</small>
+                    <h3 style="margin-top:5px; font-size:1.1rem">${a.title}</h3>
                 </div>
             </article>
         `).join('');
     }
 
-    function openModal(index) {
-        currentArt = allData[index];
+    // Search Logic
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = allData.filter(a => a.title.toLowerCase().includes(term) || a.cat.toLowerCase().includes(term));
+        renderFeed(filtered);
+    });
+
+    function openModal(i) {
+        currentArt = allData[i];
         document.getElementById('m-img').src = currentArt.img;
         document.getElementById('m-title').innerText = currentArt.title;
         document.getElementById('m-body').innerText = currentArt.body;
@@ -149,38 +160,26 @@
         document.body.style.overflow = 'hidden';
     }
 
-    // Fungsi tutup modal yang lebih bersih
     function closeModal() {
-        document.getElementById('modal').style.display = "none";
+        document.getElementById('modal').style.display = 'none';
         document.body.style.overflow = 'auto';
-        window.speechSynthesis.cancel(); // Mematikan audio saat modal tutup
-    }
-
-    window.onclick = function(event) {
-        if (event.target == document.getElementById('modal')) closeModal();
+        window.speechSynthesis.cancel();
     }
 
     function speak() {
         window.speechSynthesis.cancel();
         const msg = new SpeechSynthesisUtterance(currentArt.title + ". " + currentArt.body);
         msg.lang = 'en-US';
-        msg.rate = 0.9;
         window.speechSynthesis.speak(msg);
     }
 
     function shareTo(p) {
         const url = window.location.href;
-        const text = `Read this: ${currentArt.title} - `;
-        if (p === 'whatsapp') window.open(`https://wa.me/?text=${encodeURIComponent(text + url)}`);
-        else if (p === 'x') window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`);
-        else if (p === 'native') {
-            navigator.clipboard.writeText(url).then(() => alert("Link Copied!"));
-        }
+        if (p === 'whatsapp') window.open(`https://wa.me/?text=${encodeURIComponent(currentArt.title + " " + url)}`);
+        else if (p === 'native') { navigator.clipboard.writeText(url); alert("Link Copied!"); }
     }
 
-    setInterval(() => {
-        document.getElementById('ping-val').innerText = Math.floor(Math.random() * 30) + 10 + " ms";
-    }, 5000);
+    window.onclick = (e) => { if (e.target.id === 'modal') closeModal(); };
 
     init();
 </script>

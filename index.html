@@ -152,7 +152,7 @@
     function filterTab(cat) {
         currentFilter = cat;
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        event.target.classList.add('active');
+        if(event) event.target.classList.add('active');
         applyFilters();
     }
 
@@ -206,17 +206,31 @@
         window.speechSynthesis.cancel();
     }
 
+    // FUNGSI SPEAK DENGAN AKSEN US ENGLISH
     function speak(t, b) {
         window.speechSynthesis.cancel();
         const msg = new SpeechSynthesisUtterance(`${t}. ${b}`);
+        
+        // Paksa ke US English
+        msg.lang = 'en-US';
+
+        const voices = window.speechSynthesis.getVoices();
+        // Cari suara yang mengandung tag en-US
+        const usVoice = voices.find(v => v.lang === 'en-US' || v.lang === 'en_US');
+
+        if (usVoice) {
+            msg.voice = usVoice;
+        }
+
+        msg.rate = 1;
+        msg.pitch = 1;
+
         window.speechSynthesis.speak(msg);
     }
 
-    // Fungsi Share yang diperbarui
     function shareTo(platform) {
         const currentUrl = encodeURIComponent(window.location.href);
         const title = encodeURIComponent(document.getElementById('m-title').innerText);
-        
         let shareUrl = "";
         
         switch(platform) {
@@ -233,13 +247,11 @@
                 copyText(window.location.href);
                 return;
         }
-        
         window.open(shareUrl, '_blank', 'noopener,noreferrer');
     }
 
     window.onclick = (e) => { if (e.target.id === 'modal') closeModal(); };
     
-    // Progress bar update
     window.addEventListener('scroll', () => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;

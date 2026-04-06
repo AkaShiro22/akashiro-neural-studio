@@ -586,5 +586,13 @@
     "title": "Neuro-Sync: The Post-Screen Era Begins",
     "img": "https://picsum.photos/seed/neuro2026/800/450",
     "body": "Non-invasive sensors now allow instant brain-to-digital communication, marking the end of physical screen dominance."
+  },
+  {
+    "id": 85,
+    "cat": "GREEN TECH & AI",
+    "title": "Bio-Computing: Tanaman Hias yang Kini Berfungsi Sebagai Server Data Rumahan",
+    "img": "https://picsum.photos/seed/biotech2026/800/450",
+    "audio_desc": "Narasi Ambient Futuristic: Penjelasan teknis mengenai bagaimana DNA tumbuhan dimodifikasi untuk menyimpan data digital secara aman dan ramah lingkungan.",
+    "body": "Memasuki pertengahan April 2026, sebuah terobosan di bidang bio-komputasi resmi diperkenalkan di Jakarta. Ilmuwan berhasil mengintegrasikan struktur silikon organik ke dalam jaringan vaskular tanaman Monstera, memungkinkan tanaman ini menyimpan data hingga 10 Terabyte melalui modifikasi rantai DNA. Selain memberikan oksigen, tanaman ini berfungsi sebagai pusat penyimpanan data (cloud lokal) yang tidak memerlukan listrik sama sekali, karena energinya didapat sepenuhnya dari proses fotosintesis harian."
   }
 ]

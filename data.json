@@ -3,372 +3,351 @@
     "id": 1,
     "cat": "SCIENCE",
     "title": "Weather Engineering: Precision Cloud Seeding to Overcome Drought",
-    "img": "https://picsum.photos/seed/tech1/800/450",
+    "img": "https://picsum.photos/seed/tech1/400/225",
     "body": "The latest cloud seeding technology uses more accurate air ionization, allowing rain to fall precisely over needed farmland without disturbing other areas."
   },
   {
     "id": 2,
     "cat": "HEALTH",
     "title": "Smart Toothbrush Detects Oral Cancer Symptoms",
-    "img": "https://picsum.photos/seed/tech2/800/450",
+    "img": "https://picsum.photos/seed/tech2/400/225",
     "body": "Equipped with chemical sensors, this toothbrush analyzes saliva every morning to monitor overall body health and provide early warnings if abnormal cells are present."
   },
   {
     "id": 3,
     "cat": "GREEN TECH",
     "title": "Running Shoes That Can Charge Phone Batteries While Walking",
-    "img": "https://picsum.photos/seed/tech3/800/450",
+    "img": "https://picsum.photos/seed/tech3/400/225",
     "body": "The soles of these shoes contain piezoelectric materials that convert footstep pressure into electrical energy. Simply walking 5,000 steps can add 20% to a phone's power."
   },
   {
     "id": 4,
     "cat": "SPACE",
     "title": "Space Debris Cleaning Satellite Begins Operation",
-    "img": "https://picsum.photos/seed/tech4/800/450",
+    "img": "https://picsum.photos/seed/tech4/400/225",
     "body": "Giant laser nets have begun pulling dead satellite debris in Earth's orbit to be safely burned in the atmosphere, keeping space flight paths clear."
   },
   {
     "id": 5,
     "cat": "GADGET",
     "title": "Animal Language Translation Earbuds Go on Limited Sale",
-    "img": "https://picsum.photos/seed/tech5/800/450",
+    "img": "https://picsum.photos/seed/tech5/400/225",
     "body": "Using a database of dog and cat vocal frequencies, this AI translates pet emotions into simple words on your smartphone screen."
   },
   {
     "id": 6,
     "cat": "SCIENCE",
     "title": "Diamond-Based Batteries from Nuclear Waste",
-    "img": "https://picsum.photos/seed/tech6/800/450",
+    "img": "https://picsum.photos/seed/tech6/400/225",
     "body": "New technology converts nuclear waste carbon into artificial diamonds that generate small but stable electricity for thousands of years without needing a recharge."
   },
   {
     "id": 7,
     "cat": "AI & ROBOTICS",
     "title": "Package Delivery Drones Can Now Enter Apartment Windows",
-    "img": "https://picsum.photos/seed/tech7/800/450",
+    "img": "https://picsum.photos/seed/tech7/400/225",
     "body": "With more advanced anti-collision sensors, courier drones are now able to maneuver through narrow high-rise corridors to deliver orders directly to customers' hands."
   },
   {
     "id": 8,
     "cat": "HEALTH",
     "title": "Brainwave-Based Music Therapy to Overcome Insomnia",
-    "img": "https://picsum.photos/seed/tech8/800/450",
+    "img": "https://picsum.photos/seed/tech8/400/225",
     "body": "Recent research this month proves that specific personalized sound frequencies can put people to sleep in less than 3 minutes without the help of medication."
   },
   {
     "id": 9,
     "cat": "GREEN TECH",
     "title": "Giant Tree-Shaped Air Purifier in Central Jakarta",
-    "img": "https://picsum.photos/seed/tech9/800/450",
+    "img": "https://picsum.photos/seed/tech9/400/225",
     "body": "This 20-meter tower is capable of filtering air pollution equivalent to 1,000 real trees. It is solar-powered and releases pure oxygen into the surrounding environment."
   },
   {
     "id": 10,
     "cat": "TRANSPORTATION",
     "title": "Autonomous Vehicle Only Highway Lane Opens in Cipularang",
-    "img": "https://picsum.photos/seed/tech10/800/450",
+    "img": "https://picsum.photos/seed/tech10/400/225",
     "body": "The right lane of the highway is now dedicated to driverless cars that communicate with each other. Average speeds in this lane are stable at 150 km/h with no risk of accidents due to AI synchronization."
   },
   {
     "id": 11,
     "cat": "SPACE",
     "title": "Amateur Telescopes Can Now See Saturn's Rings from a Phone",
-    "img": "https://picsum.photos/seed/tech11/800/450",
+    "img": "https://picsum.photos/seed/tech11/400/225",
     "body": "Integration of smart digital lenses allows home telescopes to connect to the AI cloud to clear up planetary images in real-time, providing a professional astronomer-like experience."
   },
   {
     "id": 12,
     "cat": "GADGET",
     "title": "Portable Hologram Keyboard: Type on Any Table",
-    "img": "https://picsum.photos/seed/tech12/800/450",
+    "img": "https://picsum.photos/seed/tech12/400/225",
     "body": "A device as small as a lighter projects a full keyboard layout onto flat surfaces. Laser sensors detect finger taps with high accuracy without the need for a heavy physical keyboard."
   },
   {
     "id": 13,
     "cat": "AI & ROBOTICS",
     "title": "Fashion AI: Clothes That Can Change Color via App",
-    "img": "https://picsum.photos/seed/tech13/800/450",
+    "img": "https://picsum.photos/seed/tech13/400/225",
     "body": "Using e-ink fabric fibers, modern clothing can change patterns and colors according to the user's mood. Simply pick a theme on your smartphone, and your clothes change instantly."
   },
   {
     "id": 14,
     "cat": "SCIENCE",
     "title": "Transparent Fish Species Discovered in Java Trench",
-    "img": "https://picsum.photos/seed/tech14/800/450",
+    "img": "https://picsum.photos/seed/tech14/400/225",
     "body": "Deep-sea expeditions south of Java found a new ecosystem at a depth of 7,000 meters. These fish have completely clear bodies and can produce their own bioluminescent light."
   },
   {
     "id": 15,
     "cat": "HEALTH",
     "title": "Disease-Detecting Glasses via Eye Scanning",
-    "img": "https://picsum.photos/seed/tech15/800/450",
+    "img": "https://picsum.photos/seed/tech15/400/225",
     "body": "Just by wearing these glasses for 10 seconds, the AI system will analyze retinal blood vessels to detect early signs of diabetes, hypertension, and stroke risk."
   },
   {
     "id": 16,
     "cat": "GREEN TECH",
     "title": "Cassava-Based Plastics are Now Truly Edible",
-    "img": "https://picsum.photos/seed/tech16/800/450",
+    "img": "https://picsum.photos/seed/tech16/400/225",
     "body": "The latest food packaging innovation in April 2026 makes plastic waste history. The packaging not only dissolves in water but also contains nutrients safe for human or animal consumption."
   },
   {
     "id": 17,
     "cat": "GADGET",
     "title": "Zoom Contact Lenses: Blink Your Eyes to See Far Distances",
-    "img": "https://picsum.photos/seed/tech17/800/450",
+    "img": "https://picsum.photos/seed/tech17/400/225",
     "body": "These smart contact lenses allow users to perform 3x optical zoom just with specific blinking patterns. Very useful for journalists and wildlife observers."
   },
   {
     "id": 18,
     "cat": "TRANSPORTATION",
     "title": "Vario 2026 Electric Motor: Range Reaches 500 KM on One Charge",
-    "img": "https://picsum.photos/seed/tech18/800/450",
+    "img": "https://picsum.photos/seed/tech18/400/225",
     "body": "Honda released a solid-state battery update for its best-selling electric motorcycle. With high efficiency and a fade-resistant body, this bike has become a new favorite on city streets this April."
   },
   {
     "id": 19,
     "cat": "SCIENCE",
     "title": "Particle Teleportation Over 100 KM Successfully Performed in Lab",
-    "img": "https://picsum.photos/seed/tech19/800/450",
+    "img": "https://picsum.photos/seed/tech19/400/225",
     "body": "Quantum physics scientists have successfully sent instant information between two points 100 km apart. This is the foundation for a future quantum internet that cannot be hacked."
   },
   {
     "id": 20,
     "cat": "AI & ROBOTICS",
     "title": "AI Lecturers Now Teaching at Leading Indonesian Universities",
-    "img": "https://picsum.photos/seed/tech20/800/450",
+    "img": "https://picsum.photos/seed/tech20/400/225",
     "body": "Students can now consult 24/7 with AI avatars that possess knowledge of all scientific journals in the world. Human lecturers now focus more on ethical discussions and moral guidance."
   },
   {
     "id": 21,
     "cat": "GREEN TECH",
     "title": "Smart Vertical Forest in IKN Able to Lower City Temperature by 5 Degrees",
-    "img": "https://picsum.photos/seed/tech21/800/450",
+    "img": "https://picsum.photos/seed/tech21/400/225",
     "body": "High-rise construction in the New Capital City (IKN) in April 2026 is equipped with automatic humidity sensors managing wall plants, creating a cool micro-climate in the city center."
   },
   {
     "id": 22,
     "cat": "HEALTH",
     "title": "'Nano-Doc' Smart Pill Can Automatically Clear Heart Plaque",
-    "img": "https://picsum.photos/seed/tech22/800/450",
+    "img": "https://picsum.photos/seed/tech22/400/225",
     "body": "Medicine based on microscopic robots (nanobots) has been officially approved. Once swallowed, these nanobots enter the bloodstream, find arterial blockages, and clear them without major surgery."
   },
   {
     "id": 23,
     "cat": "SPACE",
     "title": "NASA Finds Signs of Microbial Life on Enceladus",
-    "img": "https://picsum.photos/seed/tech23/800/450",
+    "img": "https://picsum.photos/seed/tech23/400/225",
     "body": "NASA's undersea rover sent back surprising data from Saturn's moon, Enceladus. Complex organic molecules were found, indicating microbial life beneath the thick ice layer."
   },
   {
     "id": 24,
     "cat": "GADGET",
     "title": "First Battery-Free Smartphone: Drawing Energy from the Air",
-    "img": "https://picsum.photos/seed/tech24/800/450",
+    "img": "https://picsum.photos/seed/tech24/400/225",
     "body": "A Silicon Valley startup released a phone using 'Air-Harvesting' technology. The phone charges constantly through surrounding radio and WiFi waves, making cable chargers obsolete."
   },
   {
     "id": 25,
     "cat": "AI & ROBOTICS",
     "title": "'Socrates' AI Begins Use as Mediation Judge in Indonesia",
-    "img": "https://picsum.photos/seed/tech25/800/450",
+    "img": "https://picsum.photos/seed/tech25/400/225",
     "body": "The Ministry of Law launched a pilot project using the Socrates AI to help resolve light civil disputes. The system can analyze thousands of articles in seconds to provide the fairest solution for both parties."
   },
   {
     "id": 26,
     "cat": "SCIENCE",
     "title": "Anti-Aging Drug Enters Final Clinical Trial Phase",
-    "img": "https://picsum.photos/seed/tech26/800/450",
+    "img": "https://picsum.photos/seed/tech26/400/225",
     "body": "A new senolytic discovered by scientists is claimed to be able to repair cells damaged by age. If successful, human life expectancy could increase to an average of 120 years."
   },
   {
     "id": 27,
     "cat": "GADGET",
     "title": "Smartwatch Battery Lasts 1 Month Thanks to Mini Nuclear Tech",
-    "img": "https://picsum.photos/seed/tech27/800/450",
+    "img": "https://picsum.photos/seed/tech27/400/225",
     "body": "Users no longer need to charge their watches every day. Safe tritium cell batteries now allow wearable devices to stay active for months without stopping."
   },
   {
     "id": 28,
     "cat": "GREEN TECH",
     "title": "Halal Lab-Grown Meat Now Available in Local Supermarkets",
-    "img": "https://picsum.photos/seed/tech28/800/450",
+    "img": "https://picsum.photos/seed/tech28/400/225",
     "body": "Meat from cell cultures without animal slaughter has officially received food safety certification. This is a solution for the global food crisis and environmentally damaging farming."
   },
   {
     "id": 29,
     "cat": "TRANSPORTATION",
     "title": "Jakarta-Bandung Hyperloop Only 8 Minutes",
-    "img": "https://picsum.photos/seed/tech29/800/450",
+    "img": "https://picsum.photos/seed/tech29/400/225",
     "body": "Vacuum tube technology (Hyperloop) trials show stable results. With speeds of 1,200 km/h, the concept of inter-city travel in Indonesia will completely change next year."
   },
   {
     "id": 30,
     "cat": "AI & ROBOTICS",
     "title": "First Humanless Factory Officially Operates in Cikarang",
-    "img": "https://picsum.photos/seed/tech30/800/450",
+    "img": "https://picsum.photos/seed/tech30/400/225",
     "body": "The entire electronic production process at this factory is managed by an AI coordination system and autonomous robots. Production efficiency increased by 300 percent compared to manual labor."
   },
   {
     "id": 31,
     "cat": "GADGET",
     "title": "Instant Translation Earphones: Understand 50 Languages with No Delay",
-    "img": "https://picsum.photos/seed/tech31/800/450",
+    "img": "https://picsum.photos/seed/tech31/400/225",
     "body": "Google Buds Pro 2026 are capable of translating foreign conversations directly into your ear. Global communication is no longer hindered by language differences."
   },
   {
     "id": 32,
     "cat": "SPACE",
     "title": "James Webb Telescope Finds Signs of Oxygen on Proxima B",
-    "img": "https://picsum.photos/seed/tech32/800/450",
+    "img": "https://picsum.photos/seed/tech32/400/225",
     "body": "NASA confirmed an atmosphere containing oxygen on our neighboring planet. This discovery has sparked strong speculation about life outside our solar system."
   },
   {
     "id": 33,
     "cat": "HEALTH",
     "title": "Smart Contact Lenses Can Detect Blood Sugar Levels in Real-time",
-    "img": "https://picsum.photos/seed/tech33/800/450",
+    "img": "https://picsum.photos/seed/tech33/400/225",
     "body": "Diabetes patients no longer need to perform finger pricks. These contact lenses monitor glucose through tears and send the data directly to the user's smartwatch."
   },
   {
     "id": 34,
     "cat": "GREEN TECH",
     "title": "Pollution-Absorbing Asphalt Begins Implementation in Large Cities",
-    "img": "https://picsum.photos/seed/tech34/800/450",
+    "img": "https://picsum.photos/seed/tech34/400/225",
     "body": "New road material containing titanium dioxide catalysts is able to neutralize vehicle exhaust gases when exposed to sunlight. City center air now feels fresher."
   },
   {
     "id": 35,
     "cat": "SCIENCE",
     "title": "First Portable Quantum Computer Officially Introduced",
-    "img": "https://picsum.photos/seed/tech35/800/450",
+    "img": "https://picsum.photos/seed/tech35/400/225",
     "body": "IBM has successfully reduced the size of a quantum computer to the size of a suitcase. This device can crack the most complex encryptions in the world in just milliseconds."
   },
   {
     "id": 36,
     "cat": "TRANSPORTATION",
     "title": "Salt-Powered Electric Cars Start Trials on Highways",
-    "img": "https://picsum.photos/seed/tech36/800/450",
+    "img": "https://picsum.photos/seed/tech36/400/225",
     "body": "A lithium alternative has been found in the form of sodium-ion (sea salt) batteries. These cars have the same range but with much cheaper production costs and are environmentally friendly."
   },
   {
     "id": 37,
     "cat": "AI & ROBOTICS",
     "title": "First AI Lawyer Wins Case in International Court",
-    "img": "https://picsum.photos/seed/tech37/800/450",
+    "img": "https://picsum.photos/seed/tech37/400/225",
     "body": "An AI-based legal system proved capable of analyzing millions of legal documents in seconds. The AI successfully defended the patent rights of a tech startup against a giant corporation."
   },
   {
     "id": 38,
     "cat": "GADGET",
     "title": "Laptop Without Physical Keyboard: Era of Holographic Screens",
-    "img": "https://picsum.photos/seed/tech38/800/450",
+    "img": "https://picsum.photos/seed/tech38/400/225",
     "body": "Asus introduced the Zenbook Vision laptop which uses laser projection as a keyboard and trackpad. This device is much thinner and lighter than other conventional laptops."
   },
   {
     "id": 39,
     "cat": "SPACE",
     "title": "First Commercial Moon Tourism Opens: Tickets Priced at 1 Billion",
-    "img": "https://picsum.photos/seed/tech39/800/450",
+    "img": "https://picsum.photos/seed/tech39/400/225",
     "body": "Blue Origin released a 3-day lunar orbit travel package. Despite the high price, the waitlist for space tourism is already full through 2028 with global billionaires."
   },
   {
     "id": 40,
     "cat": "HEALTH",
     "title": "3D Organ Printers Start Use in National Hospitals",
-    "img": "https://picsum.photos/seed/tech40/800/450",
+    "img": "https://picsum.photos/seed/tech40/400/225",
     "body": "Live tissue printing technology now allows kidney transplants without long waiting lists. Organs are printed using the patient's own stem cells so the risk of body rejection is zero."
   },
   {
     "id": 41,
     "cat": "GREEN TECH",
     "title": "Transparent Solar Panels Can Now Be Installed in Apartment Windows",
-    "img": "https://picsum.photos/seed/tech41/800/450",
+    "img": "https://picsum.photos/seed/tech41/400/225",
     "body": "Electricity-generating window glass technology has entered mass production. These windows remain clear but are able to absorb UV rays to be converted into electrical energy for household appliances."
   },
   {
     "id": 42,
     "cat": "SCIENCE",
     "title": "Scientists Successfully Create Artificial Sun Lasting 1 Hour",
-    "img": "https://picsum.photos/seed/tech42/800/450",
+    "img": "https://picsum.photos/seed/tech42/400/225",
     "body": "A nuclear fusion reactor in South Korea set a new world record by maintaining hot plasma for a full hour. This is a major step toward unlimited clean energy for Earth."
   },
   {
     "id": 43,
     "cat": "GADGET",
     "title": "Apple Glass Pro Replaces iPhone: Virtual Screen Era Begins",
-    "img": "https://picsum.photos/seed/tech43/800/450",
+    "img": "https://picsum.photos/seed/tech43/400/225",
     "body": "Apple officially halted production of the regular iPhone series and shifted focus to Apple Glass. These smart glasses project an interface directly onto the user's retina with 8K resolution."
   },
   {
     "id": 44,
     "cat": "AI & ROBOTICS",
     "title": "Optimus Robot Waiters Start Working in Fast Food Restaurants",
-    "img": "https://picsum.photos/seed/tech44/800/450",
+    "img": "https://picsum.photos/seed/tech44/400/225",
     "body": "Tesla began distributing Optimus humanoid robots for the service sector. These robots can understand voice orders in various Indonesian regional languages and serve food with high precision."
   },
   {
     "id": 45,
     "cat": "TRANSPORTATION",
     "title": "EHang Flying Taxis Officially Take to the Jakarta Skies",
-    "img": "https://picsum.photos/seed/tech45/800/450",
+    "img": "https://picsum.photos/seed/tech45/400/225",
     "body": "The Ministry of Transportation inaugurated operational permits for autonomous air taxis for the Soetta Airport to Sudirman route. A trip that usually takes 2 hours is now completed in just 15 minutes."
   },
   {
     "id": 46,
     "cat": "HEALTH",
     "title": "Neuralink Telepathy: Paralyzed People Can Now Type with Their Minds",
-    "img": "https://picsum.photos/seed/tech46/800/450",
+    "img": "https://picsum.photos/seed/tech46/400/225",
     "body": "Neuralink brain chip version 4.0 officially received marketing authorization in Asia. Patients with total nerve paralysis can now operate computers and smartphones just by imagining hand movements."
   },
   {
     "id": 47,
     "cat": "GREEN TECH",
     "title": "Mini Nuclear Home Batteries: Free Electricity for 50 Years",
-    "img": "https://picsum.photos/seed/tech47/800/450",
+    "img": "https://picsum.photos/seed/tech47/400/225",
     "body": "A Bandung-based startup successfully created a power cell based on safe isotopes that can power a house without solar panels or PLN cables. This technology is claimed to be very stable and explosion-proof."
   },
   {
     "id": 48,
     "cat": "SPACE",
     "title": "SpaceX Starship Lands on Mars: First Human Colony Begins",
-    "img": "https://picsum.photos/seed/tech48/800/450",
+    "img": "https://picsum.photos/seed/tech48/400/225",
     "body": "Elon Musk announced the successful landing of the first crew on Mars this week. Autonomous robots have begun building radiation-shielded domes for permanent astronaut residences next year."
   },
   {
     "id": 49,
     "cat": "GADGET",
     "title": "Samsung Galaxy Z-Roll: First Rollable Smartphone in Jakarta",
-    "img": "https://picsum.photos/seed/tech49/800/450",
+    "img": "https://picsum.photos/seed/tech49/400/225",
     "body": "The era of foldable screens ends, shifting to rollable screens. Samsung officially released the Galaxy Z-Roll which can widen from 6 inches to 10 inches with just one touch of a haptic sensor on the phone frame."
   },
   {
     "id": 50,
     "cat": "AI & ROBOTICS",
     "title": "OpenAI Sora 3.0: AI Short Films Can Now Be Made in 5 Minutes",
-    "img": "https://picsum.photos/seed/tech50/800/450",
+    "img": "https://picsum.photos/seed/tech50/400/225",
     "body": "In April 2026, OpenAI released Sora 3.0 which allows perfect character consistency. Content creators in Indonesia have begun shifting fully to AI-based film production without needing large crews."
-  },
-  {
-    "id": 76,
-    "cat": "HEADLINE",
-    "title": "Neural Logic Portal v21.0 Officially Released",
-    "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=500",
-    "body": "A massive update to the Neural Logic website brings Auto-Sort, Audio Reading, and AI Summary features to help readers get the fastest science and technology info."
-  },
-  {
-    "id": 101,
-    "title": "Importance of Changing Motorcycle Oil Based on Mileage",
-    "cat": "AUTOMOTIVE",
-    "img": "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=800",
-    "body": "To keep Vario 160 engine performance smooth, changing oil every two thousand kilometers is highly recommended. Clean oil ensures low engine friction and keeps engine temperature stable in the April heat."
-  },
-  {
-    "id": 125,
-    "title": "Vario 160 ABS: Secrets to Keeping Paint Glossy in Tropical Climates",
-    "cat": "AUTOMOTIVE",
-    "img": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=800",
-    "body": "Paint maintenance on the Honda Vario 160 ABS requires special attention. Excessive UV rays in April can fade color pigments. Use silicone-based protective fluids and avoid washing with dish soap as its acidic nature can erode the clear coat. Ensure you use high-quality microfiber when wiping to avoid fine scratches."
   },
   {
     "id": 51,
@@ -722,222 +701,222 @@
   },
   {
     "id": 101,
-    "title": "Importance of Changing Motorcycle Oil Based on Mileage",
     "cat": "AUTOMOTIVE",
+    "title": "Importance of Changing Motorcycle Oil Based on Mileage",
     "img": "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=800",
     "body": "To keep Vario 160 engine performance smooth, oil changes every two thousand kilometers are highly recommended. Clean oil ensures low engine friction and keeps engine temperature stable in the April heat."
   },
   {
     "id": 102,
-    "title": "Finding the Closest Black Hole to Earth",
     "cat": "SPACE",
+    "title": "Finding the Closest Black Hole to Earth",
     "img": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800",
     "body": "Astronomers detected a black hole just a thousand light-years from Earth. This black hole is inactive, so it doesn't emit dangerous radiation, but its presence changes the theory of galactic mass distribution."
   },
   {
     "id": 103,
-    "title": "AI in Cinematic Music Production",
     "cat": "AI",
+    "title": "AI in Cinematic Music Production",
     "img": "https://images.unsplash.com/photo-1514525253361-bee8718a74a2?q=80&w=800",
     "body": "Film composers now use AI to create basic orchestral arrangements. This speeds up the music production process without losing the emotional touch that must remain human-made."
   },
   {
     "id": 104,
-    "title": "Macro Photography: Exploring the Micro World in Your Garden",
     "cat": "CREATIVE",
+    "title": "Macro Photography: Exploring the Micro World in Your Garden",
     "img": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800",
     "body": "Macro lenses allow us to see details of insects and flowers invisible to the naked eye. The key is patience and using a tripod to avoid blur from tiny hand tremors."
   },
   {
     "id": 105,
-    "title": "New Generation Biometric Chips for Contactless Payment",
     "cat": "SCIENCE",
+    "title": "New Generation Biometric Chips for Contactless Payment",
     "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
     "body": "Payment systems are now shifting to palm vein pattern verification. This technology is considered far safer than conventional fingerprints because it is nearly impossible to duplicate."
   },
   {
     "id": 106,
-    "title": "Smart Helmet with Head-Up Display (HUD)",
     "cat": "AUTOMOTIVE",
+    "title": "Smart Helmet with Head-Up Display (HUD)",
     "img": "https://images.unsplash.com/photo-1591704901662-dc6092040a15?q=80&w=800",
     "body": "Future helmets are now equipped with transparent screens displaying speed, GPS navigation, and smartphone notifications right in front of the rider's eyes without distracting from the road."
   },
   {
     "id": 107,
-    "title": "SpaceX Starship: Cargo Flight Test to Mars",
     "cat": "SPACE",
+    "title": "SpaceX Starship: Cargo Flight Test to Mars",
     "img": "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=800",
     "body": "Elon Musk announced that Starship will conduct a cargo landing simulation on Mars this year. This unmanned mission is crucial to ensure the safety of astronauts sent in the next decade."
   },
   {
     "id": 108,
-    "title": "Concentrated Solar Energy Utilization in the Sahara Desert",
     "cat": "SCIENCE",
+    "title": "Concentrated Solar Energy Utilization in the Sahara Desert",
     "img": "https://images.unsplash.com/photo-1509391366360-fe5bb629550b?q=80&w=800",
     "body": "A giant solar energy project in the Sahara began supplying electricity to Europe. The technology uses thousands of mirrors to focus sunlight to a single point to generate steam for electric turbines."
   },
   {
     "id": 109,
-    "title": "Symmetry Composition Techniques in Modern Architecture",
     "cat": "CREATIVE",
+    "title": "Symmetry Composition Techniques in Modern Architecture",
     "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
     "body": "Symmetry creates a satisfying visual balance. In architectural photography, taking pictures exactly from the center of a building gives a grand and neat impression, perfect for aesthetic social media galleries."
   },
   {
     "id": 110,
-    "title": "Future of AI: Companion Robots for the Elderly",
     "cat": "AI",
+    "title": "Future of AI: Companion Robots for the Elderly",
     "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800",
     "body": "Humanoid robots with emotional intelligence are starting to be used in nursing homes. They are able to recognize expressions of sadness and provide soothing conversational support for lonely seniors."
   },
   {
     "id": 111,
-    "title": "Effects of Ceramic Coating on Motorcycle Plastic Bodies",
     "cat": "AUTOMOTIVE",
+    "title": "Effects of Ceramic Coating on Motorcycle Plastic Bodies",
     "img": "https://images.unsplash.com/photo-1599256621730-535171e28e50?q=80&w=800",
     "body": "Ceramic coating is not just for luxury cars. On plastic motorcycle bodies, this coating provides a permanent layer that repels dust and water, so your Vario 160 looks like new even after rain."
   },
   {
     "id": 112,
-    "title": "James Webb Telescope Finds Signs of Water on Extra-Solar Planet",
     "cat": "SPACE",
+    "title": "James Webb Telescope Finds Signs of Water on Extra-Solar Planet",
     "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=800",
     "body": "The discovery of water vapor in the atmosphere of planet K2-18b provides new hope in the search for life outside Earth. This planet is located in its star's habitable zone, sparking deeper research."
   },
   {
     "id": 113,
-    "title": "Artificial Intelligence in Managing City Traffic",
     "cat": "AI",
+    "title": "Artificial Intelligence in Managing City Traffic",
     "img": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800",
     "body": "Smart traffic light systems now use AI sensors to detect vehicle density in real-time. This reduces city congestion by thirty percent and lowers driver stress levels during rush hour."
   },
   {
     "id": 114,
-    "title": "Color Psychology in Children's Portrait Photography",
     "cat": "CREATIVE",
+    "title": "Color Psychology in Children's Portrait Photography",
     "img": "https://images.unsplash.com/photo-1481841395932-a1c30149520e?q=80&w=800",
     "body": "Taking photos of children with royal princess themed clothing requires pastel color backgrounds. These colors give a soft and cheerful impression, making the subject stand out while remaining artistic."
   },
   {
     "id": 115,
-    "title": "Maintenance of ABS Motorcycle Tires in Rainy Season",
     "cat": "AUTOMOTIVE",
+    "title": "Maintenance of ABS Motorcycle Tires in Rainy Season",
     "img": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800",
     "body": "The ABS system on the Vario 160 relies heavily on tire traction. Ensure tire grooves are not worn to avoid slips during sudden braking on slippery roads this April. Air pressure must always be ideal."
   },
   {
     "id": 116,
-    "title": "Cyber Security: Protecting Identity in the Deepfake Era",
     "cat": "AI",
+    "title": "Cyber Security: Protecting Identity in the Deepfake Era",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
     "body": "With the rise of AI-based fake videos, blockchain technology is being used to verify video authenticity. Users are urged to be more wary of video calls from unknown numbers asking for personal data."
   },
   {
     "id": 117,
-    "title": "Capturing the Beauty of the Andromeda Galaxy from a Phone Camera",
     "cat": "SPACE",
+    "title": "Capturing the Beauty of the Andromeda Galaxy from a Phone Camera",
     "img": "https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=800",
     "body": "With the latest astrophotography mode in 2026 smartphones, photographing stars doesn't need expensive cameras. Just use a tripod and a ten-second long-exposure to capture galaxy details."
   },
   {
     "id": 118,
-    "title": "Solid Battery Revolution: Electric Motor Range Increases",
     "cat": "SCIENCE",
+    "title": "Solid Battery Revolution: Electric Motor Range Increases",
     "img": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800",
     "body": "Scientists successfully created lighter and safer solid-state batteries. This technology is predicted to be mass-adopted by late 2026, enabling electric motors to travel up to 500 km on one charge."
   },
   {
     "id": 119,
-    "title": "Aesthetic Photo Editing with AI In-Painting",
     "cat": "CREATIVE",
+    "title": "Aesthetic Photo Editing with AI In-Painting",
     "img": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800",
     "body": "Generative AI technology is now integrated in photo editing apps. You can remove distracting objects with one touch, while the AI fills the background to look real and professional."
   },
   {
     "id": 120,
-    "title": "Matte vs Metallic Color Trends in 2026 Automotive Industry",
     "cat": "AUTOMOTIVE",
+    "title": "Matte vs Metallic Color Trends in 2026 Automotive Industry",
     "img": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800",
     "body": "Matte colors still dominate the large matic motorcycle market. However, maintenance is harder as they can't be polished. Users are advised to use special matte-protection to keep the body texture smooth."
   },
   {
     "id": 121,
-    "title": "Artificial Intelligence in Self-Medical Diagnosis",
     "cat": "AI",
+    "title": "Artificial Intelligence in Self-Medical Diagnosis",
     "img": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800",
     "body": "AI-based health apps can now detect early signs of heart disease just by scanning pulse patterns from a smartphone camera. Accuracy reaches ninety-eight percent in 2026."
   },
   {
     "id": 122,
-    "title": "Artemis IV Mission: Humans Return to Explore the Moon",
     "cat": "SPACE",
+    "title": "Artemis IV Mission: Humans Return to Explore the Moon",
     "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800",
     "body": "NASA confirmed the Artemis IV launch in late April 2026. The mission focus is building the first space station in lunar orbit, serving as a gateway to Mars in the future."
   },
   {
     "id": 123,
-    "title": "Neural Engine 5: 2026 Mobile AI Revolution",
     "cat": "AI",
+    "title": "Neural Engine 5: 2026 Mobile AI Revolution",
     "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800",
     "body": "The latest Neural processors can now run large language models offline on smartphones. This keeps user data private while providing instant smart assistant responses without internet delay."
   },
   {
     "id": 124,
-    "title": "Golden Hour Lighting Technique for Motorcycle Photography",
     "cat": "CREATIVE",
+    "title": "Golden Hour Lighting Technique for Motorcycle Photography",
     "img": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=800",
     "body": "To get motorcycle photos that look 'capable', use the 5 PM sunlight. Low light gives sharp contours to the Vario 160 body. Use low-angle techniques for a grand impression and lock focus on the headlight."
   },
   {
     "id": 125,
-    "title": "Vario 160 ABS: Secrets to Keeping Paint Glossy in Tropical Climates",
     "cat": "AUTOMOTIVE",
+    "title": "Vario 160 ABS: Secrets to Keeping Paint Glossy in Tropical Climates",
     "img": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=800",
     "body": "Paint maintenance on the Honda Vario 160 ABS requires special attention. Excessive UV rays in April can fade color pigments. Use silicone-based protective fluids and avoid dish soap. Use high-quality microfiber."
   },
   {
     "id": 126,
-    "title": "6G Optical Beam: Beyond 2026 Wireless Speed Limits",
     "cat": "TECHNOLOGY",
+    "title": "6G Optical Beam: Beyond 2026 Wireless Speed Limits",
     "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800",
     "body": "Entering April 2026, 6G Optical Beam wireless data transmission trials began. This technology uses directed light waves capable of sending up to one terabit per second, supporting real-time metaverse ecosystems."
   },
   {
     "id": 127,
-    "title": "Aegis-X: 2026 Generation Autonomous Laser Interception System",
     "cat": "MILITARY",
+    "title": "Aegis-X: 2026 Generation Autonomous Laser Interception System",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
     "body": "In April 2026, air defense enters a new era with Aegis-X, a high-power solid-state laser interception system. It uses AI to track and disable drone swarms and hypersonic missiles in seconds."
   },
   {
     "id": 128,
-    "title": "Photovoltaic Screens: The Future of Gadgets Without Charger Cables",
     "cat": "TECHNOLOGY",
+    "title": "Photovoltaic Screens: The Future of Gadgets Without Charger Cables",
     "img": "https://images.unsplash.com/photo-1509391366360-fe5bbfaad89d?q=80&w=800",
     "body": "In mid-April 2026, researchers integrated transparent solar cells into AMOLED panels. This allows devices to charge continuously from ambient light or sun, ending reliance on physical chargers."
   },
   {
     "id": 129,
-    "title": "NeuralLens: AR Contact Lenses with Direct Retinal Projection",
     "cat": "GADGET",
+    "title": "NeuralLens: AR Contact Lenses with Direct Retinal Projection",
     "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800",
     "body": "In mid-April 2026, the first public prototype of NeuralLens was introduced. These smart lenses replace smartphone screens by projecting Augmented Reality (AR) directly to the user's retina."
   },
   {
     "id": 130,
-    "title": "Kinetic Interceptor Drone 'Mantis-K1': Close Range Strike Precision",
     "cat": "MILITARY",
+    "title": "Kinetic Interceptor Drone 'Mantis-K1': Close Range Strike Precision",
     "img": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800",
     "body": "By late April 2026, urban warfare changed with the Mantis-K1. It uses micro mechanical arms and AI algorithms mimicking traditional martial arts strikes to disable enemy drones without explosives."
   },
   {
     "id": 131,
-    "title": "Bio-Digital Twin: 2026 Smart Hospital Revolution",
     "cat": "MEDICAL",
+    "title": "Bio-Digital Twin: 2026 Smart Hospital Revolution",
     "img": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000",
     "body": "Entering April 2026, Bio-Digital Twin technology was implemented. It creates digital replicas of patient organs in real-time. Doctors can simulate surgeries or drug reactions before the real procedure."
   },
-  {
+{
     "id": 132,
     "cat": "GREEN TECH",
     "title": "Portable Algae Photo-Bioreactor: Independent Pollution Absorption Solution",

@@ -8,11 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* Kritis CSS: Masukkan hanya yang diperlukan untuk tampilan layar pertama (Above the Fold) */
         :root {
             --accent: #00ff88; --bg: #050509; --card: rgba(17, 17, 24, 0.8);
             --text: #f8fafc; --muted: #8892b0;
@@ -21,35 +19,49 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background: var(--bg); color: var(--text); 
-            font-family: 'Plus Jakarta Sans', system-ui, sans-serif; 
-            overflow-x: hidden; min-height: 100vh;
-            content-visibility: auto; /* Optimasi rendering browser */
-        }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; min-height: 100vh; }
 
-        nav { position: sticky; top: 0; z-index: 100; padding: 12px 6%; background: rgba(5, 5, 9, 0.8); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; border-bottom: var(--border-glass); height: 60px; }
+        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 0%; z-index: 1001; transition: width 0.2s; }
+
+        nav { position: sticky; top: 0; z-index: 100; padding: 12px 6%; background: rgba(5, 5, 9, 0.8); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; border-bottom: var(--border-glass); }
         .logo { font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; display: flex; align-items: center; }
         .logo-box { padding: 4px 10px; background: var(--gradient); color: #000; border-radius: 8px; margin-right: 8px; }
 
-        .hero { padding: 30px 6% 10px; text-align: center; min-height: 150px; }
+        /* TAB SYSTEM */
+        .tabs { display: flex; justify-content: center; gap: 10px; margin: 20px 0; padding: 0 6%; }
+        .tab-btn { background: var(--card); border: var(--border-glass); color: var(--muted); padding: 10px 20px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; }
+        .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
+
+        .search-container { padding: 0 6%; margin-bottom: 20px; }
+        #searchInput { width: 100%; padding: 14px 20px; border-radius: 16px; background: var(--card); border: var(--border-glass); color: #fff; outline: none; transition: 0.3s; font-size: 1rem; }
+        #searchInput:focus { border-color: var(--accent); box-shadow: 0 0 15px rgba(0, 255, 136, 0.1); }
+
+        .hero { padding: 30px 6% 10px; text-align: center; }
         .hero h1 { font-family: 'Space Grotesk'; font-size: clamp(2.2rem, 8vw, 3.5rem); background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
 
-        /* Optimasi Grid: Gunakan aspect-ratio untuk mencegah CLS */
-        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px 6% 80px; }
-        .card { background: var(--card); border-radius: 24px; overflow: hidden; border: var(--border-glass); position: relative; contain: layout; }
-        .card-img { width: 100%; height: 180px; object-fit: cover; background: #111; aspect-ratio: 16/9; }
-        
-        /* Sembunyikan bagian non-kritis awal */
-        .tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; padding: 0 6%; flex-wrap: wrap; }
-        .tab-btn { background: var(--card); border: var(--border-glass); color: var(--muted); padding: 8px 16px; border-radius: 12px; cursor: pointer; font-size: 0.85rem; }
-        .tab-btn.active { background: var(--accent); color: #000; }
-        
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; z-index: 1000; backdrop-filter: blur(12px); }
-        .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 10px 25px; border-radius: 50px; display: none; }
-        
-        /* Progress Bar (Gunakan transform daripada width untuk performa 60fps) */
-        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 100%; z-index: 1001; transform: scaleX(0); transform-origin: left; transition: transform 0.1s linear; }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px 6% 80px; min-height: 50vh; }
+
+        /* CARDS */
+        .card { background: var(--card); border-radius: 24px; overflow: hidden; border: var(--border-glass); transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card-img { width: 100%; height: 180px; object-fit: cover; background: #111; }
+        .card-content { padding: 20px; }
+
+        /* PROMPT SPECIFIC STYLE */
+        .prompt-badge { position: absolute; top: 15px; right: 15px; background: var(--accent); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: 800; }
+        .copy-hint { font-size: 0.7rem; color: var(--accent); margin-top: 10px; display: block; font-weight: 600; }
+
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(12px); }
+        .m-content { background: #0f0f16; max-width: 600px; margin: 40px auto; border-radius: 30px; padding: 25px; border: var(--border-glass); }
+
+        .fab-container { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 99; }
+        .fab { width: 52px; height: 52px; border-radius: 18px; background: #161622; border: var(--border-glass); color: #fff; cursor: pointer; display: grid; place-items: center; transition: 0.3s; font-size: 1.2rem; }
+
+        .share-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 8px; margin-top: 25px; padding-top: 20px; border-top: var(--border-glass); }
+        .share-btn { padding: 10px; border-radius: 12px; border: var(--border-glass); background: #1a1a24; color: #fff; cursor: pointer; font-size: 0.75rem; transition: 0.2s; font-weight: 600; text-align: center; }
+        .share-btn:hover { background: #252533; border-color: var(--accent); }
+
+        .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 10px 25px; border-radius: 50px; font-weight: 700; display: none; z-index: 2000; box-shadow: 0 10px 30px rgba(0,255,136,0.3); }
     </style>
 </head>
 <body>
@@ -59,7 +71,7 @@
 
 <nav>
     <a href="/" class="logo"><span class="logo-box">NL</span>NEURAL LOGIC</a>
-    <a href="https://saweria.co/akashiro" target="_blank" rel="noopener" style="text-decoration:none">
+    <a href="https://saweria.co/akashiro" target="_blank" style="text-decoration:none">
         <div style="background: #faae2b; color: #000; padding: 8px 16px; border-radius: 10px; font-weight: 700; font-size: 0.85rem;">Support ☕</div>
     </a>
 </nav>
@@ -68,91 +80,174 @@
     <h1>Neural Logic</h1>
 </header>
 
-<div class="tabs" id="tabContainer">
-    <button class="tab-btn active" onclick="filterTab('ALL', this)">All</button>
+<div class="tabs">
+    <button class="tab-btn active" onclick="filterTab('ALL')">All</button>
+    <button class="tab-btn" onclick="filterTab('NEURAL TECH')">Tech</button>
+    <button class="tab-btn" onclick="filterTab('AI PROMPT')">AI Prompts</button>
 </div>
 
-<div class="search-container" style="padding: 0 6%; margin-bottom: 20px;">
-    <input type="text" id="searchInput" placeholder="Search trends..." aria-label="Search">
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search trends or prompts..." aria-label="Search">
 </div>
 
 <main id="feed"></main>
 
+<div class="fab-container">
+    <button class="fab" title="Scroll Up" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
+</div>
+
+<div id="modal" class="modal">
+    <div class="m-content">
+        <img id="m-img" src="" alt="" style="width:100%; border-radius: 20px; margin-bottom: 20px; object-fit: cover; max-height: 280px;">
+        <h2 id="m-title" style="margin-bottom: 5px; color: var(--accent); font-family: 'Space Grotesk';"></h2>
+        <div id="m-date" style="color: var(--muted); font-size: 0.75rem; margin-bottom: 20px; font-weight: 600;"></div>
+        <p id="m-body" style="color: var(--text); opacity: 0.9; line-height: 1.6; margin-bottom: 25px; font-size: 1.05rem; white-space: pre-wrap;"></p>
+
+        <div style="display: flex; gap: 12px;">
+            <button id="actionBtn" style="background: var(--accent); color:#000; padding:14px 20px; border:none; border-radius:14px; font-weight:700; cursor:pointer; flex: 1;">⚡ Action</button>
+            <button onclick="closeModal()" style="background:#222; color:#fff; padding:14px 20px; border:none; border-radius:14px; cursor:pointer;">Close</button>
+        </div>
+
+        <div class="share-grid">
+            <button class="share-btn" onclick="shareTo('whatsapp')">WhatsApp</button>
+            <button class="share-btn" onclick="shareTo('facebook')">Facebook</button>
+            <button class="share-btn" onclick="shareTo('x')">X</button>
+            <button class="share-btn" onclick="shareTo('native')">Copy Link</button>
+        </div>
+    </div>
+</div>
+
 <script>
     let allData = [];
     let currentFilter = 'ALL';
-
-    // Gunakan DOMContentLoaded agar script tidak memblokir parsing HTML
-    document.addEventListener('DOMContentLoaded', () => {
-        init();
-    });
 
     async function init() {
         try {
             const res = await fetch('data.json');
             const rawData = await res.json();
             allData = [...rawData].reverse();
-            generateDynamicTabs();
             renderFeed(allData);
         } catch (e) {
-            console.error("Fetch error");
+            document.getElementById('feed').innerHTML = "<p>Connect to data.json first.</p>";
         }
     }
 
     function renderFeed(data) {
         const feed = document.getElementById('feed');
-        // Gunakan fragmen atau join untuk manipulasi DOM tunggal
-        feed.innerHTML = data.map((a, index) => `
+        feed.innerHTML = data.map((a) => {
+            const isPrompt = a.cat === "AI PROMPT";
+            return `
             <article class="card" onclick="openModalById(${a.id})">
-                <img src="${a.img}" 
-                     loading="${index < 3 ? 'eager' : 'lazy'}" 
-                     width="400" height="180" 
-                     class="card-img" alt="${a.title}">
-                <div class="card-content" style="padding:20px;">
+                ${isPrompt ? '<span class="prompt-badge">PROMPT</span>' : ''}
+                <img src="${a.img}" loading="lazy" class="card-img" alt="${a.title}">
+                <div class="card-content">
                     <small style="color:var(--accent); font-weight:600; text-transform:uppercase; font-size:0.7rem;">${a.cat}</small>
-                    <h3 style="font-size:1.1rem; line-height:1.3; margin-top:5px;">${a.title}</h3>
+                    <h3 style="font-size:1.1rem; line-height:1.3; font-family:'Space Grotesk'; margin-top:5px;">${a.title}</h3>
+                    ${isPrompt ? '<span class="copy-hint">⚡ Click to view & copy prompt</span>' : ''}
                 </div>
             </article>
-        `).join('');
+        `}).join('');
     }
 
-    // Fungsi lainnya tetap sama, namun pastikan menggunakan requestAnimationFrame untuk animasi jika ada
-    function filterTab(cat, btnElement) {
+    function filterTab(cat) {
         currentFilter = cat;
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        btnElement.classList.add('active');
+        event.target.classList.add('active');
         applyFilters();
     }
 
     function applyFilters() {
         const term = document.getElementById('searchInput').value.toLowerCase();
-        const filtered = allData.filter(a => (currentFilter === 'ALL' || a.cat === currentFilter) && a.title.toLowerCase().includes(term));
+        const filtered = allData.filter(a => {
+            const matchesTab = currentFilter === 'ALL' || a.cat === currentFilter;
+            const matchesSearch = a.title.toLowerCase().includes(term) || a.body.toLowerCase().includes(term);
+            return matchesTab && matchesSearch;
+        });
         renderFeed(filtered);
     }
 
-    function generateDynamicTabs() {
-        const tabContainer = document.getElementById('tabContainer');
-        const categories = [...new Set(allData.map(item => item.cat))];
-        categories.forEach(cat => {
-            if (cat) {
-                const btn = document.createElement('button');
-                btn.className = 'tab-btn';
-                btn.innerText = cat;
-                btn.onclick = (e) => filterTab(cat, e.target);
-                tabContainer.appendChild(btn);
-            }
-        });
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+    function openModalById(id) {
+        const item = allData.find(x => x.id === id);
+        if(!item) return;
+
+        const mImg = document.getElementById('m-img');
+        const mTitle = document.getElementById('m-title');
+        const mBody = document.getElementById('m-body');
+        const actionBtn = document.getElementById('actionBtn');
+
+        mImg.src = item.img;
+        mTitle.innerText = item.title;
+        mBody.innerText = item.body;
+
+        if(item.cat === "AI PROMPT") {
+            actionBtn.innerText = "📋 Copy Prompt";
+            actionBtn.onclick = () => copyText(item.body);
+        } else {
+            actionBtn.innerText = "🔊 Listen Article";
+            actionBtn.onclick = () => speak(item.title, item.body);
+        }
+
+        document.getElementById('modal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
     }
 
-    // Optimasi Scroll Progress Bar dengan Transform
-    window.addEventListener('scroll', () => {
-        const winScroll = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = winScroll / height;
-        document.getElementById("progress-bar").style.transform = `scaleX(${scrolled})`;
-    }, { passive: true }); // Passive listener untuk performa scroll mobile
+    function copyText(text) {
+        navigator.clipboard.writeText(text);
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        setTimeout(() => toast.style.display = 'none', 2000);
+    }
 
-    // ... sisanya fungsi modal Anda ...
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+        window.speechSynthesis.cancel();
+    }
+
+    function speak(t, b) {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(`${t}. ${b}`);
+        window.speechSynthesis.speak(msg);
+    }
+
+    // Fungsi Share yang diperbarui
+    function shareTo(platform) {
+        const currentUrl = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(document.getElementById('m-title').innerText);
+        
+        let shareUrl = "";
+        
+        switch(platform) {
+            case 'whatsapp':
+                shareUrl = `https://api.whatsapp.com/send?text=${title}%20${currentUrl}`;
+                break;
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+                break;
+            case 'x':
+                shareUrl = `https://twitter.com/intent/tweet?text=${title}&url=${currentUrl}`;
+                break;
+            case 'native':
+                copyText(window.location.href);
+                return;
+        }
+        
+        window.open(shareUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    window.onclick = (e) => { if (e.target.id === 'modal') closeModal(); };
+    
+    // Progress bar update
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    });
+
+    init();
 </script>
 </body>
 </html>

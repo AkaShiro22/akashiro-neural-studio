@@ -2,6 +2,7 @@
   {
     "id": 1,
     "cat": "SCIENCE",
+    "date": "Jan 12, 2026",
     "title": "Weather Engineering: Precision Cloud Seeding to Overcome Drought",
     "img": "https://picsum.photos/seed/tech1/400/225",
     "body": "The latest cloud seeding technology uses accurate air ionization and autonomous drones, allowing rain to fall precisely over needed farmland without disturbing other areas."
@@ -9,6 +10,7 @@
   {
     "id": 2,
     "cat": "HEALTH",
+    "date": "Jan 15, 2026",
     "title": "Smart Toothbrush Detects Oral Cancer Symptoms",
     "img": "https://picsum.photos/seed/tech2/400/225",
     "body": "Equipped with chemical sensors, this toothbrush analyzes saliva every morning to monitor overall body health and provide early warnings if abnormal cells are present."
@@ -16,6 +18,7 @@
   {
     "id": 3,
     "cat": "GREEN TECH",
+    "date": "Jan 20, 2026",
     "title": "Running Shoes That Can Charge Phone Batteries While Walking",
     "img": "https://picsum.photos/seed/tech3/400/225",
     "body": "The soles of these shoes contain piezoelectric materials that convert footstep pressure into electrical energy. Walking 5,000 steps can add 20% to a phone's power."
@@ -23,6 +26,7 @@
   {
     "id": 4,
     "cat": "SPACE",
+    "date": "Jan 25, 2026",
     "title": "Space Debris Cleaning Satellite Begins Operation",
     "img": "https://picsum.photos/seed/tech4/400/225",
     "body": "Giant laser nets have begun pulling dead satellite debris in Earth's orbit to be safely burned in the atmosphere, keeping space flight paths clear."
@@ -30,6 +34,7 @@
   {
     "id": 5,
     "cat": "GADGET",
+    "date": "Feb 02, 2026",
     "title": "Animal Language Translation Earbuds Go on Limited Sale",
     "img": "https://picsum.photos/seed/tech5/400/225",
     "body": "Using a database of dog and cat vocal frequencies, this AI translates pet emotions into simple words on your smartphone screen."
@@ -37,6 +42,7 @@
   {
     "id": 6,
     "cat": "SCIENCE",
+    "date": "Feb 05, 2026",
     "title": "Diamond-Based Batteries from Nuclear Waste",
     "img": "https://picsum.photos/seed/tech6/400/225",
     "body": "New technology converts nuclear waste carbon into artificial diamonds that generate small but stable electricity for thousands of years without needing a recharge."
@@ -44,6 +50,7 @@
   {
     "id": 7,
     "cat": "ROBOTICS",
+    "date": "Feb 08, 2026",
     "title": "Package Delivery Drones Can Now Enter Apartment Windows",
     "img": "https://picsum.photos/seed/tech7/400/225",
     "body": "With advanced anti-collision sensors, courier drones can now maneuver through narrow high-rise corridors to deliver orders langsung ke tangan pelanggan."
@@ -51,6 +58,7 @@
   {
     "id": 8,
     "cat": "HEALTH",
+    "date": "Feb 12, 2026",
     "title": "Brainwave-Based Music Therapy to Overcome Insomnia",
     "img": "https://picsum.photos/seed/tech8/400/225",
     "body": "Recent research proves that specific personalized sound frequencies can put people to sleep in less than 3 minutes without the help of medication."
@@ -58,6 +66,7 @@
   {
     "id": 9,
     "cat": "GREEN TECH",
+    "date": "Feb 15, 2026",
     "title": "Giant Tree-Shaped Air Purifier in Central Jakarta",
     "img": "https://picsum.photos/seed/tech9/400/225",
     "body": "This 20-meter tower filters air pollution equivalent to 1,000 real trees. It is solar-powered and releases pure oxygen into the surrounding environment."
@@ -65,6 +74,7 @@
   {
     "id": 10,
     "cat": "TRANSPORTATION",
+    "date": "Feb 18, 2026",
     "title": "Autonomous Vehicle Only Highway Lane Opens in Cipularang",
     "img": "https://picsum.photos/seed/tech10/400/225",
     "body": "The right lane of the highway is now dedicated to driverless cars that communicate via AI synchronization to maintain a stable speed of 150 km/h."
@@ -72,6 +82,7 @@
   {
     "id": 11,
     "cat": "SPACE",
+    "date": "Feb 22, 2026",
     "title": "Amateur Telescopes Can Now See Saturn's Rings from a Phone",
     "img": "https://picsum.photos/seed/tech11/400/225",
     "body": "Integration of smart digital lenses allows home telescopes to connect to the AI cloud to clear up planetary images in real-time."
@@ -79,6 +90,7 @@
   {
     "id": 12,
     "cat": "GADGET",
+    "date": "Feb 25, 2026",
     "title": "Portable Hologram Keyboard: Type on Any Table",
     "img": "https://picsum.photos/seed/tech12/400/225",
     "body": "A device as small as a lighter projects a full keyboard layout onto flat surfaces. Laser sensors detect finger taps with high accuracy."
@@ -86,6 +98,7 @@
   {
     "id": 13,
     "cat": "ROBOTICS",
+    "date": "Mar 01, 2026",
     "title": "Fashion AI: Clothes That Can Change Color via App",
     "img": "https://picsum.photos/seed/tech13/400/225",
     "body": "Using e-ink fabric fibers, modern clothing can change patterns and colors according to the user's mood instantly via smartphone."
@@ -93,6 +106,7 @@
   {
     "id": 14,
     "cat": "SCIENCE",
+    "date": "Mar 04, 2026",
     "title": "Transparent Fish Species Discovered in Java Trench",
     "img": "https://picsum.photos/seed/tech14/400/225",
     "body": "Deep-sea expeditions south of Java found a new ecosystem at a depth of 7,000 meters featuring bioluminescent fish with completely clear bodies."
@@ -100,6 +114,7 @@
   {
     "id": 15,
     "cat": "HEALTH",
+    "date": "Mar 07, 2026",
     "title": "Disease-Detecting Glasses via Eye Scanning",
     "img": "https://picsum.photos/seed/tech15/400/225",
     "body": "By wearing these glasses for 10 seconds, the AI system analyzes retinal blood vessels to detect early signs of diabetes and stroke risk."
@@ -107,6 +122,7 @@
   {
     "id": 16,
     "cat": "GREEN TECH",
+    "date": "Mar 10, 2026",
     "title": "Cassava-Based Plastics are Now Truly Edible",
     "img": "https://picsum.photos/seed/tech16/400/225",
     "body": "The latest food packaging not only dissolves in water but also contains nutrients safe for human or animal consumption."
@@ -114,6 +130,7 @@
   {
     "id": 17,
     "cat": "GADGET",
+    "date": "Mar 12, 2026",
     "title": "Zoom Contact Lenses: Blink Your Eyes to See Far Distances",
     "img": "https://picsum.photos/seed/tech17/400/225",
     "body": "These smart contact lenses allow users to perform 3x optical zoom just with specific blinking patterns."
@@ -121,6 +138,7 @@
   {
     "id": 18,
     "cat": "TRANSPORTATION",
+    "date": "Mar 15, 2026",
     "title": "Vario 2026 Electric Motor: Range Reaches 500 KM on One Charge",
     "img": "https://picsum.photos/seed/tech18/400/225",
     "body": "Honda released a solid-state battery update for its best-selling electric motorcycle, offering high efficiency and a fade-resistant body."
@@ -128,6 +146,7 @@
   {
     "id": 19,
     "cat": "ROBOTICS",
+    "date": "Mar 18, 2026",
     "title": "AI Lecturers Now Teaching at Leading Indonesian Universities",
     "img": "https://picsum.photos/seed/tech20/400/225",
     "body": "Students can now consult 24/7 with AI avatars. Human lecturers now focus more on ethical discussions and moral guidance."
@@ -135,6 +154,7 @@
   {
     "id": 20,
     "cat": "GREEN TECH",
+    "date": "Mar 20, 2026",
     "title": "Smart Vertical Forest in IKN Able to Lower City Temperature by 5 Degrees",
     "img": "https://picsum.photos/seed/tech21/400/225",
     "body": "High-rise construction in the New Capital City (IKN) uses automatic humidity sensors to manage wall plants."
@@ -142,6 +162,7 @@
   {
     "id": 21,
     "cat": "HEALTH",
+    "date": "Mar 22, 2026",
     "title": "'Nano-Doc' Smart Pill Can Automatically Clear Heart Plaque",
     "img": "https://picsum.photos/seed/tech22/400/225",
     "body": "Microscopic robots (nanobots) in pill form can find and clear arterial blockages without major surgery."
@@ -149,6 +170,7 @@
   {
     "id": 22,
     "cat": "SPACE",
+    "date": "Mar 24, 2026",
     "title": "NASA Finds Signs of Microbial Life on Enceladus",
     "img": "https://picsum.photos/seed/tech23/400/225",
     "body": "NASA's undersea rover found complex organic molecules beneath the ice layer of Saturn's moon."
@@ -156,6 +178,7 @@
   {
     "id": 23,
     "cat": "GADGET",
+    "date": "Mar 26, 2026",
     "title": "First Battery-Free Smartphone: Drawing Energy from the Air",
     "img": "https://picsum.photos/seed/tech24/400/225",
     "body": "A Silicon Valley startup released a phone using 'Air-Harvesting' technology from radio and WiFi waves."
@@ -163,6 +186,7 @@
   {
     "id": 24,
     "cat": "ROBOTICS",
+    "date": "Mar 28, 2026",
     "title": "'Socrates' AI Begins Use as Mediation Judge in Indonesia",
     "img": "https://picsum.photos/seed/tech25/400/225",
     "body": "The Ministry of Law uses AI to help resolve light civil disputes by analyzing legal articles in seconds."
@@ -170,6 +194,7 @@
   {
     "id": 25,
     "cat": "HEADLINE",
+    "date": "Mar 30, 2026",
     "title": "Neural Logic Portal v21.0 Officially Released",
     "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=500",
     "body": "Massive update brings Auto-Sort, Audio Reading, and AI Summary features to the Neural Logic portal."
@@ -177,6 +202,7 @@
   {
     "id": 26,
     "cat": "TECHNOLOGY",
+    "date": "Apr 01, 2026",
     "title": "6G Internet Trial Begins: Download 1TB per Second",
     "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500",
     "body": "The 6G network promises zero latency, allowing an entire movie collection download in less than 2 seconds."
@@ -184,6 +210,7 @@
   {
     "id": 27,
     "cat": "HEALTH",
+    "date": "Apr 01, 2026",
     "title": "Universal Cancer Vaccine Distribution Begins",
     "img": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=500",
     "body": "WHO approved an mRNA vaccine capable of recognizing 50 types of cancer cells before they develop."
@@ -191,6 +218,7 @@
   {
     "id": 28,
     "cat": "SCIENCE",
+    "date": "Apr 01, 2026",
     "title": "Scientists Find Oxygen on the Moon",
     "img": "https://images.unsplash.com/photo-1532634896-26909d0d4b89?q=80&w=500",
     "body": "Extraction of lunar regolith is proven to produce large amounts of oxygen for future moon bases."
@@ -198,6 +226,7 @@
   {
     "id": 29,
     "cat": "TRANSPORTATION",
+    "date": "Apr 01, 2026",
     "title": "Jakarta-Surabaya Hyperloop in 45 Minutes",
     "img": "https://images.unsplash.com/photo-1515162305114-8d3da120aa43?q=80&w=500",
     "body": "Indonesia's fastest transportation trial begins, connecting Jakarta and Surabaya in under an hour."
@@ -205,6 +234,7 @@
   {
     "id": 30,
     "cat": "SECURITY",
+    "date": "Apr 02, 2026",
     "title": "Password Officially Removed: Thought Authentication Arrives",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500",
     "body": "Security system uses unique brainwaves to unlock devices, ensuring unhackable protection."
@@ -212,6 +242,7 @@
   {
     "id": 31,
     "cat": "CRYPTO",
+    "date": "Apr 02, 2026",
     "title": "Bitcoin Becomes Official Global Currency",
     "img": "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=500",
     "body": "More than 50 countries agreed to use digital assets as main foreign exchange reserves."
@@ -219,6 +250,7 @@
   {
     "id": 32,
     "cat": "EDUCATION",
+    "date": "Apr 02, 2026",
     "title": "AI Teachers Start Teaching at Jakarta Elementary Schools",
     "img": "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=500",
     "body": "Pilot project uses AI teacher holograms that answer student questions personally."
@@ -226,6 +258,7 @@
   {
     "id": 33,
     "cat": "ENVIRONMENT",
+    "date": "Apr 02, 2026",
     "title": "Giant Carbon Suction Machine Begins Operation",
     "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=500",
     "body": "The largest air pollution suction plant in Iceland converts CO2 into mineral rock."
@@ -233,6 +266,7 @@
   {
     "id": 34,
     "cat": "SPACE",
+    "date": "Apr 03, 2026",
     "title": "First Commercial Moon Tourism Opens",
     "img": "https://images.unsplash.com/photo-1532634896-26909d0d4b89?q=80&w=500",
     "body": "Blue Origin released a 3-day lunar orbit travel package for global tourists."
@@ -240,6 +274,7 @@
   {
     "id": 35,
     "cat": "HEALTH",
+    "date": "Apr 03, 2026",
     "title": "3D Organ Printers Start Use in National Hospitals",
     "img": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=500",
     "body": "Live tissue printing allows kidney transplants using the patient's own stem cells."
@@ -247,6 +282,7 @@
   {
     "id": 36,
     "cat": "TRANSPORTATION",
+    "date": "Apr 03, 2026",
     "title": "Salt-Powered Electric Cars Start Trials",
     "img": "https://images.unsplash.com/photo-1515162305114-8d3da120aa43?q=80&w=500",
     "body": "Sodium-ion batteries offer a cheaper and eco-friendly alternative to lithium."
@@ -254,6 +290,7 @@
   {
     "id": 37,
     "cat": "ROBOTICS",
+    "date": "Apr 03, 2026",
     "title": "Optimus Robot Waiters Start Working",
     "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500",
     "body": "Tesla's humanoid robots now serve food and understand various regional languages."
@@ -261,6 +298,7 @@
   {
     "id": 38,
     "cat": "TRANSPORTATION",
+    "date": "Apr 04, 2026",
     "title": "EHang Flying Taxis Officially Take to Jakarta Skies",
     "img": "https://images.unsplash.com/photo-1515162305114-8d3da120aa43?q=80&w=500",
     "body": "Autonomous air taxis for the Soetta-Sudirman route cut travel time to 15 minutes."
@@ -268,6 +306,7 @@
   {
     "id": 39,
     "cat": "HEALTH",
+    "date": "Apr 04, 2026",
     "title": "Neuralink Telepathy: Typing with Your Mind",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500",
     "body": "Patients with nerve paralysis can now operate computers just by imagining movements."
@@ -275,6 +314,7 @@
   {
     "id": 40,
     "cat": "GREEN TECH",
+    "date": "Apr 04, 2026",
     "title": "Mini Nuclear Home Batteries: Free Electricity for 50 Years",
     "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=500",
     "body": "Safe isotope power cells can power a house independently without external cables."
@@ -282,6 +322,7 @@
   {
     "id": 41,
     "cat": "SPACE",
+    "date": "Apr 04, 2026",
     "title": "SpaceX Starship Lands on Mars",
     "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500",
     "body": "Elon Musk announced the successful landing of the first human crew on Mars."
@@ -289,6 +330,7 @@
   {
     "id": 42,
     "cat": "GADGET",
+    "date": "Apr 04, 2026",
     "title": "Samsung Galaxy Z-Roll: First Rollable Smartphone",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=500",
     "body": "Rollable screen technology allows a phone to widen from 6 to 10 inches instantly."
@@ -296,6 +338,7 @@
   {
     "id": 43,
     "cat": "ROBOTICS",
+    "date": "Apr 04, 2026",
     "title": "OpenAI Sora 3.0: AI Short Films in 5 Minutes",
     "img": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500",
     "body": "New AI allows perfect character consistency for full-scale film production."
@@ -303,6 +346,7 @@
   {
     "id": 44,
     "cat": "SPACE",
+    "date": "Apr 04, 2026",
     "title": "First Space Hotel Starts Accepting Reservations",
     "img": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=500",
     "body": "The Voyager Class commercial space station is ready to host tourists starting late this year. The price per night is set at 500 thousand USD."
@@ -310,6 +354,7 @@
   {
     "id": 45,
     "cat": "AI",
+    "date": "Apr 04, 2026",
     "title": "AI Can Now Write Hit Songs in 5 Seconds",
     "img": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=500",
     "body": "A new music platform launched a feature where users simply give a voice command to create a complete song with studio-quality lyrics and vocals."
@@ -317,6 +362,7 @@
   {
     "id": 46,
     "cat": "TECHNOLOGY",
+    "date": "Apr 04, 2026",
     "title": "Phone Battery Now Lasts 1 Month on One Charge",
     "img": "https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=500",
     "body": "The discovery of dense graphene-based batteries allows smartphones to last 30 days on a single charge without increasing the phone's thickness."
@@ -324,6 +370,7 @@
   {
     "id": 47,
     "cat": "ENERGY",
+    "date": "Apr 04, 2026",
     "title": "China's Artificial Sun Sets New Temperature Record",
     "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500",
     "body": "The EAST nuclear fusion reactor in China successfully maintained a stable 150 million degrees Celsius for 20 minutes, nearing an unlimited clean energy source."
@@ -331,6 +378,7 @@
   {
     "id": 48,
     "cat": "INTERNET",
+    "date": "Apr 04, 2026",
     "title": "Starlink 2.0: 10Gbps Internet Reaches Every Village",
     "img": "https://images.unsplash.com/photo-1527333656061-ca7adf608ae1?q=80&w=500",
     "body": "Elon Musk announced a Starlink satellite upgrade capable of providing 10Gbps speed to the remote forests of Kalimantan and Papua without lag."
@@ -338,6 +386,7 @@
   {
     "id": 49,
     "cat": "GAME",
+    "date": "Apr 04, 2026",
     "title": "PlayStation 6 Leaked: Uses Quantum Chip",
     "img": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=500",
     "body": "Sony is reportedly testing the PS6 with unlimited real-time ray-tracing technology, providing graphics impossible to distinguish from the real world."
@@ -345,6 +394,7 @@
   {
     "id": 50,
     "cat": "HEALTH",
+    "date": "Apr 04, 2026",
     "title": "Neuralink Chip Cures Total Paralysis",
     "img": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=500",
     "body": "A paralyzed patient successfully walked again after being implanted with a 4th generation Neuralink chip that connects the brain directly to the spinal cord."
@@ -352,6 +402,7 @@
   {
     "id": 51,
     "cat": "AUTOMOTIVE",
+    "date": "Apr 04, 2026",
     "title": "First Flying Car Operates in Jakarta",
     "img": "https://images.unsplash.com/photo-1506610654-064fbba47ad0?q=80&w=500",
     "body": "The DKI Jakarta Transportation Agency inaugurated air routes for electric flying taxis (eVTOL) for the Airport-Sudirman route in just 8 minutes."
@@ -359,6 +410,7 @@
   {
     "id": 52,
     "cat": "ROBOTICS",
+    "date": "Apr 04, 2026",
     "title": "Household Servant Robots Now Price of a Motorcycle",
     "img": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=500",
     "body": "The price of humanoid robots for household tasks dropped to 30 million rupiah, making it accessible for middle-class families in April 2026."
@@ -366,6 +418,7 @@
   {
     "id": 53,
     "cat": "GADGET",
+    "date": "Apr 04, 2026",
     "title": "Transparent Samsung Smartphone Goes on Sale",
     "img": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?q=80&w=500",
     "body": "The Samsung Galaxy Glass is officially here with a 90% transparent OLED screen and components hidden in an ultra-thin bottom bezel."
@@ -373,6 +426,7 @@
   {
     "id": 54,
     "cat": "AI",
+    "date": "Apr 04, 2026",
     "title": "GPT-6 Officially Launched: Can Feel Emotions",
     "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=500",
     "body": "OpenAI released GPT-6 with an empathy module that can detect user sadness through voice tone and provide psychological support."
@@ -380,6 +434,7 @@
   {
     "id": 55,
     "cat": "SPACE",
+    "date": "Apr 04, 2026",
     "title": "First Mars Colony Successfully Harvests Potatoes",
     "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=500",
     "body": "Astronauts in Mars' Jezero crater reported the first successful hydroponic potato harvest, a major step toward food independence off-Earth."
@@ -387,6 +442,7 @@
   {
     "id": 56,
     "cat": "AUTOMOTIVE",
+    "date": "Apr 05, 2026",
     "title": "Optimizing Vario 160 Performance in April Heat",
     "img": "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=800",
     "body": "To maintain engine longevity, oil changes every 2,000 km are recommended. Proper lubrication ensures stable temperatures during the current heatwave."
@@ -394,6 +450,7 @@
   {
     "id": 57,
     "cat": "SPACE",
+    "date": "Apr 05, 2026",
     "title": "Finding the Closest Black Hole to Earth",
     "img": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800",
     "body": "Astronomers detected an inactive black hole just a thousand light-years away, changing theories of galactic mass distribution."
@@ -401,6 +458,7 @@
   {
     "id": 58,
     "cat": "CREATIVE",
+    "date": "Apr 05, 2026",
     "title": "Macro Photography: Exploring the Micro World",
     "img": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800",
     "body": "Unlock the beauty of garden insects and flowers using macro lenses. Patience and a steady tripod are key to professional-grade results."
@@ -408,6 +466,7 @@
   {
     "id": 59,
     "cat": "SCIENCE",
+    "date": "Apr 05, 2026",
     "title": "New Generation Biometric Palm Vein Payments",
     "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
     "body": "Payment systems are shifting to palm vein verification, a method far more secure than fingerprints as it's nearly impossible to duplicate."
@@ -415,6 +474,7 @@
   {
     "id": 60,
     "cat": "AUTOMOTIVE",
+    "date": "Apr 05, 2026",
     "title": "Smart Helmet with Integrated HUD Display",
     "img": "https://images.unsplash.com/photo-1591704901662-dc6092040a15?q=80&w=800",
     "body": "Helmets now feature transparent screens displaying GPS and speed directly in the rider's field of vision for safer navigation."
@@ -422,6 +482,7 @@
   {
     "id": 61,
     "cat": "SCIENCE",
+    "date": "Apr 05, 2026",
     "title": "Concentrated Solar Energy in the Sahara",
     "img": "https://images.unsplash.com/photo-1509391366360-fe5bb629550b?q=80&w=800",
     "body": "A giant solar project using thousands of mirrors to focus sunlight now supplies clean electricity from the Sahara to Europe."
@@ -429,6 +490,7 @@
   {
     "id": 62,
     "cat": "CREATIVE",
+    "date": "Apr 05, 2026",
     "title": "Symmetry Composition in Modern Architecture",
     "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
     "body": "Centering your perspective in architectural photography creates a grand and satisfying balance, ideal for professional social media galleries."
@@ -436,6 +498,7 @@
   {
     "id": 63,
     "cat": "AUTOMOTIVE",
+    "date": "Apr 05, 2026",
     "title": "Ceramic Coating Benefits for Motorcycle Bodies",
     "img": "https://images.unsplash.com/photo-1599256621730-535171e28e50?q=80&w=800",
     "body": "Ceramic coating provides a permanent layer that repels dust and water, keeping your motorcycle looking brand new even after heavy rain."
@@ -443,6 +506,7 @@
   {
     "id": 64,
     "cat": "SPACE",
+    "date": "Apr 05, 2026",
     "title": "Signs of Water Found on Extra-Solar Planet K2-18b",
     "img": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=800",
     "body": "James Webb Telescope detected water vapor in a habitable zone planet, sparking new hope in the search for extraterrestrial life."
@@ -450,6 +514,7 @@
   {
     "id": 65,
     "cat": "AI",
+    "date": "Apr 05, 2026",
     "title": "Smart AI Sensors for Real-Time Traffic Management",
     "img": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800",
     "body": "City traffic lights now use AI to detect density, reducing congestion by 30% and lowering driver stress during rush hours."
@@ -457,6 +522,7 @@
   {
     "id": 66,
     "cat": "CREATIVE",
+    "date": "Apr 05, 2026",
     "title": "Aesthetic Color Schemes for Themed Portraits",
     "img": "https://images.unsplash.com/photo-1481841395932-a1c30149520e?q=80&w=800",
     "body": "Using pastel backgrounds for themed photography creates a soft, artistic impression that makes the subject stand out effectively."
@@ -464,6 +530,7 @@
   {
     "id": 67,
     "cat": "AUTOMOTIVE",
+    "date": "Apr 05, 2026",
     "title": "Tire Maintenance for ABS Systems in Rainy Seasons",
     "img": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800",
     "body": "ABS reliability depends on tire traction. Ensure deep grooves and ideal air pressure to prevent slips on slippery April roads."
@@ -471,6 +538,7 @@
   {
     "id": 68,
     "cat": "SECURITY",
+    "date": "Apr 05, 2026",
     "title": "Blockchain Identity Verification in the Deepfake Era",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
     "body": "To combat AI-based fakes, blockchain is being used to verify video authenticity and protect users from identity theft."
@@ -478,6 +546,7 @@
   {
     "id": 69,
     "cat": "SCIENCE",
+    "date": "Apr 05, 2026",
     "title": "Solid-State Battery Revolution for Electric Vehicles",
     "img": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800",
     "body": "Lighter and safer solid-state batteries are set for mass adoption, extending electric vehicle range up to 500 km per charge."
@@ -485,6 +554,7 @@
   {
     "id": 70,
     "cat": "CREATIVE",
+    "date": "Apr 05, 2026",
     "title": "Professional Editing with AI In-Painting",
     "img": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800",
     "body": "Remove distracting objects effortlessly with AI in-painting, allowing for clean and professional photo backgrounds."
@@ -492,6 +562,7 @@
   {
     "id": 71,
     "cat": "AUTOMOTIVE",
+    "date": "Apr 05, 2026",
     "title": "Matte Finish Protection Trends for 2026",
     "img": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800",
     "body": "Matte colors dominate the market but require special care. Use dedicated matte-protection products to keep the texture smooth."
@@ -499,6 +570,7 @@
   {
     "id": 72,
     "cat": "AI",
+    "date": "Apr 05, 2026",
     "title": "Neural Engine 5: Offline Mobile AI Revolution",
     "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800",
     "body": "Latest processors run large AI models offline, ensuring user privacy and instant responses without needing internet."
@@ -506,6 +578,7 @@
   {
     "id": 73,
     "cat": "CREATIVE",
+    "date": "Apr 05, 2026",
     "title": "Golden Hour Techniques for Vehicle Photography",
     "img": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=800",
     "body": "Utilize 5 PM sunlight for sharp contours and a 'grand' impression. Low-angle shots work best for capturing aesthetic details."
@@ -513,6 +586,7 @@
   {
     "id": 74,
     "cat": "AUTOMOTIVE",
+    "date": "Apr 05, 2026",
     "title": "Preserving Paint Gloss in Tropical Climates",
     "img": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=800",
     "body": "Protect vehicle paint from UV fade using silicone-based fluids. Avoid harsh soaps and use high-quality microfiber for cleaning."
@@ -520,6 +594,7 @@
   {
     "id": 75,
     "cat": "TECHNOLOGY",
+    "date": "Apr 06, 2026",
     "title": "6G Optical Beam: 1Tbps Wireless Speed",
     "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800",
     "body": "April 2026 marks the start of 6G trials using light waves, enabling real-time metaverse ecosystems with zero latency."
@@ -527,6 +602,7 @@
   {
     "id": 76,
     "cat": "MILITARY",
+    "date": "Apr 06, 2026",
     "title": "Aegis-X: Autonomous Laser Defense System",
     "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
     "body": "A new era of air defense uses AI-powered solid-state lasers to intercept drone swarms and hypersonic missiles in seconds."
@@ -534,6 +610,7 @@
   {
     "id": 77,
     "cat": "TECHNOLOGY",
+    "date": "Apr 06, 2026",
     "title": "Photovoltaic Screens: Self-Charging Gadgets",
     "img": "https://images.unsplash.com/photo-1509391366360-fe5bbfaad89d?q=80&w=800",
     "body": "Transparent solar cells integrated into AMOLED panels allow devices to charge from ambient light, ending the era of cables."
@@ -541,6 +618,7 @@
   {
     "id": 78,
     "cat": "GADGET",
+    "date": "Apr 06, 2026",
     "title": "NeuralLens: Retinal Projection AR Lenses",
     "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800",
     "body": "Smart lenses that replace smartphones by projecting Augmented Reality directly onto the retina were prototyped this month."
@@ -548,6 +626,7 @@
   {
     "id": 79,
     "cat": "MILITARY",
+    "date": "Apr 06, 2026",
     "title": "Mantis-K1: Martial Arts Inspired Kinetic Drones",
     "img": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800",
     "body": "New urban warfare drones use mechanical arms and AI strikes to disable targets without using explosives."
@@ -555,13 +634,15 @@
   {
     "id": 80,
     "cat": "MEDICAL",
+    "date": "Apr 06, 2026",
     "title": "Bio-Digital Twin: Real-Time Organ Simulation",
-    "img": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000",
+    "img": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=1000",
     "body": "Doctors now use digital replicas of patient organs to simulate surgeries and drug reactions before performing procedures."
   },
   {
     "id": 81,
     "cat": "GREEN TECH",
+    "date": "Apr 06, 2026",
     "title": "Portable Algae Bioreactors for Urban Oxygen",
     "img": "https://picsum.photos/seed/algae81/800/450",
     "body": "The Alga-Wall 3.0 uses microalgae to absorb CO2 ten times faster than trees, providing a modular pollution solution for homes."
@@ -569,6 +650,7 @@
   {
     "id": 82,
     "cat": "GADGET",
+    "date": "Apr 06, 2026",
     "title": "Skin-Sync: Bio-Holographic Sticker Phones",
     "img": "https://picsum.photos/seed/skin134/800/450",
     "body": "Ultra-thin stickers using bio-holography display health data and messages directly on the skin, potentially replacing screens."
@@ -576,6 +658,7 @@
   {
     "id": 83,
     "cat": "GADGET",
+    "date": "Apr 06, 2026",
     "title": "Omni-Ring: Graphene Smart Control Ring",
     "img": "https://picsum.photos/seed/ring135/800/450",
     "body": "A modular ring that projects smart home controls and holographic calendars for a minimalist digital experience."
@@ -583,23 +666,25 @@
   {
     "id": 84,
     "cat": "TECHNOLOGY",
+    "date": "Apr 06, 2026",
     "title": "Neuro-Sync: The Post-Screen Era Begins",
     "img": "https://picsum.photos/seed/neuro2026/800/450",
     "body": "Non-invasive sensors now allow instant brain-to-digital communication, marking the end of physical screen dominance."
   },
   {
     "id": 85,
-    "cat": "BIOTECH & SUSTAINABILITY",
-    "title": "Living Architecture: Mycelium-Based Self-Healing Isolation Panels",
+    "cat": "BIOTECH",
+    "date": "Apr 06, 2026",
+    "title": "Living Architecture: Mycelium-Based Self-Healing Panels",
     "img": "https://picsum.photos/seed/mycelium2026/800/450",
-    "audio_desc": "Futuristic Nature Narrative: Explaining the integration of fungal networks into urban construction for dynamic thermal regulation.",
-    "body": "As of late April 2026, a revolutionary construction material has been deployed in Jakarta's new eco-districts. These carbon-negative wall panels are grown from specially engineered mycelium networks. Unlike traditional insulation, these living panels can 'heal' structural micro-cracks by regrowing fungal fibers when exposed to moisture. Furthermore, the panels act as a natural thermostat, expanding or contracting their density to maintain a constant indoor temperature of 24°C, significantly reducing the energy consumption of high-rise buildings in tropical climates."
+    "body": "Carbon-negative wall panels grown from mycelium can 'heal' structural micro-cracks and act as a natural thermostat for high-rise buildings."
   },
-{
-  "id": 86,
-  "cat": "NEURAL TECH",
-  "title": "Neural Logic 2026: Synaptic Interface for Seamless Human-AI Reasoning",
-  "img": "https://images.unsplash.com/photo-1675271591211-126ad94e495d?q=80&w=400&h=225&auto=format&fm=webp",
-  "body": "In April 2026, Neural Logic introduces the 'Synapse-X' interface. Unlike previous neural links, this technology uses non-invasive electromagnetic resonance to synchronize AI logic with human intuition. It allows users to process complex data sets as if they were natural memories, bridging the gap between biological thought and digital computation without surgical implants. This breakthrough marks a new era where technology isn't just a tool, but an extension of the human mind."
-}
+  {
+    "id": 86,
+    "cat": "NEURAL TECH",
+    "date": "Apr 06, 2026",
+    "title": "Neural Logic 2026: Synaptic Interface for Human-AI Reasoning",
+    "img": "https://images.unsplash.com/photo-1675271591211-126ad94e495d?q=80&w=400&h=225&auto=format&fm=webp",
+    "body": "Neural Logic introduces 'Synapse-X', a non-invasive interface that synchronizes AI logic with human intuition via electromagnetic resonance."
+  }
 ]

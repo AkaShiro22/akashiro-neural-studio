@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL LOGIC | Futuristic Tech 2026</title>
-    <meta name="description" content="Latest tech innovation hub with neural synchronization.">
-
+    <title>NEURAL LOGIC | Immersive Tech 2026</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --accent: #00ff88; --bg: #050509; --card: rgba(17, 17, 24, 0.8);
-            --text: #f8fafc; --muted: #8892b0;
-            --gradient: linear-gradient(135deg, #00ff88 0%, #0072ff 100%);
+            /* Warna Default: Neon Green */
+            --accent: #00ff88; 
+            --bg: #050509; 
+            --card: rgba(17, 17, 24, 0.8);
+            --text: #f8fafc; 
+            --muted: #8892b0;
+            --gradient: linear-gradient(135deg, var(--accent) 0%, #0072ff 100%);
             --border-glass: 1px solid rgba(255, 255, 255, 0.08);
         }
 
+        /* Tema Alternatif */
+        body.theme-cyber { --accent: #ff00ff; --gradient: linear-gradient(135deg, #ff00ff 0%, #7000ff 100%); }
+        body.theme-ocean { --accent: #00d9ff; --gradient: linear-gradient(135deg, #00d9ff 0%, #0044ff 100%); }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; min-height: 100vh; }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; min-height: 100vh; transition: 0.5s ease; }
 
         #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 0%; z-index: 1001; transition: width 0.2s; }
 
@@ -27,8 +34,10 @@
         .logo { font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; display: flex; align-items: center; }
         .logo-box { padding: 4px 10px; background: var(--gradient); color: #000; border-radius: 8px; margin-right: 8px; }
 
-        /* TAB SYSTEM */
-        .tabs { display: flex; justify-content: center; gap: 10px; margin: 20px 0; padding: 0 6%; }
+        .theme-switches { display: flex; gap: 8px; }
+        .dot { width: 14px; height: 14px; border-radius: 50%; cursor: pointer; border: 2px solid rgba(255,255,255,0.2); }
+
+        .tabs { display: flex; justify-content: center; gap: 10px; margin: 20px 0; padding: 0 6%; flex-wrap: wrap; }
         .tab-btn { background: var(--card); border: var(--border-glass); color: var(--muted); padding: 10px 20px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; }
         .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
 
@@ -36,82 +45,74 @@
         #searchInput { width: 100%; padding: 14px 20px; border-radius: 16px; background: var(--card); border: var(--border-glass); color: #fff; outline: none; transition: 0.3s; font-size: 1rem; }
         #searchInput:focus { border-color: var(--accent); box-shadow: 0 0 15px rgba(0, 255, 136, 0.1); }
 
-        .hero { padding: 30px 6% 10px; text-align: center; }
-        .hero h1 { font-family: 'Space Grotesk'; font-size: clamp(2.2rem, 8vw, 3.5rem); background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px 6% 80px; }
 
-        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px 6% 80px; min-height: 50vh; }
-
-        /* CARDS */
-        .card { background: var(--card); border-radius: 24px; overflow: hidden; border: var(--border-glass); transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        /* CARD REVEAL ANIMATION */
+        .card { 
+            background: var(--card); border-radius: 24px; overflow: hidden; border: var(--border-glass); 
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative;
+            opacity: 0; transform: translateY(30px); /* Initial state for animation */
+        }
+        .card.visible { opacity: 1; transform: translateY(0); }
+        .card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .card-img { width: 100%; height: 180px; object-fit: cover; background: #111; }
         .card-content { padding: 20px; }
 
-        /* PROMPT SPECIFIC STYLE */
-        .prompt-badge { position: absolute; top: 15px; right: 15px; background: var(--accent); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: 800; }
-        .copy-hint { font-size: 0.7rem; color: var(--accent); margin-top: 10px; display: block; font-weight: 600; }
+        .read-time { font-size: 0.65rem; color: var(--muted); float: right; margin-top: 3px; }
+        .bookmark-icon { position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.5); padding: 5px; border-radius: 8px; backdrop-filter: blur(5px); z-index: 2; color: #fff; }
 
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(12px); }
-        .m-content { background: #0f0f16; max-width: 600px; margin: 40px auto; border-radius: 30px; padding: 25px; border: var(--border-glass); }
-
-        .fab-container { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 99; }
-        .fab { width: 52px; height: 52px; border-radius: 18px; background: #161622; border: var(--border-glass); color: #fff; cursor: pointer; display: grid; place-items: center; transition: 0.3s; font-size: 1.2rem; }
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
+        .m-content { background: #0f0f16; max-width: 650px; margin: 40px auto; border-radius: 30px; padding: 30px; border: var(--border-glass); position: relative; }
 
         .share-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 8px; margin-top: 25px; padding-top: 20px; border-top: var(--border-glass); }
         .share-btn { padding: 10px; border-radius: 12px; border: var(--border-glass); background: #1a1a24; color: #fff; cursor: pointer; font-size: 0.75rem; transition: 0.2s; font-weight: 600; text-align: center; }
-        .share-btn:hover { background: #252533; border-color: var(--accent); }
 
-        .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 10px 25px; border-radius: 50px; font-weight: 700; display: none; z-index: 2000; box-shadow: 0 10px 30px rgba(0,255,136,0.3); }
+        .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 10px 25px; border-radius: 50px; font-weight: 700; display: none; z-index: 2000; }
     </style>
 </head>
 <body>
 
 <div id="progress-bar"></div>
-<div id="toast" class="toast">Prompt Copied!</div>
+<div id="toast" class="toast">Action Confirmed!</div>
 
 <nav>
     <a href="/" class="logo"><span class="logo-box">NL</span>NEURAL LOGIC</a>
-    <a href="https://saweria.co/akashiro" target="_blank" style="text-decoration:none">
-        <div style="background: #faae2b; color: #000; padding: 8px 16px; border-radius: 10px; font-weight: 700; font-size: 0.85rem;">Support ☕</div>
-    </a>
+    <div class="theme-switches">
+        <div class="dot" style="background:#00ff88" onclick="setTheme('default')"></div>
+        <div class="dot" style="background:#ff00ff" onclick="setTheme('cyber')"></div>
+        <div class="dot" style="background:#00d9ff" onclick="setTheme('ocean')"></div>
+    </div>
 </nav>
 
-<header class="hero">
-    <h1>Neural Logic</h1>
-</header>
-
 <div class="tabs">
-    <button class="tab-btn active" onclick="filterTab('ALL')">All</button>
-    <button class="tab-btn" onclick="filterTab('NEURAL TECH')">Tech</button>
+    <button class="tab-btn active" onclick="filterTab('ALL')">All Feeds</button>
+    <button class="tab-btn" onclick="filterTab('NEURAL TECH')">Technology</button>
     <button class="tab-btn" onclick="filterTab('AI PROMPT')">AI Prompts</button>
+    <button class="tab-btn" onclick="filterTab('BOOKMARK')" style="color: var(--accent)">★ Saved</button>
 </div>
 
 <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search trends or prompts..." aria-label="Search">
+    <input type="text" id="searchInput" placeholder="Search neural database...">
 </div>
 
 <main id="feed"></main>
 
-<div class="fab-container">
-    <button class="fab" title="Scroll Up" onclick="window.scrollTo({top:0, behavior:'smooth'})">▲</button>
-</div>
-
 <div id="modal" class="modal">
     <div class="m-content">
-        <img id="m-img" src="" alt="" style="width:100%; border-radius: 20px; margin-bottom: 20px; object-fit: cover; max-height: 280px;">
-        <h2 id="m-title" style="margin-bottom: 5px; color: var(--accent); font-family: 'Space Grotesk';"></h2>
-        <div id="m-date" style="color: var(--muted); font-size: 0.75rem; margin-bottom: 20px; font-weight: 600;"></div>
-        <p id="m-body" style="color: var(--text); opacity: 0.9; line-height: 1.6; margin-bottom: 25px; font-size: 1.05rem; white-space: pre-wrap;"></p>
+        <img id="m-img" src="" alt="" style="width:100%; border-radius: 20px; margin-bottom: 20px; object-fit: cover; max-height: 300px;">
+        <h2 id="m-title" style="color: var(--accent); font-family: 'Space Grotesk'; margin-bottom: 15px;"></h2>
+        <p id="m-body" style="color: var(--text); line-height: 1.8; margin-bottom: 25px; font-size: 1.05rem; white-space: pre-wrap;"></p>
 
         <div style="display: flex; gap: 12px;">
-            <button id="actionBtn" style="background: var(--accent); color:#000; padding:14px 20px; border:none; border-radius:14px; font-weight:700; cursor:pointer; flex: 1;">⚡ Action</button>
-            <button onclick="closeModal()" style="background:#222; color:#fff; padding:14px 20px; border:none; border-radius:14px; cursor:pointer;">Close</button>
+            <button id="actionBtn" style="background: var(--accent); color:#000; padding:14px; border:none; border-radius:14px; font-weight:700; cursor:pointer; flex: 2;">⚡ Action</button>
+            <button id="saveBtn" style="background: #222; color:#fff; padding:14px; border:none; border-radius:14px; cursor:pointer; flex: 1;">★ Save</button>
+            <button onclick="closeModal()" style="background:#222; color:#fff; padding:14px; border:none; border-radius:14px; cursor:pointer;">Close</button>
         </div>
 
         <div class="share-grid">
             <button class="share-btn" onclick="shareTo('whatsapp')">WhatsApp</button>
             <button class="share-btn" onclick="shareTo('facebook')">Facebook</button>
-            <button class="share-btn" onclick="shareTo('x')">X</button>
+            <button class="share-btn" onclick="shareTo('x')">X (Twitter)</button>
             <button class="share-btn" onclick="shareTo('native')">Copy Link</button>
         </div>
     </div>
@@ -120,6 +121,7 @@
 <script>
     let allData = [];
     let currentFilter = 'ALL';
+    let bookmarks = JSON.parse(localStorage.getItem('nl_bookmarks')) || [];
 
     async function init() {
         try {
@@ -128,41 +130,68 @@
             allData = [...rawData].reverse();
             renderFeed(allData);
         } catch (e) {
-            document.getElementById('feed').innerHTML = "<p>Connect to data.json first.</p>";
+            document.getElementById('feed').innerHTML = "<p style='text-align:center'>Please connect data.json file.</p>";
         }
+    }
+
+    // Hitung Estimasi Waktu Baca
+    function getReadTime(text) {
+        const wpm = 200; 
+        const words = text.trim().split(/\s+/).length;
+        return Math.ceil(words / wpm);
     }
 
     function renderFeed(data) {
         const feed = document.getElementById('feed');
         feed.innerHTML = data.map((a) => {
-            const isPrompt = a.cat === "AI PROMPT";
+            const isSaved = bookmarks.includes(a.id);
+            const time = getReadTime(a.body);
             return `
             <article class="card" onclick="openModalById(${a.id})">
-                ${isPrompt ? '<span class="prompt-badge">PROMPT</span>' : ''}
-                <img src="${a.img}" loading="lazy" class="card-img" alt="${a.title}">
+                ${isSaved ? '<span class="bookmark-icon">★</span>' : ''}
+                <img src="${a.img}" loading="lazy" class="card-img">
                 <div class="card-content">
+                    <span class="read-time">⏲️ ${time} min</span>
                     <small style="color:var(--accent); font-weight:600; text-transform:uppercase; font-size:0.7rem;">${a.cat}</small>
-                    <h3 style="font-size:1.1rem; line-height:1.3; font-family:'Space Grotesk'; margin-top:5px;">${a.title}</h3>
-                    ${isPrompt ? '<span class="copy-hint">⚡ Click to view & copy prompt</span>' : ''}
+                    <h3 style="font-size:1.1rem; margin-top:5px; font-family:'Space Grotesk';">${a.title}</h3>
                 </div>
             </article>
         `}).join('');
+        
+        observeCards(); // Jalankan animasi reveal
+    }
+
+    // Intersection Observer untuk Animasi Scroll
+    function observeCards() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card').forEach(card => observer.observe(card));
     }
 
     function filterTab(cat) {
         currentFilter = cat;
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        if(event) event.target.classList.add('active');
+        event.target.classList.add('active');
         applyFilters();
     }
 
     function applyFilters() {
         const term = document.getElementById('searchInput').value.toLowerCase();
-        const filtered = allData.filter(a => {
-            const matchesTab = currentFilter === 'ALL' || a.cat === currentFilter;
-            const matchesSearch = a.title.toLowerCase().includes(term) || a.body.toLowerCase().includes(term);
-            return matchesTab && matchesSearch;
-        });
+        let filtered = allData;
+
+        if(currentFilter === 'BOOKMARK') {
+            filtered = allData.filter(a => bookmarks.includes(a.id));
+        } else if(currentFilter !== 'ALL') {
+            filtered = allData.filter(a => a.cat === currentFilter);
+        }
+
+        filtered = filtered.filter(a => a.title.toLowerCase().includes(term) || a.body.toLowerCase().includes(term));
         renderFeed(filtered);
     }
 
@@ -172,32 +201,80 @@
         const item = allData.find(x => x.id === id);
         if(!item) return;
 
-        const mImg = document.getElementById('m-img');
-        const mTitle = document.getElementById('m-title');
-        const mBody = document.getElementById('m-body');
+        document.getElementById('m-img').src = item.img;
+        document.getElementById('m-title').innerText = item.title;
+        document.getElementById('m-body').innerText = item.body;
+        
         const actionBtn = document.getElementById('actionBtn');
+        const saveBtn = document.getElementById('saveBtn');
 
-        mImg.src = item.img;
-        mTitle.innerText = item.title;
-        mBody.innerText = item.body;
-
+        // Logic Tombol Action
         if(item.cat === "AI PROMPT") {
-            actionBtn.innerText = "📋 Copy Prompt";
-            actionBtn.onclick = () => copyText(item.body);
+            actionBtn.innerHTML = "📋 Copy Prompt";
+            actionBtn.onclick = () => { copyText(item.body); showToast("Prompt Copied!"); };
         } else {
-            actionBtn.innerText = "🔊 Listen Article";
+            actionBtn.innerHTML = "🔊 Listen (US Accent)";
             actionBtn.onclick = () => speak(item.title, item.body);
         }
+
+        // Logic Tombol Save/Bookmark
+        const isSaved = bookmarks.includes(item.id);
+        saveBtn.innerText = isSaved ? "★ Saved" : "☆ Save";
+        saveBtn.onclick = () => toggleBookmark(item.id);
 
         document.getElementById('modal').style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
 
+    function toggleBookmark(id) {
+        if(bookmarks.includes(id)) {
+            bookmarks = bookmarks.filter(b => b !== id);
+            showToast("Removed from Bookmarks");
+        } else {
+            bookmarks.push(id);
+            showToast("Saved to Bookmarks!");
+        }
+        localStorage.setItem('nl_bookmarks', JSON.stringify(bookmarks));
+        applyFilters(); // Update tampilan
+        closeModal();
+    }
+
+    function setTheme(t) {
+        document.body.className = t === 'default' ? '' : 'theme-' + t;
+        showToast(`Theme updated to ${t}`);
+    }
+
+    function speak(t, b) {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(`${t}. ${b}`);
+        msg.lang = 'en-US'; // American Accent
+        const voices = window.speechSynthesis.getVoices();
+        const usVoice = voices.find(v => v.lang === 'en-US' || v.lang === 'en_US');
+        if(usVoice) msg.voice = usVoice;
+        window.speechSynthesis.speak(msg);
+    }
+
     function copyText(text) {
         navigator.clipboard.writeText(text);
-        const toast = document.getElementById('toast');
-        toast.style.display = 'block';
-        setTimeout(() => toast.style.display = 'none', 2000);
+    }
+
+    function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.innerText = msg;
+        t.style.display = 'block';
+        setTimeout(() => t.style.display = 'none', 2000);
+    }
+
+    function shareTo(platform) {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent(document.getElementById('m-title').innerText);
+        const links = {
+            whatsapp: `https://api.whatsapp.com/send?text=${text}%20${url}`,
+            facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+            x: `https://twitter.com/intent/tweet?text=${text}&url=${url}`
+        };
+        if(platform === 'native') { copyText(window.location.href); showToast("Link Copied!"); return; }
+        window.open(links[platform], '_blank');
     }
 
     function closeModal() {
@@ -206,57 +283,12 @@
         window.speechSynthesis.cancel();
     }
 
-    // FUNGSI SPEAK DENGAN AKSEN US ENGLISH
-    function speak(t, b) {
-        window.speechSynthesis.cancel();
-        const msg = new SpeechSynthesisUtterance(`${t}. ${b}`);
-        
-        // Paksa ke US English
-        msg.lang = 'en-US';
-
-        const voices = window.speechSynthesis.getVoices();
-        // Cari suara yang mengandung tag en-US
-        const usVoice = voices.find(v => v.lang === 'en-US' || v.lang === 'en_US');
-
-        if (usVoice) {
-            msg.voice = usVoice;
-        }
-
-        msg.rate = 1;
-        msg.pitch = 1;
-
-        window.speechSynthesis.speak(msg);
-    }
-
-    function shareTo(platform) {
-        const currentUrl = encodeURIComponent(window.location.href);
-        const title = encodeURIComponent(document.getElementById('m-title').innerText);
-        let shareUrl = "";
-        
-        switch(platform) {
-            case 'whatsapp':
-                shareUrl = `https://api.whatsapp.com/send?text=${title}%20${currentUrl}`;
-                break;
-            case 'facebook':
-                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
-                break;
-            case 'x':
-                shareUrl = `https://twitter.com/intent/tweet?text=${title}&url=${currentUrl}`;
-                break;
-            case 'native':
-                copyText(window.location.href);
-                return;
-        }
-        window.open(shareUrl, '_blank', 'noopener,noreferrer');
-    }
-
     window.onclick = (e) => { if (e.target.id === 'modal') closeModal(); };
-    
+
     window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const winScroll = document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById("progress-bar").style.width = scrolled + "%";
+        document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
     });
 
     init();

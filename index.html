@@ -63,6 +63,7 @@
         .card-content { padding: 22px; }
 
         .read-time { font-size: 0.7rem; color: var(--muted); float: right; margin-top: 2px; }
+        .post-date { font-size: 0.65rem; color: var(--muted); display: block; margin-top: 4px; font-weight: 400; opacity: 0.8; }
         .bookmark-badge { position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.6); padding: 6px 10px; border-radius: 10px; backdrop-filter: blur(5px); z-index: 2; color: gold; font-size: 0.8rem; border: 1px solid rgba(255,215,0,0.3); }
 
         /* MODAL */
@@ -80,7 +81,6 @@
 
         .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 2000; box-shadow: 0 10px 30px rgba(0,255,136,0.3); }
         
-        /* ACCESSIBILITY: Visually Hidden for SEO */
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
 </head>
@@ -156,7 +156,7 @@
 
     function getReadTime(text) {
         const words = text.trim().split(/\s+/).length;
-        return Math.ceil(words / 225); // 225 wpm average
+        return Math.ceil(words / 225);
     }
 
     function renderFeed(data) {
@@ -169,6 +169,9 @@
         feed.innerHTML = data.map((a) => {
             const isSaved = bookmarks.includes(a.id);
             const time = getReadTime(a.body);
+            // Format Tanggal (Jika di data.json tidak ada tanggal, tampilkan Today)
+            const postDate = a.date ? a.date : "Recently Updated";
+
             return `
             <article class="card" onclick="openModalById(${a.id})" aria-label="Read article: ${a.title}">
                 ${isSaved ? '<div class="bookmark-badge">★ Saved</div>' : ''}
@@ -176,6 +179,7 @@
                 <div class="card-content">
                     <span class="read-time" aria-label="Reading time">⏲️ ${time} min</span>
                     <small style="color:var(--accent); font-weight:700; text-transform:uppercase; font-size:0.7rem; letter-spacing:1px;">${a.cat}</small>
+                    <time class="post-date">📅 ${postDate}</time>
                     <h3 style="font-size:1.15rem; margin-top:8px; font-family:'Space Grotesk'; line-height:1.4;">${a.title}</h3>
                 </div>
             </article>

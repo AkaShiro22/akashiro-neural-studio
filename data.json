@@ -703,5 +703,14 @@
   "title": "Hyper-Realistic Portrait Prompt",
   "img": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fm=webp",
   "body": "A professional cinematic portrait of a cybernetic entity, neon fiber optics, 8k resolution, photorealistic, intricate textures, shot on 35mm lens --ar 16:9"
+},
+{
+  "id": 89,
+  "cat": "AI PROMPT",
+  "title": "Cinematic ETLE Violation: Night High-Speed Romance",
+  "date": "2026-04-07",
+  "img": "https://yourdomain.com/images/etle-lamborghini.webp",
+  "body": "PROMPT:\nDocumentary-style black and white cinematic photography of a night highway in Indonesia. High-angle tracking shot of a Lamborghini Aventador speeding on a Bandung city toll road. Intense motion blur on the background, road barriers, and other vehicles to emphasize extreme speed. \n\nInside the car, a man and a woman (consistent facial features) sit in the front seats. The male driver in casual attire looks toward the woman with an attentive expression. The woman wears a hijab and smiles softly; they are engaged in a romantic interaction showing a lack of focus on driving. \n\nDramatic lighting from streetlamps and vehicle headlights, creating high contrast and sharp shadows inside the cabin. Light reflections on the hood and windshield. Realistic interior details. \n\nTop overlay: Electronic Traffic Law Enforcement (ETLE) graphic interface with an official information box in Indonesian containing:\n- Title: 'KONFIRMASI PELANGGARAN LALU LINTAS ELEKTRONIK (ETLE NASIONAL)'\n- Location: Bandung\n- Time: Nighttime\n- Vehicle: Lamborghini Aventador\n- Violation: Speeding (210 km/h in an 80 km/h zone)\n- Note: Distracted driving/Driver lack of concentration\n- Fine amount in IDR Rupiah.\n\nTECHNICAL STYLES:\nRealistic, ultra-detailed, 4K resolution, high contrast, cinematic noir, depth of field, sharp focus on the car, fine grain like photojournalism, dynamic composition, dramatic and slightly tense atmosphere. --no color, blur on main object, distorted anatomy, messy text, watermark, low quality.",
+  "author": "Neural Logic Team"
 }
 ]

@@ -712,5 +712,13 @@
   "img": "https://res.cloudinary.com/dtz0urit6/image/upload/f_webp,q_auto/cloudinary-tools-uploads/rccpjm9ahvwjmwmhcqep.webp",
   "body": "PROMPT:\nDocumentary-style black and white cinematic photography of a night highway in Indonesia. High-angle tracking shot of a Lamborghini Aventador speeding on a Bandung city toll road. Intense motion blur on the background, road barriers, and other vehicles to emphasize extreme speed. \n\nInside the car, a man and a woman (consistent facial features) sit in the front seats. The male driver in casual attire looks toward the woman with an attentive expression. The woman wears a hijab and smiles softly; they are engaged in a romantic interaction showing a lack of focus on driving. \n\nDramatic lighting from streetlamps and vehicle headlights, creating high contrast and sharp shadows inside the cabin. Light reflections on the hood and windshield. Realistic interior details. \n\nTop overlay: Electronic Traffic Law Enforcement (ETLE) graphic interface with an official information box in Indonesian containing:\n- Title: 'KONFIRMASI PELANGGARAN LALU LINTAS ELEKTRONIK (ETLE NASIONAL)'\n- Location: Bandung\n- Time: Nighttime\n- Vehicle: Lamborghini Aventador\n- Violation: Speeding (210 km/h in an 80 km/h zone)\n- Note: Distracted driving/Driver lack of concentration\n- Fine amount in IDR Rupiah.\n\nTECHNICAL STYLES:\nRealistic, ultra-detailed, 4K resolution, high contrast, cinematic noir, depth of field, sharp focus on the car, fine grain like photojournalism, dynamic composition, dramatic and slightly tense atmosphere. --no color, blur on main object, distorted anatomy, messy text, watermark, low quality.",
   "author": "Neural Logic Team"
+},
+{
+  "id": 1712520000,
+  "cat": "AI PROMPT",
+  "title": "Nocturnal Silence: Lewandowski Style",
+  "date": "2026-04-07",
+  "img": "https://res.cloudinary.com/dtz0urit6/image/upload/f_webp,q_auto/cloudinary-tools-uploads/i7dv2ldjvbtswvnnszxh.webp",
+  "body": "PROMPT:\nA mesmerizing nocturne painting capturing a city at midnight, reminiscent of the style of Mariusz Lewandowski. The city streets are cloaked in darkness, with only dim lights illuminating the cobblestone pathways. A lonely streetlamp casts a warm, golden glow, while the buildings in the background loom ominously in the shadows. A few silhouettes of trees and billowing curtains add depth to the scene, while the silence is palpable. \n\nSTYLE DETAILS:\nThe oil painting exudes a sense of serenity and solitude, with rich, textured brushstrokes that bring the city to life. Atmospheric lighting, dark surrealism, high contrast, fine art oil on canvas, 8k resolution, cinematic composition. --no bright daylight, modern cars, neon signs, distorted perspective.",
+  "author": "Neural Logic Team"
 }
-]

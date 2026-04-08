@@ -78,7 +78,7 @@
 
         .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 2000; }
         footer { padding: 40px 6%; text-align: center; border-top: var(--border-glass); color: var(--muted); font-size: 0.9rem; }
-        
+
         .article-date { font-size: 0.75rem; color: var(--muted); margin-bottom: 5px; display: block; }
     </style>
 </head>
@@ -160,22 +160,22 @@
     // FUNGSI AUDIO (Optimized English - USA Accent)
     function speak(title, text) {
         if (!window.speechSynthesis) return showToast("Speech not supported");
-        
+
         window.speechSynthesis.cancel();
         const msg = new SpeechSynthesisUtterance(`${title}. ${text}`);
-        msg.lang = 'en-US'; 
-        
+        msg.lang = 'en-US';
+
         const voices = window.speechSynthesis.getVoices();
-        
+
         // Prioritas pencarian suara US (Google US English adalah yang terbaik di Chrome)
-        const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') || 
-                        voices.find(v => v.lang === 'en-US') || 
+        const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') ||
+                        voices.find(v => v.lang === 'en-US') ||
                         voices.find(v => v.lang.startsWith('en'));
-        
+
         if(usVoice) msg.voice = usVoice;
         msg.rate = 0.95; // Sedikit lebih lambat agar artikulasi jelas
-        msg.pitch = 1.0; 
-        
+        msg.pitch = 1.0;
+
         window.speechSynthesis.speak(msg);
         showToast(`🔊 Playing (${usVoice ? 'US Accent' : 'Default'})...`);
     }
@@ -192,7 +192,7 @@
                     <span style="font-size:4rem;">💎</span>
                     <h2 style="color:var(--gold); font-family:'Space Grotesk'; margin:20px 0;">Elite Access</h2>
                     <p style="margin-bottom:30px;">This content is reserved for premium members.</p>
-                    <button class="gold-btn" onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')">UPGRADE NOW</button>
+                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">UPGRADE NOW</button>
                     <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Close</button>
                 </div>`;
         } else {
@@ -212,7 +212,7 @@
                     <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${item.title}" target="_blank" class="share-btn">X</a>
                     <a href="https://api.whatsapp.com/send?text=${item.title}%20${shareUrl}" target="_blank" class="share-btn">WA</a>
                 </div>`;
-            
+
             document.getElementById('actBtn').onclick = () => {
                 if(item.cat === 'AI PROMPT') { navigator.clipboard.writeText(item.body); showToast("Copied!"); }
                 else { speak(item.title, item.body); }
@@ -257,10 +257,10 @@
 
     function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
     function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
-    
-    function closeModal() { 
-        document.getElementById('modal').style.display = 'none'; 
-        document.body.style.overflow = 'auto'; 
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.body.style.overflow = 'auto';
         if(window.speechSynthesis) window.speechSynthesis.cancel();
     }
 
@@ -268,16 +268,16 @@
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
         document.querySelectorAll('.card').forEach(c => obs.observe(c));
     }
-    
+
     window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
-    
+
     // Perbaikan pemuatan suara untuk browser berbasis Chromium
     if(window.speechSynthesis) {
         if (window.speechSynthesis.onvoiceschanged !== undefined) {
             window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
         }
     }
-    
+
     init();
 </script>
 </body>

@@ -125,7 +125,9 @@
     let allData = [];
     let currentFilter = 'ALL';
     let bookmarks = JSON.parse(localStorage.getItem('nl_bookmarks')) || [];
-    let isPremiumUser = false;
+    
+    // CEK STATUS PREMIUM DARI PENYIMPANAN BROWSER
+    let isPremiumUser = localStorage.getItem('nl_premium_active') === 'true';
 
     async function init() {
         try {
@@ -138,7 +140,6 @@
     function renderFeed(data) {
         const feed = document.getElementById('feed');
         feed.innerHTML = data.map((a, i) => {
-            const isSaved = bookmarks.includes(a.id);
             const isPremium = a.premium === true;
             const dateStr = a.date || 'April 2026';
             const priority = i < 4 ? 'fetchpriority="high"' : 'loading="lazy"';
@@ -157,27 +158,35 @@
         observeCards();
     }
 
-    // FUNGSI AUDIO (Optimized English - USA Accent)
+    // FUNGSI UNTUK AKTIVASI PREMIUM DENGAN KODE
+    function checkLicense() {
+        const key = prompt("Enter your Premium License Key:");
+        const VALID_KEY = "NEURAL2026"; // GANTI KODE INI SESUAI KEINGINANMU
+
+        if (key === VALID_KEY) {
+            localStorage.setItem('nl_premium_active', 'true');
+            isPremiumUser = true;
+            showToast("💎 PREMIUM ACTIVATED!");
+            closeModal();
+            applyFilters(); // Refresh tampilan feed
+        } else if (key !== null) {
+            alert("Invalid License Key. Please try again.");
+        }
+    }
+
     function speak(title, text) {
         if (!window.speechSynthesis) return showToast("Speech not supported");
-
         window.speechSynthesis.cancel();
         const msg = new SpeechSynthesisUtterance(`${title}. ${text}`);
         msg.lang = 'en-US';
-
         const voices = window.speechSynthesis.getVoices();
-
-        // Prioritas pencarian suara US (Google US English adalah yang terbaik di Chrome)
-        const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') ||
-                        voices.find(v => v.lang === 'en-US') ||
+        const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') || 
+                        voices.find(v => v.lang === 'en-US') || 
                         voices.find(v => v.lang.startsWith('en'));
-
         if(usVoice) msg.voice = usVoice;
-        msg.rate = 0.95; // Sedikit lebih lambat agar artikulasi jelas
-        msg.pitch = 1.0;
-
+        msg.rate = 0.95;
         window.speechSynthesis.speak(msg);
-        showToast(`🔊 Playing (${usVoice ? 'US Accent' : 'Default'})...`);
+        showToast(`🔊 Playing...`);
     }
 
     function openModalById(id) {
@@ -192,7 +201,8 @@
                     <span style="font-size:4rem;">💎</span>
                     <h2 style="color:var(--gold); font-family:'Space Grotesk'; margin:20px 0;">Elite Access</h2>
                     <p style="margin-bottom:30px;">This content is reserved for premium members.</p>
-                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">UPGRADE NOW</button>
+                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">UPGRADE VIA SAWERIA</button>
+                    <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; background:transparent; border:1px solid var(--gold); color:var(--gold);">I HAVE A KEY</button>
                     <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Close</button>
                 </div>`;
         } else {
@@ -271,7 +281,6 @@
 
     window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
 
-    // Perbaikan pemuatan suara untuk browser berbasis Chromium
     if(window.speechSynthesis) {
         if (window.speechSynthesis.onvoiceschanged !== undefined) {
             window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };

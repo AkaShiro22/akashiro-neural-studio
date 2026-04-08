@@ -699,6 +699,7 @@
 {
   "id": 88,
   "cat": "AI PROMPT",
+  "premium": false,
   "date": "April 06, 2026",
   "title": "Hyper-Realistic Portrait Prompt",
   "img": "https://image2url.com/r2/default/images/1775608251814-21d9950b-5b71-421c-86a4-0bc855b25060.jpg",
@@ -707,6 +708,7 @@
 {
   "id": 89,
   "cat": "AI PROMPT",
+  "premium": false,
   "title": "Cinematic ETLE Violation: Night High-Speed Romance",
   "date": "2026-04-07",
   "img": "https://image2url.com/r2/default/images/1775604522276-ac996d4f-ee51-4ea4-aaf0-e793171dc08b.jpg",
@@ -716,6 +718,7 @@
 {
   "id": 1712520000,
   "cat": "AI PROMPT",
+  "premium": false,
   "title": "Nocturnal Silence: Lewandowski Style",
   "date": "2026-04-07",
   "img": "https://image2url.com/r2/default/images/1775604058603-e5024063-1854-4dc5-9531-73cab809897d.jpg",
@@ -727,15 +730,17 @@
     "cat": "AI PROMPT",
     "premium": true, 
     "title": "Hyper-Realistic Cyberpunk City",
+    "date": "2026-04-08",
     "img": "https://imgbb.com/your-image.webp",
     "body": "Male superhero made of shadows and neon green energy, cat-like silhouette, glowing eyes, standing in futuristic city, dark atmosphere, cinematic lighting, ultra detailed, 8K"
   },
   {
     "id": 2,
-    "cat": "NEURAL TECH",
+    "cat": "AI PROMPT"",
     "premium": false,
     "title": "Update AI 2026",
-    "img": "https://imgbb.com/free-image.webp",
-    "body": "Artikel gratis untuk publik."
+    "date": "2026-04-08",
+    "img": "https://image2url.com/r2/default/images/1775620054855-7df8f3b4-4429-4606-b19c-3883bbaa42f3.jpg",
+    "body": "Medieval vilage, full moon, plague doctor walking on the streets, dark night, tranquility in the style of Yves Klein, abstract"
   }
 ]

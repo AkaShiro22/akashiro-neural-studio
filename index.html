@@ -157,25 +157,27 @@
         observeCards();
     }
 
-    // FUNGSI AUDIO (English - USA Accent)
+    // FUNGSI AUDIO (Optimized English - USA Accent)
     function speak(title, text) {
         if (!window.speechSynthesis) return showToast("Speech not supported");
         
         window.speechSynthesis.cancel();
         const msg = new SpeechSynthesisUtterance(`${title}. ${text}`);
+        msg.lang = 'en-US'; 
         
         const voices = window.speechSynthesis.getVoices();
-        // Mencari suara khusus English US
-        const usVoice = voices.find(v => v.lang === 'en-US' && v.name.includes('Google')) || 
+        
+        // Prioritas pencarian suara US (Google US English adalah yang terbaik di Chrome)
+        const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') || 
                         voices.find(v => v.lang === 'en-US') || 
                         voices.find(v => v.lang.startsWith('en'));
         
         if(usVoice) msg.voice = usVoice;
-        msg.rate = 1.0; 
-        msg.pitch = 1.1; // Sedikit tinggi untuk kesan AI robotik futuristik
+        msg.rate = 0.95; // Sedikit lebih lambat agar artikulasi jelas
+        msg.pitch = 1.0; 
         
         window.speechSynthesis.speak(msg);
-        showToast("🔊 Playing (US Accent)...");
+        showToast(`🔊 Playing (${usVoice ? 'US Accent' : 'Default'})...`);
     }
 
     function openModalById(id) {
@@ -269,9 +271,11 @@
     
     window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
     
-    // Pastikan suara termuat di browser (terutama Chrome)
+    // Perbaikan pemuatan suara untuk browser berbasis Chromium
     if(window.speechSynthesis) {
-        window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
+        }
     }
     
     init();

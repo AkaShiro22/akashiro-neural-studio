@@ -153,6 +153,25 @@
         observeCards();
     }
 
+    // FUNGSI AUDIO (English Speak)
+    function speak(title, text) {
+        if (!window.speechSynthesis) return showToast("Speech not supported");
+        
+        window.speechSynthesis.cancel(); // Stop audio sebelumnya
+        const msg = new SpeechSynthesisUtterance(`${title}. ${text}`);
+        
+        // Cari suara Bahasa Inggris (US/UK)
+        const voices = window.speechSynthesis.getVoices();
+        const enVoice = voices.find(v => v.lang.startsWith('en')) || voices[0];
+        
+        if(enVoice) msg.voice = enVoice;
+        msg.rate = 0.9; // Kecepatan sedikit lebih lambat agar futuristik
+        msg.pitch = 1;
+        
+        window.speechSynthesis.speak(msg);
+        showToast("🔊 Audio Playing...");
+    }
+
     function openModalById(id) {
         const item = allData.find(x => x.id === id);
         const inner = document.getElementById('modal-inner');
@@ -205,7 +224,7 @@
     function filterTab(cat) {
         currentFilter = cat;
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        event.target.classList.add('active');
+        if(event) event.target.classList.add('active');
         applyFilters();
     }
 
@@ -228,12 +247,22 @@
 
     function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
     function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
-    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; if(window.speechSynthesis) window.speechSynthesis.cancel(); }
+    
+    function closeModal() { 
+        document.getElementById('modal').style.display = 'none'; 
+        document.body.style.overflow = 'auto'; 
+        if(window.speechSynthesis) window.speechSynthesis.cancel(); // Matikan audio saat modal tutup
+    }
+
     function observeCards() {
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
         document.querySelectorAll('.card').forEach(c => obs.observe(c));
     }
     window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
+    
+    // Pre-load voices untuk Chrome/Mobile
+    if(window.speechSynthesis) window.speechSynthesis.getVoices();
+    
     init();
 </script>
 </body>

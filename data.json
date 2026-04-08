@@ -699,10 +699,10 @@
 {
   "id": 88,
   "cat": "AI PROMPT",
-  "premium": false,
+  "premium": true,
   "date": "April 06, 2026",
   "title": "Hyper-Realistic Portrait Prompt",
-  "img": "https://image2url.com/r2/default/images/1775608251814-21d9950b-5b71-421c-86a4-0bc855b25060.jpg",
+  "img": "https://image2url.com/r2/default/images/1775636859052-109652d5-5f9f-4389-a7c6-45a3daf6eaef.webp",
   "body": "A professional cinematic portrait of a cybernetic entity, neon fiber optics, 8k resolution, photorealistic, intricate textures, shot on 35mm lens --ar 16:9"
 },
 {

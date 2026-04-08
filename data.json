@@ -733,5 +733,14 @@
     "date": "2026-04-08",
     "img": "https://imgbb.com/your-image.webp",
     "body": "Male superhero made of shadows and neon green energy, cat-like silhouette, glowing eyes, standing in futuristic city, dark atmosphere, cinematic lighting, ultra detailed, 8K"
+  },
+{
+    "id": 1,
+    "cat": "AI PROMPT",
+    "premium": false, 
+    "title": "Hyper-Realistic Cyberpunk City",
+    "date": "2026-04-08",
+    "img": "https://imgbb.com/your-image.webp",
+    "body": "Male superhero made of shadows and neon green energy, cat-like silhouette, glowing eyes, standing in futuristic city, dark atmosphere, cinematic lighting, ultra detailed, 8K"
   }
 ]

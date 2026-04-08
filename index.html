@@ -15,10 +15,9 @@
     <meta property="og:image" content="https://yourdomain.com/social-preview.jpg">
 
     <link rel="canonical" href="https://neurallogic.eu.cc/">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap&font-display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -54,19 +53,18 @@
         .tab-btn.premium-tab { border: 1px solid var(--gold); color: var(--gold); }
         .tab-btn.premium-tab.active { background: var(--gold); color: #000; }
 
-        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px 6% 80px; min-height: 500px; /* Cegah lonjakan CLS */ }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px 6% 80px; }
 
         .card, .skeleton { background: var(--card); border-radius: 26px; overflow: hidden; border: var(--border-glass); position: relative; }
         .card { opacity: 0; transform: translateY(30px); cursor: pointer; transition: 0.4s; }
         .card.visible { opacity: 1; transform: translateY(0); }
-        
-        /* 2. Optimasi Gambar: Ukuran tetap untuk CLS 0 */
-        .card-img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; background: #111; display: block; }
+        .card-img { width: 100%; height: 190px; object-fit: cover; aspect-ratio: 16/9; }
         .card-content { padding: 22px; }
 
-        .premium-badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; padding: 4px 12px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; z-index: 2; }
+        /* Premium Assets */
+        .premium-badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; padding: 4px 12px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; z-index: 2; box-shadow: 0 0 15px rgba(255, 204, 0, 0.4); }
         .lock-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 3; }
-        .lock-icon { font-size: 2.5rem; }
+        .lock-icon { font-size: 2.5rem; filter: drop-shadow(0 0 10px var(--gold)); }
 
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
         .m-content { background: #0f0f16; max-width: 680px; margin: 40px auto; border-radius: 32px; padding: 35px; border: var(--border-glass); }
@@ -88,13 +86,13 @@
         <span class="logo-box">NL</span>NEURAL LOGIC
     </a>
     <div class="theme-switches">
-        <button class="dot" style="background:#00ff88" onclick="setTheme('default')" aria-label="Default Theme"></button>
-        <button class="dot" style="background:#ff00ff" onclick="setTheme('cyber')" aria-label="Cyber Theme"></button>
-        <button class="dot" style="background:#00d9ff" onclick="setTheme('ocean')" aria-label="Ocean Theme"></button>
+        <div class="dot" style="background:#00ff88" onclick="setTheme('default')"></div>
+        <div class="dot" style="background:#ff00ff" onclick="setTheme('cyber')"></div>
+        <div class="dot" style="background:#00d9ff" onclick="setTheme('ocean')"></div>
     </div>
 </nav>
 
-<div class="tabs" role="tablist">
+<div class="tabs">
     <button class="tab-btn active" onclick="filterTab('ALL')">All Trends</button>
     <button class="tab-btn" onclick="filterTab('NEURAL TECH')">Tech Hub</button>
     <button class="tab-btn" onclick="filterTab('AI PROMPT')">AI Library</button>
@@ -103,13 +101,14 @@
 </div>
 
 <div class="search-container" style="padding: 0 6%; margin-bottom: 20px;">
-    <input type="text" id="searchInput" placeholder="Search neural database..." aria-label="Search" style="width:100%; padding:16px; border-radius:18px; background:var(--card); border:var(--border-glass); color:#fff; outline:none;">
+    <input type="text" id="searchInput" placeholder="Search neural database..." style="width:100%; padding:16px; border-radius:18px; background:var(--card); border:var(--border-glass); color:#fff; outline:none;">
 </div>
 
 <main id="feed"></main>
 
-<div id="modal" class="modal" role="dialog" aria-modal="true">
-    <div class="m-content" id="modal-inner"></div>
+<div id="modal" class="modal">
+    <div class="m-content" id="modal-inner">
+        </div>
 </div>
 
 <footer>
@@ -121,9 +120,8 @@
     let allData = [];
     let currentFilter = 'ALL';
     let bookmarks = JSON.parse(localStorage.getItem('nl_bookmarks')) || [];
-    let isPremiumUser = false;
+    let isPremiumUser = false; // Logika untuk mengunci/membuka (secara frontend)
 
-    // Prefetch data segera
     async function init() {
         try {
             const res = await fetch('data.json');
@@ -137,15 +135,12 @@
         feed.innerHTML = data.map((a, i) => {
             const isSaved = bookmarks.includes(a.id);
             const isPremium = a.premium === true;
-            // Gunakan fetchpriority tinggi untuk konten LCP (konten pertama)
-            const priority = i < 2 ? 'fetchpriority="high"' : 'loading="lazy"';
-            
             return `
             <article class="card" onclick="openModalById(${a.id})">
                 ${isPremium ? '<div class="premium-badge">PREMIUM</div>' : ''}
-                ${isPremium && !isPremiumUser ? '<div class="lock-overlay"><span class="lock-icon">🔒</span></div>' : ''}
+                ${isPremium && !isPremiumUser ? '<div class="lock-overlay"><span class="lock-icon">🔒</span><small style="color:var(--gold); margin-top:10px; font-weight:800;">LOCKED</small></div>' : ''}
                 ${isSaved ? '<div class="bookmark-badge">★ Saved</div>' : ''}
-                <img src="${a.img}" class="card-img" ${priority} alt="${a.title}" width="400" height="225">
+                <img src="${a.img}" class="card-img" loading="lazy">
                 <div class="card-content">
                     <small style="color:var(--accent); font-weight:700; text-transform:uppercase;">${a.cat}</small>
                     <h3 style="margin-top:8px; font-family:'Space Grotesk';">${a.title}</h3>
@@ -158,10 +153,30 @@
     function openModalById(id) {
         const item = allData.find(x => x.id === id);
         const inner = document.getElementById('modal-inner');
+
         if (item.premium && !isPremiumUser) {
-            inner.innerHTML = `<div style="text-align:center; padding:20px;"><h2 style="color:var(--gold);">💎 Locked Content</h2><button class="gold-btn" onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')">Unlock Now</button></div>`;
+            inner.innerHTML = `
+                <div style="text-align:center; padding:20px;">
+                    <span style="font-size:4rem;">💎</span>
+                    <h2 style="color:var(--gold); font-family:'Space Grotesk'; margin:20px 0;">Elite Prompt Access</h2>
+                    <p style="color:var(--text); line-height:1.6; margin-bottom:30px;">This pro-level prompt is locked. Upgrade to Premium for full access to our secret neural database.</p>
+                    <button class="gold-btn" onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')">UNLOCK ALL ACCESS — $5/mo</button>
+                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Maybe Later</button>
+                </div>`;
         } else {
-            inner.innerHTML = `<img src="${item.img}" style="width:100%; border-radius:22px; aspect-ratio:16/9; object-fit:cover;"><h2 style="color:var(--accent); margin-top:20px;">${item.title}</h2><p style="margin-top:15px; white-space:pre-wrap;">${item.body}</p><button onclick="closeModal()" class="sec-btn" style="margin-top:20px; width:100%;">Close</button>`;
+            inner.innerHTML = `
+                <img src="${item.img}" style="width:100%; border-radius:22px; margin-bottom:25px; aspect-ratio:16/9; object-fit:cover;">
+                <h2 style="color:var(--accent); font-family:'Space Grotesk'; margin-bottom:15px;">${item.title}</h2>
+                <p style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap;">${item.body}</p>
+                <div class="btn-group" style="display:flex; gap:10px;">
+                    <button id="actBtn" class="primary-btn">${item.cat === 'AI PROMPT' ? '📋 Copy Prompt' : '🔊 Listen'}</button>
+                    <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★ Saved' : '☆ Save'}</button>
+                    <button onclick="closeModal()" class="sec-btn">Close</button>
+                </div>`;
+            document.getElementById('actBtn').onclick = () => {
+                if(item.cat === 'AI PROMPT') { navigator.clipboard.writeText(item.body); showToast("Prompt Copied!"); }
+                else { speak(item.title, item.body); }
+            };
         }
         document.getElementById('modal').style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -183,17 +198,22 @@
         renderFeed(f.filter(a => a.title.toLowerCase().includes(term)));
     }
 
-    document.getElementById('searchInput').addEventListener('input', applyFilters, {passive: true});
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+    function toggleBookmark(id) {
+        bookmarks = bookmarks.includes(id) ? bookmarks.filter(b => b !== id) : [...bookmarks, id];
+        localStorage.setItem('nl_bookmarks', JSON.stringify(bookmarks));
+        applyFilters(); closeModal();
+    }
 
     function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
     function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
-    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
-    
+    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; window.speechSynthesis.cancel(); }
     function observeCards() {
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
         document.querySelectorAll('.card').forEach(c => obs.observe(c));
     }
-
+    window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
     init();
 </script>
 </body>

@@ -125,8 +125,6 @@
     let allData = [];
     let currentFilter = 'ALL';
     let bookmarks = JSON.parse(localStorage.getItem('nl_bookmarks')) || [];
-    
-    // CEK STATUS PREMIUM DARI PENYIMPANAN BROWSER
     let isPremiumUser = localStorage.getItem('nl_premium_active') === 'true';
 
     async function init() {
@@ -158,19 +156,23 @@
         observeCards();
     }
 
-    // FUNGSI UNTUK AKTIVASI PREMIUM DENGAN KODE
+    // GERTAKAN KE USER PREMIUM (FAKE SYSTEM WARNING)
     function checkLicense() {
-        const key = prompt("Enter your Premium License Key:");
-        const VALID_KEY = "NEURAL2026"; // GANTI KODE INI SESUAI KEINGINANMU
+        const key = prompt("CRITICAL: Enter Premium Access Key to avoid system lockout.");
+        const VALID_KEY = "NEURAL2026"; 
 
         if (key === VALID_KEY) {
             localStorage.setItem('nl_premium_active', 'true');
             isPremiumUser = true;
-            showToast("💎 PREMIUM ACTIVATED!");
+            showToast("💎 ACCESS GRANTED. WELCOME.");
             closeModal();
-            applyFilters(); // Refresh tampilan feed
+            applyFilters();
         } else if (key !== null) {
-            alert("Invalid License Key. Please try again.");
+            // Rangkaian Gertakan
+            alert("⚠️ SECURITY BREACH DETECTED!");
+            alert("Unauthorized access attempt from IP: " + (Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + ".1.102"));
+            alert("System tracing active... Please contact administrator or buy a valid key to stop this process.");
+            showToast("🚨 SYSTEM TRACKING ACTIVE");
         }
     }
 
@@ -180,9 +182,7 @@
         const msg = new SpeechSynthesisUtterance(`${title}. ${text}`);
         msg.lang = 'en-US';
         const voices = window.speechSynthesis.getVoices();
-        const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') || 
-                        voices.find(v => v.lang === 'en-US') || 
-                        voices.find(v => v.lang.startsWith('en'));
+        const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') || voices.find(v => v.lang === 'en-US');
         if(usVoice) msg.voice = usVoice;
         msg.rate = 0.95;
         window.speechSynthesis.speak(msg);
@@ -193,22 +193,20 @@
         const item = allData.find(x => x.id === id);
         const inner = document.getElementById('modal-inner');
         const shareUrl = window.location.origin + window.location.pathname;
-        const dateStr = item.date || 'April 8, 2026';
 
         if (item.premium && !isPremiumUser) {
             inner.innerHTML = `
                 <div style="text-align:center; padding:20px;">
-                    <span style="font-size:4rem;">💎</span>
-                    <h2 style="color:var(--gold); font-family:'Space Grotesk'; margin:20px 0;">Elite Access</h2>
-                    <p style="margin-bottom:30px;">This content is reserved for premium members.</p>
-                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">UPGRADE VIA SAWERIA</button>
-                    <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; background:transparent; border:1px solid var(--gold); color:var(--gold);">I HAVE A KEY</button>
-                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Close</button>
+                    <span style="font-size:4rem; filter: drop-shadow(0 0 15px red);">🚫</span>
+                    <h2 style="color:#ff4444; font-family:'Space Grotesk'; margin:20px 0;">ACCESS DENIED</h2>
+                    <p style="margin-bottom:30px; color:var(--muted);">Unauthorized access to neural database is strictly prohibited.</p>
+                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">GET OFFICIAL KEY</button>
+                    <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; border:1px solid #ff4444; color:#ff4444;">BYPASS SYSTEM (REQUIRED KEY)</button>
+                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Exit Secure Zone</button>
                 </div>`;
         } else {
             inner.innerHTML = `
                 <img src="${item.img}" style="width:100%; border-radius:22px; margin-bottom:25px; aspect-ratio:16/9; object-fit:cover;">
-                <span class="article-date" style="margin-bottom:10px; display:block;">PUBLISHED: ${dateStr}</span>
                 <h2 style="color:var(--accent); font-family:'Space Grotesk'; margin-bottom:15px;">${item.title}</h2>
                 <p style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap;">${item.body}</p>
                 <div class="btn-group" style="display:flex; gap:10px;">
@@ -218,8 +216,6 @@
                 </div>
                 <div class="share-group">
                     <button onclick="shareNative('${item.title}', '${shareUrl}')" class="share-btn">📲 Share</button>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn">FB</a>
-                    <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${item.title}" target="_blank" class="share-btn">X</a>
                     <a href="https://api.whatsapp.com/send?text=${item.title}%20${shareUrl}" target="_blank" class="share-btn">WA</a>
                 </div>`;
 
@@ -233,12 +229,8 @@
     }
 
     async function shareNative(title, url) {
-        if (navigator.share) {
-            try { await navigator.share({ title: title, url: url }); } catch (err) {}
-        } else {
-            navigator.clipboard.writeText(url);
-            showToast("Link Copied!");
-        }
+        if (navigator.share) { try { await navigator.share({ title: title, url: url }); } catch (err) {} }
+        else { navigator.clipboard.writeText(url); showToast("Link Copied!"); }
     }
 
     function filterTab(cat) {
@@ -267,12 +259,7 @@
 
     function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
     function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
-
-    function closeModal() {
-        document.getElementById('modal').style.display = 'none';
-        document.body.style.overflow = 'auto';
-        if(window.speechSynthesis) window.speechSynthesis.cancel();
-    }
+    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; if(window.speechSynthesis) window.speechSynthesis.cancel(); }
 
     function observeCards() {
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
@@ -280,13 +267,6 @@
     }
 
     window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
-
-    if(window.speechSynthesis) {
-        if (window.speechSynthesis.onvoiceschanged !== undefined) {
-            window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
-        }
-    }
-
     init();
 </script>
 </body>

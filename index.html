@@ -33,16 +33,15 @@
 
         body.theme-cyber { --accent: #ff00ff; --gradient: linear-gradient(135deg, #ff00ff 0%, #7000ff 100%); }
         body.theme-ocean { --accent: #00d9ff; --gradient: linear-gradient(135deg, #00d9ff 0%, #0044ff 100%); }
-
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; min-height: 100vh; transition: background 0.4s; }
 
         #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 0%; z-index: 1001; transition: width 0.2s; }
-
+        
         nav { position: sticky; top: 0; z-index: 100; padding: 12px 6%; background: rgba(5, 5, 9, 0.8); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; border-bottom: var(--border-glass); }
         .logo { font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; display: flex; align-items: center; }
         .logo-box { padding: 4px 10px; background: var(--gradient); color: #000; border-radius: 8px; margin-right: 8px; }
-
         .theme-switches { display: flex; gap: 15px; padding: 5px; }
         .dot { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid rgba(255,255,255,0.2); transition: 0.2s; }
         .dot:hover { transform: scale(1.2); box-shadow: 0 0 10px var(--accent); }
@@ -54,220 +53,215 @@
         .tab-btn.premium-tab.active { background: var(--gold); color: #000; }
 
         #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px 6% 80px; min-height: 500px; }
-
         .card, .skeleton { background: var(--card); border-radius: 26px; overflow: hidden; border: var(--border-glass); position: relative; }
         .card { opacity: 0; transform: translateY(30px); cursor: pointer; transition: 0.4s; }
         .card.visible { opacity: 1; transform: translateY(0); }
         .card-img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; display: block; background: #111; }
         .card-content { padding: 22px; }
-
+        
+        .article-date { font-size: 0.75rem; color: var(--muted); margin-bottom: 8px; display: block; font-weight: 600; letter-spacing: 0.5px; }
+        
         .premium-badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; padding: 4px 12px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; z-index: 2; box-shadow: 0 0 15px rgba(255, 204, 0, 0.4); }
         .lock-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 3; }
         .lock-icon { font-size: 2.5rem; filter: drop-shadow(0 0 10px var(--gold)); }
-
+        
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
         .m-content { background: #0f0f16; max-width: 680px; margin: 40px auto; border-radius: 32px; padding: 35px; border: var(--border-glass); }
-
         .primary-btn { background: var(--accent); color:#000; padding:16px; border:none; border-radius:16px; font-weight:700; cursor:pointer; flex: 2; }
         .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; flex: 1; text-decoration: none; text-align: center; }
         .gold-btn { background: var(--gold); color: #000; width: 100%; padding: 18px; border: none; border-radius: 16px; font-weight: 800; cursor: pointer; margin-top: 20px; font-size: 1.1rem; }
-
         .share-group { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; border-top: var(--border-glass); padding-top: 20px; }
         .share-btn { background: #1e1e26; border: var(--border-glass); color: #fff; padding: 10px 16px; border-radius: 12px; cursor: pointer; font-size: 0.8rem; font-weight: 700; text-decoration: none; transition: 0.2s; }
         .share-btn:hover { background: var(--accent); color: #000; }
-
+        
         .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 2000; }
         footer { padding: 40px 6%; text-align: center; border-top: var(--border-glass); color: var(--muted); font-size: 0.9rem; }
-
-        .article-date { font-size: 0.75rem; color: var(--muted); margin-bottom: 5px; display: block; }
     </style>
 </head>
 <body>
+    <div id="progress-bar"></div>
+    <div id="toast" class="toast">Action Confirmed!</div>
 
-<div id="progress-bar"></div>
-<div id="toast" class="toast">Action Confirmed!</div>
+    <nav>
+        <a href="/" class="logo">
+            <span class="logo-box">NL</span>NEURAL LOGIC
+        </a>
+        <div class="theme-switches">
+            <div class="dot" style="background:#00ff88" onclick="setTheme('default')"></div>
+            <div class="dot" style="background:#ff00ff" onclick="setTheme('cyber')"></div>
+            <div class="dot" style="background:#00d9ff" onclick="setTheme('ocean')"></div>
+        </div>
+    </nav>
 
-<nav>
-    <a href="/" class="logo">
-        <span class="logo-box">NL</span>NEURAL LOGIC
-    </a>
-    <div class="theme-switches">
-        <div class="dot" style="background:#00ff88" onclick="setTheme('default')"></div>
-        <div class="dot" style="background:#ff00ff" onclick="setTheme('cyber')"></div>
-        <div class="dot" style="background:#00d9ff" onclick="setTheme('ocean')"></div>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="filterTab('ALL')">All Trends</button>
+        <button class="tab-btn" onclick="filterTab('NEURAL TECH')">Tech Hub</button>
+        <button class="tab-btn" onclick="filterTab('AI PROMPT')">AI Library</button>
+        <button class="tab-btn premium-tab" onclick="filterTab('PREMIUM')">💎 PREMIUM</button>
+        <button class="tab-btn" onclick="filterTab('BOOKMARK')" style="color: var(--accent)">★ Favorites</button>
     </div>
-</nav>
 
-<div class="tabs">
-    <button class="tab-btn active" onclick="filterTab('ALL')">All Trends</button>
-    <button class="tab-btn" onclick="filterTab('NEURAL TECH')">Tech Hub</button>
-    <button class="tab-btn" onclick="filterTab('AI PROMPT')">AI Library</button>
-    <button class="tab-btn premium-tab" onclick="filterTab('PREMIUM')">💎 PREMIUM</button>
-    <button class="tab-btn" onclick="filterTab('BOOKMARK')" style="color: var(--accent)">★ Favorites</button>
-</div>
+    <div class="search-container" style="padding: 0 6%; margin-bottom: 20px;">
+        <input type="text" id="searchInput" placeholder="Search neural database..." style="width:100%; padding:16px; border-radius:18px; background:var(--card); border:var(--border-glass); color:#fff; outline:none;">
+    </div>
 
-<div class="search-container" style="padding: 0 6%; margin-bottom: 20px;">
-    <input type="text" id="searchInput" placeholder="Search neural database..." style="width:100%; padding:16px; border-radius:18px; background:var(--card); border:var(--border-glass); color:#fff; outline:none;">
-</div>
+    <main id="feed"></main>
 
-<main id="feed"></main>
+    <div id="modal" class="modal">
+        <div class="m-content" id="modal-inner"></div>
+    </div>
 
-<div id="modal" class="modal">
-    <div class="m-content" id="modal-inner"></div>
-</div>
+    <footer>
+        <p>&copy; 2026 NEURAL LOGIC. All Rights Reserved.</p>
+        <p style="margin-top: 10px; color: var(--accent);">SYSTEM STATUS: OPERATIONAL</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2026 NEURAL LOGIC. All Rights Reserved.</p>
-    <p style="margin-top: 10px; color: var(--accent);">SYSTEM STATUS: OPERATIONAL</p>
-</footer>
+    <script>
+        let allData = [];
+        let currentFilter = 'ALL';
+        let bookmarks = JSON.parse(localStorage.getItem('nl_bookmarks')) || [];
+        let isPremiumUser = localStorage.getItem('nl_premium_active') === 'true';
 
-<script>
-    let allData = [];
-    let currentFilter = 'ALL';
-    let bookmarks = JSON.parse(localStorage.getItem('nl_bookmarks')) || [];
-    let isPremiumUser = localStorage.getItem('nl_premium_active') === 'true';
+        async function init() {
+            try {
+                const res = await fetch('data.json');
+                allData = (await res.json()).reverse();
+                renderFeed(allData);
+            } catch (e) { console.error("Database offline."); }
+        }
 
-    async function init() {
-        try {
-            const res = await fetch('data.json');
-            allData = (await res.json()).reverse();
-            renderFeed(allData);
-        } catch (e) { console.error("Database offline."); }
-    }
+        function renderFeed(data) {
+            const feed = document.getElementById('feed');
+            feed.innerHTML = data.map((a, i) => {
+                const isPremium = a.premium === true;
+                const dateStr = a.date || 'April 2026';
+                const priority = i < 4 ? 'fetchpriority="high"' : 'loading="lazy"';
+                return `
+                <article class="card" onclick="openModalById(${a.id})">
+                    ${isPremium ? '<div class="premium-badge">PREMIUM</div>' : ''}
+                    ${isPremium && !isPremiumUser ? '<div class="lock-overlay"><span class="lock-icon">🔒</span></div>' : ''}
+                    <img src="${a.img}" class="card-img" ${priority} width="400" height="225" alt="${a.title}">
+                    <div class="card-content">
+                        <span class="article-date">📅 ${dateStr}</span>
+                        <small style="color:var(--accent); font-weight:700; text-transform:uppercase;">${a.cat}</small>
+                        <h3 style="margin-top:8px; font-family:'Space Grotesk'; line-height: 1.3;">${a.title}</h3>
+                    </div>
+                </article>
+            `}).join('');
+            observeCards();
+        }
 
-    function renderFeed(data) {
-        const feed = document.getElementById('feed');
-        feed.innerHTML = data.map((a, i) => {
-            const isPremium = a.premium === true;
-            const dateStr = a.date || 'April 2026';
-            const priority = i < 4 ? 'fetchpriority="high"' : 'loading="lazy"';
-            return `
-            <article class="card" onclick="openModalById(${a.id})">
-                ${isPremium ? '<div class="premium-badge">PREMIUM</div>' : ''}
-                ${isPremium && !isPremiumUser ? '<div class="lock-overlay"><span class="lock-icon">🔒</span></div>' : ''}
-                <img src="${a.img}" class="card-img" ${priority} width="400" height="225" alt="${a.title}">
-                <div class="card-content">
-                    <span class="article-date">📅 ${dateStr}</span>
-                    <small style="color:var(--accent); font-weight:700; text-transform:uppercase;">${a.cat}</small>
-                    <h3 style="margin-top:8px; font-family:'Space Grotesk';">${a.title}</h3>
-                </div>
-            </article>
-        `}).join('');
-        observeCards();
-    }
+        function checkLicense() {
+            const key = prompt("CRITICAL: Enter Premium Access Key to avoid system lockout.");
+            const VALID_KEY = "NEURAL2026";
 
-    // GERTAKAN KE USER PREMIUM (FAKE SYSTEM WARNING)
-    function checkLicense() {
-        const key = prompt("CRITICAL: Enter Premium Access Key to avoid system lockout.");
-        const VALID_KEY = "NEURAL2026"; 
+            if (key === VALID_KEY) {
+                localStorage.setItem('nl_premium_active', 'true');
+                isPremiumUser = true;
+                showToast("💎 ACCESS GRANTED. WELCOME.");
+                closeModal();
+                applyFilters();
+            } else if (key !== null) {
+                alert("⚠️ SECURITY BREACH DETECTED!");
+                alert("Unauthorized access attempt from IP: " + (Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + ".1.102"));
+                alert("System tracing active... Please contact administrator or buy a valid key to stop this process.");
+                showToast("🚨 SYSTEM TRACKING ACTIVE");
+            }
+        }
 
-        if (key === VALID_KEY) {
-            localStorage.setItem('nl_premium_active', 'true');
-            isPremiumUser = true;
-            showToast("💎 ACCESS GRANTED. WELCOME.");
-            closeModal();
+        function speak(title, text) {
+            if (!window.speechSynthesis) return showToast("Speech not supported");
+            window.speechSynthesis.cancel();
+            const msg = new SpeechSynthesisUtterance(`${title}. ${text}`);
+            msg.lang = 'en-US';
+            const voices = window.speechSynthesis.getVoices();
+            const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') || voices.find(v => v.lang === 'en-US');
+            if(usVoice) msg.voice = usVoice;
+            msg.rate = 0.95;
+            window.speechSynthesis.speak(msg);
+            showToast(`🔊 Playing...`);
+        }
+
+        function openModalById(id) {
+            const item = allData.find(x => x.id === id);
+            const inner = document.getElementById('modal-inner');
+            const shareUrl = window.location.origin + window.location.pathname;
+
+            if (item.premium && !isPremiumUser) {
+                inner.innerHTML = `
+                    <div style="text-align:center; padding:20px;">
+                        <span style="font-size:4rem; filter: drop-shadow(0 0 15px red);">🚫</span>
+                        <h2 style="color:#ff4444; font-family:'Space Grotesk'; margin:20px 0;">ACCESS DENIED</h2>
+                        <p style="margin-bottom:30px; color:var(--muted);">Unauthorized access to neural database is strictly prohibited.</p>
+                        <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">GET OFFICIAL KEY</button>
+                        <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; border:1px solid #ff4444; color:#ff4444;">BYPASS SYSTEM (REQUIRED KEY)</button>
+                        <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Exit Secure Zone</button>
+                    </div>`;
+            } else {
+                inner.innerHTML = `
+                    <img src="${item.img}" style="width:100%; border-radius:22px; margin-bottom:25px; aspect-ratio:16/9; object-fit:cover;">
+                    <span class="article-date">📅 ${item.date || 'April 2026'}</span>
+                    <h2 style="color:var(--accent); font-family:'Space Grotesk'; margin-bottom:15px;">${item.title}</h2>
+                    <p style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap;">${item.body}</p>
+                    <div class="btn-group" style="display:flex; gap:10px;">
+                        <button id="actBtn" class="primary-btn">${item.cat === 'AI PROMPT' ? '📋 Copy' : '🔊 Listen'}</button>
+                        <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★' : '☆'}</button>
+                        <button onclick="closeModal()" class="sec-btn">Close</button>
+                    </div>
+                    <div class="share-group">
+                        <button onclick="shareNative('${item.title}', '${shareUrl}')" class="share-btn">📲 Share</button>
+                        <a href="https://api.whatsapp.com/send?text=${item.title}%20${shareUrl}" target="_blank" class="share-btn">WA</a>
+                    </div>`;
+
+                document.getElementById('actBtn').onclick = () => {
+                    if(item.cat === 'AI PROMPT') { navigator.clipboard.writeText(item.body); showToast("Copied!"); }
+                    else { speak(item.title, item.body); }
+                };
+            }
+            document.getElementById('modal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        async function shareNative(title, url) {
+            if (navigator.share) { try { await navigator.share({ title: title, url: url }); } catch (err) {} }
+            else { navigator.clipboard.writeText(url); showToast("Link Copied!"); }
+        }
+
+        function filterTab(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            if(event && event.target.classList.contains('tab-btn')) event.target.classList.add('active');
             applyFilters();
-        } else if (key !== null) {
-            // Rangkaian Gertakan
-            alert("⚠️ SECURITY BREACH DETECTED!");
-            alert("Unauthorized access attempt from IP: " + (Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + ".1.102"));
-            alert("System tracing active... Please contact administrator or buy a valid key to stop this process.");
-            showToast("🚨 SYSTEM TRACKING ACTIVE");
         }
-    }
 
-    function speak(title, text) {
-        if (!window.speechSynthesis) return showToast("Speech not supported");
-        window.speechSynthesis.cancel();
-        const msg = new SpeechSynthesisUtterance(`${title}. ${text}`);
-        msg.lang = 'en-US';
-        const voices = window.speechSynthesis.getVoices();
-        const usVoice = voices.find(v => v.name.includes('Google') && v.lang === 'en-US') || voices.find(v => v.lang === 'en-US');
-        if(usVoice) msg.voice = usVoice;
-        msg.rate = 0.95;
-        window.speechSynthesis.speak(msg);
-        showToast(`🔊 Playing...`);
-    }
-
-    function openModalById(id) {
-        const item = allData.find(x => x.id === id);
-        const inner = document.getElementById('modal-inner');
-        const shareUrl = window.location.origin + window.location.pathname;
-
-        if (item.premium && !isPremiumUser) {
-            inner.innerHTML = `
-                <div style="text-align:center; padding:20px;">
-                    <span style="font-size:4rem; filter: drop-shadow(0 0 15px red);">🚫</span>
-                    <h2 style="color:#ff4444; font-family:'Space Grotesk'; margin:20px 0;">ACCESS DENIED</h2>
-                    <p style="margin-bottom:30px; color:var(--muted);">Unauthorized access to neural database is strictly prohibited.</p>
-                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">GET OFFICIAL KEY</button>
-                    <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; border:1px solid #ff4444; color:#ff4444;">BYPASS SYSTEM (REQUIRED KEY)</button>
-                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Exit Secure Zone</button>
-                </div>`;
-        } else {
-            inner.innerHTML = `
-                <img src="${item.img}" style="width:100%; border-radius:22px; margin-bottom:25px; aspect-ratio:16/9; object-fit:cover;">
-                <h2 style="color:var(--accent); font-family:'Space Grotesk'; margin-bottom:15px;">${item.title}</h2>
-                <p style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap;">${item.body}</p>
-                <div class="btn-group" style="display:flex; gap:10px;">
-                    <button id="actBtn" class="primary-btn">${item.cat === 'AI PROMPT' ? '📋 Copy' : '🔊 Listen'}</button>
-                    <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★' : '☆'}</button>
-                    <button onclick="closeModal()" class="sec-btn">Close</button>
-                </div>
-                <div class="share-group">
-                    <button onclick="shareNative('${item.title}', '${shareUrl}')" class="share-btn">📲 Share</button>
-                    <a href="https://api.whatsapp.com/send?text=${item.title}%20${shareUrl}" target="_blank" class="share-btn">WA</a>
-                </div>`;
-
-            document.getElementById('actBtn').onclick = () => {
-                if(item.cat === 'AI PROMPT') { navigator.clipboard.writeText(item.body); showToast("Copied!"); }
-                else { speak(item.title, item.body); }
-            };
+        function applyFilters() {
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            let f = allData;
+            if (currentFilter === 'BOOKMARK') f = allData.filter(a => bookmarks.includes(a.id));
+            else if (currentFilter === 'PREMIUM') f = allData.filter(a => a.premium === true);
+            else if (currentFilter !== 'ALL') f = allData.filter(a => a.cat === currentFilter);
+            renderFeed(f.filter(a => a.title.toLowerCase().includes(term)));
         }
-        document.getElementById('modal').style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
 
-    async function shareNative(title, url) {
-        if (navigator.share) { try { await navigator.share({ title: title, url: url }); } catch (err) {} }
-        else { navigator.clipboard.writeText(url); showToast("Link Copied!"); }
-    }
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
 
-    function filterTab(cat) {
-        currentFilter = cat;
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        if(event && event.target.classList.contains('tab-btn')) event.target.classList.add('active');
-        applyFilters();
-    }
+        function toggleBookmark(id) {
+            bookmarks = bookmarks.includes(id) ? bookmarks.filter(b => b !== id) : [...bookmarks, id];
+            localStorage.setItem('nl_bookmarks', JSON.stringify(bookmarks));
+            applyFilters(); closeModal();
+        }
 
-    function applyFilters() {
-        const term = document.getElementById('searchInput').value.toLowerCase();
-        let f = allData;
-        if (currentFilter === 'BOOKMARK') f = allData.filter(a => bookmarks.includes(a.id));
-        else if (currentFilter === 'PREMIUM') f = allData.filter(a => a.premium === true);
-        else if (currentFilter !== 'ALL') f = allData.filter(a => a.cat === currentFilter);
-        renderFeed(f.filter(a => a.title.toLowerCase().includes(term)));
-    }
+        function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
+        function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
+        function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; if(window.speechSynthesis) window.speechSynthesis.cancel(); }
+        
+        function observeCards() {
+            const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
+            document.querySelectorAll('.card').forEach(c => obs.observe(c));
+        }
 
-    document.getElementById('searchInput').addEventListener('input', applyFilters);
-
-    function toggleBookmark(id) {
-        bookmarks = bookmarks.includes(id) ? bookmarks.filter(b => b !== id) : [...bookmarks, id];
-        localStorage.setItem('nl_bookmarks', JSON.stringify(bookmarks));
-        applyFilters(); closeModal();
-    }
-
-    function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
-    function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
-    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; if(window.speechSynthesis) window.speechSynthesis.cancel(); }
-
-    function observeCards() {
-        const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
-        document.querySelectorAll('.card').forEach(c => obs.observe(c));
-    }
-
-    window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
-    init();
-</script>
+        window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
+        init();
+    </script>
 </body>
 </html>

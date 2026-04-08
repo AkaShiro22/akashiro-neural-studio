@@ -17,7 +17,7 @@
     <link rel="canonical" href="https://neurallogic.eu.cc/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap&font-display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -53,15 +53,14 @@
         .tab-btn.premium-tab { border: 1px solid var(--gold); color: var(--gold); }
         .tab-btn.premium-tab.active { background: var(--gold); color: #000; }
 
-        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px 6% 80px; }
+        #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px 6% 80px; min-height: 500px; }
 
         .card, .skeleton { background: var(--card); border-radius: 26px; overflow: hidden; border: var(--border-glass); position: relative; }
         .card { opacity: 0; transform: translateY(30px); cursor: pointer; transition: 0.4s; }
         .card.visible { opacity: 1; transform: translateY(0); }
-        .card-img { width: 100%; height: 190px; object-fit: cover; aspect-ratio: 16/9; }
+        .card-img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; display: block; background: #111; }
         .card-content { padding: 22px; }
 
-        /* Premium Assets */
         .premium-badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; padding: 4px 12px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; z-index: 2; box-shadow: 0 0 15px rgba(255, 204, 0, 0.4); }
         .lock-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 3; }
         .lock-icon { font-size: 2.5rem; filter: drop-shadow(0 0 10px var(--gold)); }
@@ -70,10 +69,15 @@
         .m-content { background: #0f0f16; max-width: 680px; margin: 40px auto; border-radius: 32px; padding: 35px; border: var(--border-glass); }
 
         .primary-btn { background: var(--accent); color:#000; padding:16px; border:none; border-radius:16px; font-weight:700; cursor:pointer; flex: 2; }
-        .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; flex: 1; }
+        .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; flex: 1; text-decoration: none; text-align: center; }
         .gold-btn { background: var(--gold); color: #000; width: 100%; padding: 18px; border: none; border-radius: 16px; font-weight: 800; cursor: pointer; margin-top: 20px; font-size: 1.1rem; }
 
+        .share-group { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; border-top: var(--border-glass); padding-top: 20px; }
+        .share-btn { background: #1e1e26; border: var(--border-glass); color: #fff; padding: 10px 16px; border-radius: 12px; cursor: pointer; font-size: 0.8rem; font-weight: 700; text-decoration: none; transition: 0.2s; }
+        .share-btn:hover { background: var(--accent); color: #000; }
+
         .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 2000; }
+        footer { padding: 40px 6%; text-align: center; border-top: var(--border-glass); color: var(--muted); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -107,20 +111,19 @@
 <main id="feed"></main>
 
 <div id="modal" class="modal">
-    <div class="m-content" id="modal-inner">
-        </div>
+    <div class="m-content" id="modal-inner"></div>
 </div>
 
 <footer>
     <p>&copy; 2026 NEURAL LOGIC. All Rights Reserved.</p>
-    <p style="margin-top: 10px; color: var(--accent);"><span class="status-dot"></span> SYSTEM STATUS: OPERATIONAL</p>
+    <p style="margin-top: 10px; color: var(--accent);">SYSTEM STATUS: OPERATIONAL</p>
 </footer>
 
 <script>
     let allData = [];
     let currentFilter = 'ALL';
     let bookmarks = JSON.parse(localStorage.getItem('nl_bookmarks')) || [];
-    let isPremiumUser = false; // Logika untuk mengunci/membuka (secara frontend)
+    let isPremiumUser = false;
 
     async function init() {
         try {
@@ -135,12 +138,12 @@
         feed.innerHTML = data.map((a, i) => {
             const isSaved = bookmarks.includes(a.id);
             const isPremium = a.premium === true;
+            const priority = i < 4 ? 'fetchpriority="high"' : 'loading="lazy"';
             return `
             <article class="card" onclick="openModalById(${a.id})">
                 ${isPremium ? '<div class="premium-badge">PREMIUM</div>' : ''}
-                ${isPremium && !isPremiumUser ? '<div class="lock-overlay"><span class="lock-icon">🔒</span><small style="color:var(--gold); margin-top:10px; font-weight:800;">LOCKED</small></div>' : ''}
-                ${isSaved ? '<div class="bookmark-badge">★ Saved</div>' : ''}
-                <img src="${a.img}" class="card-img" loading="lazy">
+                ${isPremium && !isPremiumUser ? '<div class="lock-overlay"><span class="lock-icon">🔒</span></div>' : ''}
+                <img src="${a.img}" class="card-img" ${priority} width="400" height="225" alt="${a.title}">
                 <div class="card-content">
                     <small style="color:var(--accent); font-weight:700; text-transform:uppercase;">${a.cat}</small>
                     <h3 style="margin-top:8px; font-family:'Space Grotesk';">${a.title}</h3>
@@ -153,15 +156,16 @@
     function openModalById(id) {
         const item = allData.find(x => x.id === id);
         const inner = document.getElementById('modal-inner');
+        const shareUrl = window.location.origin + window.location.pathname;
 
         if (item.premium && !isPremiumUser) {
             inner.innerHTML = `
                 <div style="text-align:center; padding:20px;">
                     <span style="font-size:4rem;">💎</span>
-                    <h2 style="color:var(--gold); font-family:'Space Grotesk'; margin:20px 0;">Elite Prompt Access</h2>
-                    <p style="color:var(--text); line-height:1.6; margin-bottom:30px;">This pro-level prompt is locked. Upgrade to Premium for full access to our secret neural database.</p>
-                    <button class="gold-btn" onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')">UNLOCK ALL ACCESS — $5/mo</button>
-                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Maybe Later</button>
+                    <h2 style="color:var(--gold); font-family:'Space Grotesk'; margin:20px 0;">Elite Access</h2>
+                    <p style="margin-bottom:30px;">This content is reserved for premium members.</p>
+                    <button class="gold-btn" onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')">UPGRADE NOW</button>
+                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Close</button>
                 </div>`;
         } else {
             inner.innerHTML = `
@@ -169,12 +173,19 @@
                 <h2 style="color:var(--accent); font-family:'Space Grotesk'; margin-bottom:15px;">${item.title}</h2>
                 <p style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap;">${item.body}</p>
                 <div class="btn-group" style="display:flex; gap:10px;">
-                    <button id="actBtn" class="primary-btn">${item.cat === 'AI PROMPT' ? '📋 Copy Prompt' : '🔊 Listen'}</button>
-                    <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★ Saved' : '☆ Save'}</button>
+                    <button id="actBtn" class="primary-btn">${item.cat === 'AI PROMPT' ? '📋 Copy' : '🔊 Listen'}</button>
+                    <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★' : '☆'}</button>
                     <button onclick="closeModal()" class="sec-btn">Close</button>
+                </div>
+                <div class="share-group">
+                    <button onclick="shareNative('${item.title}', '${shareUrl}')" class="share-btn">📲 Share</button>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn">FB</a>
+                    <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${item.title}" target="_blank" class="share-btn">X</a>
+                    <a href="https://api.whatsapp.com/send?text=${item.title}%20${shareUrl}" target="_blank" class="share-btn">WA</a>
                 </div>`;
+            
             document.getElementById('actBtn').onclick = () => {
-                if(item.cat === 'AI PROMPT') { navigator.clipboard.writeText(item.body); showToast("Prompt Copied!"); }
+                if(item.cat === 'AI PROMPT') { navigator.clipboard.writeText(item.body); showToast("Copied!"); }
                 else { speak(item.title, item.body); }
             };
         }
@@ -182,10 +193,19 @@
         document.body.style.overflow = 'hidden';
     }
 
+    async function shareNative(title, url) {
+        if (navigator.share) {
+            try { await navigator.share({ title: title, url: url }); } catch (err) {}
+        } else {
+            navigator.clipboard.writeText(url);
+            showToast("Link Copied!");
+        }
+    }
+
     function filterTab(cat) {
         currentFilter = cat;
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        if(event) event.target.classList.add('active');
+        event.target.classList.add('active');
         applyFilters();
     }
 
@@ -208,7 +228,7 @@
 
     function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
     function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
-    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; window.speechSynthesis.cancel(); }
+    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; if(window.speechSynthesis) window.speechSynthesis.cancel(); }
     function observeCards() {
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
         document.querySelectorAll('.card').forEach(c => obs.observe(c));

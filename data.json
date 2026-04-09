@@ -762,7 +762,7 @@
     "premium": true, 
     "title": "A photo of a man painting",
     "date": "2026-04-09",
-    "img": "https://image2url.com/r2/default/images/1775706860629-617ec9d1-1e42-4e4c-9d40-00996aaea1e7.avif",
+    "img": "Images/A_photo_of_a_man_painting.avif",
     "body": "PROMPT:\nA A photo of a man painting a pink flower on a canvas amidst the ruins of a dilapidated structure. The background is filled with debris and the structure's remains. The man is wearing work attire and is focused on his painting. The overall image has a desolate atmosphere, but the act of painting a flower brings a sense of hope and resilience. --v 6.1 --ar 9:16.",
     "author": "Neural Logic Team"
   }

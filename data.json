@@ -716,7 +716,7 @@
   "author": "Neural Logic Team"
 },
 {
-  "id": 1712520000,
+  "id": 90,
   "cat": "AI PROMPT",
   "premium": false,
   "title": "Nocturnal Silence: Lewandowski Style",
@@ -726,7 +726,7 @@
   "author": "Neural Logic Team"
 },
   {
-    "id": 1,
+    "id": 91,
     "cat": "AI PROMPT",
     "premium": true, 
     "title": "Hyper-Realistic Cyberpunk City",
@@ -735,12 +735,21 @@
     "body": "Male superhero made of shadows and neon green energy, cat-like silhouette, glowing eyes, standing in futuristic city, dark atmosphere, cinematic lighting, ultra detailed, 8K"
   },
 {
-    "id": 2,
+    "id": 92,
     "cat": "AI PROMPT",
     "premium": false, 
-    "title": "Hyper-Realistic Cyberpunk City",
+    "title": "tranquility in the style of Yves Klein, abstract.",
     "date": "2026-04-08",
     "img": "https://image2url.com/r2/default/images/1775620054855-7df8f3b4-4429-4606-b19c-3883bbaa42f3.jpg",
     "body": "Medieval vilage, full moon, plague doctor walking on the streets, dark night, tranquility in the style of Yves Klein, abstract."
+  },
+{
+    "id": 93,
+    "cat": "AI PROMPT",
+    "premium": true, 
+    "title": "A hyper-realistic, cinematic low-angle shot of a massive",
+    "date": "2026-04-08",
+    "img": "https://image2url.com/r2/default/images/1775705695636-f14775d4-8be9-44e0-84a5-36d545f8d099.webp",
+    "body": "A hyper-realistic, cinematic low-angle shot of a massive, heavily armored bipedal mech in a war-torn futuristic industrial sci-fi city. The gigantic mech is painted in weathered white with orange and dark grey accents, showing dirt, scratches, and battle damage.It features a clear glass dome cockpit on its chest, revealing a human pilot inside wearing tactical military gear and a helmet.The mech stomps heavily onto the dirt ground, causing massive, vibrant fiery explosions, flying debris, and thick clouds of dust around its legs.The mech then raises a huge heavy machine gun attached to its arm and fires continuously, creating bright glowing muzzle flashes, flying sparks, and smoke.Bright daylight illumination, dynamic camera shake on impact handheld tracking, highly detailed mechanical parts, intense action scene, photorealistic,8k resolution, masterpiece"
   }
 ]

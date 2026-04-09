@@ -703,7 +703,8 @@
   "date": "April 06, 2026",
   "title": "Hyper-Realistic Portrait Prompt",
   "img": "https://image2url.com/r2/default/images/1775636859052-109652d5-5f9f-4389-a7c6-45a3daf6eaef.webp",
-  "body": "A professional cinematic portrait of a cybernetic entity, neon fiber optics, 8k resolution, photorealistic, intricate textures, shot on 35mm lens --ar 16:9"
+  "body": "PROMPT:\nA A professional cinematic portrait of a cybernetic entity, neon fiber optics, 8k resolution, photorealistic, intricate textures, shot on 35mm lens --ar 16:9."
+  "author": "Neural Logic Team"
 },
 {
   "id": 89,
@@ -732,7 +733,7 @@
     "title": "Hyper-Realistic Cyberpunk City",
     "date": "2026-04-08",
     "img": "https://image2url.com/r2/default/images/1775627543665-8b5d20d6-653b-48b6-b64b-9c0f4c3fdc22.avif",
-    "body": "Male superhero made of shadows and neon green energy, cat-like silhouette, glowing eyes, standing in futuristic city, dark atmosphere, cinematic lighting, ultra detailed, 8K"
+    "body": "PROMPT:\nA Male superhero made of shadows and neon green energy, cat-like silhouette, glowing eyes, standing in futuristic city, dark atmosphere, cinematic lighting, ultra detailed, 8K.",
   },
 {
     "id": 92,
@@ -741,15 +742,28 @@
     "title": "tranquility in the style of Yves Klein, abstract.",
     "date": "2026-04-08",
     "img": "https://image2url.com/r2/default/images/1775620054855-7df8f3b4-4429-4606-b19c-3883bbaa42f3.jpg",
-    "body": "Medieval vilage, full moon, plague doctor walking on the streets, dark night, tranquility in the style of Yves Klein, abstract."
+    "body": "PROMPT:\nA Medieval vilage, full moon, plague doctor walking on the streets, dark night, tranquility in the style of Yves Klein, abstract."
+    "author": "Neural Logic Team"
   },
 {
     "id": 93,
     "cat": "AI PROMPT",
     "premium": true, 
     "title": "A hyper-realistic, cinematic low-angle shot of a massive",
-    "date": "2026-04-08",
+    "date": "2026-04-09",
     "img": "https://image2url.com/r2/default/images/1775705695636-f14775d4-8be9-44e0-84a5-36d545f8d099.webp",
-    "body": "A hyper-realistic, cinematic low-angle shot of a massive, heavily armored bipedal mech in a war-torn futuristic industrial sci-fi city. The gigantic mech is painted in weathered white with orange and dark grey accents, showing dirt, scratches, and battle damage.It features a clear glass dome cockpit on its chest, revealing a human pilot inside wearing tactical military gear and a helmet.The mech stomps heavily onto the dirt ground, causing massive, vibrant fiery explosions, flying debris, and thick clouds of dust around its legs.The mech then raises a huge heavy machine gun attached to its arm and fires continuously, creating bright glowing muzzle flashes, flying sparks, and smoke.Bright daylight illumination, dynamic camera shake on impact handheld tracking, highly detailed mechanical parts, intense action scene, photorealistic,8k resolution, masterpiece"
+    "body": "PROMPT:\nA A hyper-realistic, cinematic low-angle shot of a massive, heavily armored bipedal mech in a war-torn futuristic industrial sci-fi city. The gigantic mech is painted in weathered white with orange and dark grey accents, showing dirt, scratches, and battle damage.It features a clear glass dome cockpit on its chest, revealing a human pilot inside wearing tactical military gear and a helmet.The mech stomps heavily onto the dirt ground, causing massive, vibrant fiery explosions, flying debris, and thick clouds of dust around its legs.The mech then raises a huge heavy machine gun attached to its arm and fires continuously, creating bright glowing muzzle flashes, flying sparks, and smoke.Bright daylight illumination, dynamic camera shake on impact handheld tracking, highly detailed mechanical parts, intense action scene, photorealistic,8k resolution, masterpiece."
+    "author": "Neural Logic Team"
+  }
+]
+{
+    "id": 94,
+    "cat": "AI PROMPT",
+    "premium": true, 
+    "title": "A photo of a man painting",
+    "date": "2026-04-09",
+    "img": "https://image2url.com/r2/default/images/1775706860629-617ec9d1-1e42-4e4c-9d40-00996aaea1e7.avif",
+    "body": "PROMPT:\nA A photo of a man painting a pink flower on a canvas amidst the ruins of a dilapidated structure. The background is filled with debris and the structure's remains. The man is wearing work attire and is focused on his painting. The overall image has a desolate atmosphere, but the act of painting a flower brings a sense of hope and resilience. --v 6.1 --ar 9:16."
+    "author": "Neural Logic Team"
   }
 ]

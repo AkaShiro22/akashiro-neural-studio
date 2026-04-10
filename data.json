@@ -636,7 +636,7 @@
     "cat": "MEDICAL",
     "date": "Apr 06, 2026",
     "title": "Bio-Digital Twin: Real-Time Organ Simulation",
-    "img": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=1000",
+    "img": "Images/Bio_Digital_Twin.avif",
     "body": "Doctors now use digital replicas of patient organs to simulate surgeries and drug reactions before performing procedures."
   },
   {
@@ -644,7 +644,7 @@
     "cat": "GREEN TECH",
     "date": "Apr 06, 2026",
     "title": "Portable Algae Bioreactors for Urban Oxygen",
-    "img": "https://picsum.photos/seed/algae81/800/450",
+    "img": "Images/Portable_Algae.avif",
     "body": "The Alga-Wall 3.0 uses microalgae to absorb CO2 ten times faster than trees, providing a modular pollution solution for homes."
   },
   {
@@ -652,7 +652,7 @@
     "cat": "GADGET",
     "date": "Apr 06, 2026",
     "title": "Skin-Sync: Bio-Holographic Sticker Phones",
-    "img": "https://picsum.photos/seed/skin134/800/450",
+    "img": "Images/Skin_Sync.avif",
     "body": "Ultra-thin stickers using bio-holography display health data and messages directly on the skin, potentially replacing screens."
   },
   {
@@ -660,7 +660,7 @@
     "cat": "GADGET",
     "date": "Apr 06, 2026",
     "title": "Omni-Ring: Graphene Smart Control Ring",
-    "img": "https://picsum.photos/seed/ring135/800/450",
+    "img": "Images/Omni_Ring.avif",
     "body": "A modular ring that projects smart home controls and holographic calendars for a minimalist digital experience."
   },
   {
@@ -668,7 +668,7 @@
     "cat": "TECHNOLOGY",
     "date": "Apr 06, 2026",
     "title": "Neuro-Sync: The Post-Screen Era Begins",
-    "img": "https://picsum.photos/seed/neuro2026/800/450",
+    "img": "Images/Neuro_Sync.avif",
     "body": "Non-invasive sensors now allow instant brain-to-digital communication, marking the end of physical screen dominance."
   },
   {
@@ -676,7 +676,7 @@
     "cat": "BIOTECH",
     "date": "Apr 06, 2026",
     "title": "Living Architecture: Mycelium-Based Self-Healing Panels",
-    "img": "https://picsum.photos/seed/mycelium2026/800/450",
+    "img": "Images/Living_Architecture.avif",
     "body": "Carbon-negative wall panels grown from mycelium can 'heal' structural micro-cracks and act as a natural thermostat for high-rise buildings."
   },
   {
@@ -684,7 +684,7 @@
     "cat": "NEURAL TECH",
     "date": "Apr 06, 2026",
     "title": "Neural Logic 2026: Synaptic Interface for Human-AI Reasoning",
-    "img": "https://images.unsplash.com/photo-1675271591211-126ad94e495d?q=80&w=400&h=225&auto=format&fm=webp",
+    "img": "Images/Synaptic_Interface_for_Human_AI_Reasoning.avif",
     "body": "Neural Logic introduces 'Synapse-X', a non-invasive interface that synchronizes AI logic with human intuition via electromagnetic resonance."
   },
 {
@@ -692,7 +692,7 @@
   "cat": "NEURAL TECH",
   "date": "April 06, 2026",
   "title": "Neural Logic 2026: Synaptic Resonance and the Dawn of Deep-Mind Integration",
-  "img": "https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=1000&auto=format&fm=webp",
+  "img": "Images/Neural_Logic_2026.avif",
   "audio_desc": "Futuristic Narrative: Exploring the 2026 breakthrough in Synaptic Resonance and instant knowledge transfer.",
   "body": "In April 2026, Neural Logic officially unveiled its 'Synapse-X' protocol, marking a definitive shift from external interfaces to direct Deep-Mind Integration. Utilizing low-frequency synaptic resonance, this technology allows users to synchronize digital data directly with biological memory. Complex skills—ranging from advanced quantum physics to mastering new languages—can now be 'downloaded' into the subconscious within seconds. This milestone effectively removes the bottleneck of manual learning, establishing Neural Logic as the primary architect for the next stage of human cognitive evolution."
 },
@@ -702,8 +702,8 @@
   "premium": true,
   "date": "April 06, 2026",
   "title": "Hyper-Realistic Portrait Prompt",
-  "img": "https://image2url.com/r2/default/images/1775636859052-109652d5-5f9f-4389-a7c6-45a3daf6eaef.webp",
-  "body": "PROMPT:\nA A professional cinematic portrait of a cybernetic entity, neon fiber optics, 8k resolution, photorealistic, intricate textures, shot on 35mm lens --ar 16:9.",
+  "img": "Images/Hyper_Realistic_Portrait_Prompt.avif",
+  "body": "PROMPT:\nA professional cinematic portrait of a cybernetic entity, neon fiber optics, 8k resolution, photorealistic, intricate textures, shot on 35mm lens --ar 16:9.",
   "author": "Neural Logic Team"
 },
 {
@@ -712,7 +712,7 @@
   "premium": false,
   "title": "Cinematic ETLE Violation: Night High-Speed Romance",
   "date": "2026-04-07",
-  "img": "https://image2url.com/r2/default/images/1775604522276-ac996d4f-ee51-4ea4-aaf0-e793171dc08b.jpg",
+  "img": "Images/Cinematic_ETLE_Violation_Night_High_Speed_Romance.avif",
   "body": "PROMPT:\nDocumentary-style black and white cinematic photography of a night highway in Indonesia. High-angle tracking shot of a Lamborghini Aventador speeding on a Bandung city toll road. Intense motion blur on the background, road barriers, and other vehicles to emphasize extreme speed. \n\nInside the car, a man and a woman (consistent facial features) sit in the front seats. The male driver in casual attire looks toward the woman with an attentive expression. The woman wears a hijab and smiles softly; they are engaged in a romantic interaction showing a lack of focus on driving. \n\nDramatic lighting from streetlamps and vehicle headlights, creating high contrast and sharp shadows inside the cabin. Light reflections on the hood and windshield. Realistic interior details. \n\nTop overlay: Electronic Traffic Law Enforcement (ETLE) graphic interface with an official information box in Indonesian containing:\n- Title: 'KONFIRMASI PELANGGARAN LALU LINTAS ELEKTRONIK (ETLE NASIONAL)'\n- Location: Bandung\n- Time: Nighttime\n- Vehicle: Lamborghini Aventador\n- Violation: Speeding (210 km/h in an 80 km/h zone)\n- Note: Distracted driving/Driver lack of concentration\n- Fine amount in IDR Rupiah.\n\nTECHNICAL STYLES:\nRealistic, ultra-detailed, 4K resolution, high contrast, cinematic noir, depth of field, sharp focus on the car, fine grain like photojournalism, dynamic composition, dramatic and slightly tense atmosphere. --no color, blur on main object, distorted anatomy, messy text, watermark, low quality.",
   "author": "Neural Logic Team"
 },
@@ -722,8 +722,8 @@
   "premium": false,
   "title": "Nocturnal Silence: Lewandowski Style",
   "date": "2026-04-07",
-  "img": "https://image2url.com/r2/default/images/1775604058603-e5024063-1854-4dc5-9531-73cab809897d.jpg",
-  "body": "PROMPT:\nA mesmerizing nocturne painting capturing a city at midnight, reminiscent of the style of Mariusz Lewandowski. The city streets are cloaked in darkness, with only dim lights illuminating the cobblestone pathways. A lonely streetlamp casts a warm, golden glow, while the buildings in the background loom ominously in the shadows. A few silhouettes of trees and billowing curtains add depth to the scene, while the silence is palpable. \n\nSTYLE DETAILS:\nThe oil painting exudes a sense of serenity and solitude, with rich, textured brushstrokes that bring the city to life. Atmospheric lighting, dark surrealism, high contrast, fine art oil on canvas, 8k resolution, cinematic composition. --no bright daylight, modern cars, neon signs, distorted perspective.",
+  "img": "Inages/Nocturnal_Silence_Lewandowski_Style.avif",
+  "body": "PROMPT:\nmesmerizing nocturne painting capturing a city at midnight, reminiscent of the style of Mariusz Lewandowski. The city streets are cloaked in darkness, with only dim lights illuminating the cobblestone pathways. A lonely streetlamp casts a warm, golden glow, while the buildings in the background loom ominously in the shadows. A few silhouettes of trees and billowing curtains add depth to the scene, while the silence is palpable. \n\nSTYLE DETAILS:\nThe oil painting exudes a sense of serenity and solitude, with rich, textured brushstrokes that bring the city to life. Atmospheric lighting, dark surrealism, high contrast, fine art oil on canvas, 8k resolution, cinematic composition. --no bright daylight, modern cars, neon signs, distorted perspective.",
   "author": "Neural Logic Team"
 },
   {
@@ -732,8 +732,8 @@
     "premium": true, 
     "title": "Hyper-Realistic Cyberpunk City",
     "date": "2026-04-08",
-    "img": "https://image2url.com/r2/default/images/1775627543665-8b5d20d6-653b-48b6-b64b-9c0f4c3fdc22.avif",
-    "body": "PROMPT:\nA Male superhero made of shadows and neon green energy, cat-like silhouette, glowing eyes, standing in futuristic city, dark atmosphere, cinematic lighting, ultra detailed, 8K.",
+    "img": "Images/Hyper_Realistic_Cyberpunk_City.avif",
+    "body": "PROMPT:\nMale superhero made of shadows and neon green energy, cat-like silhouette, glowing eyes, standing in futuristic city, dark atmosphere, cinematic lighting, ultra detailed, 8K.",
     "author": "Neural Logic Team"
   },
 {
@@ -742,8 +742,8 @@
     "premium": false, 
     "title": "tranquility in the style of Yves Klein, abstract.",
     "date": "2026-04-08",
-    "img": "https://image2url.com/r2/default/images/1775620054855-7df8f3b4-4429-4606-b19c-3883bbaa42f3.jpg",
-    "body": "PROMPT:\nA Medieval vilage, full moon, plague doctor walking on the streets, dark night, tranquility in the style of Yves Klein, abstract.",
+    "img": "Images/tranquility_in_the_style_of_Yves_Klein_abstract.avif",
+    "body": "PROMPT:\nMedieval vilage, full moon, plague doctor walking on the streets, dark night, tranquility in the style of Yves Klein, abstract.",
     "author": "Neural Logic Team"
   },
 {
@@ -752,8 +752,8 @@
     "premium": true, 
     "title": "A hyper-realistic, cinematic low-angle shot of a massive",
     "date": "2026-04-09",
-    "img": "https://image2url.com/r2/default/images/1775705695636-f14775d4-8be9-44e0-84a5-36d545f8d099.webp",
-    "body": "PROMPT:\nA A hyper-realistic, cinematic low-angle shot of a massive, heavily armored bipedal mech in a war-torn futuristic industrial sci-fi city. The gigantic mech is painted in weathered white with orange and dark grey accents, showing dirt, scratches, and battle damage.It features a clear glass dome cockpit on its chest, revealing a human pilot inside wearing tactical military gear and a helmet.The mech stomps heavily onto the dirt ground, causing massive, vibrant fiery explosions, flying debris, and thick clouds of dust around its legs.The mech then raises a huge heavy machine gun attached to its arm and fires continuously, creating bright glowing muzzle flashes, flying sparks, and smoke.Bright daylight illumination, dynamic camera shake on impact handheld tracking, highly detailed mechanical parts, intense action scene, photorealistic,8k resolution, masterpiece.",
+    "img": "Images/A_hyper_realistic_cinematic_low_angle_shot_of_a_mass.avif",
+    "body": "PROMPT:\nA hyper-realistic, cinematic low-angle shot of a massive, heavily armored bipedal mech in a war-torn futuristic industrial sci-fi city. The gigantic mech is painted in weathered white with orange and dark grey accents, showing dirt, scratches, and battle damage.It features a clear glass dome cockpit on its chest, revealing a human pilot inside wearing tactical military gear and a helmet.The mech stomps heavily onto the dirt ground, causing massive, vibrant fiery explosions, flying debris, and thick clouds of dust around its legs.The mech then raises a huge heavy machine gun attached to its arm and fires continuously, creating bright glowing muzzle flashes, flying sparks, and smoke.Bright daylight illumination, dynamic camera shake on impact handheld tracking, highly detailed mechanical parts, intense action scene, photorealistic,8k resolution, masterpiece.",
     "author": "Neural Logic Team"
   },
 {
@@ -763,7 +763,17 @@
     "title": "A photo of a man painting",
     "date": "2026-04-09",
     "img": "Images/A_photo_of_a_man_painting.avif",
-    "body": "PROMPT:\nA A photo of a man painting a pink flower on a canvas amidst the ruins of a dilapidated structure. The background is filled with debris and the structure's remains. The man is wearing work attire and is focused on his painting. The overall image has a desolate atmosphere, but the act of painting a flower brings a sense of hope and resilience. --v 6.1 --ar 9:16.",
+    "body": "PROMPT:\nA photo of a man painting a pink flower on a canvas amidst the ruins of a dilapidated structure. The background is filled with debris and the structure's remains. The man is wearing work attire and is focused on his painting. The overall image has a desolate atmosphere, but the act of painting a flower brings a sense of hope and resilience. --v 6.1 --ar 9:16.",
+    "author": "Neural Logic Team"
+  },
+{
+    "id": 94,
+    "cat": "AI PROMPT",
+    "premium": true, 
+    "title": "Impressionist oil painting",
+    "date": "2026-04-09",
+    "img": "Images/Impressionist_oil_painting.avif",
+    "body": "PROMPT:\nImpressionist oil painting about meditation reflected in one person --v 6.0.",
     "author": "Neural Logic Team"
   }
 ]

@@ -769,7 +769,7 @@
 {
     "id": 94,
     "cat": "AI PROMPT",
-    "premium": true, 
+    "premium": false, 
     "title": "Impressionist oil painting",
     "date": "2026-04-09",
     "img": "Images/Impressionist_oil_painting.avif",

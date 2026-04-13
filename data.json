@@ -805,5 +805,15 @@
     "img": "Images/a_giant_giraffe_plant_topiary.avif",
     "body": "PROMPT:\nA high-quality cinematic time-lapse video showing the creation of a giant giraffe plant topiary in a sun-drenched botanical garden. It starts with a bare metal wire frame in the shape of a tall giraffe. Rapidly, green boxwood plants and lush vines grow and climb over the frame, filling it in. Invisible shears meticulously trim the foliage into a smooth, defined giraffe silhouette. The background shows the sun moving across the sky, casting dynamic shadows, and colorful flowers blooming around the base as the topiary reaches completion. Ultra-detailed, 4K, vibrant natural colors",
     "author": "Neural Logic Team"
-  }
+  },
+{
+  "id": 98,
+  "cat": "TECH CULTURE",
+  "premium": false,
+  "title": "Defining the Modern Tech Hub",
+  "date": "2026-04-14",
+  "img": "Images/Defining_the_Modern_Tech_Hub",
+  "body": "A Tech Hub is no longer defined by a physical office, but by the flow of data and the quality of collaboration. In a decentralized world, your terminal is your headquarters. Neural Logic serves as a digital sanctuary where logic-driven development meets artistic expression. Our goal is to provide the 'Neural' (the intelligence) and the 'Logic' (the framework) for anyone looking to dominate the digital landscape, from mobile-first coding to advanced generative AI modeling.",
+  "author": "Neural Logic Team"
+}
 ]

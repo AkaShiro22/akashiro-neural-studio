@@ -71,7 +71,7 @@
         .btn-group { display: flex; gap: 10px; margin-top: 20px; }
         .primary-btn { background: var(--accent); color:#000; padding:16px; border:none; border-radius:16px; font-weight:700; cursor:pointer; flex: 2; }
         .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; flex: 1; text-decoration: none; text-align: center; }
-        .gold-btn { background: var(--gold); color: #000; width: 100%; padding: 18px; border: none; border-radius: 16px; font-weight: 800; cursor: pointer; margin-top: 20px; }
+        .audio-btn { background: #4444ff; color:#fff; border:none; border-radius:16px; cursor:pointer; padding: 16px; flex: 1; font-weight: 700; }
 
         .share-group { display: flex; gap: 8px; margin-top: 25px; flex-wrap: wrap; border-top: var(--border-glass); padding-top: 20px; }
         .share-btn { background: #1e1e26; border: var(--border-glass); color: #fff; padding: 10px 16px; border-radius: 12px; cursor: pointer; font-size: 0.8rem; font-weight: 700; text-decoration: none; transition: 0.2s; display: flex; align-items: center; gap: 5px; }
@@ -153,6 +153,21 @@
         observeCards();
     }
 
+    // Fungsi Audio Inggris
+    function speakEnglish(text) {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel(); // Stop audio sebelumnya
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            utterance.rate = 0.9;
+            utterance.pitch = 1;
+            window.speechSynthesis.speak(utterance);
+            showToast("🔊 Playing English Audio...");
+        } else {
+            showToast("⚠️ TTS not supported in this browser.");
+        }
+    }
+
     function openModalById(id) {
         const item = allData.find(x => x.id === id);
         const inner = document.getElementById('modal-inner');
@@ -177,15 +192,16 @@
                 
                 <div class="btn-group">
                     <button onclick="copyText('${item.body.replace(/'/g, "\\'")}')" class="primary-btn">📋 Copy</button>
+                    <button onclick="speakEnglish('${item.body.replace(/'/g, "\\'").replace(/\n/g, " ")}')" class="audio-btn">🔊 Listen</button>
                     <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★' : '☆'}</button>
-                    <button onclick="closeModal()" class="sec-btn">Close</button>
                 </div>
 
                 <div class="share-group">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn">FB</a>
                     <a href="https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}" target="_blank" class="share-btn">X</a>
                     <a href="https://api.whatsapp.com/send?text=${shareTitle}%20${shareUrl}" target="_blank" class="share-btn">WA</a>
-                    <button onclick="copyText('https://neurallogic.eu.cc/')" class="share-btn">IG (Copy Link)</button>
+                    <button onclick="copyText('https://neurallogic.eu.cc/')" class="share-btn">IG (Link)</button>
+                    <button onclick="closeModal()" class="share-btn" style="margin-left:auto; background:red;">Close</button>
                 </div>`;
         }
         document.getElementById('modal').style.display = 'block';
@@ -232,7 +248,13 @@
 
     function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
     function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
-    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
+    
+    function closeModal() { 
+        document.getElementById('modal').style.display = 'none'; 
+        document.body.style.overflow = 'auto'; 
+        window.speechSynthesis.cancel(); // Matikan audio saat modal tutup
+    }
+
     function observeCards() {
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
         document.querySelectorAll('.card').forEach(c => obs.observe(c));

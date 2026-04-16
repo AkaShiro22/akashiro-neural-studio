@@ -844,31 +844,4 @@
     "img": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800",
     "body": "Unlock the 'Environmental Synthesis' prompt for mid-2026 AI models. \n\nPROMPT:\n[Subject: Bio-luminescent rainforest at dusk], [Atmosphere: Thick neon fog, electromagnetic spores floating in air], [Camera: Ultra-wide 12mm lens, low angle], [Lighting: Volumetric god-rays filtering through crystalline leaves], [Detail: 16k resolution, Octane Render style, hyper-realistic moss textures] --v 7.0 --stylize 750"
   },
-  {
-    "id": 102,
-    "cat": "TRENDS",
-    "premium": false,
-    "date": "April 15, 2026",
-    "title": "Why 5G-Advanced is the Backbone of the New Metaverse",
-    "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
-    "body": "The rollout of 5G-Advanced (5.5G) in early 2026 has finally enabled stable holographic calling. Neural Logic explores how low-latency networks are transforming Jakarta into a 'Smart Mesh' city, where autonomous air taxis and AR navigation helmets operate on a single, unified neural grid. The latency has dropped to a record-breaking 0.5ms, making remote robotic surgery a daily reality."
-  },
-  {
-    "id": 103,
-    "cat": "NEURAL TECH",
-    "premium": true,
-    "date": "April 14, 2026",
-    "title": "Synapse-X: First Hands-On with the Non-Invasive BCI",
-    "img": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800",
-    "body": "Our team spent 48 hours testing the Synapse-X headband. Unlike previous generations, this device uses electromagnetic resonance to detect 'Intent Waves' without surgical implants. We successfully drafted three full articles and generated five AI images just by focusing on mental silhouettes. The era of the 'Silent Keyboard' has officially begun, and Neural Logic is at the forefront of this revolution."
-  },
-  {
-    "id": 104,
-    "cat": "AI PROMPT",
-    "premium": false,
-    "date": "April 13, 2026",
-    "title": "Prompt Engineering for Autonomous Aerial Cinematography",
-    "img": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800",
-    "body": "Directing drones with AI requires a specific syntax. Use this prompt for high-speed tracking shots.\n\nPROMPT:\nAction sequence, drone-view, tracking an autonomous air taxi through skyscraper canyons, motion blur, anamorphic flares, futuristic cyberpunk aesthetic, high stakes, shot on DJI Ronin 4D AI-Link --ar 21:9 --q 2"
-  }
 ]

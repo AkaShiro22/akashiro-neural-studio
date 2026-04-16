@@ -15,6 +15,7 @@
     <meta property="og:image" content="https://neurallogic.eu.cc/social-preview.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NEURAL LOGIC | Futuristic Tech">
     <meta name="twitter:image" content="https://neurallogic.eu.cc/social-preview.jpg">
 
     <link rel="canonical" href="https://neurallogic.eu.cc/">
@@ -47,32 +48,38 @@
 
         .theme-switches { display: flex; gap: 15px; }
         .dot { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid rgba(255,255,255,0.2); transition: 0.2s; }
-        .dot:hover { transform: scale(1.2); }
+        .dot:hover { transform: scale(1.2); box-shadow: 0 0 10px var(--accent); }
 
         .tabs { display: flex; justify-content: center; gap: 10px; margin: 20px 0; padding: 0 6%; flex-wrap: wrap; }
         .tab-btn { background: var(--card); border: var(--border-glass); color: var(--muted); padding: 12px 22px; border-radius: 14px; cursor: pointer; font-weight: 600; transition: 0.3s; }
-        .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
+        .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2); }
         .tab-btn.premium-tab { border: 1px solid var(--gold); color: var(--gold); }
         .tab-btn.premium-tab.active { background: var(--gold); color: #000; }
 
         #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px 6% 80px; }
         .card { background: var(--card); border-radius: 26px; overflow: hidden; border: var(--border-glass); opacity: 0; transform: translateY(30px); cursor: pointer; transition: 0.4s; position: relative; }
         .card.visible { opacity: 1; transform: translateY(0); }
-        .card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #111; }
+        .card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
         .card-content { padding: 22px; }
 
         .premium-badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; padding: 4px 12px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; z-index: 2; }
-        .lock-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); display: flex; justify-content: center; align-items: center; z-index: 3; }
-        
+        .lock-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); display: flex; justify-content: center; align-items: center; z-index: 3; font-size: 2.5rem; }
+
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
         .m-content { background: #0f0f16; max-width: 680px; margin: 40px auto; border-radius: 32px; padding: 35px; border: var(--border-glass); }
-        
+
+        .btn-group { display: flex; gap: 10px; margin-top: 20px; }
         .primary-btn { background: var(--accent); color:#000; padding:16px; border:none; border-radius:16px; font-weight:700; cursor:pointer; flex: 2; }
         .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; flex: 1; text-decoration: none; text-align: center; }
-        .gold-btn { background: var(--gold); color: #000; width: 100%; padding: 18px; border: none; border-radius: 16px; font-weight: 800; cursor: pointer; margin-top: 20px; font-size: 1.1rem; }
-        
+        .gold-btn { background: var(--gold); color: #000; width: 100%; padding: 18px; border: none; border-radius: 16px; font-weight: 800; cursor: pointer; margin-top: 20px; }
+
+        .share-group { display: flex; gap: 8px; margin-top: 25px; flex-wrap: wrap; border-top: var(--border-glass); padding-top: 20px; }
+        .share-btn { background: #1e1e26; border: var(--border-glass); color: #fff; padding: 10px 16px; border-radius: 12px; cursor: pointer; font-size: 0.8rem; font-weight: 700; text-decoration: none; transition: 0.2s; display: flex; align-items: center; gap: 5px; }
+        .share-btn:hover { background: var(--accent); color: #000; }
+
         .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 2000; }
         footer { padding: 40px 6%; text-align: center; border-top: var(--border-glass); color: var(--muted); }
+        .article-date { font-size: 0.75rem; color: var(--muted); margin-bottom: 5px; display: block; }
     </style>
 </head>
 <body>
@@ -81,9 +88,7 @@
 <div id="toast" class="toast">Action Confirmed!</div>
 
 <nav>
-    <a href="/" class="logo">
-        <span class="logo-box">NL</span>NEURAL LOGIC
-    </a>
+    <a href="/" class="logo"><span class="logo-box">NL</span>NEURAL LOGIC</a>
     <div class="theme-switches">
         <div class="dot" style="background:#00ff88" onclick="setTheme('default')"></div>
         <div class="dot" style="background:#ff00ff" onclick="setTheme('cyber')"></div>
@@ -93,7 +98,7 @@
 
 <div class="tabs">
     <button class="tab-btn active" onclick="filterTab('ALL')">All Trends</button>
-    <button class="tab-btn" onclick="filterTab('TECH CULTURE')">Tech Hub</button>
+    <button class="tab-btn" onclick="filterTab('NEURAL TECH')">Tech Hub</button>
     <button class="tab-btn" onclick="filterTab('AI PROMPT')">AI Library</button>
     <button class="tab-btn premium-tab" onclick="filterTab('PREMIUM')">💎 PREMIUM</button>
     <button class="tab-btn" onclick="filterTab('BOOKMARK')" style="color: var(--accent)">★ Favorites</button>
@@ -132,12 +137,14 @@
         const feed = document.getElementById('feed');
         feed.innerHTML = data.map((a, i) => {
             const isPremium = a.premium === true;
+            const dateStr = a.date || '2026-04-10';
             return `
             <article class="card" onclick="openModalById(${a.id})">
                 ${isPremium ? '<div class="premium-badge">PREMIUM</div>' : ''}
                 ${isPremium && !isPremiumUser ? '<div class="lock-overlay">🔒</div>' : ''}
                 <img src="${a.img}" class="card-img" loading="lazy" alt="${a.title}">
                 <div class="card-content">
+                    <span class="article-date">📅 ${dateStr}</span>
                     <small style="color:var(--accent); font-weight:700; text-transform:uppercase;">${a.cat}</small>
                     <h3 style="margin-top:8px; font-family:'Space Grotesk';">${a.title}</h3>
                 </div>
@@ -146,44 +153,52 @@
         observeCards();
     }
 
-    function checkLicense() {
-        const key = prompt("CRITICAL: Enter Premium Access Key.");
-        if (key === "NEURAL2026") {
-            localStorage.setItem('nl_premium_active', 'true');
-            isPremiumUser = true;
-            showToast("💎 ACCESS GRANTED.");
-            location.reload();
-        } else if (key !== null) {
-            alert("⚠️ SECURITY BREACH DETECTED!");
-        }
-    }
-
     function openModalById(id) {
         const item = allData.find(x => x.id === id);
         const inner = document.getElementById('modal-inner');
+        const shareUrl = encodeURIComponent("https://neurallogic.eu.cc/");
+        const shareTitle = encodeURIComponent(item.title);
 
         if (item.premium && !isPremiumUser) {
             inner.innerHTML = `
                 <div style="text-align:center; padding:20px;">
                     <h2 style="color:#ff4444; font-family:'Space Grotesk';">ACCESS DENIED</h2>
-                    <p style="margin:20px 0; color:var(--muted);">Silakan dukung kami untuk mendapatkan kunci akses.</p>
+                    <p style="margin:20px 0; color:var(--muted);">Dapatkan kunci akses premium untuk membuka data ini.</p>
                     <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">GET OFFICIAL KEY</button>
                     <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; border:1px solid #ff4444; color:#ff4444;">INPUT KEY</button>
                     <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Exit</button>
                 </div>`;
         } else {
             inner.innerHTML = `
+                <span class="article-date" style="margin-bottom:10px; display:block;">📅 Published: ${item.date}</span>
                 <img src="${item.img}" style="width:100%; border-radius:22px; margin-bottom:25px; aspect-ratio:16/9; object-fit:cover;">
                 <h2 style="color:var(--accent); font-family:'Space Grotesk'; margin-bottom:15px;">${item.title}</h2>
                 <p style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap;">${item.body}</p>
-                <div style="display:flex; gap:10px;">
-                    <button onclick="copyText('${item.body}')" class="primary-btn">📋 Copy</button>
+                
+                <div class="btn-group">
+                    <button onclick="copyText('${item.body.replace(/'/g, "\\'")}')" class="primary-btn">📋 Copy</button>
                     <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★' : '☆'}</button>
                     <button onclick="closeModal()" class="sec-btn">Close</button>
+                </div>
+
+                <div class="share-group">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn">FB</a>
+                    <a href="https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}" target="_blank" class="share-btn">X</a>
+                    <a href="https://api.whatsapp.com/send?text=${shareTitle}%20${shareUrl}" target="_blank" class="share-btn">WA</a>
+                    <button onclick="copyText('https://neurallogic.eu.cc/')" class="share-btn">IG (Copy Link)</button>
                 </div>`;
         }
         document.getElementById('modal').style.display = 'block';
         document.body.style.overflow = 'hidden';
+    }
+
+    function checkLicense() {
+        const key = prompt("Enter Premium Access Key:");
+        if (key === "NEURAL2026") {
+            localStorage.setItem('nl_premium_active', 'true');
+            isPremiumUser = true;
+            location.reload();
+        } else if (key !== null) { alert("⚠️ INVALID KEY"); }
     }
 
     function copyText(txt) {

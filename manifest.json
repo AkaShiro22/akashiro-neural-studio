@@ -1,15 +1,18 @@
 {
-  "name": "Neural Logic Portal",
+  "name": "Neural Logic Tech Hub",
   "short_name": "NeuralLogic",
-  "start_url": "index.html",
+  "description": "Futuristic Tech & AI Prompts 2026",
+  "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#050508",
+  "background_color": "#050509",
   "theme_color": "#00ff88",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+      "src": "https://neurallogic.eu.cc/social-preview.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpg",
+      "purpose": "any maskable"
     }
   ]
 }
+

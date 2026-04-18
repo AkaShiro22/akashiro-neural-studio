@@ -4,7 +4,7 @@
     "cat": "SCIENCE",
     "date": "Jan 12, 2026",
     "title": "Weather Engineering: Precision Cloud Seeding to Overcome Drought",
-    "img": "https://picsum.photos/seed/tech1/400/225",
+    "img": "Images/Weather.avif",
     "body": "The latest cloud seeding technology uses accurate air ionization and autonomous drones, allowing rain to fall precisely over needed farmland without disturbing other areas."
   },
   {
@@ -12,7 +12,7 @@
     "cat": "HEALTH",
     "date": "Jan 15, 2026",
     "title": "Smart Toothbrush Detects Oral Cancer Symptoms",
-    "img": "https://picsum.photos/seed/tech2/400/225",
+    "img": "Images/Toothbrush.avif",
     "body": "Equipped with chemical sensors, this toothbrush analyzes saliva every morning to monitor overall body health and provide early warnings if abnormal cells are present."
   },
   {
@@ -20,7 +20,7 @@
     "cat": "GREEN TECH",
     "date": "Jan 20, 2026",
     "title": "Running Shoes That Can Charge Phone Batteries While Walking",
-    "img": "https://picsum.photos/seed/tech3/400/225",
+    "img": "Images/Shoes.avif",
     "body": "The soles of these shoes contain piezoelectric materials that convert footstep pressure into electrical energy. Walking 5,000 steps can add 20% to a phone's power."
   },
   {
@@ -28,7 +28,7 @@
     "cat": "SPACE",
     "date": "Jan 25, 2026",
     "title": "Space Debris Cleaning Satellite Begins Operation",
-    "img": "https://picsum.photos/seed/tech4/400/225",
+    "img": "Images/Satellite.avif",
     "body": "Giant laser nets have begun pulling dead satellite debris in Earth's orbit to be safely burned in the atmosphere, keeping space flight paths clear."
   },
   {
@@ -36,7 +36,7 @@
     "cat": "GADGET",
     "date": "Feb 02, 2026",
     "title": "Animal Language Translation Earbuds Go on Limited Sale",
-    "img": "https://picsum.photos/seed/tech5/400/225",
+    "img": "Images/Animal.avif",
     "body": "Using a database of dog and cat vocal frequencies, this AI translates pet emotions into simple words on your smartphone screen."
   },
   {
@@ -44,7 +44,7 @@
     "cat": "SCIENCE",
     "date": "Feb 05, 2026",
     "title": "Diamond-Based Batteries from Nuclear Waste",
-    "img": "https://picsum.photos/seed/tech6/400/225",
+    "img": "Images/Diamond.avif",
     "body": "New technology converts nuclear waste carbon into artificial diamonds that generate small but stable electricity for thousands of years without needing a recharge."
   },
   {
@@ -52,7 +52,7 @@
     "cat": "ROBOTICS",
     "date": "Feb 08, 2026",
     "title": "Package Delivery Drones Can Now Enter Apartment Windows",
-    "img": "https://picsum.photos/seed/tech7/400/225",
+    "img": "Images/Package.avif",
     "body": "With advanced anti-collision sensors, courier drones can now maneuver through narrow high-rise corridors to deliver orders langsung ke tangan pelanggan."
   },
   {
@@ -60,7 +60,7 @@
     "cat": "HEALTH",
     "date": "Feb 12, 2026",
     "title": "Brainwave-Based Music Therapy to Overcome Insomnia",
-    "img": "https://picsum.photos/seed/tech8/400/225",
+    "img": "Images/Brainwave.avif",
     "body": "Recent research proves that specific personalized sound frequencies can put people to sleep in less than 3 minutes without the help of medication."
   },
   {
@@ -68,7 +68,7 @@
     "cat": "GREEN TECH",
     "date": "Feb 15, 2026",
     "title": "Giant Tree-Shaped Air Purifier in Central Jakarta",
-    "img": "https://picsum.photos/seed/tech9/400/225",
+    "img": "Images/Purifier.avif",
     "body": "This 20-meter tower filters air pollution equivalent to 1,000 real trees. It is solar-powered and releases pure oxygen into the surrounding environment."
   },
   {
@@ -76,7 +76,7 @@
     "cat": "TRANSPORTATION",
     "date": "Feb 18, 2026",
     "title": "Autonomous Vehicle Only Highway Lane Opens in Cipularang",
-    "img": "https://picsum.photos/seed/tech10/400/225",
+    "img": "Images/Vehicle.avif",
     "body": "The right lane of the highway is now dedicated to driverless cars that communicate via AI synchronization to maintain a stable speed of 150 km/h."
   },
   {
@@ -84,7 +84,7 @@
     "cat": "SPACE",
     "date": "Feb 22, 2026",
     "title": "Amateur Telescopes Can Now See Saturn's Rings from a Phone",
-    "img": "https://picsum.photos/seed/tech11/400/225",
+    "img": "Images/Telescopes.avif",
     "body": "Integration of smart digital lenses allows home telescopes to connect to the AI cloud to clear up planetary images in real-time."
   },
   {
@@ -92,7 +92,7 @@
     "cat": "GADGET",
     "date": "Feb 25, 2026",
     "title": "Portable Hologram Keyboard: Type on Any Table",
-    "img": "https://picsum.photos/seed/tech12/400/225",
+    "img": "Images/Portable.avif",
     "body": "A device as small as a lighter projects a full keyboard layout onto flat surfaces. Laser sensors detect finger taps with high accuracy."
   },
   {
@@ -100,7 +100,7 @@
     "cat": "ROBOTICS",
     "date": "Mar 01, 2026",
     "title": "Fashion AI: Clothes That Can Change Color via App",
-    "img": "https://picsum.photos/seed/tech13/400/225",
+    "img": "Images/Fashion.avif",
     "body": "Using e-ink fabric fibers, modern clothing can change patterns and colors according to the user's mood instantly via smartphone."
   },
   {
@@ -108,7 +108,7 @@
     "cat": "SCIENCE",
     "date": "Mar 04, 2026",
     "title": "Transparent Fish Species Discovered in Java Trench",
-    "img": "https://picsum.photos/seed/tech14/400/225",
+    "img": "Images/Fish.avif",
     "body": "Deep-sea expeditions south of Java found a new ecosystem at a depth of 7,000 meters featuring bioluminescent fish with completely clear bodies."
   },
   {
@@ -116,7 +116,7 @@
     "cat": "HEALTH",
     "date": "Mar 07, 2026",
     "title": "Disease-Detecting Glasses via Eye Scanning",
-    "img": "https://picsum.photos/seed/tech15/400/225",
+    "img": "Images/Disease.avif",
     "body": "By wearing these glasses for 10 seconds, the AI system analyzes retinal blood vessels to detect early signs of diabetes and stroke risk."
   },
   {

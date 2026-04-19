@@ -124,7 +124,7 @@
     "cat": "GREEN TECH",
     "date": "Mar 10, 2026",
     "title": "Cassava-Based Plastics are Now Truly Edible",
-    "img": "https://picsum.photos/seed/tech16/400/225",
+    "img": "Images/Cassava.avif",
     "body": "The latest food packaging not only dissolves in water but also contains nutrients safe for human or animal consumption."
   },
   {
@@ -132,7 +132,7 @@
     "cat": "GADGET",
     "date": "Mar 12, 2026",
     "title": "Zoom Contact Lenses: Blink Your Eyes to See Far Distances",
-    "img": "https://picsum.photos/seed/tech17/400/225",
+    "img": "Images/Lenses.avif",
     "body": "These smart contact lenses allow users to perform 3x optical zoom just with specific blinking patterns."
   },
   {
@@ -140,7 +140,7 @@
     "cat": "TRANSPORTATION",
     "date": "Mar 15, 2026",
     "title": "Vario 2026 Electric Motor: Range Reaches 500 KM on One Charge",
-    "img": "https://picsum.photos/seed/tech18/400/225",
+    "img": "Images/Vario.avif",
     "body": "Honda released a solid-state battery update for its best-selling electric motorcycle, offering high efficiency and a fade-resistant body."
   },
   {
@@ -148,7 +148,7 @@
     "cat": "ROBOTICS",
     "date": "Mar 18, 2026",
     "title": "AI Lecturers Now Teaching at Leading Indonesian Universities",
-    "img": "https://picsum.photos/seed/tech20/400/225",
+    "img": "Images/Lecturers.avif",
     "body": "Students can now consult 24/7 with AI avatars. Human lecturers now focus more on ethical discussions and moral guidance."
   },
   {
@@ -156,7 +156,7 @@
     "cat": "GREEN TECH",
     "date": "Mar 20, 2026",
     "title": "Smart Vertical Forest in IKN Able to Lower City Temperature by 5 Degrees",
-    "img": "https://picsum.photos/seed/tech21/400/225",
+    "img": "Images/IKN.avif",
     "body": "High-rise construction in the New Capital City (IKN) uses automatic humidity sensors to manage wall plants."
   },
   {
@@ -164,7 +164,7 @@
     "cat": "HEALTH",
     "date": "Mar 22, 2026",
     "title": "'Nano-Doc' Smart Pill Can Automatically Clear Heart Plaque",
-    "img": "https://picsum.photos/seed/tech22/400/225",
+    "img": "Images/Nano.avif",
     "body": "Microscopic robots (nanobots) in pill form can find and clear arterial blockages without major surgery."
   },
   {
@@ -172,7 +172,7 @@
     "cat": "SPACE",
     "date": "Mar 24, 2026",
     "title": "NASA Finds Signs of Microbial Life on Enceladus",
-    "img": "https://picsum.photos/seed/tech23/400/225",
+    "img": "Images/NASA.avif",
     "body": "NASA's undersea rover found complex organic molecules beneath the ice layer of Saturn's moon."
   },
   {
@@ -180,7 +180,7 @@
     "cat": "GADGET",
     "date": "Mar 26, 2026",
     "title": "First Battery-Free Smartphone: Drawing Energy from the Air",
-    "img": "https://picsum.photos/seed/tech24/400/225",
+    "img": "Images/Battery.avif",
     "body": "A Silicon Valley startup released a phone using 'Air-Harvesting' technology from radio and WiFi waves."
   },
   {
@@ -188,7 +188,7 @@
     "cat": "ROBOTICS",
     "date": "Mar 28, 2026",
     "title": "'Socrates' AI Begins Use as Mediation Judge in Indonesia",
-    "img": "https://picsum.photos/seed/tech25/400/225",
+    "img": "Images/Socrates.avif",
     "body": "The Ministry of Law uses AI to help resolve light civil disputes by analyzing legal articles in seconds."
   },
   {

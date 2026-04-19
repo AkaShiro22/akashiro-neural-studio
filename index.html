@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,48 +24,44 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; min-height: 100vh; transition: background 0.4s; }
 
-        /* Style Tambahan untuk Tombol Gold & Premium Info */
-        .gold-btn { 
-            background: var(--gold); color: #000; padding: 16px; border: none; border-radius: 16px; 
-            font-weight: 800; cursor: pointer; width: 100%; transition: 0.3s;
-        }
-        .gold-btn:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(255, 204, 0, 0.4); }
-        
-        .premium-info-box {
-            background: rgba(255, 204, 0, 0.05);
-            border: 1px dashed var(--gold);
-            padding: 15px;
-            border-radius: 12px;
-            margin: 15px 0;
-            text-align: left;
-            font-size: 0.9rem;
-        }
-
-        /* ... (Style lama tetap dipertahankan) ... */
-        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 0%; z-index: 1001; transition: width 0.2s; }
+        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 0%; z-index: 1001; }
         nav { position: sticky; top: 0; z-index: 100; padding: 12px 6%; background: rgba(5, 5, 9, 0.8); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; border-bottom: var(--border-glass); }
         .logo { font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; display: flex; align-items: center; }
         .logo-box { padding: 4px 10px; background: var(--gradient); color: #000; border-radius: 8px; margin-right: 8px; }
+
         .theme-switches { display: flex; gap: 15px; }
         .dot { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid rgba(255,255,255,0.2); transition: 0.2s; }
+
         .tabs { display: flex; justify-content: center; gap: 10px; margin: 20px 0; padding: 0 6%; flex-wrap: wrap; }
         .tab-btn { background: var(--card); border: var(--border-glass); color: var(--muted); padding: 12px 22px; border-radius: 14px; cursor: pointer; font-weight: 600; transition: 0.3s; }
-        .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2); }
+        .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
         .tab-btn.premium-tab { border: 1px solid var(--gold); color: var(--gold); }
         .tab-btn.premium-tab.active { background: var(--gold); color: #000; }
+
         #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px 6% 80px; }
         .card { background: var(--card); border-radius: 26px; overflow: hidden; border: var(--border-glass); opacity: 0; transform: translateY(30px); cursor: pointer; transition: 0.4s; position: relative; }
         .card.visible { opacity: 1; transform: translateY(0); }
         .card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
         .card-content { padding: 22px; }
+
         .premium-badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; padding: 4px 12px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; z-index: 2; }
         .lock-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); display: flex; justify-content: center; align-items: center; z-index: 3; font-size: 2.5rem; }
+
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
         .m-content { background: #0f0f16; max-width: 680px; margin: 40px auto; border-radius: 32px; padding: 35px; border: var(--border-glass); }
-        .btn-group { display: flex; gap: 10px; margin-top: 20px; }
-        .primary-btn { background: var(--accent); color:#000; padding:16px; border:none; border-radius:16px; font-weight:700; cursor:pointer; flex: 2; }
-        .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; flex: 1; text-decoration: none; text-align: center; }
-        .audio-btn { background: #4444ff; color:#fff; border:none; border-radius:16px; cursor:pointer; padding: 16px; flex: 1; font-weight: 700; }
+
+        .btn-group { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin-top: 20px; }
+        .primary-btn { background: var(--accent); color:#000; padding:16px; border:none; border-radius:16px; font-weight:700; cursor:pointer; }
+        .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; display: flex; justify-content: center; align-items: center; }
+        .audio-btn { background: #4444ff; color:#fff; border:none; border-radius:16px; cursor:pointer; font-weight: 700; }
+        
+        .gold-btn { background: var(--gold); color: #000; padding: 16px; border: none; border-radius: 16px; font-weight: 800; cursor: pointer; width: 100%; margin-top: 10px; }
+        .premium-info-box { background: rgba(255, 204, 0, 0.05); border: 1px dashed var(--gold); padding: 20px; border-radius: 12px; margin: 15px 0; text-align: left; }
+
+        .share-row { display: flex; gap: 10px; margin-top: 25px; border-top: var(--border-glass); padding-top: 20px; flex-wrap: wrap; }
+        .share-icon { width: 45px; height: 45px; border-radius: 12px; background: #1e1e26; display: flex; justify-content: center; align-items: center; text-decoration: none; color: white; font-weight: bold; transition: 0.3s; font-size: 0.8rem; }
+        .share-icon:hover { background: var(--accent); color: #000; transform: translateY(-3px); }
+
         .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 2000; }
         footer { padding: 40px 6%; text-align: center; border-top: var(--border-glass); color: var(--muted); }
     </style>
@@ -85,7 +81,7 @@
 </nav>
 
 <div class="tabs">
-    <button class="tab-btn active" onclick="filterTab('ALL')">All Trends</button>
+    <button class="tab-btn active" onclick="filterTab('ALL')">All Streams</button>
     <button class="tab-btn" onclick="filterTab('NEURAL TECH')">Tech Hub</button>
     <button class="tab-btn" onclick="filterTab('AI PROMPT')">AI Library</button>
     <button class="tab-btn premium-tab" onclick="filterTab('PREMIUM')">💎 PREMIUM</button>
@@ -123,17 +119,17 @@
 
     function renderFeed(data) {
         const feed = document.getElementById('feed');
-        feed.innerHTML = data.map((a, i) => {
+        feed.innerHTML = data.map((a) => {
             const isPremium = a.premium === true;
             return `
             <article class="card" onclick="openModalById(${a.id})">
                 ${isPremium ? '<div class="premium-badge">PREMIUM</div>' : ''}
                 ${isPremium && !isPremiumUser ? '<div class="lock-overlay">🔒</div>' : ''}
-                <img src="${a.img}" class="card-img" loading="lazy" alt="${a.title}">
+                <img src="${a.img}" class="card-img" alt="${a.title}">
                 <div class="card-content">
-                    <span style="font-size:0.75rem; color:var(--muted);">${a.date || '2026'}</span><br>
-                    <small style="color:var(--accent); font-weight:700; text-transform:uppercase;">${a.cat}</small>
-                    <h3 style="margin-top:8px; font-family:'Space Grotesk';">${a.title}</h3>
+                    <span style="font-size:0.75rem; color:var(--accent); font-weight:700;">${a.date || 'April 2026'}</span><br>
+                    <small style="color:var(--muted); text-transform:uppercase; letter-spacing:1px;">${a.cat}</small>
+                    <h3 style="margin-top:8px; font-family:'Space Grotesk'; line-height:1.3;">${a.title}</h3>
                 </div>
             </article>
         `}).join('');
@@ -143,46 +139,55 @@
     function openModalById(id) {
         const item = allData.find(x => x.id === id);
         const inner = document.getElementById('modal-inner');
+        const shareText = encodeURIComponent(item.title + " | Neural Logic 2026");
+        const shareUrl = encodeURIComponent(window.location.href);
 
         if (item.premium && !isPremiumUser) {
             inner.innerHTML = `
-                <div style="text-align:center; padding:10px;">
-                    <div style="font-size:3rem; margin-bottom:15px;">💎</div>
-                    <h2 style="color:var(--gold); font-family:'Space Grotesk';">PREMIUM CONTENT</h2>
-                    <p style="margin:15px 0; color:var(--muted);">Materi ini eksklusif untuk member Premium Neural Logic.</p>
+                <div style="text-align:center;">
+                    <div style="font-size:3.5rem; margin-bottom:10px;">💎</div>
+                    <h2 style="color:var(--gold); font-family:'Space Grotesk';">PREMIUM ENCRYPTION</h2>
+                    <p style="margin:15px 0; color:var(--muted);">This classified data is only available for Premium Intelligence Members.</p>
                     
                     <div class="premium-info-box">
-                        <b style="color:var(--gold)">Keuntungan Premium:</b>
-                        <ul style="margin:10px 0 0 20px; color:#fff;">
-                            <li>Akses Semua Professional AI Prompts</li>
-                            <li>Update Tren Teknologi Masa Depan</li>
-                            <li>Lisensi Penggunaan Komersial</li>
+                        <b style="color:var(--gold); font-size:1.1rem;">Membership Benefits:</b>
+                        <ul style="margin:12px 0 0 20px; color:#fff; line-height:1.6;">
+                            <li>Full Access to Pro AI Prompts (Sora, Kling, Midjourney)</li>
+                            <li>Future-Tech Trends & Market Insights</li>
+                            <li>Commercial Use License for all Prompts</li>
                         </ul>
-                        <p style="margin-top:10px;"><b>Harga:</b> Rp 50.000 / Selamanya</p>
+                        <p style="margin-top:15px; font-weight:bold;">Lifetime Access: Rp 50.000 (approx. $3.20)</p>
                     </div>
 
-                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">BELI AKSES VIA SAWERIA</button>
-                    <p style="font-size:0.7rem; color:var(--muted); margin-top:10px;">*Tuliskan "Neural Premium" di pesan Saweria, kunci akan dikirim ke email kamu.</p>
+                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">UPGRADE VIA SAWERIA</button>
+                    <p style="font-size:0.7rem; color:var(--muted); margin-top:12px;">*Please include "Neural Premium" in your message. Your key will be sent via email.</p>
                     
-                    <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; border:1px solid var(--gold); color:var(--gold);">MASUKKAN KODE AKSES</button>
-                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Kembali</button>
+                    <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; border:1px solid var(--gold); color:var(--gold);">ENTER ACCESS KEY</button>
+                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Back to Feed</button>
                 </div>`;
         } else {
-            // FIX COPY PASTE: Menggunakan textContent secara aman
             inner.innerHTML = `
-                <img src="${item.img}" style="width:100%; border-radius:22px; margin-bottom:25px; aspect-ratio:16/9; object-fit:cover;">
-                <h2 style="color:var(--accent); font-family:'Space Grotesk'; margin-bottom:15px;">${item.title}</h2>
-                <div id="article-body" style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap; color:#cbd5e1;">${item.body}</div>
+                <span style="color:var(--accent); font-weight:700; font-size:0.85rem;">Published: ${item.date || 'April 2026'}</span>
+                <img src="${item.img}" style="width:100%; border-radius:22px; margin:15px 0 25px; aspect-ratio:16/9; object-fit:cover;">
+                <h2 style="color:#fff; font-family:'Space Grotesk'; margin-bottom:15px; font-size:1.8rem;">${item.title}</h2>
+                <div id="article-body" style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap; color:#cbd5e1; font-size:1rem;">${item.body}</div>
 
                 <div class="btn-group">
                     <button id="copyBtn" class="primary-btn">📋 Copy Article</button>
                     <button onclick="speakEnglish()" class="audio-btn">🔊 Listen</button>
                     <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★' : '☆'}</button>
                 </div>
-                <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:15px; background:red;">Close</button>
+
+                <div class="share-row">
+                    <span style="width:100%; font-size:0.8rem; color:var(--muted); margin-bottom:5px;">Share to Neural Network:</span>
+                    <a href="https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}" target="_blank" class="share-icon">WA</a>
+                    <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" class="share-icon">X</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-icon">FB</a>
+                    <button onclick="copyShareLink()" class="share-icon" style="cursor:pointer; border:none; width:auto; padding:0 15px;">Copy Link</button>
+                    <button onclick="closeModal()" class="share-icon" style="background:#ff4444; border:none; margin-left:auto; cursor:pointer;">Close</button>
+                </div>
             `;
             
-            // Event Listener khusus untuk Copy agar tidak error karakter spesial
             document.getElementById('copyBtn').onclick = () => {
                 const text = document.getElementById('article-body').innerText;
                 navigator.clipboard.writeText(text);
@@ -193,24 +198,30 @@
         document.body.style.overflow = 'hidden';
     }
 
+    function copyShareLink() {
+        navigator.clipboard.writeText(window.location.href);
+        showToast("Link copied!");
+    }
+
     function speakEnglish() {
         const text = document.getElementById('article-body').innerText;
         if ('speechSynthesis' in window) {
             window.speechSynthesis.cancel();
             const msg = new SpeechSynthesisUtterance(text);
             msg.lang = 'en-US';
+            msg.rate = 0.9;
             window.speechSynthesis.speak(msg);
-            showToast("🔊 Playing Audio...");
+            showToast("🔊 Voice Transmission Active...");
         }
     }
 
     function checkLicense() {
-        const key = prompt("Masukkan Kunci Akses Premium:");
+        const key = prompt("Enter Premium Access Key:");
         if (key === "NEURAL2026") {
             localStorage.setItem('nl_premium_active', 'true');
-            alert("✅ AKSES PREMIUM AKTIF!");
+            alert("ACCESS GRANTED. Welcome, Member.");
             location.reload();
-        } else if (key !== null) { alert("⚠️ KODE SALAH"); }
+        } else if (key !== null) { alert("ERROR: INVALID ACCESS KEY"); }
     }
 
     function filterTab(cat) {
@@ -240,10 +251,12 @@
     function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
     function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
     function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; window.speechSynthesis.cancel(); }
+    
     function observeCards() {
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
         document.querySelectorAll('.card').forEach(c => obs.observe(c));
     }
+
     window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
     init();
 </script>

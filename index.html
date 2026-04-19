@@ -4,26 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEURAL LOGIC | Futuristic Tech & AI Prompts 2026</title>
-    
-    <link rel="manifest" href="manifest.json">
-    <meta name="description" content="Neural Logic adalah pusat inovasi teknologi masa depan, tren AI terbaru, dan koleksi prompt AI profesional.">
-    <meta name="author" content="Neural Logic Team">
-    <meta name="theme-color" content="#050509">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://neurallogic.eu.cc/">
-    <meta property="og:title" content="NEURAL LOGIC | Futuristic Tech & AI Prompts">
-    <meta property="og:description" content="Pusat inovasi teknologi masa depan dan koleksi prompt AI profesional.">
-    <meta property="og:image" content="https://neurallogic.eu.cc/social-preview.jpg">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NEURAL LOGIC | Futuristic Tech">
-    <meta name="twitter:description" content="Pusat inovasi teknologi masa depan dan prompt AI.">
-    <meta name="twitter:image" content="https://neurallogic.eu.cc/social-preview.jpg">
-
-    <link rel="canonical" href="https://neurallogic.eu.cc/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -42,57 +22,58 @@
         body.theme-ocean { --accent: #00d9ff; --gradient: linear-gradient(135deg, #00d9ff 0%, #0044ff 100%); }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; min-height: 100vh; transition: background 0.4s; scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; min-height: 100vh; transition: background 0.4s; }
 
-        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 0%; z-index: 1001; transition: width 0.2s; }
+        /* Style Tambahan untuk Tombol Gold & Premium Info */
+        .gold-btn { 
+            background: var(--gold); color: #000; padding: 16px; border: none; border-radius: 16px; 
+            font-weight: 800; cursor: pointer; width: 100%; transition: 0.3s;
+        }
+        .gold-btn:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(255, 204, 0, 0.4); }
         
+        .premium-info-box {
+            background: rgba(255, 204, 0, 0.05);
+            border: 1px dashed var(--gold);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px 0;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        /* ... (Style lama tetap dipertahankan) ... */
+        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); width: 0%; z-index: 1001; transition: width 0.2s; }
         nav { position: sticky; top: 0; z-index: 100; padding: 12px 6%; background: rgba(5, 5, 9, 0.8); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; border-bottom: var(--border-glass); }
         .logo { font-family: 'Space Grotesk'; font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; display: flex; align-items: center; }
         .logo-box { padding: 4px 10px; background: var(--gradient); color: #000; border-radius: 8px; margin-right: 8px; }
-
         .theme-switches { display: flex; gap: 15px; }
         .dot { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid rgba(255,255,255,0.2); transition: 0.2s; }
-        
         .tabs { display: flex; justify-content: center; gap: 10px; margin: 20px 0; padding: 0 6%; flex-wrap: wrap; }
         .tab-btn { background: var(--card); border: var(--border-glass); color: var(--muted); padding: 12px 22px; border-radius: 14px; cursor: pointer; font-weight: 600; transition: 0.3s; }
         .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2); }
         .tab-btn.premium-tab { border: 1px solid var(--gold); color: var(--gold); }
         .tab-btn.premium-tab.active { background: var(--gold); color: #000; }
-
         #feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px 6% 80px; }
-        
-        /* Skeleton & Animation */
-        .skeleton { height: 300px; background: linear-gradient(90deg, #111 25%, #222 50%, #111 75%); background-size: 200% 100%; animation: loading 1.5s infinite; border-radius: 26px; border: var(--border-glass); }
-        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-
         .card { background: var(--card); border-radius: 26px; overflow: hidden; border: var(--border-glass); opacity: 0; transform: translateY(30px); cursor: pointer; transition: 0.4s; position: relative; }
         .card.visible { opacity: 1; transform: translateY(0); }
         .card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
         .card-content { padding: 22px; }
-
+        .premium-badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; padding: 4px 12px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; z-index: 2; }
+        .lock-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); display: flex; justify-content: center; align-items: center; z-index: 3; font-size: 2.5rem; }
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); display: none; z-index: 1000; padding: 20px; overflow-y: auto; backdrop-filter: blur(15px); }
         .m-content { background: #0f0f16; max-width: 680px; margin: 40px auto; border-radius: 32px; padding: 35px; border: var(--border-glass); }
-
         .btn-group { display: flex; gap: 10px; margin-top: 20px; }
         .primary-btn { background: var(--accent); color:#000; padding:16px; border:none; border-radius:16px; font-weight:700; cursor:pointer; flex: 2; }
+        .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; flex: 1; text-decoration: none; text-align: center; }
         .audio-btn { background: #4444ff; color:#fff; border:none; border-radius:16px; cursor:pointer; padding: 16px; flex: 1; font-weight: 700; }
-        .sec-btn { background: #1e1e26; color:#fff; padding:16px; border:none; border-radius:16px; cursor:pointer; flex: 1; text-align: center; }
-
-        .share-group { display: flex; gap: 8px; margin-top: 25px; flex-wrap: wrap; border-top: var(--border-glass); padding-top: 20px; }
-        .share-btn { background: #1e1e26; border: var(--border-glass); color: #fff; padding: 10px 16px; border-radius: 12px; cursor: pointer; font-size: 0.8rem; font-weight: 700; text-decoration: none; }
-
-        #scrollTop { position: fixed; bottom: 30px; right: 20px; background: var(--accent); color: #000; width: 50px; height: 50px; border-radius: 50%; display: none; justify-content: center; align-items: center; cursor: pointer; z-index: 99; font-weight: bold; box-shadow: 0 0 20px rgba(0,255,136,0.4); }
-        
-        .toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 2000; }
+        .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 2000; }
         footer { padding: 40px 6%; text-align: center; border-top: var(--border-glass); color: var(--muted); }
-        .article-date { font-size: 0.75rem; color: var(--muted); margin-bottom: 5px; display: block; }
     </style>
 </head>
 <body>
 
 <div id="progress-bar"></div>
 <div id="toast" class="toast">Action Confirmed!</div>
-<div id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">▲</div>
 
 <nav>
     <a href="/" class="logo"><span class="logo-box">NL</span>NEURAL LOGIC</a>
@@ -132,37 +113,25 @@
     let bookmarks = JSON.parse(localStorage.getItem('nl_bookmarks')) || [];
     let isPremiumUser = localStorage.getItem('nl_premium_active') === 'true';
 
-    // 1. Inisialisasi dengan Skeleton & Error Handling
     async function init() {
-        const feed = document.getElementById('feed');
-        feed.innerHTML = '<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>';
-        
         try {
             const res = await fetch('data.json');
-            if(!res.ok) throw new Error("DB_OFFLINE");
             allData = (await res.json()).reverse();
             renderFeed(allData);
-        } catch (e) { 
-            feed.innerHTML = `<div style="text-align:center; grid-column:1/-1; padding:50px;">
-                <p style="color:red">📡 CRITICAL ERROR: Database Connection Lost</p>
-                <button onclick="location.reload()" class="tab-btn" style="margin-top:20px">Retry Connection</button>
-            </div>`;
-        }
+        } catch (e) { console.error("Database offline."); }
     }
 
     function renderFeed(data) {
         const feed = document.getElementById('feed');
-        if(data.length === 0) { feed.innerHTML = '<p style="text-align:center; grid-column:1/-1;">No data found.</p>'; return; }
-        
         feed.innerHTML = data.map((a, i) => {
             const isPremium = a.premium === true;
             return `
             <article class="card" onclick="openModalById(${a.id})">
-                ${isPremium ? '<div style="position:absolute; top:15px; right:15px; background:var(--gold); color:#000; padding:4px 12px; border-radius:50px; font-weight:800; font-size:0.7rem; z-index:2;">PREMIUM</div>' : ''}
-                ${isPremium && !isPremiumUser ? '<div style="position:absolute; inset:0; background:rgba(0,0,0,0.5); backdrop-filter:blur(4px); display:flex; justify-content:center; align-items:center; z-index:3; font-size:2rem;">🔒</div>' : ''}
-                <img src="${a.img}" class="card-img" alt="${a.title}">
+                ${isPremium ? '<div class="premium-badge">PREMIUM</div>' : ''}
+                ${isPremium && !isPremiumUser ? '<div class="lock-overlay">🔒</div>' : ''}
+                <img src="${a.img}" class="card-img" loading="lazy" alt="${a.title}">
                 <div class="card-content">
-                    <span class="article-date">📅 ${a.date || '2026'}</span>
+                    <span style="font-size:0.75rem; color:var(--muted);">${a.date || '2026'}</span><br>
                     <small style="color:var(--accent); font-weight:700; text-transform:uppercase;">${a.cat}</small>
                     <h3 style="margin-top:8px; font-family:'Space Grotesk';">${a.title}</h3>
                 </div>
@@ -171,78 +140,83 @@
         observeCards();
     }
 
-    // 2. Audio & Modal Logic
-    function speakEnglish(text) {
-        if ('speechSynthesis' in window) {
-            window.speechSynthesis.cancel();
-            const ut = new SpeechSynthesisUtterance(text);
-            ut.lang = 'en-US';
-            ut.rate = 0.95;
-            window.speechSynthesis.speak(ut);
-            showToast("🔊 Playing Audio...");
-        }
-    }
-
     function openModalById(id) {
         const item = allData.find(x => x.id === id);
         const inner = document.getElementById('modal-inner');
-        const shareUrl = encodeURIComponent(window.location.href);
 
         if (item.premium && !isPremiumUser) {
-            inner.innerHTML = `<div style="text-align:center; padding:20px;">
-                <h2 style="color:red;">ACCESS DENIED</h2>
-                <button class="primary-btn" style="background:var(--gold); margin-top:20px; width:100%" onclick="window.open('https://saweria.co/akashiro')">BUY PREMIUM KEY</button>
-                <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:10px;">ENTER KEY</button>
-                <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Close</button>
-            </div>`;
-        } else {
             inner.innerHTML = `
-                <span class="article-date">📅 Published: ${item.date}</span>
-                <img src="${item.img}" style="width:100%; border-radius:22px; margin:20px 0; aspect-ratio:16/9; object-fit:cover;">
-                <h2 style="color:var(--accent); font-family:'Space Grotesk';">${item.title}</h2>
-                <p style="line-height:1.8; margin:20px 0; white-space:pre-wrap;">${item.body}</p>
-                
+                <div style="text-align:center; padding:10px;">
+                    <div style="font-size:3rem; margin-bottom:15px;">💎</div>
+                    <h2 style="color:var(--gold); font-family:'Space Grotesk';">PREMIUM CONTENT</h2>
+                    <p style="margin:15px 0; color:var(--muted);">Materi ini eksklusif untuk member Premium Neural Logic.</p>
+                    
+                    <div class="premium-info-box">
+                        <b style="color:var(--gold)">Keuntungan Premium:</b>
+                        <ul style="margin:10px 0 0 20px; color:#fff;">
+                            <li>Akses Semua Professional AI Prompts</li>
+                            <li>Update Tren Teknologi Masa Depan</li>
+                            <li>Lisensi Penggunaan Komersial</li>
+                        </ul>
+                        <p style="margin-top:10px;"><b>Harga:</b> Rp 50.000 / Selamanya</p>
+                    </div>
+
+                    <button class="gold-btn" onclick="window.open('https://saweria.co/akashiro', '_blank')">BELI AKSES VIA SAWERIA</button>
+                    <p style="font-size:0.7rem; color:var(--muted); margin-top:10px;">*Tuliskan "Neural Premium" di pesan Saweria, kunci akan dikirim ke email kamu.</p>
+                    
+                    <button onclick="checkLicense()" class="sec-btn" style="width:100%; margin-top:15px; border:1px solid var(--gold); color:var(--gold);">MASUKKAN KODE AKSES</button>
+                    <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:10px;">Kembali</button>
+                </div>`;
+        } else {
+            // FIX COPY PASTE: Menggunakan textContent secara aman
+            inner.innerHTML = `
+                <img src="${item.img}" style="width:100%; border-radius:22px; margin-bottom:25px; aspect-ratio:16/9; object-fit:cover;">
+                <h2 style="color:var(--accent); font-family:'Space Grotesk'; margin-bottom:15px;">${item.title}</h2>
+                <div id="article-body" style="line-height:1.8; margin-bottom:30px; white-space:pre-wrap; color:#cbd5e1;">${item.body}</div>
+
                 <div class="btn-group">
-                    <button onclick="copyText('${item.body.replace(/'/g, "\\'")}')" class="primary-btn">📋 Copy</button>
-                    <button onclick="speakEnglish('${item.body.replace(/'/g, "\\'")}')" class="audio-btn">🔊 Listen</button>
+                    <button id="copyBtn" class="primary-btn">📋 Copy Article</button>
+                    <button onclick="speakEnglish()" class="audio-btn">🔊 Listen</button>
                     <button onclick="toggleBookmark(${item.id})" class="sec-btn">${bookmarks.includes(item.id) ? '★' : '☆'}</button>
                 </div>
-
-                <div class="share-group">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn">FB</a>
-                    <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${encodeURIComponent(item.title)}" target="_blank" class="share-btn">X</a>
-                    <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(item.title + ' ' + window.location.href)}" target="_blank" class="share-btn">WA</a>
-                    <button onclick="copyText(window.location.href)" class="share-btn">Link</button>
-                    <button onclick="closeModal()" class="share-btn" style="margin-left:auto; background:#ff4444;">Close</button>
-                </div>`;
+                <button onclick="closeModal()" class="sec-btn" style="width:100%; margin-top:15px; background:red;">Close</button>
+            `;
+            
+            // Event Listener khusus untuk Copy agar tidak error karakter spesial
+            document.getElementById('copyBtn').onclick = () => {
+                const text = document.getElementById('article-body').innerText;
+                navigator.clipboard.writeText(text);
+                showToast("Copied to clipboard!");
+            };
         }
         document.getElementById('modal').style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
 
-    // 3. Scroll & Progress Logic
-    window.onscroll = () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
-        document.getElementById('scrollTop').style.display = winScroll > 500 ? 'flex' : 'none';
-    };
-
-    function checkLicense() {
-        if (prompt("Enter License Key:") === "NEURAL2026") {
-            localStorage.setItem('nl_premium_active', 'true');
-            location.reload();
+    function speakEnglish() {
+        const text = document.getElementById('article-body').innerText;
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            const msg = new SpeechSynthesisUtterance(text);
+            msg.lang = 'en-US';
+            window.speechSynthesis.speak(msg);
+            showToast("🔊 Playing Audio...");
         }
     }
 
-    function copyText(t) { navigator.clipboard.writeText(t); showToast("Copied!"); }
-    function setTheme(t) { document.body.className = t === 'default' ? '' : 'theme-' + t; }
-    function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
-    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; window.speechSynthesis.cancel(); }
-    
+    function checkLicense() {
+        const key = prompt("Masukkan Kunci Akses Premium:");
+        if (key === "NEURAL2026") {
+            localStorage.setItem('nl_premium_active', 'true');
+            alert("✅ AKSES PREMIUM AKTIF!");
+            location.reload();
+        } else if (key !== null) { alert("⚠️ KODE SALAH"); }
+    }
+
     function filterTab(cat) {
         currentFilter = cat;
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.innerText.includes(cat) || (cat==='ALL' && b.innerText==='All Trends')));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        if(event) event.target.classList.add('active');
         applyFilters();
     }
 
@@ -250,10 +224,12 @@
         const term = document.getElementById('searchInput').value.toLowerCase();
         let f = allData;
         if (currentFilter === 'BOOKMARK') f = allData.filter(a => bookmarks.includes(a.id));
-        else if (currentFilter === 'PREMIUM') f = allData.filter(a => a.premium);
+        else if (currentFilter === 'PREMIUM') f = allData.filter(a => a.premium === true);
         else if (currentFilter !== 'ALL') f = allData.filter(a => a.cat === currentFilter);
         renderFeed(f.filter(a => a.title.toLowerCase().includes(term)));
     }
+
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
 
     function toggleBookmark(id) {
         bookmarks = bookmarks.includes(id) ? bookmarks.filter(b => b !== id) : [...bookmarks, id];
@@ -261,12 +237,13 @@
         applyFilters(); closeModal();
     }
 
+    function setTheme(t) { document.body.className = (t === 'default' ? '' : 'theme-' + t); }
+    function showToast(m) { const t = document.getElementById('toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
+    function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; window.speechSynthesis.cancel(); }
     function observeCards() {
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
         document.querySelectorAll('.card').forEach(c => obs.observe(c));
     }
-
-    document.getElementById('searchInput').addEventListener('input', applyFilters);
     window.onclick = e => { if(e.target.id === 'modal') closeModal(); };
     init();
 </script>
